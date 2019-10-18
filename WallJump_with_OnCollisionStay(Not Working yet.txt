@@ -1,0 +1,43 @@
+ foreach (ContactPoint contact in collisionInfo.contacts)
+            {
+                //Debug.DrawRay(contact.point, contact.normal, Color.white);
+
+                if (!characterControl.IsGrounded && other.gameObject.tag == "RightWall")
+                {
+                    characterControl.CanDoubleJUmp = false;
+
+                    if (characterControl.Dowalljump == true)
+                    {
+                        characterControl.rb.AddForce(contact.normal.normalized * force_By_WallNormal, ForceMode.VelocityChange);
+                        characterControl.rb.AddForce(Vector3.up * WallJump_UpwardForce, ForceMode.VelocityChange);
+
+                    }
+                    else if (!characterControl.IsGrounded && collisionInfo.collider.tag == "RightWall")
+                    {
+
+                        if (characterControl.Dowalljump == false)
+                            characterControl.rb.velocity = Vector3.zero;
+                        characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
+                    }
+
+                }
+
+
+                if (!characterControl.IsGrounded && collisionInfo.collider.tag == "LeftWall")
+                {
+                    characterControl.CanDoubleJUmp = false;
+
+                    if (characterControl.Dowalljump == true)
+                    {
+                        characterControl.rb.velocity = Vector3.zero;
+                        characterControl.rb.AddForce(contact.normal * force_By_WallNormal, ForceMode.VelocityChange);
+                        characterControl.rb.AddForce(Vector3.up * WallJump_UpwardForce, ForceMode.VelocityChange);
+                        characterControl.Dowalljump = false;
+                    }
+                    else if (!characterControl.IsGrounded && characterControl.Dowalljump == false && collisionInfo.collider.tag == "LeftWall")
+                    {
+                        characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
+                    }
+
+                }
+            }
