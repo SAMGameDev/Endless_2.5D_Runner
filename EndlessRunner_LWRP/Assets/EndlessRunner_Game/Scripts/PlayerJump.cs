@@ -18,9 +18,7 @@ namespace RunnerGame
         protected float wallSlide_Down;
         [SerializeField]
         protected float force_By_WallNormal;
-        [SerializeField]
-        protected float WallJump_UpwardForce;
-
+        
         RaycastHit leftHitInfo;
         RaycastHit RightHitInfo;
 
@@ -76,7 +74,7 @@ namespace RunnerGame
                     {
                         characterControl.rb.velocity = Vector3.zero;
                         characterControl.rb.AddForce(RightHitInfo.normal.normalized * force_By_WallNormal, ForceMode.VelocityChange);
-                        characterControl.rb.AddForce(Vector3.up * WallJump_UpwardForce, ForceMode.VelocityChange);
+                        characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
                         characterControl.Dowalljump = false;
                     }
                     else if (!characterControl.IsGrounded && characterControl.Dowalljump == false && RightHitInfo.collider.tag == "RightWall")
@@ -96,7 +94,7 @@ namespace RunnerGame
                     {
                         characterControl.rb.velocity = Vector3.zero;
                         characterControl.rb.AddForce(leftHitInfo.normal.normalized * force_By_WallNormal, ForceMode.VelocityChange);
-                        characterControl.rb.AddForce(Vector3.up * WallJump_UpwardForce, ForceMode.VelocityChange);
+                        characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
                         characterControl.Dowalljump = false;
                     }
                     else if (!characterControl.IsGrounded && characterControl.Dowalljump == false && leftHitInfo.collider.tag == "LeftWall")

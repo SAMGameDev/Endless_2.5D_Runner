@@ -11,8 +11,12 @@ namespace RunnerGame
         public bool DoubleJump;
         public bool Dowalljump;
         public bool CanDoubleJUmp;
+        public bool DoDash;
 
         public bool IsGrounded;
+        public bool move;
+
+        Vector3 moveForward;
 
         public float speed;
         public Rigidbody rb;
@@ -21,18 +25,29 @@ namespace RunnerGame
         {
             Application.targetFrameRate = 60;
             rb = GetComponent<Rigidbody>();
-        }
+        }        
         void Update()
         {
-
             if (IsGrounded)
+            {
+                move = true;
+            }
+            else
+            {
+                move = false;
+            }
+
+        }
+        void FixedUpdate()
+        {
+            if (move)
             {
                 rb.velocity = new Vector3(0, rb.velocity.y, speed);
             }
-        }
-
-        void FixedUpdate()
-        {      
+            if(DoDash == true)
+            {
+                rb.velocity = new Vector3(0, rb.velocity.y, 100f);
+            }
         }
     }
 }

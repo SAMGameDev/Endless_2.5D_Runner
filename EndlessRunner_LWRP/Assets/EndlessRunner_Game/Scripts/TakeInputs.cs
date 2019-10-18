@@ -9,7 +9,7 @@ namespace RunnerGame
         public CharacterControl characterControl;
         private void Start()
         {
-           characterControl = GetComponent<CharacterControl>();
+            characterControl = GetComponent<CharacterControl>();
         }
         // Update is called once per frame
         void Update()
@@ -34,6 +34,15 @@ namespace RunnerGame
             {
                 characterControl.Dowalljump = false;
             }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                characterControl.DoDash = true;
+            }
+            else
+            {
+                characterControl.DoDash = false;
+            }
+            
         }
     }
 }
