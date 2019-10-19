@@ -13,6 +13,8 @@ namespace RunnerGame
         public bool CanDoubleJUmp;
         public bool DoDash;
 
+        public bool faceRight;
+
         public bool IsGrounded;
         public bool move;
 
@@ -25,7 +27,7 @@ namespace RunnerGame
         {
             Application.targetFrameRate = 60;
             rb = GetComponent<Rigidbody>();
-        }        
+        }
         void Update()
         {
             if (IsGrounded)
@@ -36,17 +38,12 @@ namespace RunnerGame
             {
                 move = false;
             }
-
         }
         void FixedUpdate()
         {
             if (move)
             {
                 rb.velocity = new Vector3(0, rb.velocity.y, speed);
-            }
-            if(DoDash == true)
-            {
-                rb.velocity = new Vector3(0, rb.velocity.y, 100f);
             }
         }
     }
