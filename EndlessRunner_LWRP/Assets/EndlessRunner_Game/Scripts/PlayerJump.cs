@@ -18,34 +18,19 @@ namespace RunnerGame
         protected float wallSlide_Down;
         [SerializeField]
         protected float force_By_WallNormal;
-        [SerializeField]
-        protected float WallJump_UpwardForce;
 
-        Vector3 lastPos;
-        Vector3 currPos;
-
-        RaycastHit leftHitInfo;
         RaycastHit RightHitInfo;
 
         public BoxCollider dectorCollider;
         public CharacterControl characterControl;
         void Start()
         {
-            currPos = this.gameObject.transform.position;           
             characterControl = GetComponent<CharacterControl>();
         }
 
         void Update()
         {
-            lastPos = this.gameObject.transform.position;
-            Vector3 minusPos = currPos - lastPos;
-            Debug.Log("lastpos" + minusPos);
 
-            if(minusPos.z < 0)
-            {
-                transform.localRotation = Quaternion.Euler(0, 180, 0);
-            }
-          
         }
         void FixedUpdate()
         {
@@ -81,50 +66,35 @@ namespace RunnerGame
             characterControl.DoubleJump = false;
             characterControl.Jump = false;
         }
-         void WallJumping()
-         {
-             if (Physics.Raycast(transform.position, transform.forward, out RightHitInfo, 0.5f))
-             {
-                 if (!characterControl.IsGrounded && RightHitInfo.collider.tag == "RightWall")
-                 {
-                     characterControl.CanDoubleJUmp = false;
+        void WallJumping()
+        {
+            characterControl.CanDoubleJUmp = false;
 
-                     if (characterControl.Dowalljump == true)
-                     {
-                         characterControl.rb.velocity = Vector3.zero;
-                         characterControl.rb.AddForce(RightHitInfo.normal.normalized * force_By_WallNormal, ForceMode.VelocityChange);
-                         characterControl.rb.AddForce(Vector3.up * WallJump_UpwardForce, ForceMode.VelocityChange);
-                         characterControl.Dowalljump = false;
-                     }
-                     else if (!characterControl.IsGrounded && characterControl.Dowalljump == false && RightHitInfo.collider.tag == "RightWall")
-                     {
-                         characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
-                     }
-                 }
+            if (Physics.Raycast(transform.position, transform.forward, out RightHitInfo, 0.5f))
+            {
+                if (!characterControl.IsGrounded && characterControl.Dowalljump == true && RightHitInfo.collider.tag == "RightWall")
+                {
+                    characterControl.rb.velocity = Vector3.zero;
+                    characterControl.rb.AddForce(RightHitInfo.normal.normalized * force_By_WallNormal, ForceMode.VelocityChange);
+                    characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
+                    transform.localRotation = Quaternion.Euler(0, 180, 0);
+                    characterControl.Dowalljump = false;
+                }
 
-             }
-             if (Physics.Raycast(transform.position, -transform.forward, out leftHitInfo, 0.6f))
-             {
-                 if (!characterControl.IsGrounded && leftHitInfo.collider.tag == "LeftWall")
-                 {
-                     characterControl.CanDoubleJUmp = false;
-
-                     if (characterControl.Dowalljump == true)
-                     {
-                         characterControl.rb.velocity = Vector3.zero;
-                         characterControl.rb.AddForce(leftHitInfo.normal.normalized * force_By_WallNormal, ForceMode.VelocityChange);
-                         characterControl.rb.AddForce(Vector3.up * WallJump_UpwardForce, ForceMode.VelocityChange);
-                         characterControl.Dowalljump = false;
-                     }
-                     else if (!characterControl.IsGrounded && characterControl.Dowalljump == false && leftHitInfo.collider.tag == "LeftWall")
-                     {
-                         characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
-                     }
-                 }
-
-             }
-         }
-
+                else if (!characterControl.IsGrounded && characterControl.Dowalljump == true && RightHitInfo.collider.tag == "LeftWall")
+                {
+                    characterControl.rb.velocity = Vector3.zero;
+                    characterControl.rb.AddForce(RightHitInfo.normal.normalized * force_By_WallNormal, ForceMode.VelocityChange);
+                    characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
+                    transform.localRotation = Quaternion.Euler(0, 0, 0);
+                    characterControl.Dowalljump = false;
+                }
+                else if (!characterControl.IsGrounded && characterControl.Dowalljump == false && RightHitInfo.collider.tag == "RightWall" || RightHitInfo.collider.tag == "LeftWall")
+                {
+                    characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
+                }
+            }
+        }
         void OnTriggerStay(Collider other)
         {
             if (!other.isTrigger && other.gameObject.tag == "Ground")
