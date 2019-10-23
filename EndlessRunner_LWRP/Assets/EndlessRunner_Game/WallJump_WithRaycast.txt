@@ -1,0 +1,33 @@
+ /* void WallJumping()
+         {
+             characterControl.CanDoubleJUmp = false;
+
+             if (Physics.Raycast(transform.position, transform.forward, out RightHitInfo, 0.5f))
+             {
+                 if (!characterControl.IsGrounded && characterControl.Dowalljump == true && RightHitInfo.collider.tag == "RightWall")
+                 {                   
+                     characterControl.rb.velocity = Vector3.zero;
+                     characterControl.rb.AddForce(RightHitInfo.normal * force_By_WallNormal, ForceMode.VelocityChange);
+                     characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
+                     characterControl.Dowalljump = false;
+                 }
+                 else if (!characterControl.IsGrounded && characterControl.Dowalljump == false && RightHitInfo.collider.tag == "RightWall")
+                 {
+                     characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
+                 }
+             }
+             if (Physics.Raycast(transform.position, -transform.forward, out LeftHitinfo, 0.5f))
+             {
+                 if (!characterControl.IsGrounded && characterControl.Dowalljump == true && LeftHitinfo.collider.tag == "LeftWall")
+                 {
+                     characterControl.rb.velocity = Vector3.zero;
+                     characterControl.rb.AddForce(LeftHitinfo.normal * force_By_WallNormal, ForceMode.VelocityChange);
+                     characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
+                     characterControl.Dowalljump = false;
+                 }
+                 else if (!characterControl.IsGrounded && characterControl.Dowalljump == false && LeftHitinfo.collider.tag == "LeftWall")
+                 {
+                     characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
+                 }
+             }
+         }*/
