@@ -11,7 +11,7 @@ namespace RunnerGame
         public bool DoubleJump;
         public bool Dowalljump;
         public bool CanwallJump;
-        public bool CanDoubleJUmp;
+        public bool CanDoubleJump;
         public bool DoDash;
 
         public bool faceRight;

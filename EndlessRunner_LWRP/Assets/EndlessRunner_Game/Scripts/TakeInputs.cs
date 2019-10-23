@@ -21,18 +21,19 @@ namespace RunnerGame
                 if (characterControl.IsGrounded)
                 {
                     characterControl.Jump = true;
-                    characterControl.CanDoubleJUmp = true;
+                    characterControl.CanDoubleJump = true;
                 }
-                else if (!characterControl.IsGrounded && characterControl.CanDoubleJUmp == true)
+                if (!characterControl.IsGrounded && characterControl.CanDoubleJump == true)
                 {
-                    characterControl.DoubleJump = true;
-
+                   characterControl.DoubleJump = true;                  
                 }
+
             }
             else
-            {
+            {              
                 characterControl.Dowalljump = false;
             }
+
 
 
 
