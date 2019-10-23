@@ -19,7 +19,7 @@ namespace RunnerGame
         [SerializeField]
         protected float force_By_WallNormal;
 
-        public bool canWallJump_New;
+        public bool wallSlide;
 
         RaycastHit RightHitInfo;
         RaycastHit LeftHitinfo;
@@ -36,6 +36,11 @@ namespace RunnerGame
             characterControl.IsGrounded = false;
             ApplyGravity();
             Jump();
+
+            if (wallSlide == true)
+            {
+                characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
+            }
             // WallJumping();
         }
         public void ApplyGravity()
@@ -65,43 +70,6 @@ namespace RunnerGame
             characterControl.DoubleJump = false;
             characterControl.Jump = false;
         }
-
-        /* void WallJumping()
-         {
-             if (Physics.Raycast(transform.position, transform.forward, out RightHitInfo, 0.5f))
-             {
-
-                 characterControl.CanwallJump = true;
-
-                 if (!characterControl.IsGrounded && characterControl.Dowalljump == true && RightHitInfo.collider.tag == "RightWall")
-                 {
-                     characterControl.rb.velocity = Vector3.zero;
-                     characterControl.rb.AddForce(RightHitInfo.normal * force_By_WallNormal, ForceMode.VelocityChange);
-                     characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
-                     characterControl.CanwallJump = false;
-                 }
-                 else if (!characterControl.IsGrounded && characterControl.Dowalljump == false && RightHitInfo.collider.tag == "RightWall")
-                 {
-                     characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
-                 }
-             }
-             if (Physics.Raycast(transform.position, -transform.forward, out LeftHitinfo, 0.5f))
-             {
-                 characterControl.CanwallJump = true;
-
-                 if (!characterControl.IsGrounded && characterControl.Dowalljump == true && LeftHitinfo.collider.tag == "LeftWall")
-                 {
-                     characterControl.rb.velocity = Vector3.zero;
-                     characterControl.rb.AddForce(LeftHitinfo.normal * force_By_WallNormal, ForceMode.VelocityChange);
-                     characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
-                     characterControl.CanwallJump = false;
-                 }
-                 else if (!characterControl.IsGrounded && characterControl.Dowalljump == false && LeftHitinfo.collider.tag == "LeftWall")
-                 {
-                     characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
-                 }
-             }
-         }*/
         void OnCollisionStay(Collision collision)
         {
             foreach (ContactPoint contact in collision.contacts)
@@ -111,28 +79,23 @@ namespace RunnerGame
                     // Debug.DrawRay(contact.point, contact.normal, Color.yellow, 0.12f);   
                     characterControl.CanwallJump = true;
 
-                    if (characterControl.Dowalljump == true)
+                    if (characterControl.Dowalljump)
                     {
                         characterControl.rb.velocity = Vector3.zero;
                         characterControl.rb.AddForce(contact.normal * force_By_WallNormal, ForceMode.VelocityChange);
                         characterControl.rb.AddForce(Vector3.up * 2.5f, ForceMode.VelocityChange);
                         characterControl.CanwallJump = false;
                     }
-                    if (!characterControl.IsGrounded && collision.collider.tag == "RightWall")
+                    else
                     {
-                        
-                        if (characterControl.Dowalljump == false)
-                            Debug.Log("I Ran");
-                        characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
+                        wallSlide = true;
                     }
                 }
-                /* if (!characterControl.IsGrounded && collision.collider.tag == "RightWall")
-                 {
-                     Debug.Log("I Ran");
-                     if (characterControl.CanwallJump == false)
-                         characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
-                 }*/
             }
+        }
+        private void OnCollisionExit(Collision collision)
+        {
+            wallSlide = false;
         }
         void OnTriggerStay(Collider other)
         {
