@@ -21,9 +21,6 @@ namespace RunnerGame
 
         public bool wallSlide;
 
-        RaycastHit RightHitInfo;
-        RaycastHit LeftHitinfo;
-
         public BoxCollider dectorCollider;
         public CharacterControl characterControl;
         void Start()
@@ -31,17 +28,19 @@ namespace RunnerGame
             characterControl = GetComponent<CharacterControl>();
         }
 
+        private void Update()
+        {
+            if (wallSlide == true)
+            {
+                characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
+            }
+        }
+
         void FixedUpdate()
         {
             characterControl.IsGrounded = false;
             ApplyGravity();
             Jump();
-
-            if (wallSlide == true)
-            {
-                characterControl.rb.velocity = new Vector3(0, -wallSlide_Down, 0);
-            }
-            // WallJumping();
         }
         public void ApplyGravity()
         {
@@ -82,9 +81,8 @@ namespace RunnerGame
                     if (characterControl.Dowalljump)
                     {
                         characterControl.rb.velocity = Vector3.zero;
-                        characterControl.rb.AddForce(contact.normal * force_By_WallNormal, ForceMode.VelocityChange);
-                        characterControl.rb.AddForce(Vector3.up * 2.5f, ForceMode.VelocityChange);
-                        characterControl.CanwallJump = false;
+                        characterControl.rb.AddForce(contact.normal * force_By_WallNormal, ForceMode.Impulse);
+                        characterControl.rb.AddForce(Vector3.up * 3f, ForceMode.Impulse);
                     }
                     else
                     {
@@ -93,8 +91,8 @@ namespace RunnerGame
                 }
             }
         }
-        private void OnCollisionExit(Collision collision)
-        {
+        void OnCollisionExit(Collision collision)
+        {           
             wallSlide = false;
         }
         void OnTriggerStay(Collider other)

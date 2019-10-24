@@ -16,8 +16,6 @@ namespace RunnerGame
         {
             if (Input.GetButtonDown("Jump"))
             {
-                characterControl.Dowalljump = characterControl.CanwallJump;
-
                 if (characterControl.IsGrounded)
                 {
                     characterControl.Jump = true;
@@ -25,12 +23,16 @@ namespace RunnerGame
                 }
                 if (!characterControl.IsGrounded && characterControl.CanDoubleJump == true)
                 {
-                   characterControl.DoubleJump = true;                  
+                    characterControl.DoubleJump = true;
                 }
 
             }
+            if (Input.GetButton("Jump"))
+            {
+                characterControl.Dowalljump = characterControl.CanwallJump;
+            }
             else
-            {              
+            {
                 characterControl.Dowalljump = false;
             }
 

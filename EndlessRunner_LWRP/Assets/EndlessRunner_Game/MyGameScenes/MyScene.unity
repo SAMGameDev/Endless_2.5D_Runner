@@ -239,7 +239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590701219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.18, z: 75.23}
+  m_LocalPosition: {x: 0, y: 8.24, z: 74.48}
   m_LocalScale: {x: 5, y: 10.648001, z: 1}
   m_Children: []
   m_Father: {fileID: 1293069971}
@@ -733,7 +733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221460064}
   m_LocalRotation: {x: 0.00000016129334, y: 0.70710677, z: -0.00000016129334, w: -0.7071069}
-  m_LocalPosition: {x: 20, y: 1.62, z: 59.14}
+  m_LocalPosition: {x: 20, y: 3.52, z: 28.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1059082137}
@@ -1230,7 +1230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583028039250909337}
   m_LocalRotation: {x: 0.00000016129334, y: 0.70710677, z: -0.00000016129334, w: -0.7071069}
-  m_LocalPosition: {x: 20, y: 1.62, z: 59.14}
+  m_LocalPosition: {x: 20, y: 3.52, z: 28.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1289,12 +1289,12 @@ PrefabInstance:
     - target: {fileID: 1583028038604935020, guid: 9e29026dbd925db47a958c4cb6b623e1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 1583028038604935020, guid: 9e29026dbd925db47a958c4cb6b623e1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59.14
+      value: 28.6
       objectReference: {fileID: 0}
     - target: {fileID: 1583028038604935020, guid: 9e29026dbd925db47a958c4cb6b623e1,
         type: 3}
@@ -1338,15 +1338,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1942151696, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
       propertyPath: DoubleJump_Force
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1942151696, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
       propertyPath: force_By_WallNormal
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1942151696, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
       propertyPath: wallSlide_Down
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1942151696, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
       propertyPath: JumpForce
@@ -1359,6 +1359,21 @@ PrefabInstance:
     - target: {fileID: 1942151697, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
       propertyPath: CanDoubleJUmp
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583028038939364411, guid: 9e29026dbd925db47a958c4cb6b623e1,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583028038939364411, guid: 9e29026dbd925db47a958c4cb6b623e1,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583028038939364411, guid: 9e29026dbd925db47a958c4cb6b623e1,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
