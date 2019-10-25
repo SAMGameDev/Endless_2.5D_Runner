@@ -15,7 +15,7 @@ namespace RunnerGame
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetButtonDown("Jump"))
+            if (CrossPlatformInputManager.GetButtonDown("Jump"))
             {
                 if (characterControl.IsGrounded)
                 {
@@ -28,7 +28,7 @@ namespace RunnerGame
                 }
             }
 
-            if (Input.GetButtonDown("Jump"))
+            if (CrossPlatformInputManager.GetButtonDown("Jump"))
             {
                 characterControl.Dowalljump = true;
             }
