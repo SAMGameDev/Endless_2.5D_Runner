@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 namespace RunnerGame
 {
@@ -25,34 +26,16 @@ namespace RunnerGame
                 {
                     characterControl.DoubleJump = true;
                 }
-
             }
-            if (Input.GetButton("Jump"))
+
+            if (Input.GetButtonDown("Jump"))
             {
-                characterControl.Dowalljump = characterControl.CanwallJump;
+                characterControl.Dowalljump = true;
             }
             else
             {
                 characterControl.Dowalljump = false;
             }
-
-
-
-
-
-
-
-
-
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                characterControl.DoDash = true;
-            }
-            else
-            {
-                characterControl.DoDash = false;
-            }
-
         }
     }
 }

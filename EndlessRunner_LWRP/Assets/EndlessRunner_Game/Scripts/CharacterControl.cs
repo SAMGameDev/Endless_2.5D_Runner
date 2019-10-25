@@ -9,7 +9,7 @@ namespace RunnerGame
         //inputs
         public bool Jump;
         public bool DoubleJump;
-        public bool Dowalljump;
+        public bool Dowalljump = false;
         public bool CanwallJump;
         public bool CanDoubleJump;
         public bool DoDash;
@@ -44,6 +44,7 @@ namespace RunnerGame
         {
             if (move)
             {
+                this.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 rb.velocity = new Vector3(0, rb.velocity.y, speed);
             }
         }
