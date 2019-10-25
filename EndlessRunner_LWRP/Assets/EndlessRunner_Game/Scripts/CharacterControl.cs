@@ -13,12 +13,8 @@ namespace RunnerGame
         public bool CanDoubleJump;
         public bool DoDash;
 
-        public bool faceRight;
-
         public bool IsGrounded;
         public bool move;
-
-        Vector3 moveForward;
 
         public float speed;
         public Rigidbody rb;
