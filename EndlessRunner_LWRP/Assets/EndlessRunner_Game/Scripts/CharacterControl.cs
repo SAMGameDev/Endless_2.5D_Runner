@@ -9,9 +9,9 @@ namespace RunnerGame
         //inputs
         public bool Jump;
         public bool DoubleJump;
-        public bool Dowalljump = false;     
+        public bool Dowalljump = false;
         public bool CanDoubleJump;
-        public bool DoDash;
+        public bool DoDash = false;
 
         public bool IsGrounded;
         public bool move;
@@ -21,7 +21,7 @@ namespace RunnerGame
 
         private void Start()
         {
-           // Application.targetFrameRate = 60;
+            // Application.targetFrameRate = 60;
             rb = GetComponent<Rigidbody>();
         }
         void Update()

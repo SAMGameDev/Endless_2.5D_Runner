@@ -8,15 +8,17 @@ namespace RunnerGame
     public class TakeInputs : MonoBehaviour
     {
         public CharacterControl characterControl;
-        private void Start()
+        void Start()
         {
             characterControl = GetComponent<CharacterControl>();
         }
         // Update is called once per frame
         void Update()
         {
-            if (CrossPlatformInputManager.GetButtonDown("Jump"))
+            if (CrossPlatformInputManager.GetButtonDown("Jump") || Input.GetButtonDown("Jump"))
             {
+                characterControl.Dowalljump = true;
+
                 if (characterControl.IsGrounded)
                 {
                     characterControl.Jump = true;
@@ -24,17 +26,17 @@ namespace RunnerGame
                 }
                 if (!characterControl.IsGrounded && characterControl.CanDoubleJump == true)
                 {
+                    characterControl.CanDoubleJump = false;
                     characterControl.DoubleJump = true;
                 }
-            }
-
-            if (CrossPlatformInputManager.GetButtonDown("Jump"))
-            {
-                characterControl.Dowalljump = true;
             }
             else
             {
                 characterControl.Dowalljump = false;
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                characterControl.DoDash = true;
             }
         }
     }

@@ -81,13 +81,11 @@ MonoBehaviour:
   Jump: 0
   DoubleJump: 0
   Dowalljump: 0
-  CanwallJump: 0
   CanDoubleJump: 0
   DoDash: 0
-  faceRight: 0
   IsGrounded: 0
   move: 0
-  speed: 18
+  speed: 20
   rb: {fileID: 0}
 --- !u!114 &4062899752063287556
 MonoBehaviour:
@@ -114,14 +112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ece39cbc834904296b2df25dce8c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 12
-  DoubleJump_Force: 0
-  FallMultiplier: 3
-  lowJumpGravity: 1.85
+  JumpForce: 10
+  DoubleJump_Force: 8
+  FallMultiplier: 4
+  lowJumpGravity: 2
   wallSlide_Down: 6
-  force_By_WallNormal: 2
-  WallJump_JumpForce: 8
-  wallSlide: 0
+  force_By_WallNormal: 12
+  JumpForce_OnWall: 14
   dectorCollider: {fileID: 1583028038939364411}
   characterControl: {fileID: 0}
 --- !u!1 &1583028038939364409
@@ -214,7 +211,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.6}
+  m_Size: {x: 1, y: 1, z: 1.2}
   m_Center: {x: 0, y: -0.18, z: 0}
 --- !u!1 &1592427157572646896
 GameObject:

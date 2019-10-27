@@ -19,7 +19,7 @@ namespace RunnerGame
         [SerializeField]
         protected float force_By_WallNormal;
         [SerializeField]
-        protected float WallJump_JumpForce;
+        protected float JumpForce_OnWall;
 
         RaycastHit HitInfo;
 
@@ -29,12 +29,16 @@ namespace RunnerGame
         {
             characterControl = GetComponent<CharacterControl>();
         }
+        void Update()
+        {
+           
+            WallJumping();
+        }
         void FixedUpdate()
         {
             characterControl.IsGrounded = false;
             ApplyGravity();
             Jump();
-            WallJumping();
         }
         public void ApplyGravity()
         {
@@ -53,12 +57,11 @@ namespace RunnerGame
         {
             if (characterControl.Jump == true)
             {
-                characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+                characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
             }
             if (characterControl.DoubleJump == true)
             {
-                characterControl.rb.AddForce(Vector3.up * DoubleJump_Force, ForceMode.Impulse);
-                characterControl.CanDoubleJump = false;
+                characterControl.rb.AddForce(Vector3.up * DoubleJump_Force, ForceMode.VelocityChange);
             }
             characterControl.DoubleJump = false;
             characterControl.Jump = false;
@@ -69,17 +72,17 @@ namespace RunnerGame
             {
                 if (!characterControl.IsGrounded && characterControl.Dowalljump == true && HitInfo.collider.tag == "RightWall")
                 {
+                    characterControl.CanDoubleJump = false;
                     characterControl.rb.velocity = Vector3.zero;
                     characterControl.rb.AddForce(HitInfo.normal * force_By_WallNormal, ForceMode.VelocityChange);
-                    characterControl.rb.AddForce(Vector3.up * WallJump_JumpForce, ForceMode.VelocityChange);
+                    characterControl.rb.AddForce(Vector3.up * JumpForce_OnWall, ForceMode.VelocityChange);
                     this.gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-
                 }
                 if (!characterControl.IsGrounded && characterControl.Dowalljump == true && HitInfo.collider.tag == "LeftWall")
                 {
                     characterControl.rb.velocity = Vector3.zero;
                     characterControl.rb.AddForce(HitInfo.normal * force_By_WallNormal, ForceMode.VelocityChange);
-                    characterControl.rb.AddForce(Vector3.up * WallJump_JumpForce, ForceMode.VelocityChange);
+                    characterControl.rb.AddForce(Vector3.up * JumpForce_OnWall, ForceMode.VelocityChange);
                     this.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
                 }
