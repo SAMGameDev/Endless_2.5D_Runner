@@ -34,6 +34,7 @@ namespace RunnerGame
             {
                 characterControl.Dowalljump = false;
             }
+
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 characterControl.DoDash = true;

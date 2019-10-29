@@ -31,14 +31,13 @@ namespace RunnerGame
         }
         void Update()
         {
-           
+            Jump();
             WallJumping();
         }
         void FixedUpdate()
         {
             characterControl.IsGrounded = false;
-            ApplyGravity();
-            Jump();
+            ApplyGravity();        
         }
         public void ApplyGravity()
         {
@@ -57,11 +56,13 @@ namespace RunnerGame
         {
             if (characterControl.Jump == true)
             {
-                characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
+                //characterControl.rb.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
+                characterControl.rb.velocity = new Vector3(0, JumpForce, characterControl.rb.velocity.z);
             }
             if (characterControl.DoubleJump == true)
             {
-                characterControl.rb.AddForce(Vector3.up * DoubleJump_Force, ForceMode.VelocityChange);
+                // characterControl.rb.AddForce(Vector3.up * DoubleJump_Force, ForceMode.VelocityChange);
+                characterControl.rb.velocity = new Vector3(0, DoubleJump_Force, characterControl.rb.velocity.z);
             }
             characterControl.DoubleJump = false;
             characterControl.Jump = false;

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -186,49 +186,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &238342623
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 238342624}
-  - component: {fileID: 238342625}
-  m_Layer: 0
-  m_Name: FPS Shower
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &238342624
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238342623}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &238342625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238342623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 190be173bbdddea4495c8ea58a3c249b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &298555968
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 25, y: 0, z: 0}
+  m_FollowOffset: {x: 18, y: 0, z: 0}
   m_XDamping: 0
   m_YDamping: 2
   m_ZDamping: 20
@@ -932,7 +889,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221460064}
   m_LocalRotation: {x: 0.00000016129334, y: 0.70710677, z: -0.00000016129334, w: -0.7071069}
-  m_LocalPosition: {x: 25, y: 1.62, z: -65.1}
+  m_LocalPosition: {x: 18, y: 1.62, z: -65.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1059082137}
@@ -1241,7 +1198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583028039250909337}
   m_LocalRotation: {x: 0.00000016129334, y: 0.70710677, z: -0.00000016129334, w: -0.7071069}
-  m_LocalPosition: {x: 25, y: 1.62, z: -65.1}
+  m_LocalPosition: {x: 18, y: 1.62, z: -65.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1346,6 +1303,38 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942151697, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
+      propertyPath: dashSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942151697, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
+      propertyPath: maxDash_Time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942151697, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
+      propertyPath: startDash_Time
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942151697, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
+      propertyPath: dashStoppingSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942151697, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
+      propertyPath: dashStoppingTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942151697, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
+      propertyPath: DashSpeed
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942151697, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
+      propertyPath: DashStart_Time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942151696, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}
+      propertyPath: DoubleJump_Force
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e29026dbd925db47a958c4cb6b623e1, type: 3}

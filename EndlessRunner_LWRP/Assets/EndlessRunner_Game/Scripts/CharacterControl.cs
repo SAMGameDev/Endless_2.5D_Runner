@@ -11,7 +11,8 @@ namespace RunnerGame
         public bool DoubleJump;
         public bool Dowalljump = false;
         public bool CanDoubleJump;
-        public bool DoDash = false;
+        public bool DoDash;
+
 
         public bool IsGrounded;
         public bool move;
@@ -19,9 +20,14 @@ namespace RunnerGame
         public float speed;
         public Rigidbody rb;
 
-        private void Start()
+        //Dash Stuff. public vector3 moveDirection;
+        public float DashSpeed;
+        public float DashTime;
+        public float DashStart_Time;
+
+        void Start()
         {
-            // Application.targetFrameRate = 60;
+            DashTime = DashStart_Time;
             rb = GetComponent<Rigidbody>();
         }
         void Update()
@@ -41,7 +47,7 @@ namespace RunnerGame
             {
                 this.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 rb.velocity = new Vector3(0, rb.velocity.y, speed);
-            }
+            }         
         }
     }
 }
