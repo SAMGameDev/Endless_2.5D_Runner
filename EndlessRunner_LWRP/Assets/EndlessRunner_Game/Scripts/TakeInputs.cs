@@ -21,14 +21,14 @@ namespace RunnerGame
 
                 if (characterControl.IsGrounded)
                 {
+                   // characterControl.CanDoubleJump = true;
                     characterControl.Jump = true;
-                    characterControl.CanDoubleJump = true;
                 }
-                if (!characterControl.IsGrounded && characterControl.CanDoubleJump == true)
+               /* if (!characterControl.IsGrounded && characterControl.CanDoubleJump == true)
                 {
-                    characterControl.CanDoubleJump = false;
                     characterControl.DoubleJump = true;
-                }
+                    characterControl.CanDoubleJump = false;
+                }  */             
             }
             else
             {
@@ -38,6 +38,10 @@ namespace RunnerGame
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 characterControl.DoDash = true;
+            }
+            else
+            {
+                characterControl.DoDash = false;
             }
         }
     }

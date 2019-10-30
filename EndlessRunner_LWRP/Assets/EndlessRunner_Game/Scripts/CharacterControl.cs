@@ -8,11 +8,10 @@ namespace RunnerGame
     {
         //inputs
         public bool Jump;
-        public bool DoubleJump;
         public bool Dowalljump = false;
-        public bool CanDoubleJump;
         public bool DoDash;
-
+        // public bool DoubleJump;
+        // public bool CanDoubleJump;
 
         public bool IsGrounded;
         public bool move;
@@ -26,7 +25,7 @@ namespace RunnerGame
         public float DashStart_Time;
 
         void Start()
-        {
+        {      //1 if DashStartTime
             DashTime = DashStart_Time;
             rb = GetComponent<Rigidbody>();
         }
@@ -47,7 +46,13 @@ namespace RunnerGame
             {
                 this.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 rb.velocity = new Vector3(0, rb.velocity.y, speed);
-            }         
+            }
+
+            if (DoDash)
+            {
+                rb.velocity = new Vector3(0, rb.velocity.y, DashSpeed);
+            }
+
         }
     }
 }
