@@ -20,7 +20,8 @@ namespace RunnerGame
         protected float force_By_WallNormal;
       
         RaycastHit HitInfo;
-        GameObject obj;
+
+        public Vector3 RayPost;
 
         public BoxCollider dectorCollider;
         public CharacterControl characterControl;
@@ -69,8 +70,10 @@ namespace RunnerGame
         }
         void WallJumping()
         {
-            if (Physics.Raycast(transform.position, transform.forward, out HitInfo, 0.5f))
-            {
+            //Debug.DrawRay(this.transform.position + RayPost, transform.forward * 500f, Color.white);
+            if (Physics.Raycast(transform.position + RayPost , transform.forward, out HitInfo, 0.5f))
+            {              
+
                 if (characterControl.Dowalljump && !characterControl.IsGrounded && HitInfo.collider.tag == "RightWall")
                 {                   
                     characterControl.rb.velocity = Vector3.zero;

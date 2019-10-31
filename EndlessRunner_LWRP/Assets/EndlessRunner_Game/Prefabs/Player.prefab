@@ -79,14 +79,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Jump: 0
-  DoubleJump: 0
   Dowalljump: 0
-  CanDoubleJump: 0
   DoDash: 0
   IsGrounded: 0
   move: 0
   speed: 20
   rb: {fileID: 0}
+  DashSpeed: 400
+  DashTime: 0
+  DashStart_Time: 0.02
 --- !u!114 &4062899752063287556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,13 +113,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ece39cbc834904296b2df25dce8c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 10
-  DoubleJump_Force: 8
+  JumpForce: 12
+  DoubleJump_Force: 15
   FallMultiplier: 4
   lowJumpGravity: 2
   wallSlide_Down: 6
   force_By_WallNormal: 12
-  JumpForce_OnWall: 14
   dectorCollider: {fileID: 1583028038939364411}
   characterControl: {fileID: 0}
 --- !u!1 &1583028038939364409
