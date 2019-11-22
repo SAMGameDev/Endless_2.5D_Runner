@@ -4,56 +4,56 @@ using UnityEngine;
 
 namespace RunnerGame
 {
+    public enum TranistionParemeters
+    {
+        Jump,
+        ForceTransition,
+        Grounded,
+        Run,
+    }
     public class CharacterControl : MonoBehaviour
     {
         //inputs
         public bool Jump;
         public bool Dowalljump = false;
-        public bool DoDash;
-        // public bool DoubleJump;
-        // public bool CanDoubleJump;
+     
+        [SerializeField]
+        protected float FallMultiplier;
+        [SerializeField]
+        protected float lowJumpGravity;
 
-        public bool IsGrounded;
-        public bool move;
-
-        public float speed;
-        public Rigidbody rb;
-
-        //Dash Stuff. public vector3 moveDirection;
-        public float DashSpeed;
-        public float DashTime;
-        public float DashStart_Time;
-
-        void Start()
-        {      //1 if DashStartTime
-            DashTime = DashStart_Time;
-            rb = GetComponent<Rigidbody>();
-        }
-        void Update()
+        public Animator animator;
+        public BoxCollider Bcollider;
+        private Rigidbody rb;
+        public Rigidbody RIGIDBODY
         {
-            if (IsGrounded)
+            get
             {
-                move = true;
-            }
-            else
-            {
-                move = false;
+                if (rb == null)
+                {
+                    rb = GetComponent<Rigidbody>();
+                }
+                return rb;
             }
         }
         void FixedUpdate()
         {
-            if (move)
-            {
-                this.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-                rb.velocity = new Vector3(0, rb.velocity.y, speed);
-            }
-
-            if (DoDash)
-            {
-                rb.velocity = new Vector3(0, rb.velocity.y, DashSpeed);
-            }
-
+            ApplyGravity();
         }
+        public void ApplyGravity()
+        {
+            //if character is falling increase acceraltion
+            if (RIGIDBODY.velocity.y < 0f)
+            {
+                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
+            }
+            //if it's  in air make him fall don't keep going up
+            else if (RIGIDBODY.velocity.y > 0f && Jump == false)
+            {
+                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
+            }
+        }
+      
     }
 }
 

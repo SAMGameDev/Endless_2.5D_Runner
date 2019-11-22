@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1583028038604935020
 Transform:
   m_ObjectHideFlags: 0
@@ -119,6 +119,7 @@ MonoBehaviour:
   lowJumpGravity: 2
   wallSlide_Down: 6
   force_By_WallNormal: 12
+  RayPost: {x: 0, y: 0, z: 0}
   dectorCollider: {fileID: 1583028038939364411}
   characterControl: {fileID: 0}
 --- !u!1 &1583028038939364409
