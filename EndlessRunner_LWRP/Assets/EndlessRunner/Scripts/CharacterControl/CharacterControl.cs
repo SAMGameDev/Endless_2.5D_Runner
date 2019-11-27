@@ -10,14 +10,15 @@ namespace RunnerGame
         ForceTransition,
         Grounded,
         Run,
+        Dash,
     }
     public class CharacterControl : MonoBehaviour
     {
         //inputs
         public bool Jump;
         public bool Dowalljump = false;
-        public bool isGrounded;
-     
+        public bool Dash;
+
         [SerializeField]
         protected float FallMultiplier;
         [SerializeField]
@@ -25,6 +26,8 @@ namespace RunnerGame
 
         public Animator animator;
         public BoxCollider Bcollider;
+
+
         private Rigidbody rb;
         public Rigidbody RIGIDBODY
         {

@@ -25,6 +25,15 @@ namespace RunnerGame
                 characterControl.Dowalljump = false;
                 characterControl.Jump = false;
             }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                characterControl.Dash = true;
+            }
+            else
+            {
+                characterControl.Dash = false;
+            }
         }
     }
 }
