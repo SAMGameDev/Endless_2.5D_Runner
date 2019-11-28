@@ -11,6 +11,7 @@ namespace RunnerGame
         Grounded,
         Run,
         Dash,
+        DashISDone,
     }
     public class CharacterControl : MonoBehaviour
     {
