@@ -7,9 +7,6 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/GroundDector")]
     public class GroundDector : ScriptableObjectData
     {
-
-        public float hieght;
-        public LayerMask platforLayerMask;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
 
@@ -18,7 +15,7 @@ namespace RunnerGame
         {
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
 
-            if (isGrounded(control))
+            if (control.isGrounded)
             {
                 animator.SetBool(TranistionParemeters.Grounded.ToString(), true);
             }
@@ -26,32 +23,40 @@ namespace RunnerGame
             {
                 animator.SetBool(TranistionParemeters.Grounded.ToString(), false);
             }
+
+            /*   if (isGrounded(control))
+               {
+                   animator.SetBool(TranistionParemeters.Grounded.ToString(), true);
+               }
+               else
+               {
+                   animator.SetBool(TranistionParemeters.Grounded.ToString(), false);
+               }*/
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
 
         }
+        /*   private bool isGrounded(CharacterControl control)
+           {
+               RaycastHit hit;
+               Physics.Raycast(control.Bcollider.bounds.center, -Vector3.up, out hit, control.Bcollider.bounds.extents.y + hieght, platforLayerMask);
+               Color rayColor;
 
-        private bool isGrounded(CharacterControl control)
-        {
-            RaycastHit hit;
-            Physics.Raycast(control.Bcollider.bounds.center, -Vector3.up, out hit, control.Bcollider.bounds.extents.y + hieght, platforLayerMask);
-            Color rayColor;
+               if (hit.collider != null)
+               {
+                   rayColor = Color.white;
+                   Debug.Log(hit.collider.name);
+               }
+               else
+               {
+                   rayColor = Color.red;
+               }
 
-            if (hit.collider != null)
-            {
-                rayColor = Color.white;
-                Debug.Log(hit.collider.name);
-            }
-            else
-            {
-                rayColor = Color.red;
-            }
-
-            Debug.DrawRay(control.Bcollider.bounds.center, -Vector3.up * (control.Bcollider.bounds.extents.y + hieght), rayColor);
-            return hit.collider != null;
-        }
+               Debug.DrawRay(control.Bcollider.bounds.center, -Vector3.up * (control.Bcollider.bounds.extents.y + hieght), rayColor);
+               return hit.collider != null;
+           }*/
     }
 
 }

@@ -20,6 +20,8 @@ namespace RunnerGame
         public bool Dowalljump = false;
         public bool Dash;
 
+        public bool isGrounded;
+
         [SerializeField]
         protected float FallMultiplier;
         [SerializeField]
@@ -58,7 +60,21 @@ namespace RunnerGame
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
             }
         }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.gameObject.CompareTag("Ground"))
+            {
+                isGrounded = true;
+            }
+        }
 
+        private void OnCollisionExit(Collision collision)
+        {
+            if(collision.gameObject.CompareTag("Ground"))
+            {
+                isGrounded = false;
+            }
+        }
     }
 }
 

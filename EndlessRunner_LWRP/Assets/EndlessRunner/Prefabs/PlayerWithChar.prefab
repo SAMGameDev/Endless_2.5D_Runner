@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 897679848}
   m_Layer: 0
-  m_Name: SceneFollow_Temporary
+  m_Name: sceneFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897679847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.65, z: 0}
+  m_LocalPosition: {x: -0.01, y: 2.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4047275035033725583}
@@ -1101,8 +1101,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 3.33, z: 0.7}
-  m_Center: {x: 0, y: 1.658, z: 0}
+  m_Size: {x: 0.5, y: 3.33, z: 0.8}
+  m_Center: {x: 0, y: 1.59, z: 0}
 --- !u!114 &3233889761665017991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,6 +1133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Jump: 0
   Dowalljump: 0
+  Dash: 0
+  isGrounded: 0
   FallMultiplier: 4
   lowJumpGravity: 2
   animator: {fileID: 0}
@@ -1159,7 +1161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8234345583630404038}
   m_Layer: 0
-  m_Name: Cam_FollowOBJ
+  m_Name: CamFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1838,7 +1840,7 @@ GameObject:
   - component: {fileID: 5876302194928327463}
   - component: {fileID: 4541548686946711133}
   m_Layer: 0
-  m_Name: Girl_WithBenny
+  m_Name: Girl-WithBenny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
