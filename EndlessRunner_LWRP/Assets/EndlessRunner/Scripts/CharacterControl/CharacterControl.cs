@@ -11,7 +11,7 @@ namespace RunnerGame
         Grounded,
         Run,
         Dash,
-        DashISDone,
+        OnSlope,
     }
     public class CharacterControl : MonoBehaviour
     {
@@ -21,11 +21,14 @@ namespace RunnerGame
         public bool Dash;
 
         public bool isGrounded;
+        public bool isOnSlope;
 
         [SerializeField]
         protected float FallMultiplier;
         [SerializeField]
         protected float lowJumpGravity;
+        [SerializeField]
+        protected float FallMultiplieragain;
 
         public Animator animator;
         public BoxCollider Bcollider;
@@ -62,15 +65,24 @@ namespace RunnerGame
         }
         private void OnCollisionEnter(Collision collision)
         {
-            if(collision.gameObject.CompareTag("Ground"))
+            if (collision.gameObject.CompareTag("Ground"))
             {
                 isGrounded = true;
+            }
+            if (collision.contacts[0].normal != Vector3.up)
+            {               
+                Debug.Log("IT is a fucking slope");
+                isOnSlope = true;
+            }
+            else
+            {
+                isOnSlope = false;
             }
         }
 
         private void OnCollisionExit(Collision collision)
         {
-            if(collision.gameObject.CompareTag("Ground"))
+            if (collision.gameObject.CompareTag("Ground"))
             {
                 isGrounded = false;
             }

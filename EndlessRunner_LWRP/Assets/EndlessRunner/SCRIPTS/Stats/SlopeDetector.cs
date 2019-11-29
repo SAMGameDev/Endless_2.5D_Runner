@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace RunnerGame
 {
-    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/RunForward")]
-    public class RunningForward : ScriptableObjectData
+    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/SlopeDetector")]
+    public class SlopeDetector : ScriptableObjectData
     {
-        public float speed;
+        public float velOnY;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
 
@@ -16,14 +16,17 @@ namespace RunnerGame
         {
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
 
-            control.RIGIDBODY.velocity = new Vector3(0f, control.RIGIDBODY.velocity.y, speed);
-            control.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-
-            if (control.Jump)
+            if (control.isOnSlope)
             {
-                animator.SetBool(TranistionParemeters.Jump.ToString(), true);
+               
+                animator.SetBool(TranistionParemeters.OnSlope.ToString(), true);
+            }
+            else
+            {
+                animator.SetBool(TranistionParemeters.OnSlope.ToString(), false);
             }
         }
+
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
 
