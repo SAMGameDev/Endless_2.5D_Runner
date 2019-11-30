@@ -30,6 +30,8 @@ namespace RunnerGame
         [SerializeField]
         protected float FallMultiplieragain;
 
+        public float slopeFroce;
+
         public Animator animator;
         public BoxCollider Bcollider;
 
@@ -52,6 +54,10 @@ namespace RunnerGame
         }
         public void ApplyGravity()
         {
+            if(isOnSlope)
+            {
+                RIGIDBODY.AddForce(Vector3.down * slopeFroce);
+            }
             //if character is falling increase acceraltion
             if (RIGIDBODY.velocity.y < 0f)
             {

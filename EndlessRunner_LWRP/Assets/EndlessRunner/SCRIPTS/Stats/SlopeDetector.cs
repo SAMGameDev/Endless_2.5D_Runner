@@ -7,7 +7,6 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/SlopeDetector")]
     public class SlopeDetector : ScriptableObjectData
     {
-        public float velOnY;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
 
