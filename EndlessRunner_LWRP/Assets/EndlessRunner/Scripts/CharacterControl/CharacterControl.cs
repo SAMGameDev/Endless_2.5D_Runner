@@ -29,13 +29,11 @@ namespace RunnerGame
         protected float lowJumpGravity;
         [SerializeField]
         protected float FallMultiplieragain;
-
-        public float slopeFroce;
+        [SerializeField]
+        protected float slopeFroce;
 
         public Animator animator;
         public BoxCollider Bcollider;
-
-
         private Rigidbody rb;
         public Rigidbody RIGIDBODY
         {
@@ -54,7 +52,7 @@ namespace RunnerGame
         }
         public void ApplyGravity()
         {
-            if(isOnSlope)
+            if (isOnSlope)
             {
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             }
@@ -76,8 +74,7 @@ namespace RunnerGame
                 isGrounded = true;
             }
             if (collision.contacts[0].normal != Vector3.up)
-            {               
-                Debug.Log("IT is a fucking slope");
+            {
                 isOnSlope = true;
             }
             else
