@@ -67,19 +67,35 @@ namespace RunnerGame
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
             }
         }
-        private void OnCollisionEnter(Collision collision)
+        private void OnCollisionStay(Collision collision)
         {
             if (collision.gameObject.CompareTag("Ground"))
             {
                 isGrounded = true;
             }
-            if (collision.contacts[0].normal != Vector3.up)
+
+            /*  if (collision.contacts[0].normal != Vector3.up)
+              {
+                  isOnSlope = true;
+              }
+              else
+              {
+                  isOnSlope = false;
+              }*/
+
+            foreach (ContactPoint contact in collision.contacts)
             {
-                isOnSlope = true;
-            }
-            else
-            {
-                isOnSlope = false;
+                Debug.DrawRay(contact.point, contact.normal, Color.white, 0.2f);
+
+                if (contact.normal != Vector3.up)
+                {
+                    isOnSlope = true;
+                }
+                else
+                {
+                    isOnSlope = false;
+                }
+
             }
         }
 

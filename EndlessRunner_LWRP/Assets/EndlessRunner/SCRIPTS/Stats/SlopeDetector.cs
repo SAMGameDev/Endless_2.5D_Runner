@@ -17,7 +17,6 @@ namespace RunnerGame
 
             if (control.isOnSlope)
             {
-               
                 animator.SetBool(TranistionParemeters.OnSlope.ToString(), true);
             }
             else

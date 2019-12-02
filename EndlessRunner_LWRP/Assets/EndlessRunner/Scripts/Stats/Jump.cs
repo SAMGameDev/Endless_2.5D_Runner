@@ -10,25 +10,25 @@ namespace RunnerGame
         public float JumpForce;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            float normalJumpForce = 13;
-            float SlopeJumpForce = 22;
+            float normal_JumpForce = 13;
+            float Slope_JumpForce = 60;
 
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
 
-            if (control.isOnSlope)
+            if (!control.isOnSlope)
             {
-                JumpForce = SlopeJumpForce;
+                JumpForce = normal_JumpForce;
             }
             else
             {
-                JumpForce = normalJumpForce;
+                JumpForce = Slope_JumpForce;
             }
 
             control.RIGIDBODY.AddForce(Vector3.up * JumpForce, ForceMode.VelocityChange);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
+
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
