@@ -15,14 +15,16 @@ namespace RunnerGame
     }
     public class CharacterControl : MonoBehaviour
     {
-        //inputs
+        [Header("INPUTS")]
         public bool Jump;
         public bool Dowalljump = false;
         public bool Dash;
 
+        [Header("DETECTORS")]
         public bool isGrounded;
         public bool isOnSlope;
 
+        [Header("FLOATS")]
         [SerializeField]
         protected float FallMultiplier;
         [SerializeField]
@@ -32,7 +34,8 @@ namespace RunnerGame
         [SerializeField]
         protected float slopeFroce;
 
-        public Animator animator;
+        [Header("SUB-COMPONENTS")]
+        public Animator anim;
         public BoxCollider Bcollider;
         private Rigidbody rb;
         public Rigidbody RIGIDBODY
@@ -46,12 +49,19 @@ namespace RunnerGame
                 return rb;
             }
         }
+
+        private void Start()
+        {
+            anim = GetComponentInChildren<Animator>();
+            Bcollider = GetComponent<BoxCollider>();
+        }
         void FixedUpdate()
         {
             ApplyGravity();
         }
         public void ApplyGravity()
         {
+            //fixing that bouncing effect
             if (isOnSlope)
             {
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
@@ -67,35 +77,20 @@ namespace RunnerGame
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
             }
         }
-        private void OnCollisionStay(Collision collision)
+        private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Ground"))
             {
                 isGrounded = true;
             }
 
-            /*  if (collision.contacts[0].normal != Vector3.up)
-              {
-                  isOnSlope = true;
-              }
-              else
-              {
-                  isOnSlope = false;
-              }*/
-
-            foreach (ContactPoint contact in collision.contacts)
+            if (collision.contacts[0].normal != Vector3.up)
             {
-                Debug.DrawRay(contact.point, contact.normal, Color.white, 0.2f);
-
-                if (contact.normal != Vector3.up)
-                {
-                    isOnSlope = true;
-                }
-                else
-                {
-                    isOnSlope = false;
-                }
-
+                isOnSlope = true;
+            }
+            else
+            {
+                isOnSlope = false;
             }
         }
 
