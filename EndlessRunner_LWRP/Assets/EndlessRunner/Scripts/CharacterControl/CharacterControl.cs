@@ -30,8 +30,6 @@ namespace RunnerGame
         [SerializeField]
         protected float lowJumpGravity;
         [SerializeField]
-        protected float FallMultiplieragain;
-        [SerializeField]
         protected float slopeFroce;
 
         [Header("SUB-COMPONENTS")]

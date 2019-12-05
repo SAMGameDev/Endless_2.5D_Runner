@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 3233889761665017992}
   - component: {fileID: 3233889761665017993}
   m_Layer: 0
-  m_Name: PlayerWithChar
+  m_Name: MainPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1137,8 +1137,8 @@ MonoBehaviour:
   isGrounded: 0
   isOnSlope: 0
   FallMultiplier: 4
-  lowJumpGravity: 2
-  FallMultiplieragain: 3
+  lowJumpGravity: 2.2
+  FallMultiplieragain: 3.2
   slopeFroce: 40
   anim: {fileID: 0}
   Bcollider: {fileID: 0}

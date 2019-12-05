@@ -16,7 +16,7 @@ namespace RunnerGame
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
 
             if (control.isOnSlope)
-            {
+            {                
                 animator.SetBool(TranistionParemeters.OnSlope.ToString(), true);
             }
             else
