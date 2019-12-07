@@ -47,7 +47,6 @@ namespace RunnerGame
                 return rb;
             }
         }
-
         private void Start()
         {
             anim = GetComponentInChildren<Animator>();
@@ -65,6 +64,7 @@ namespace RunnerGame
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             }
             //if character is falling increase acceraltion
+
             if (RIGIDBODY.velocity.y < 0f)
             {
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;

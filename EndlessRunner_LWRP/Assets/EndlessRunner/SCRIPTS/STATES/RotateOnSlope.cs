@@ -18,8 +18,9 @@ namespace RunnerGame
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
 
             RaycastHit hit;
+
             Ray ray = new Ray(control.transform.position, -control.transform.up);
-            if (Physics.Raycast(ray, out hit, 3.3f))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 Debug.DrawRay(hit.point, hit.normal * 3.3f, Color.white);
                

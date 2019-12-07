@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897679847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.7, z: 0}
+  m_LocalPosition: {x: 0, y: 2.343, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4047275035033725583}
@@ -1047,7 +1047,6 @@ GameObject:
   - component: {fileID: 4047275035033725583}
   - component: {fileID: 4047275035033725576}
   - component: {fileID: 4047275035033725577}
-  - component: {fileID: 3233889761665017991}
   - component: {fileID: 3233889761665017992}
   - component: {fileID: 3233889761665017993}
   m_Layer: 0
@@ -1103,22 +1102,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 3.33, z: 0.44}
   m_Center: {x: 0, y: 1.565, z: 0}
---- !u!114 &3233889761665017991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4047275035033725556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82ece39cbc834904296b2df25dce8c7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wallSlide_Down: 2
-  force_By_WallNormal: 12
-  JumpForce2: 0
-  RayPost: {x: 0, y: 1, z: 0}
 --- !u!114 &3233889761665017992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,9 +1119,8 @@ MonoBehaviour:
   Dash: 0
   isGrounded: 0
   isOnSlope: 0
-  FallMultiplier: 4
+  FallMultiplier: 3.2
   lowJumpGravity: 2.2
-  FallMultiplieragain: 3.2
   slopeFroce: 40
   anim: {fileID: 0}
   Bcollider: {fileID: 0}
@@ -1178,7 +1160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4308736197791273491}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.05, z: 0}
+  m_LocalPosition: {x: 0, y: 2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4047275035033725583}
