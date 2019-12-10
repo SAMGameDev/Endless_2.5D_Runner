@@ -20,9 +20,9 @@ namespace RunnerGame
             RaycastHit hit;
 
             Ray ray = new Ray(control.transform.position, -control.transform.up);
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit,1f))
             {
-                Debug.DrawRay(hit.point, hit.normal * 3.3f, Color.white);
+                Debug.DrawRay(hit.point, hit.normal * 0.5f, Color.white);
                
                 Quaternion rot = Quaternion.LookRotation(Vector3.Cross(control.transform.right, hit.normal));
                 control.transform.rotation = Quaternion.Slerp(control.transform.rotation, rot, smoothRottation * Time.deltaTime);
