@@ -444,9 +444,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0
+  m_TransitionDuration: 0.037601143
+  m_TransitionOffset: 0.37147564
+  m_ExitTime: 14.116044
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -674,8 +674,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptableObjectDatas:
   - {fileID: 11400000, guid: efa510ca4c84dd048a994e49d3d4130f, type: 2}
-  - {fileID: 11400000, guid: 2f90b39e9a4f3ff42813375074711c0f, type: 2}
   - {fileID: 11400000, guid: b3840abe570313543b9f99e352337417, type: 2}
+  - {fileID: 11400000, guid: 2f90b39e9a4f3ff42813375074711c0f, type: 2}
 --- !u!1101 &4072430131596754259
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -841,7 +841,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Female Action Pose
+  m_Name: Sliding
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -850,14 +850,14 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: 3749219655783524161}
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 52d6e14835a5d604a9980c47a42cfc3e,
+  m_Motion: {fileID: -203655887218126122, guid: fc0ef4aff97b2554c99ba241674504b5,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -998,9 +998,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.24141005
-  m_TransitionOffset: 0.51539683
-  m_ExitTime: 0.6188263
+  m_TransitionDuration: 0.09874499
+  m_TransitionOffset: 8.74449
+  m_ExitTime: 0.83538145
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

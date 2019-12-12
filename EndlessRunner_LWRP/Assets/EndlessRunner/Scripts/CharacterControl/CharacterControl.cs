@@ -52,6 +52,11 @@ namespace RunnerGame
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
+
+        private void Update()
+        {
+           Time.timeScale = 0.4f;
+        }
         void FixedUpdate()
         {
             ApplyGravity();
@@ -75,7 +80,7 @@ namespace RunnerGame
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
             }
         }
-        private void OnCollisionEnter(Collision collision)
+        private void OnCollisionStay(Collision collision)
         {
             if (collision.gameObject.CompareTag("Ground"))
             {
