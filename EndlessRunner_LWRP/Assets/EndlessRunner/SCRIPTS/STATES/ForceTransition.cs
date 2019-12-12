@@ -7,8 +7,9 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/ForceTransition")]
     public class ForceTransition : ScriptableObjectData
     {
+        [SerializeField]
         [Range(0.01f, 1f)]
-        public float TransitionTiming;
+        protected float TransitionTiming;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
 
@@ -17,7 +18,7 @@ namespace RunnerGame
         {
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
 
-            if(stateInfo.normalizedTime >= TransitionTiming)
+            if (stateInfo.normalizedTime >= TransitionTiming)
             {
                 animator.SetBool(TranistionParemeters.ForceTransition.ToString(), true);
             }

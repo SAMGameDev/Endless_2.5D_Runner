@@ -24,14 +24,6 @@ namespace RunnerGame
         public bool isGrounded;
         public bool isOnSlope;
 
-        [Header("FLOATS")]
-        [SerializeField]
-        protected float FallMultiplier;
-        [SerializeField]
-        protected float lowJumpGravity;
-        [SerializeField]
-        protected float slopeFroce;
-
         [Header("SUB-COMPONENTS")]
         public Animator anim;
         public BoxCollider Bcollider;
@@ -52,17 +44,19 @@ namespace RunnerGame
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
-
-        private void Update()
-        {
-           Time.timeScale = 0.4f;
-        }
         void FixedUpdate()
         {
             ApplyGravity();
         }
         public void ApplyGravity()
         {
+
+            float FallMultiplier = 3.2f;
+
+            float lowJumpGravity = 2.2f;
+
+            float slopeFroce = 60f;
+
             //fixing that bouncing effect
             if (isOnSlope)
             {

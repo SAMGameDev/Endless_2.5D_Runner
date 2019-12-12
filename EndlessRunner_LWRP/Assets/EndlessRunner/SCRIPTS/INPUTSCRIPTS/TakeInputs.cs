@@ -1,24 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
 namespace RunnerGame
 {
     public class TakeInputs : MonoBehaviour
     {
-        private CharacterControl characterControl;
+        CharacterControl characterControl;
         void Start()
         {
             characterControl = GetComponent<CharacterControl>();
         }
         void Update()
         {
-            if (CrossPlatformInputManager.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetMouseButton(0) && Input.mousePosition.x <= Screen.width / 2
+                || Input.GetKeyDown(KeyCode.Space))
             {
                 characterControl.Dowalljump = true;
                 characterControl.Jump = true;
-
             }
             else
             {
@@ -26,7 +25,8 @@ namespace RunnerGame
                 characterControl.Jump = false;
             }
 
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2
+                || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 characterControl.Dash = true;
             }
