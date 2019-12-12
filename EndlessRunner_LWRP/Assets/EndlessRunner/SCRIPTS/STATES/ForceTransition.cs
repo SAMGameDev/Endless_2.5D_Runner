@@ -12,7 +12,6 @@ namespace RunnerGame
         protected float TransitionTiming;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
