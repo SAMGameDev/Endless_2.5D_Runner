@@ -24,6 +24,14 @@ namespace RunnerGame
         public bool isGrounded;
         public bool isOnSlope;
 
+        [Header("Floats")]
+        [SerializeField]
+        float FallMultiplier;
+        [SerializeField]
+        float lowJumpGravity;
+        [SerializeField]
+        float slopeFroce;
+
         [Header("SUB-COMPONENTS")]
         public Animator anim;
         public BoxCollider Bcollider;
@@ -50,13 +58,6 @@ namespace RunnerGame
         }
         public void ApplyGravity()
         {
-
-            float FallMultiplier = 3.2f;
-
-            float lowJumpGravity = 2.2f;
-
-            float slopeFroce = 60f;
-
             //fixing that bouncing effect
             if (isOnSlope)
             {
@@ -76,12 +77,12 @@ namespace RunnerGame
         }
         private void OnCollisionStay(Collision collision)
         {
-            if (collision.gameObject.CompareTag("Ground"))
+            if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
             {
                 isGrounded = true;
             }
 
-            if (collision.contacts[0].normal != Vector3.up)
+            if (collision.gameObject.CompareTag("Slope"))
             {
                 isOnSlope = true;
             }
