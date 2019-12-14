@@ -26,11 +26,11 @@ namespace RunnerGame
 
         [Header("Floats")]
         [SerializeField]
-        float FallMultiplier;
+        protected float FallMultiplier;
         [SerializeField]
-        float lowJumpGravity;
+        protected float lowJumpGravity;
         [SerializeField]
-        float slopeFroce;
+        protected float slopeFroce;
 
         [Header("SUB-COMPONENTS")]
         public Animator anim;
@@ -49,8 +49,15 @@ namespace RunnerGame
         }
         private void Start()
         {
+            QualitySettings.vSyncCount = 0;
+            Application.targetFrameRate = 60;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
+        }
+
+        public void Update()
+        {
+            Debug.Log(Application.targetFrameRate);
         }
         void FixedUpdate()
         {
