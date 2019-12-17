@@ -16,7 +16,7 @@ namespace RunnerGame
     public class CharacterControl : MonoBehaviour
     {
         [Header("INPUTS")]
-        public bool Jump;    
+        public bool Jump;
         public bool Dash;
 
         [Header("DETECTORS")]
@@ -59,13 +59,7 @@ namespace RunnerGame
         }
         public void ApplyGravity()
         {
-            //fixing that bouncing effect
-            if (isOnSlope)
-            {
-                RIGIDBODY.AddForce(Vector3.down * slopeFroce);
-            }
             //if character is falling increase acceraltion
-
             if (RIGIDBODY.velocity.y < 0f)
             {
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
@@ -74,6 +68,11 @@ namespace RunnerGame
             else if (RIGIDBODY.velocity.y > 0f && Jump == false)
             {
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
+            }
+            //fixing that bouncing effect
+            if (isOnSlope)
+            {
+                RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             }
         }
         private void OnCollisionStay(Collision collision)
