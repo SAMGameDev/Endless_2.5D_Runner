@@ -17,7 +17,6 @@ namespace RunnerGame
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
 
             control.RIGIDBODY.velocity = new Vector3(0f, control.RIGIDBODY.velocity.y, speed);
-            control.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
 
             if (control.Jump)
             {

@@ -16,8 +16,7 @@ namespace RunnerGame
     public class CharacterControl : MonoBehaviour
     {
         [Header("INPUTS")]
-        public bool Jump;
-        public bool Dowalljump = false;
+        public bool Jump;    
         public bool Dash;
 
         [Header("DETECTORS")]
@@ -50,14 +49,9 @@ namespace RunnerGame
         private void Start()
         {
             QualitySettings.vSyncCount = 0;
-            Application.targetFrameRate = 60;
+            Application.targetFrameRate = 65;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
-        }
-
-        public void Update()
-        {
-            Debug.Log(Application.targetFrameRate);
         }
         void FixedUpdate()
         {
@@ -88,7 +82,6 @@ namespace RunnerGame
             {
                 isGrounded = true;
             }
-
             if (collision.gameObject.CompareTag("Slope"))
             {
                 isOnSlope = true;
@@ -101,7 +94,7 @@ namespace RunnerGame
 
         private void OnCollisionExit(Collision collision)
         {
-            if (collision.gameObject.CompareTag("Ground"))
+            if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
             {
                 isGrounded = false;
             }

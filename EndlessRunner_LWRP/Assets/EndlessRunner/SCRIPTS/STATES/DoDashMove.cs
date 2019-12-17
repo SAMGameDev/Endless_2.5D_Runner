@@ -15,7 +15,6 @@ namespace RunnerGame
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
-
             Vector3 vel = control.RIGIDBODY.velocity;
             vel.z = 0f;
             control.RIGIDBODY.velocity = vel;
