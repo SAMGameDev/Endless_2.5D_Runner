@@ -98,6 +98,10 @@ namespace RunnerGame
             {
                 isGrounded = false;
             }
+            if (collision.gameObject.CompareTag("Slope"))
+            {
+                isOnSlope = false;
+            }
         }
     }
 }
