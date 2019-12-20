@@ -53,6 +53,12 @@ namespace RunnerGame
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
+
+        private void Update()
+        {
+           // Time.timeScale = 0.08f;         
+        }
+
         void FixedUpdate()
         {
             ApplyGravity();
@@ -73,9 +79,11 @@ namespace RunnerGame
             if (isOnSlope)
             {
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
+                //RIGIDBODY.velocity = new Vector3(0, -slopeFroce, RIGIDBODY.velocity.z);
             }
+
         }
-        private void OnCollisionStay(Collision collision)
+        private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
             {
