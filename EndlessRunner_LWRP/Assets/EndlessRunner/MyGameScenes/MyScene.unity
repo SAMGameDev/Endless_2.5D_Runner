@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: bffb24f385153094f8cce509ab5d0a5f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1357,6 +1357,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 3233889761665017992, guid: 2b12dbd07c8531b4a897f398dc0f0bde,
+        type: 3}
+      propertyPath: slopeFroce
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 4047275035033725583, guid: 2b12dbd07c8531b4a897f398dc0f0bde,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1411,11 +1416,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3233889761665017992, guid: 2b12dbd07c8531b4a897f398dc0f0bde,
-        type: 3}
-      propertyPath: slopeFroce
-      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b12dbd07c8531b4a897f398dc0f0bde, type: 3}
