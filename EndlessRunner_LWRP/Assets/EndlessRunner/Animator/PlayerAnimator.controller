@@ -166,9 +166,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: ForceTransition
     m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: Grounded
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7254284013093707124}
   m_Solo: 0
@@ -719,8 +716,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: Jump
+  - m_ConditionMode: 1
+    m_ConditionEvent: ForceTransition
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5984723750503210836}
@@ -992,6 +989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptableObjectDatas:
   - {fileID: 11400000, guid: 0b53f75c209b89b408c45ed71a23e92e, type: 2}
+  - {fileID: 11400000, guid: 23b09c48e4ea9644281fb0e93b754923, type: 2}
 --- !u!1102 &8035600168223188893
 AnimatorState:
   serializedVersion: 5
