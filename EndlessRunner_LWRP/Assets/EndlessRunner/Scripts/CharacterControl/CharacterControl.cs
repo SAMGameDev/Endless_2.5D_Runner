@@ -48,15 +48,15 @@ namespace RunnerGame
         }
         private void Start()
         {
-          //  QualitySettings.vSyncCount = 0;
-          //  Application.targetFrameRate = 65;
+            //  QualitySettings.vSyncCount = 0;
+            //  Application.targetFrameRate = 65;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
 
-        private void Update()
+        void Update()
         {
-            Time.timeScale = 0.2f;         
+            // Time.timeScale = 0.2f;         
         }
 
         void FixedUpdate()
@@ -79,7 +79,6 @@ namespace RunnerGame
             if (isOnSlope)
             {
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
-                //RIGIDBODY.velocity = new Vector3(0, -slopeFroce, RIGIDBODY.velocity.z);
             }
 
         }
@@ -93,10 +92,6 @@ namespace RunnerGame
             {
                 isOnSlope = true;
             }
-          /*  else
-            {
-                isOnSlope = false;
-            }*/
         }
 
         private void OnCollisionExit(Collision collision)
