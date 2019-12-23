@@ -48,15 +48,15 @@ namespace RunnerGame
         }
         private void Start()
         {
-            //  QualitySettings.vSyncCount = 0;
-            //  Application.targetFrameRate = 65;
+            QualitySettings.vSyncCount = 0;
+            Application.targetFrameRate = 65;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
 
         void Update()
         {
-            // Time.timeScale = 0.2f;         
+            //Time.timeScale = 0.15f;
         }
 
         void FixedUpdate()
