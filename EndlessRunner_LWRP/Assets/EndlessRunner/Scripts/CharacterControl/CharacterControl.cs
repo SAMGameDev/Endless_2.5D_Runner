@@ -46,7 +46,7 @@ namespace RunnerGame
                 return rb;
             }
         }
-        private void Start()
+        void Start()
         {
             QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = 65;
