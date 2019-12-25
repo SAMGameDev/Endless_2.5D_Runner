@@ -21,12 +21,12 @@ namespace RunnerGame
             RaycastHit hit;
 
             Ray ray = new Ray(control.transform.position, -control.transform.up);
-            if (Physics.Raycast(ray, out hit, 1f))
+            if (Physics.Raycast(ray, out hit, 0.7f))
             {
                 Quaternion rot = Quaternion.LookRotation(Vector3.Cross(control.transform.right, hit.normal));
                 control.transform.rotation = Quaternion.Slerp(control.transform.rotation, rot, smoothRottation * Time.deltaTime);
             }
-           // Debug.DrawRay(control.transform.position, -control.transform.up, Color.white);
+            Debug.DrawRay(control.transform.position, -control.transform.up * 0.7f, Color.white);
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

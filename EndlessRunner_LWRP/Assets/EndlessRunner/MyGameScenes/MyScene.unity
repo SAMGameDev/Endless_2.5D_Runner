@@ -329,7 +329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &990460065
 Transform:
   m_ObjectHideFlags: 0
@@ -578,7 +578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322051551}
   m_LocalRotation: {x: 0.14177668, y: -0, z: -0, w: 0.9898987}
-  m_LocalPosition: {x: 0, y: 0, z: 591}
+  m_LocalPosition: {x: 0, y: -114.45, z: 591}
   m_LocalScale: {x: 8, y: 5, z: 100}
   m_Children:
   - {fileID: 990460065}
@@ -1121,7 +1121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692425238659099068}
   m_LocalRotation: {x: 0.11450429, y: -0.27029473, z: 0.032394953, w: 0.9553953}
-  m_LocalPosition: {x: 8.66, y: -78.68, z: 504.63004}
+  m_LocalPosition: {x: 8.66, y: -91.950005, z: 379.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1692425239356515909}
@@ -1306,7 +1306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3671718746086388473}
   m_LocalRotation: {x: 0.11450429, y: -0.27029473, z: 0.032394953, w: 0.9553953}
-  m_LocalPosition: {x: 8.66, y: -78.68, z: 504.63004}
+  m_LocalPosition: {x: 8.66, y: -91.950005, z: 379.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1370,12 +1370,12 @@ PrefabInstance:
     - target: {fileID: 4047275035033725583, guid: 2b12dbd07c8531b4a897f398dc0f0bde,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -84.63
+      value: -97.9
       objectReference: {fileID: 0}
     - target: {fileID: 4047275035033725583, guid: 2b12dbd07c8531b4a897f398dc0f0bde,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 518.71
+      value: 393.49
       objectReference: {fileID: 0}
     - target: {fileID: 4047275035033725583, guid: 2b12dbd07c8531b4a897f398dc0f0bde,
         type: 3}
@@ -1416,6 +1416,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109292110, guid: 2b12dbd07c8531b4a897f398dc0f0bde, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b12dbd07c8531b4a897f398dc0f0bde, type: 3}
