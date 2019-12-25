@@ -49,21 +49,21 @@ namespace RunnerGame
         void Start()
         {
             QualitySettings.vSyncCount = 0;
-            Application.targetFrameRate = 65;
+            Application.targetFrameRate = 60;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
 
         void Update()
         {
-            //Time.timeScale = 0.15f;
+            Time.timeScale = 0.6f;
         }
 
         void FixedUpdate()
         {
             ApplyGravity();
         }
-        public void ApplyGravity()
+        void ApplyGravity()
         {
             //if character is falling increase acceraltion
             if (RIGIDBODY.velocity.y < 0f)
@@ -82,7 +82,7 @@ namespace RunnerGame
             }
 
         }
-        private void OnCollisionEnter(Collision collision)
+        void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
             {
@@ -94,16 +94,16 @@ namespace RunnerGame
             }
         }
 
-        private void OnCollisionExit(Collision collision)
+        void OnCollisionExit(Collision collision)
         {
-            if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
-            {
+            //if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
+           // {
                 isGrounded = false;
-            }
-            if (collision.gameObject.CompareTag("Slope"))
-            {
+           // }
+           // if (collision.gameObject.CompareTag("Slope"))
+           // {
                 isOnSlope = false;
-            }
+           // }
         }
     }
 }
