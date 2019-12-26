@@ -7,7 +7,7 @@ namespace RunnerGame
     public class TakeInputs : MonoBehaviour
     {
         CharacterControl characterControl;
-        void Start()
+        void Awake()
         {
             characterControl = GetComponent<CharacterControl>();
         }
@@ -16,24 +16,24 @@ namespace RunnerGame
             if (Input.GetMouseButton(0) && Input.mousePosition.x <= Screen.width / 2
                 || Input.GetKeyDown(KeyCode.Space))
             {
-               // characterControl.Dowalljump = true;
+                // characterControl.Dowalljump = true;
                 characterControl.Jump = true;
             }
-            else
-            {
-                //characterControl.Dowalljump = false;
-                characterControl.Jump = false;
-            }
-
-            if (Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2
-                || Input.GetKeyDown(KeyCode.RightArrow))
+            else if (Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2
+               || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 characterControl.Dash = true;
             }
             else
             {
+                //characterControl.Dowalljump = false;
+                characterControl.Jump = false;
                 characterControl.Dash = false;
             }
+            /*  else
+              {
+                  characterControl.Dash = false;
+              }*/
         }
     }
 }
