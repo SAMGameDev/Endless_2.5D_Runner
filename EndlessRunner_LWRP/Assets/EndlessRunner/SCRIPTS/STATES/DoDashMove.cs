@@ -12,14 +12,7 @@ namespace RunnerGame
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
-
-           // CharacterControl control = playerStateBase.GetCharacterControl(animator);
             control.RIGIDBODY.velocity = new Vector3(0f, control.RIGIDBODY.velocity.y, DashForce);
-            /*Vector3 vel = control.RIGIDBODY.velocity;
-            vel.z = 0f;
-            control.RIGIDBODY.velocity = vel;
-
-            control.RIGIDBODY.AddForce(Vector3.forward * DashForce, ForceMode.Impulse);*/
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -27,7 +20,7 @@ namespace RunnerGame
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-         
+
         }
     }
 

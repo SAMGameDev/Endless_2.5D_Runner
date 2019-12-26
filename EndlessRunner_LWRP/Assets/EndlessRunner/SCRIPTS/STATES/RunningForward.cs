@@ -22,7 +22,7 @@ namespace RunnerGame
             {
                 animator.SetBool(TranistionParemeters.Jump.ToString(), true);
             }
-            if(control.Dash)
+            if (control.Dash)
             {
                 animator.SetBool(TranistionParemeters.Dash.ToString(), true);
             }
