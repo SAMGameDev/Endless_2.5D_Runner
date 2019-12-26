@@ -11,19 +11,23 @@ namespace RunnerGame
         protected float DashForce;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-        }
-        public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
-        {
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
-            Vector3 vel = control.RIGIDBODY.velocity;
+
+           // CharacterControl control = playerStateBase.GetCharacterControl(animator);
+            control.RIGIDBODY.velocity = new Vector3(0f, control.RIGIDBODY.velocity.y, DashForce);
+            /*Vector3 vel = control.RIGIDBODY.velocity;
             vel.z = 0f;
             control.RIGIDBODY.velocity = vel;
 
-            control.RIGIDBODY.AddForce(Vector3.forward * DashForce, ForceMode.VelocityChange);
+            control.RIGIDBODY.AddForce(Vector3.forward * DashForce, ForceMode.Impulse);*/
+        }
+        public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
+        {
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+         
         }
     }
 

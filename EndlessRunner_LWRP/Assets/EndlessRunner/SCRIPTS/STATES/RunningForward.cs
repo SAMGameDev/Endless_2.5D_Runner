@@ -10,7 +10,7 @@ namespace RunnerGame
         public float speed;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
+            animator.SetBool(TranistionParemeters.Dash.ToString(), false);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -21,6 +21,10 @@ namespace RunnerGame
             if (control.Jump)
             {
                 animator.SetBool(TranistionParemeters.Jump.ToString(), true);
+            }
+            if(control.Dash)
+            {
+                animator.SetBool(TranistionParemeters.Dash.ToString(), true);
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
