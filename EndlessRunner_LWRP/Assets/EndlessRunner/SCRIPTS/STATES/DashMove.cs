@@ -4,30 +4,23 @@ using UnityEngine;
 
 namespace RunnerGame
 {
-    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/DashMove")]
+    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/DoDashMove")]
     public class DashMove : ScriptableObjectData
     {
+        [SerializeField]
+        protected float DashForce;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
-
-            if (control.Dash)
-            {
-                animator.SetBool(TranistionParemeters.Dash.ToString(), true);
-
-            }
-            else
-            {
-                animator.SetBool(TranistionParemeters.Dash.ToString(), false);
-            }
+            control.RIGIDBODY.AddForce(Vector3.forward * DashForce, ForceMode.Force);
         }
+
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
     }
+
 }

@@ -96,14 +96,8 @@ namespace RunnerGame
 
         void OnCollisionExit(Collision collision)
         {
-            //if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
-           // {
-                isGrounded = false;
-           // }
-           // if (collision.gameObject.CompareTag("Slope"))
-           // {
-                isOnSlope = false;
-           // }
+            isGrounded = false;
+            isOnSlope = false;
         }
     }
 }

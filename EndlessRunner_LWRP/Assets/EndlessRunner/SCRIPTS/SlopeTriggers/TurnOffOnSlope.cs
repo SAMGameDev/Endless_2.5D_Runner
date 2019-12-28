@@ -10,9 +10,13 @@ namespace RunnerGame
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.isTrigger && other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("Player"))
             {
                 Ccontrol.isOnSlope = false;
+            }
+            else
+            {
+                return;
             }
         }
     }

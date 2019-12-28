@@ -29,11 +29,7 @@ namespace RunnerGame
                 //characterControl.Dowalljump = false;
                 characterControl.Jump = false;
                 characterControl.Dash = false;
-            }
-            /*  else
-              {
-                  characterControl.Dash = false;
-              }*/
+            }         
         }
     }
 }
