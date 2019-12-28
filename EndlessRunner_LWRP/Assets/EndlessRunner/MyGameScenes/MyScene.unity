@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 112000000, guid: bffb24f385153094f8cce509ab5d0a5f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1401,11 +1401,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520459909538102, guid: 734cc7b3bcf18430e914f983a4108584, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.26010644
+      value: -0.2601064
       objectReference: {fileID: 0}
     - target: {fileID: 4520459909538102, guid: 734cc7b3bcf18430e914f983a4108584, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.028344657
+      value: 0.028344642
       objectReference: {fileID: 0}
     - target: {fileID: 4520459909538102, guid: 734cc7b3bcf18430e914f983a4108584, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1853,7 +1853,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692425238659099068}
-  m_LocalRotation: {x: 0.10455795, y: -0.26010644, z: 0.028344657, w: 0.9594837}
+  m_LocalRotation: {x: 0.10455795, y: -0.2601064, z: 0.028344642, w: 0.9594837}
   m_LocalPosition: {x: 7.9, y: -32.3, z: 489.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2032,26 +2032,6 @@ PrefabInstance:
     - target: {fileID: 5422730396343348129, guid: fbd81fa6c8ec9bb4aa9e373b12b9d619,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9184903949159903559, guid: fbd81fa6c8ec9bb4aa9e373b12b9d619,
-        type: 3}
-      propertyPath: m_Name
-      value: White-MartialArts_Guy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8316925458817892550, guid: fbd81fa6c8ec9bb4aa9e373b12b9d619,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8414637564601924091, guid: fbd81fa6c8ec9bb4aa9e373b12b9d619,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8414637564601924091, guid: fbd81fa6c8ec9bb4aa9e373b12b9d619,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
