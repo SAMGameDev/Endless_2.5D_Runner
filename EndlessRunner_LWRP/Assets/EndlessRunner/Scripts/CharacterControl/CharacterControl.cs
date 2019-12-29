@@ -49,7 +49,7 @@ namespace RunnerGame
         void Start()
         {
             QualitySettings.vSyncCount = 0;
-            Application.targetFrameRate = 60;
+            Application.targetFrameRate = 75;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
