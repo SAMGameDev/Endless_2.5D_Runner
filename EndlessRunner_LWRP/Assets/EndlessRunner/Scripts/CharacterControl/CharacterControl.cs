@@ -82,7 +82,7 @@ namespace RunnerGame
             }
 
         }
-        void OnCollisionEnter(Collision collision)
+        void OnCollisionStay(Collision collision)
         {
             if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
             {
