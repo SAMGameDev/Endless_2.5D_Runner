@@ -31,6 +31,13 @@ namespace RunnerGame
         [SerializeField]
         protected float slopeFroce;
 
+        [Header("UpdateBoxCollider")]
+        public Vector3 targetSize_C;
+        public float SizeUpdate_Speed_C;
+        public Vector3 targetCenter_C;
+        public float CenterUpdate_Speed_C;
+        public bool UpdateNow;
+
         [Header("SUB-COMPONENTS")]
         public Animator anim;
         public BoxCollider Bcollider;
@@ -61,6 +68,8 @@ namespace RunnerGame
 
         void FixedUpdate()
         {
+            UpdateCenter();
+            UpdateSize();
             ApplyGravity();
         }
         void ApplyGravity()
@@ -75,12 +84,37 @@ namespace RunnerGame
             {
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
             }
-            //fixing that bouncing effect
+            //fixing that bouncing effect On Slope
             if (isOnSlope)
             {
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             }
+        }
+        void UpdateCenter()
+        {
+            if (!UpdateNow)
+            {
+                return;
+            }
 
+            if (Vector3.SqrMagnitude(Bcollider.center - targetCenter_C) > 0.01f)
+            {
+                Bcollider.center = Vector3.Lerp(Bcollider.center, targetCenter_C,
+                    Time.fixedDeltaTime * CenterUpdate_Speed_C);
+            }
+        }
+        void UpdateSize()
+        {
+            if (!UpdateNow)
+            {
+                return;
+            }
+
+            if (Vector3.SqrMagnitude(Bcollider.size - targetSize_C) > 0.01f)
+            {
+                Bcollider.size = Vector3.Lerp(Bcollider.size, targetSize_C,
+                    Time.fixedDeltaTime * SizeUpdate_Speed_C);
+            }
         }
         void OnCollisionStay(Collision collision)
         {
