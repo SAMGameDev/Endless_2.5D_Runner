@@ -20,7 +20,7 @@ namespace RunnerGame
             control.CenterUpdate_Speed_C = CenterUpdate_Speed;
             control.targetSize_C = targetSize;
             control.SizeUpdate_Speed_C = SizeUpdate_Speed;
-           
+
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

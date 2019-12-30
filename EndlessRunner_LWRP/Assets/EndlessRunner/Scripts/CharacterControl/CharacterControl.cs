@@ -63,7 +63,7 @@ namespace RunnerGame
 
         void Update()
         {
-            //Time.timeScale = 0.25f;
+           // Time.timeScale = 0.4f;
         }
 
         void FixedUpdate()
