@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310347782969622712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.25, z: 0}
+  m_LocalPosition: {x: 0, y: 2.3, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 5422730396343348129}
@@ -95,7 +95,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 3.8, z: 0.57}
-  m_Center: {x: 0, y: 1.81, z: 0.14}
+  m_Center: {x: 0, y: 1.74, z: 0.14}
 --- !u!114 &6884510939604789670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,11 +110,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Jump: 0
   Dash: 0
-  isGrounded: 0
+  isGrounded: 1
   isOnSlope: 0
-  FallMultiplier: 3.5
+  FallMultiplier: 5
   lowJumpGravity: 2.5
-  slopeFroce: 500
+  slopeFroce: 400
+  targetSize_C: {x: 0, y: 0, z: 0}
+  SizeUpdate_Speed_C: 0
+  targetCenter_C: {x: 0, y: 0, z: 0}
+  CenterUpdate_Speed_C: 0
+  UpdateNow: 0
   anim: {fileID: 0}
   Bcollider: {fileID: 0}
 --- !u!114 &6884510939604789671
@@ -153,7 +158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8316925458817892553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.2, z: 0}
+  m_LocalPosition: {x: 0, y: 1.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5422730396343348129}
