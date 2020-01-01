@@ -63,7 +63,7 @@ namespace RunnerGame
 
         void Update()
         {
-           // Time.timeScale = 0.15f;
+           Time.timeScale = 0.65f;
         }
 
         void FixedUpdate()
@@ -127,7 +127,6 @@ namespace RunnerGame
                 isOnSlope = true;
             }
         }
-
         void OnCollisionExit(Collision collision)
         {
             isGrounded = false;

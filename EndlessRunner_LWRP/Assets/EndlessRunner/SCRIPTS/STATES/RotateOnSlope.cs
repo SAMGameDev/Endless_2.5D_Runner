@@ -23,7 +23,7 @@ namespace RunnerGame
                 control.transform.rotation = Quaternion.LookRotation(Vector3.Cross(control.transform.right, hit.normal));
                 //control.transform.rotation = Quaternion.Slerp(control.transform.rotation, rot, smoothRottation * Time.deltaTime);
             }
-           // Debug.DrawRay(control.transform.position, -control.transform.up * 0.7f, Color.white);
+            Debug.DrawRay(control.transform.position, -control.transform.up * 0.7f, Color.red);
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
