@@ -60,12 +60,6 @@ namespace RunnerGame
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
-
-        void Update()
-        {
-           Time.timeScale = 0.65f;
-        }
-
         void FixedUpdate()
         {
             UpdateCenter();
