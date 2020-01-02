@@ -120,6 +120,7 @@ namespace RunnerGame
             {
                 isOnSlope = true;
             }
+            
         }
         void OnCollisionExit(Collision collision)
         {
