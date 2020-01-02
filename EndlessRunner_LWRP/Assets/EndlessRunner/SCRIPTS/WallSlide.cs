@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallSlide : MonoBehaviour
+namespace RunnerGame
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/WallSlide")]
+    public class WallSlide : ScriptableObjectData
     {
+        public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
+        {
+            CharacterControl control = playerStateBase.GetCharacterControl(animator);
+            control.RIGIDBODY.velocity = new Vector3(0, -1000, 0);
+        }
+        public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
+        {
         
+                   
+        }
+
+        public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
+        {
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

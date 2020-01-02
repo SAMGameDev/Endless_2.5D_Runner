@@ -253,7 +253,7 @@ AnimatorStateMachine:
     m_Position: {x: 710, y: 670, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5984723750503210836}
-    m_Position: {x: 690, y: 90, z: 0}
+    m_Position: {x: 710, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8299052900897027996}
     m_Position: {x: 120, y: 90, z: 0}
@@ -519,31 +519,37 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ForceTransition
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: OnSlope
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Grounded
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Dash
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - m_Name: WallSlide
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -1029,8 +1035,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptableObjectDatas:
   - {fileID: 11400000, guid: 0b53f75c209b89b408c45ed71a23e92e, type: 2}
+  - {fileID: 11400000, guid: a9d82587ec326ce4184091aa43c3f535, type: 2}
   - {fileID: 11400000, guid: 23b09c48e4ea9644281fb0e93b754923, type: 2}
-  - {fileID: 11400000, guid: 449aa4b858d76dc4885066561223cb55, type: 2}
 --- !u!1102 &8035600168223188893
 AnimatorState:
   serializedVersion: 5

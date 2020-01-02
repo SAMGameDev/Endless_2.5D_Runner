@@ -12,6 +12,7 @@ namespace RunnerGame
         Run,
         Dash,
         OnSlope,
+        WallSlide,
     }
     public class CharacterControl : MonoBehaviour
     {
@@ -22,6 +23,7 @@ namespace RunnerGame
         [Header("DETECTORS")]
         public bool isGrounded;
         public bool isOnSlope;
+        public bool CollidedWithWall;
 
         [Header("Floats")]
         [SerializeField]
@@ -60,6 +62,12 @@ namespace RunnerGame
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
+
+        private void Update()
+        {
+            Time.timeScale = 0.5f;
+        }
+
         void FixedUpdate()
         {
             UpdateCenter();
@@ -120,12 +128,16 @@ namespace RunnerGame
             {
                 isOnSlope = true;
             }
-            
+            if (collision.gameObject.CompareTag("Wall"))
+            {
+                CollidedWithWall = true;
+            }
         }
         void OnCollisionExit(Collision collision)
         {
             isGrounded = false;
             isOnSlope = false;
+            CollidedWithWall = false;
         }
     }
 }
