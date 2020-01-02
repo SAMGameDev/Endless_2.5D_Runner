@@ -23,7 +23,6 @@ namespace RunnerGame
         [Header("DETECTORS")]
         public bool isGrounded;
         public bool isOnSlope;
-        public bool CollidedWithWall;
 
         [Header("Floats")]
         [SerializeField]
@@ -65,7 +64,7 @@ namespace RunnerGame
 
         private void Update()
         {
-            Time.timeScale = 0.5f;
+            //Time.timeScale = 0.5f;
         }
 
         void FixedUpdate()
@@ -128,16 +127,11 @@ namespace RunnerGame
             {
                 isOnSlope = true;
             }
-            if (collision.gameObject.CompareTag("Wall"))
-            {
-                CollidedWithWall = true;
-            }
         }
         void OnCollisionExit(Collision collision)
         {
             isGrounded = false;
             isOnSlope = false;
-            CollidedWithWall = false;
         }
     }
 }
