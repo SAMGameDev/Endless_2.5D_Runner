@@ -14,10 +14,9 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
-
-            control.RIGIDBODY.velocity = new Vector3(0f, control.RIGIDBODY.velocity.y, speed);
-
+             CharacterControl control = playerStateBase.GetCharacterControl(animator);
+             control.RIGIDBODY.velocity = new Vector3(0f, control.RIGIDBODY.velocity.y, speed);
+            
             if (control.Jump)
             {
                 animator.SetBool(TranistionParemeters.Jump.ToString(), true);
@@ -28,8 +27,7 @@ namespace RunnerGame
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
-        {
-
+        {         
         }
     }
 

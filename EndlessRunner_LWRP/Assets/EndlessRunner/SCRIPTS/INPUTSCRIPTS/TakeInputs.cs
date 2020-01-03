@@ -16,7 +16,7 @@ namespace RunnerGame
             if (Input.GetMouseButton(0) && Input.mousePosition.x <= Screen.width / 2
                 || Input.GetKeyDown(KeyCode.Space))
             {
-                // characterControl.Dowalljump = true;
+                 characterControl.Dowalljump = true;
                 characterControl.Jump = true;
             }
             else if (Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2
@@ -26,7 +26,7 @@ namespace RunnerGame
             }
             else
             {
-                //characterControl.Dowalljump = false;
+                characterControl.Dowalljump = false;
                 characterControl.Jump = false;
                 characterControl.Dash = false;
             }         

@@ -19,6 +19,7 @@ namespace RunnerGame
         [Header("INPUTS")]
         public bool Jump;
         public bool Dash;
+        public bool Dowalljump;
 
         [Header("DETECTORS")]
         public bool isGrounded;
