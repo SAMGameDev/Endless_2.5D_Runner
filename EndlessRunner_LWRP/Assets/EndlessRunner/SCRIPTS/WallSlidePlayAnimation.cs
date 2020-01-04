@@ -4,27 +4,30 @@ using UnityEngine;
 
 namespace RunnerGame
 {
-    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/RunForward")]
-    public class RunningForward : ScriptableObjectData
+    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/WallSlidePlayAnimation")]
+    public class WallSlidePlayAnimation : ScriptableObjectData
     {
-        public float speed;
+        public float force_By_WallNormal;
+        public float JumpForce2;
+        public Vector3 RayPost;
+        RaycastHit HitInfo;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            animator.SetBool(TranistionParemeters.Dash.ToString(), false);
+
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             CharacterControl control = playerStateBase.GetCharacterControl(animator);
-            control.RIGIDBODY.velocity = new Vector3(0f, control.RIGIDBODY.velocity.y, speed);
 
-            if (control.Jump)
+            if(control.WallSlideBool)
             {
-                animator.SetBool(TranistionParemeters.Jump.ToString(), true);
+                animator.SetBool(TranistionParemeters.WallSlide.ToString(), true);
             }
-            if (control.Dash)
+            else
             {
-                animator.SetBool(TranistionParemeters.Dash.ToString(), true);
+                animator.SetBool(TranistionParemeters.WallSlide.ToString(), false);
             }
+          
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

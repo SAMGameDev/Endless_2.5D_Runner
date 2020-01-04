@@ -13,7 +13,7 @@ namespace RunnerGame
         }
         void Update()
         {
-            if (Input.GetMouseButtonUp(0) && Input.mousePosition.x <= Screen.width / 2
+            if (Input.GetMouseButtonDown(0) && Input.mousePosition.x <= Screen.width / 2
                 || Input.GetKeyDown(KeyCode.Space))
             {
                 characterControl.Dowalljump = true;
@@ -24,7 +24,7 @@ namespace RunnerGame
                 characterControl.Dowalljump = false;
                 characterControl.Jump = false;
             }
-            if (Input.GetMouseButtonUp(0) && Input.mousePosition.x > Screen.width / 2
+            if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > Screen.width / 2
                || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 characterControl.Dash = true;

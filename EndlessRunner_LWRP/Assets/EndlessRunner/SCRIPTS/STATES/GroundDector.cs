@@ -18,6 +18,7 @@ namespace RunnerGame
             if (control.isGrounded)
             {
                 animator.SetBool(TranistionParemeters.Grounded.ToString(), true);
+                control.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
             else
             {

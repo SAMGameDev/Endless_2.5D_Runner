@@ -21,6 +21,9 @@ namespace RunnerGame
         public bool Dash;
         public bool Dowalljump;
         public bool WallSlideBool;
+        public bool makeWallJump;
+
+        public RaycastHit hitinfo;
 
         [Header("DETECTORS")]
         public bool isGrounded;
