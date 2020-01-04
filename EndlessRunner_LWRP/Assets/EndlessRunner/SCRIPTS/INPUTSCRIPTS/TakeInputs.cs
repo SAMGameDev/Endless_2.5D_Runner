@@ -13,23 +13,27 @@ namespace RunnerGame
         }
         void Update()
         {
-            if (Input.GetMouseButton(0) && Input.mousePosition.x <= Screen.width / 2
+            if (Input.GetMouseButtonUp(0) && Input.mousePosition.x <= Screen.width / 2
                 || Input.GetKeyDown(KeyCode.Space))
             {
-                 characterControl.Dowalljump = true;
+                characterControl.Dowalljump = true;
                 characterControl.Jump = true;
             }
-            else if (Input.GetMouseButton(0) && Input.mousePosition.x > Screen.width / 2
+            else
+            {
+                characterControl.Dowalljump = false;
+                characterControl.Jump = false;
+            }
+            if (Input.GetMouseButtonUp(0) && Input.mousePosition.x > Screen.width / 2
                || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 characterControl.Dash = true;
             }
             else
             {
-                characterControl.Dowalljump = false;
-                characterControl.Jump = false;
+
                 characterControl.Dash = false;
-            }         
+            }
         }
     }
 }

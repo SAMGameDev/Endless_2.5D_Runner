@@ -9,7 +9,7 @@ namespace RunnerGame
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            animator.SetBool(TranistionParemeters.Jump.ToString(), false);
+            animator.SetBool(TranistionParemeters.Jump.ToString(), false);          
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

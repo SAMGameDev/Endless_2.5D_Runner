@@ -20,6 +20,7 @@ namespace RunnerGame
         public bool Jump;
         public bool Dash;
         public bool Dowalljump;
+        public bool WallSlideBool;
 
         [Header("DETECTORS")]
         public bool isGrounded;
