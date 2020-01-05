@@ -19,11 +19,6 @@ namespace RunnerGame
         [Header("INPUTS")]
         public bool Jump;
         public bool Dash;
-        public bool Dowalljump;
-        public bool WallSlideBool;
-        public bool makeWallJump;
-
-        public RaycastHit hitinfo;
 
         [Header("DETECTORS")]
         public bool isGrounded;
@@ -65,24 +60,16 @@ namespace RunnerGame
             Application.targetFrameRate = 75;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
-           // CacheCharacterControl(anim);
         }
-
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
 
-            foreach(PlayerStateBase c in arr)
+            foreach (PlayerStateBase c in arr)
             {
                 c.characterControl = this;
             }
         }
-
-        private void Update()
-        {
-            //Time.timeScale = 0.5f;
-        }
-
         void FixedUpdate()
         {
             UpdateCenter();
@@ -113,7 +100,6 @@ namespace RunnerGame
             {
                 return;
             }
-
             if (Vector3.SqrMagnitude(Bcollider.center - targetCenter_C) > 0.01f)
             {
                 Bcollider.center = Vector3.Lerp(Bcollider.center, targetCenter_C,

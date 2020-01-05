@@ -16,12 +16,10 @@ namespace RunnerGame
             if (Input.GetMouseButtonDown(0) && Input.mousePosition.x <= Screen.width / 2
                 || Input.GetKeyDown(KeyCode.Space))
             {
-                characterControl.Dowalljump = true;
                 characterControl.Jump = true;
             }
             else
             {
-                characterControl.Dowalljump = false;
                 characterControl.Jump = false;
             }
             if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > Screen.width / 2

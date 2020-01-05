@@ -12,7 +12,6 @@ namespace RunnerGame
         protected float force_By_WallNormal;
         public float JumpForce2;
 
-
         RaycastHit HitInfo;
 
         public Vector3 RayPost;
@@ -24,7 +23,7 @@ namespace RunnerGame
         }
         void Update()
         {
-             WallJumping();
+            WallJumping();
         }
         void FixedUpdate()
         {
@@ -37,7 +36,7 @@ namespace RunnerGame
             if (Physics.Raycast(transform.position + RayPost, transform.forward, out HitInfo, 0.5f))
             {
 
-                if (characterControl.Dowalljump && !characterControl.isGrounded
+                if (characterControl.Jump && !characterControl.isGrounded
                     && HitInfo.collider.tag == "RightWall")
                 {
                     characterControl.RIGIDBODY.velocity = Vector3.zero;
@@ -45,7 +44,7 @@ namespace RunnerGame
                     characterControl.RIGIDBODY.AddForce(Vector3.up * JumpForce2, ForceMode.VelocityChange);
                     this.gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                 }
-                if (!characterControl.isGrounded && characterControl.Dowalljump == true
+                if (!characterControl.isGrounded && characterControl.Jump == true
                     && HitInfo.collider.tag == "LeftWall")
                 {
                     characterControl.RIGIDBODY.velocity = Vector3.zero;
@@ -53,7 +52,7 @@ namespace RunnerGame
                     characterControl.RIGIDBODY.AddForce(Vector3.up * JumpForce2, ForceMode.VelocityChange);
                     this.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 }
-                else if (!characterControl.isGrounded && characterControl.Dowalljump == false
+                else if (!characterControl.isGrounded && characterControl.Jump == false
                     && HitInfo.collider.tag == "RightWall" || HitInfo.collider.tag == "LeftWall")
                 {
                     characterControl.RIGIDBODY.velocity = new Vector3(0, -wallSlide_Down, 0);
