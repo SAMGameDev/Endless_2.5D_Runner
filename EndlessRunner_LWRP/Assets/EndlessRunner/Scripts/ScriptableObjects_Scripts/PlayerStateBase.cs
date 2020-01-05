@@ -21,19 +21,8 @@ namespace RunnerGame
                 d.OnEnter(this, animator, stateInfo);
             }
         }
-
-        /*  public void UpdateAll(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
-          {
-              foreach (ScriptableObjectData d in scriptableObjectDatas)
-              {
-                  d.OnUpdate(playerStateBase, animator, stateInfo);
-              }
-          }*/
-
         public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            // UpdateAll(this, animator, stateInfo);
-
             foreach (ScriptableObjectData d in scriptableObjectDatas)
             {
                 d.OnUpdate(this, animator, stateInfo);
@@ -46,16 +35,5 @@ namespace RunnerGame
                 d.OnExit(this, animator, stateInfo);
             }
         }
-
-        /*  private CharacterControl characterControl;
-          public CharacterControl GetCharacterControl(Animator animator)
-          {
-              if (characterControl == null)
-              {
-                  characterControl = animator.GetComponentInParent<CharacterControl>();
-              }
-
-              return characterControl;
-          }*/
     }
 }
