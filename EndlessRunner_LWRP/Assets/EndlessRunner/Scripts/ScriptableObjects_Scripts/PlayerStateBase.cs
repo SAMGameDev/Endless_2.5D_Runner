@@ -10,6 +10,12 @@ namespace RunnerGame
         public CharacterControl characterControl;
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
+            if (characterControl == null)
+            {
+                CharacterControl control = animator.transform.root.GetComponent<CharacterControl>();
+                control.CacheCharacterControl(animator);
+            }
+
             foreach (ScriptableObjectData d in scriptableObjectDatas)
             {
                 d.OnEnter(this, animator, stateInfo);
@@ -41,15 +47,15 @@ namespace RunnerGame
             }
         }
 
-      /*  private CharacterControl characterControl;
-        public CharacterControl GetCharacterControl(Animator animator)
-        {
-            if (characterControl == null)
-            {
-                characterControl = animator.GetComponentInParent<CharacterControl>();
-            }
+        /*  private CharacterControl characterControl;
+          public CharacterControl GetCharacterControl(Animator animator)
+          {
+              if (characterControl == null)
+              {
+                  characterControl = animator.GetComponentInParent<CharacterControl>();
+              }
 
-            return characterControl;
-        }*/
+              return characterControl;
+          }*/
     }
 }

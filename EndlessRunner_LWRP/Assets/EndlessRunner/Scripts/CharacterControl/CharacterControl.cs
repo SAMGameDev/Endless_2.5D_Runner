@@ -65,7 +65,7 @@ namespace RunnerGame
             Application.targetFrameRate = 75;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
-            CacheCharacterControl(anim);
+           // CacheCharacterControl(anim);
         }
 
         public void CacheCharacterControl(Animator animator)
