@@ -15,8 +15,6 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
-
             if (stateInfo.normalizedTime >= TransitionTiming)
             {
                 animator.SetBool(TranistionParemeters.ForceTransition.ToString(), true);

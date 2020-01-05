@@ -12,9 +12,7 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
-
-            if (control.WallSlideBool)
+            if (playerStateBase.characterControl.WallSlideBool)
             {
                 animator.SetBool(TranistionParemeters.WallSlide.ToString(), true);
             }

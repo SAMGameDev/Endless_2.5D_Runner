@@ -112,7 +112,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &5422730396343348135
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -142,11 +142,12 @@ MonoBehaviour:
   Dash: 0
   Dowalljump: 0
   WallSlideBool: 0
+  makeWallJump: 0
   isGrounded: 1
   isOnSlope: 0
   FallMultiplier: 4.5
   lowJumpGravity: 2.5
-  slopeFroce: 400
+  slopeFroce: 1000
   targetSize_C: {x: 0, y: 0, z: 0}
   SizeUpdate_Speed_C: 0
   targetCenter_C: {x: 0, y: 0, z: 0}

@@ -13,14 +13,12 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
-
             RaycastHit hit;
 
-            Ray ray = new Ray(control.transform.position, -control.transform.up);
+            Ray ray = new Ray(playerStateBase.characterControl.transform.position, -playerStateBase.characterControl.transform.up);
             if (Physics.Raycast(ray, out hit, 0.3f))
             {
-                control.transform.rotation = Quaternion.LookRotation(Vector3.Cross(control.transform.right, hit.normal));
+                playerStateBase.characterControl.transform.rotation = Quaternion.LookRotation(Vector3.Cross(playerStateBase.characterControl.transform.right, hit.normal));
                 //control.transform.rotation = Quaternion.Slerp(control.transform.rotation, rot, smoothRottation * Time.deltaTime);
             }
             // Debug.DrawRay(control.transform.position, -control.transform.up * 0.7f, Color.red);

@@ -7,7 +7,7 @@ namespace RunnerGame
     public class PlayerStateBase : StateMachineBehaviour
     {
         public List<ScriptableObjectData> scriptableObjectDatas = new List<ScriptableObjectData>();
-
+        public CharacterControl characterControl;
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             foreach (ScriptableObjectData d in scriptableObjectDatas)
@@ -41,7 +41,7 @@ namespace RunnerGame
             }
         }
 
-        private CharacterControl characterControl;
+      /*  private CharacterControl characterControl;
         public CharacterControl GetCharacterControl(Animator animator)
         {
             if (characterControl == null)
@@ -50,6 +50,6 @@ namespace RunnerGame
             }
 
             return characterControl;
-        }
+        }*/
     }
 }

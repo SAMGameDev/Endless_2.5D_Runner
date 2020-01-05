@@ -14,18 +14,17 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
             //  Debug.DrawRay(control.transform.position + RayPost, control.transform.forward * 50f, Color.magenta);
-            if (Physics.Raycast(control.transform.position + RayPost, control.transform.forward, out control.hitinfo, 0.5f))
+            if (Physics.Raycast(playerStateBase.characterControl.transform.position + RayPost, playerStateBase.characterControl.transform.forward, out playerStateBase.characterControl.hitinfo, 0.5f))
             {
-                if (!control.isGrounded && control.Jump == false
-                 && control.hitinfo.collider.tag == "RightWall" || control.hitinfo.collider.tag == "LeftWall")
+                if (!playerStateBase.characterControl.isGrounded && playerStateBase.characterControl.Jump == false
+                 && playerStateBase.characterControl.hitinfo.collider.tag == "RightWall" || playerStateBase.characterControl.hitinfo.collider.tag == "LeftWall")
                 {
-                    control.WallSlideBool = true;
+                    playerStateBase.characterControl.WallSlideBool = true;
                 }
                 else
                 {
-                    control.WallSlideBool = false;
+                    playerStateBase.characterControl.WallSlideBool = false;
                 }
             }
         }

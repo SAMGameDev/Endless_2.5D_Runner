@@ -13,9 +13,8 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
 
-            if (control.isGrounded)
+            if (playerStateBase.characterControl.isGrounded)
             {
                 animator.SetBool(TranistionParemeters.Grounded.ToString(), true);
             }
@@ -23,15 +22,6 @@ namespace RunnerGame
             {
                 animator.SetBool(TranistionParemeters.Grounded.ToString(), false);
             }
-
-            /*  if (isGrounded(control))
-              {
-                  animator.SetBool(TranistionParemeters.Grounded.ToString(), true);
-              }
-              else
-              {
-                  animator.SetBool(TranistionParemeters.Grounded.ToString(), false);
-              }*/
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

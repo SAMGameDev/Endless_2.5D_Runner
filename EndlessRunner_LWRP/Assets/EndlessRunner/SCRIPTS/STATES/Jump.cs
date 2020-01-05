@@ -14,9 +14,7 @@ namespace RunnerGame
             float normal_JumpForce = 14;
             float Slope_JumpForce = 35;
 
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
-
-            if (!control.isOnSlope)
+            if (!playerStateBase.characterControl.isOnSlope)
             {
                 JumpForce = normal_JumpForce;
             }
@@ -24,7 +22,7 @@ namespace RunnerGame
             {
                 JumpForce = Slope_JumpForce;
             }
-            control.RIGIDBODY.velocity = new Vector3(0, JumpForce, control.RIGIDBODY.velocity.z);
+            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0, JumpForce, playerStateBase.characterControl.RIGIDBODY.velocity.z);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

@@ -59,12 +59,23 @@ namespace RunnerGame
                 return rb;
             }
         }
-        void Start()
+        void Awake()
         {
             QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = 75;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
+            CacheCharacterControl(anim);
+        }
+
+        public void CacheCharacterControl(Animator animator)
+        {
+            PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
+
+            foreach(PlayerStateBase c in arr)
+            {
+                c.characterControl = this;
+            }
         }
 
         private void Update()

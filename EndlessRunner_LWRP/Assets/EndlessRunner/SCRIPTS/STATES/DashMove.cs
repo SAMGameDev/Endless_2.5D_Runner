@@ -14,8 +14,7 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
-            control.RIGIDBODY.AddForce(Vector3.forward * DashForce, ForceMode.Force);
+            playerStateBase.characterControl.RIGIDBODY.AddForce(Vector3.forward * DashForce, ForceMode.Force);
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

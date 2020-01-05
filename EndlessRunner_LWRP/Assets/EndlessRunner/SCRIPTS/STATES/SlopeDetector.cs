@@ -12,10 +12,8 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
-
-            if (control.isOnSlope)
-            {                
+            if (playerStateBase.characterControl.isOnSlope)
+            {
                 animator.SetBool(TranistionParemeters.OnSlope.ToString(), true);
             }
             else

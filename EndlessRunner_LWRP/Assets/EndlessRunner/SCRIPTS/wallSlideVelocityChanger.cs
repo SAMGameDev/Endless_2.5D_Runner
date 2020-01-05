@@ -9,14 +9,11 @@ namespace RunnerGame
     {
         public float wallSlide_Down;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
-        {
-          
+        {          
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
-        {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
-
-            control.RIGIDBODY.velocity = new Vector3(0, -wallSlide_Down, 0);
+        {           
+            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0, -wallSlide_Down, 0);
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

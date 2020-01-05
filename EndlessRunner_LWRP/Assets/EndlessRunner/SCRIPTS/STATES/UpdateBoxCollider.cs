@@ -13,24 +13,22 @@ namespace RunnerGame
         public float SizeUpdate_Speed;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
-            control.UpdateNow = true;
+            playerStateBase.characterControl.UpdateNow = true;
 
-            control.targetCenter_C = targetCenter;
-            control.CenterUpdate_Speed_C = CenterUpdate_Speed;
-            control.targetSize_C = targetSize;
-            control.SizeUpdate_Speed_C = SizeUpdate_Speed;
+            playerStateBase.characterControl.targetCenter_C = targetCenter;
+            playerStateBase.characterControl.CenterUpdate_Speed_C = CenterUpdate_Speed;
+            playerStateBase.characterControl.targetSize_C = targetSize;
+            playerStateBase.characterControl.SizeUpdate_Speed_C = SizeUpdate_Speed;
 
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-           
+
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = playerStateBase.GetCharacterControl(animator);
-            control.UpdateNow = false;
+            playerStateBase.characterControl.UpdateNow = false;
         }
     }
 
