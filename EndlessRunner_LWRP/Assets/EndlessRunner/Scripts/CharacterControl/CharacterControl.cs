@@ -24,6 +24,8 @@ namespace RunnerGame
         public bool isGrounded;
         public bool isOnSlope;
 
+        public bool Wallslide;
+
         [Header("Floats")]
         [SerializeField]
         protected float FallMultiplier;
@@ -128,6 +130,15 @@ namespace RunnerGame
             if (collision.gameObject.CompareTag("Slope"))
             {
                 isOnSlope = true;
+            }
+            if (!isGrounded && !Jump && collision.gameObject.CompareTag("RightWall")
+                || collision.gameObject.CompareTag("LeftWall"))
+            {
+                Wallslide = true;
+            }
+            else
+            {
+                Wallslide = false;
             }
         }
         void OnCollisionExit(Collision collision)
