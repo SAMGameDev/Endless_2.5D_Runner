@@ -7,11 +7,10 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/Jump")]
     public class Jump : ScriptableObjectData
     {
-        public float force_By_WallNormal;
         public float JumpForce;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            float normal_JumpForce = 14;
+            float normal_JumpForce = 25;
             float Slope_JumpForce = 35;
 
             if (!playerStateBase.characterControl.isOnSlope)

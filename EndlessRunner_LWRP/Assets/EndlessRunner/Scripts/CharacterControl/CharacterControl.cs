@@ -24,7 +24,7 @@ namespace RunnerGame
         public bool isGrounded;
         public bool isOnSlope;
 
-        public bool Wallslide;
+        public bool Wallslide = false;
 
         [Header("Floats")]
         [SerializeField]
@@ -74,6 +74,13 @@ namespace RunnerGame
         }
         void FixedUpdate()
         {
+            if (Wallslide == true && Jump == true)
+            {
+                RIGIDBODY.velocity = Vector3.zero;
+                RIGIDBODY.AddForce(-Vector3.forward * 800f, ForceMode.VelocityChange);
+                RIGIDBODY.AddForce(Vector3.up * 30, ForceMode.VelocityChange);
+                this.gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            }
             UpdateCenter();
             UpdateSize();
             ApplyGravity();

@@ -21,6 +21,11 @@ namespace RunnerGame
             {
                 animator.SetBool(TranistionParemeters.Grounded.ToString(), false);
             }
+
+            if (playerStateBase.characterControl.isGrounded && !playerStateBase.characterControl.isOnSlope)
+            {
+                playerStateBase.characterControl.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            }
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
