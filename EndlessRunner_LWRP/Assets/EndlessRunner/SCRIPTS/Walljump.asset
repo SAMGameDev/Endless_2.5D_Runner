@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd9f542cd02f1ee4c9b980c0738cb559, type: 3}
-  m_Name: WallSlide
+  m_Script: {fileID: 11500000, guid: d6fe857d516ccb44f8b018bc0ae17e83, type: 3}
+  m_Name: Walljump
   m_EditorClassIdentifier: 
-  wallSlide_Down: 0
+  wallSlide_Down: 0.05
+  force_By_WallNormal: 20
+  JumpForce2: 18
+  RayPost: {x: 0, y: 2, z: 0}

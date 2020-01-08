@@ -74,13 +74,6 @@ namespace RunnerGame
         }
         void FixedUpdate()
         {
-            if (Wallslide == true && Jump == true)
-            {
-                RIGIDBODY.velocity = Vector3.zero;
-                RIGIDBODY.AddForce(-Vector3.forward * 800f, ForceMode.VelocityChange);
-                RIGIDBODY.AddForce(Vector3.up * 30, ForceMode.VelocityChange);
-                this.gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-            }
             UpdateCenter();
             UpdateSize();
             ApplyGravity();
@@ -121,7 +114,6 @@ namespace RunnerGame
             {
                 return;
             }
-
             if (Vector3.SqrMagnitude(Bcollider.size - targetSize_C) > 0.01f)
             {
                 Bcollider.size = Vector3.Lerp(Bcollider.size, targetSize_C,
@@ -137,15 +129,6 @@ namespace RunnerGame
             if (collision.gameObject.CompareTag("Slope"))
             {
                 isOnSlope = true;
-            }
-            if (!isGrounded && !Jump && collision.gameObject.CompareTag("RightWall")
-                || collision.gameObject.CompareTag("LeftWall"))
-            {
-                Wallslide = true;
-            }
-            else
-            {
-                Wallslide = false;
             }
         }
         void OnCollisionExit(Collision collision)
