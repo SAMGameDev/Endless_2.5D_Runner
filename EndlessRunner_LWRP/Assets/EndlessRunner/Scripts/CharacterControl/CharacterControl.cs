@@ -25,10 +25,10 @@ namespace RunnerGame
         public bool isGrounded;
         public bool isOnSlope;
 
-        public RaycastHit hitinfo;
-        public bool WallSlide;
-        public bool WallJumpRight;
-        public bool WallJumpLeft;
+        public ContactPoint contacts_S;
+        public bool WallJump;
+        public bool WallJump_L;
+        public bool wallSlide;
 
         [Header("Floats")]
         [SerializeField]
@@ -75,6 +75,11 @@ namespace RunnerGame
             {
                 c.characterControl = this;
             }
+        }
+
+        private void Update()
+        {
+            Time.timeScale = 0.23f;
         }
         void FixedUpdate()
         {
@@ -126,6 +131,8 @@ namespace RunnerGame
         }
         void OnCollisionStay(Collision collision)
         {
+            contacts_S = collision.GetContact(0);
+
             if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
             {
                 isGrounded = true;
@@ -134,11 +141,38 @@ namespace RunnerGame
             {
                 isOnSlope = true;
             }
+            if (!isGrounded && !Jump && collision.gameObject.CompareTag("RightWall") ||
+                collision.gameObject.CompareTag("LeftWall"))
+            {
+                wallSlide = true;
+            }
+            else
+            {
+                wallSlide = false;
+            }
+            if (!isGrounded && Jump == true)
+            {
+                if (collision.gameObject.CompareTag("RightWall"))
+                {
+                    WallJump = true;
+                }
+                if (collision.gameObject.CompareTag("LeftWall"))
+                {
+                    WallJump_L = true;
+                }
+            }
+            else
+            {
+                WallJump = false;
+                WallJump_L = false;
+            }
         }
         void OnCollisionExit(Collision collision)
         {
             isGrounded = false;
             isOnSlope = false;
+            WallJump = false;
+            WallJump_L = false;
         }
     }
 }

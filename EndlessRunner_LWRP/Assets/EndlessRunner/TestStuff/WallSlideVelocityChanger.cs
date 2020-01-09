@@ -4,20 +4,19 @@ using UnityEngine;
 
 namespace RunnerGame
 {
-    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/Landing")]
-    public class Landing : ScriptableObjectData
+    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/WallSlideVelocityChanger")]
+    public class WallSlideVelocityChanger : ScriptableObjectData
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            animator.SetBool(TranistionParemeters.Jump.ToString(), false);
+
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
-        {        
+        {
+            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0, -0.5f, 0);
         }
-
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
     }
 
