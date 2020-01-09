@@ -25,9 +25,10 @@ namespace RunnerGame
         public bool isGrounded;
         public bool isOnSlope;
 
-        public bool Wallslide;
-        public bool WallJump;
-        public bool WallJump_L;
+        public RaycastHit hitinfo;
+        public bool WallSlide;
+        public bool WallJumpRight;
+        public bool WallJumpLeft;
 
         [Header("Floats")]
         [SerializeField]
@@ -133,36 +134,9 @@ namespace RunnerGame
             {
                 isOnSlope = true;
             }
-            if (!isGrounded && !Jump && collision.gameObject.CompareTag("RightWall")
-                || collision.gameObject.CompareTag("LeftWall"))
-            {
-                Wallslide = true;
-            }
-            else
-            {
-                Wallslide = false;
-            }
-            if (!isGrounded && Jump && collision.gameObject.CompareTag("RightWall"))
-            {
-                WallJump = true;
-            }
-            else
-            {
-                WallJump = false;
-            }
-            if (!isGrounded && Jump && collision.gameObject.CompareTag("LeftWall"))
-            {
-                WallJump_L = true;
-            }
-            else
-            {
-                WallJump_L = false;
-            }
-
         }
         void OnCollisionExit(Collision collision)
         {
-            Wallslide = false;
             isGrounded = false;
             isOnSlope = false;
         }
