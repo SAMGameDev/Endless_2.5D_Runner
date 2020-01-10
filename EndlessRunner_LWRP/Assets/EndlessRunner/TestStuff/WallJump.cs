@@ -9,12 +9,10 @@ namespace RunnerGame
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (playerStateBase.characterControl.WallJump
-                || playerStateBase.characterControl.WallJump_L)
+            if (playerStateBase.characterControl.wallJump)
             {
                 animator.SetBool(TranistionParemeters.WallJump.ToString(), true);
             }
@@ -23,8 +21,10 @@ namespace RunnerGame
                 animator.SetBool(TranistionParemeters.WallJump.ToString(), false);
             }
         }
+
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+
         }
     }
 

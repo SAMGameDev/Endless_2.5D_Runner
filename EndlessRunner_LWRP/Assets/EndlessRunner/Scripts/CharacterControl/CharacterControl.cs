@@ -17,6 +17,11 @@ namespace RunnerGame
     }
     public class CharacterControl : MonoBehaviour
     {
+        [Header("WallJump")]
+        public bool wallSlide;
+        public bool wallJump;
+        public ContactPoint contacts_S;
+
         [Header("INPUTS")]
         public bool Jump;
         public bool Dash;
@@ -24,11 +29,6 @@ namespace RunnerGame
         [Header("DETECTORS")]
         public bool isGrounded;
         public bool isOnSlope;
-
-        public ContactPoint contacts_S;
-        public bool WallJump;
-        public bool WallJump_L;
-        public bool wallSlide;
 
         [Header("Floats")]
         [SerializeField]
@@ -63,7 +63,7 @@ namespace RunnerGame
         void Awake()
         {
             QualitySettings.vSyncCount = 0;
-            Application.targetFrameRate = 75;
+            Application.targetFrameRate = 65;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
@@ -79,7 +79,7 @@ namespace RunnerGame
 
         private void Update()
         {
-            Time.timeScale = 0.23f;
+            Time.timeScale = 0.85f;
         }
         void FixedUpdate()
         {
@@ -141,6 +141,15 @@ namespace RunnerGame
             {
                 isOnSlope = true;
             }
+            if (!isGrounded && Jump && collision.gameObject.CompareTag("RightWall")
+                || collision.gameObject.CompareTag("LeftWall"))
+            {
+                wallJump = true;
+            }
+            else
+            {
+                wallJump = false;
+            }
             if (!isGrounded && !Jump && collision.gameObject.CompareTag("RightWall") ||
                 collision.gameObject.CompareTag("LeftWall"))
             {
@@ -150,29 +159,13 @@ namespace RunnerGame
             {
                 wallSlide = false;
             }
-            if (!isGrounded && Jump == true)
-            {
-                if (collision.gameObject.CompareTag("RightWall"))
-                {
-                    WallJump = true;
-                }
-                if (collision.gameObject.CompareTag("LeftWall"))
-                {
-                    WallJump_L = true;
-                }
-            }
-            else
-            {
-                WallJump = false;
-                WallJump_L = false;
-            }
         }
         void OnCollisionExit(Collision collision)
         {
+            wallSlide = false;
+            wallJump = false;
             isGrounded = false;
             isOnSlope = false;
-            WallJump = false;
-            WallJump_L = false;
         }
     }
 }
