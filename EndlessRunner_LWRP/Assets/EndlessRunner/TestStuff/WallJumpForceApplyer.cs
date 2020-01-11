@@ -9,13 +9,17 @@ namespace RunnerGame
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
+         
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (playerStateBase.characterControl.wallJump)
-                playerStateBase.characterControl.RIGIDBODY.AddForce(-Vector3.forward * 120
+            if (playerStateBase.characterControl.Jump)
+            {
+                playerStateBase.characterControl.RIGIDBODY.AddForce(playerStateBase.characterControl.contacts_S.normal * 170
                   , ForceMode.VelocityChange);
+                playerStateBase.characterControl.RIGIDBODY.AddForce(Vector3.up * 45
+                    , ForceMode.VelocityChange);
+            }       
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

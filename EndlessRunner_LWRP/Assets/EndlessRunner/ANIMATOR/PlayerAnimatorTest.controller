@@ -509,6 +509,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: b3840abe570313543b9f99e352337417, type: 2}
   - {fileID: 11400000, guid: a9d82587ec326ce4184091aa43c3f535, type: 2}
+  - {fileID: 11400000, guid: 8a01f2f3cd8cce94992900cb4e0fb7d3, type: 2}
   characterControl: {fileID: 0}
 --- !u!1101 &-1638045696874038690
 AnimatorStateTransition:
@@ -897,6 +898,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 06a67fd831c5f5944a00d6c4f128641d, type: 2}
   - {fileID: 11400000, guid: 4310e45e811f48c4e9284fb33e41e9b8, type: 2}
   - {fileID: 11400000, guid: 14aa005f3c7e7b94cb5b3d5454fb2900, type: 2}
+  - {fileID: 11400000, guid: 006c51d05a0be1647b972ec915ebf332, type: 2}
+  - {fileID: 11400000, guid: 06a67fd831c5f5944a00d6c4f128641d, type: 2}
   characterControl: {fileID: 0}
 --- !u!1101 &2818631662985683448
 AnimatorStateTransition:
@@ -1461,6 +1464,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: WallSlide
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: WallJump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1256106567142839700}

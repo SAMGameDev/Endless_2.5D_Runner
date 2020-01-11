@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace RunnerGame
 {
-    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/RunForward")]
-    public class RunningForward : ScriptableObjectData
+    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/JumpAnim")]
+    public class JumpAnim : ScriptableObjectData
     {
         public float speed;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
@@ -14,11 +14,9 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0f, playerStateBase.characterControl.RIGIDBODY.velocity.y, speed);
-
-            if (playerStateBase.characterControl.Dash)
+            if (playerStateBase.characterControl.Jump)
             {
-                animator.SetBool(TranistionParemeters.Dash.ToString(), true);
+                animator.SetBool(TranistionParemeters.Jump.ToString(), true);
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
