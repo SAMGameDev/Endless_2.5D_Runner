@@ -17,11 +17,6 @@ namespace RunnerGame
     }
     public class CharacterControl : MonoBehaviour
     {
-        [Header("WallJump")]
-        public bool wallSlide;
-        public bool wallJump;
-        public ContactPoint contacts_S;
-
         [Header("INPUTS")]
         public bool Jump;
         public bool Dash;
@@ -79,8 +74,9 @@ namespace RunnerGame
 
         private void Update()
         {
-            //Time.timeScale = 0.25f;
+            Time.timeScale = 0.17f;
         }
+
         void FixedUpdate()
         {
             UpdateCenter();
@@ -131,8 +127,6 @@ namespace RunnerGame
         }
         void OnCollisionStay(Collision collision)
         {
-            contacts_S = collision.GetContact(0);
-
             if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
             {
                 isGrounded = true;
@@ -141,29 +135,9 @@ namespace RunnerGame
             {
                 isOnSlope = true;
             }
-            if (!isGrounded && Jump && collision.gameObject.CompareTag("RightWall")
-                || collision.gameObject.CompareTag("LeftWall"))
-            {
-                wallJump = true;
-            }
-            else
-            {
-                wallJump = false;
-            }
-            if (!isGrounded && !Jump && collision.gameObject.CompareTag("RightWall") ||
-                collision.gameObject.CompareTag("LeftWall"))
-            {
-                wallSlide = true;
-            }
-            else
-            {
-                wallSlide = false;
-            }
         }
         void OnCollisionExit(Collision collision)
         {
-            wallSlide = false;
-            wallJump = false;
             isGrounded = false;
             isOnSlope = false;
         }
