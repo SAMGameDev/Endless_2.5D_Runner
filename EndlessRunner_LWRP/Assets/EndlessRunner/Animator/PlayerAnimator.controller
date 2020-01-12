@@ -16,6 +16,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f403792be2df5d04b91320f126f48d7e, type: 2}
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: b0e9e2f7f3db80149832c4bbcf95bbe0, type: 2}
+  - {fileID: 11400000, guid: b3840abe570313543b9f99e352337417, type: 2}
   characterControl: {fileID: 0}
 --- !u!1101 &-8476670133715653099
 AnimatorStateTransition:
@@ -73,7 +74,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Jumping_Landing
-  m_Speed: 1.3
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7032343774614919467}
@@ -283,7 +284,7 @@ AnimatorStateMachine:
     m_Position: {x: -290, y: 660, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7423156578474183689}
-    m_Position: {x: -70, y: 860, z: 0}
+    m_Position: {x: -90, y: 860, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -430,10 +431,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: OnSlope
+    m_ConditionEvent: Grounded
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: Grounded
+    m_ConditionEvent: OnSlope
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5984723750503210836}
@@ -441,9 +442,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.1298022
-  m_TransitionOffset: 0.0190708
-  m_ExitTime: 0.78190166
+  m_TransitionDuration: 0.025279047
+  m_TransitionOffset: 0.019070799
+  m_ExitTime: 0.7819018
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -505,7 +506,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Flying Kick
-  m_Speed: 1.3
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3274711836361882597}
@@ -868,11 +869,11 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: OnSlope
-    m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Grounded
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnSlope
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7423156578474183689}
@@ -880,9 +881,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.0039997855
+  m_TransitionDuration: 0.0020843996
   m_TransitionOffset: 0
-  m_ExitTime: 0.6473749
+  m_ExitTime: 0.83998764
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -914,10 +915,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ForceTransition
+    m_ConditionEvent: Grounded
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnSlope
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: Grounded
+    m_ConditionEvent: ForceTransition
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7254284013093707124}
@@ -984,7 +988,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sliding
-  m_Speed: 1.3
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2450147641467347417}
@@ -1091,7 +1095,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Stand To Roll
-  m_Speed: 1.33
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5303158777707993588}
