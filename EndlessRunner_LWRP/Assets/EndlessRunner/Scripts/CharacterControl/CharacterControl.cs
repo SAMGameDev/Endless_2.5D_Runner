@@ -25,13 +25,12 @@ namespace RunnerGame
         public bool isGrounded;
         public bool isOnSlope;
 
-        [Header("Floats")]
+        [Header("Floats")]    
+        public float FallMultiplier;
         [SerializeField]
-        protected float FallMultiplier;
+        public float lowJumpGravity;
         [SerializeField]
-        protected float lowJumpGravity;
-        [SerializeField]
-        protected float slopeFroce;
+        public float slopeFroce;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetSize_C;
