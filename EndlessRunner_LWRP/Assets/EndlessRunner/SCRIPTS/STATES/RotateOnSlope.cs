@@ -19,9 +19,10 @@ namespace RunnerGame
             if (Physics.Raycast(ray, out hit, 0.3f))
             {
                 playerStateBase.characterControl.transform.rotation = Quaternion.LookRotation(Vector3.Cross(playerStateBase.characterControl.transform.right, hit.normal));
-                //control.transform.rotation = Quaternion.Slerp(control.transform.rotation, rot, smoothRottation * Time.deltaTime);
+                //playerStateBase.characterControl.transform.rotation =
+                //Quaternion.Slerp(playerStateBase.characterControl.transform.rotation, rot, smoothRottation * Time.deltaTime);
             }
-          //  Debug.DrawRay(playerStateBase.characterControl.transform.position, -playerStateBase.characterControl.transform.up * 0.7f, Color.red);
+            //  Debug.DrawRay(playerStateBase.characterControl.transform.position, -playerStateBase.characterControl.transform.up * 0.7f, Color.red);
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

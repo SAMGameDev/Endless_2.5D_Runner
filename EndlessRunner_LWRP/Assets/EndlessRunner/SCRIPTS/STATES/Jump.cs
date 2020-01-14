@@ -10,7 +10,7 @@ namespace RunnerGame
         public float JumpForce;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            float normal_JumpForce = 13;
+            float normal_JumpForce = 11.5f;
             float Slope_JumpForce = 18;
 
             if (!playerStateBase.characterControl.isOnSlope)
