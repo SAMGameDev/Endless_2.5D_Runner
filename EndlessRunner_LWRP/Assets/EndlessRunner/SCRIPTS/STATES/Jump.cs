@@ -21,7 +21,8 @@ namespace RunnerGame
             {
                 JumpForce = Slope_JumpForce;
             }
-            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0, JumpForce, playerStateBase.characterControl.RIGIDBODY.velocity.z);
+            // playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0, JumpForce, playerStateBase.characterControl.RIGIDBODY.velocity.z);
+            playerStateBase.characterControl.RIGIDBODY.AddForce(playerStateBase.characterControl.transform.up * JumpForce, ForceMode.VelocityChange);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

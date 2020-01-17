@@ -15,7 +15,6 @@ namespace RunnerGame
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0f, playerStateBase.characterControl.RIGIDBODY.velocity.y, speed);
-
             if (playerStateBase.characterControl.Dash)
             {
                 animator.SetBool(TranistionParemeters.Dash.ToString(), true);
