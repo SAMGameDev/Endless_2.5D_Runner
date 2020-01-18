@@ -18,7 +18,7 @@ namespace RunnerGame
             if (characterControl.Death)
             {
                 characterControl.anim.enabled = false;
-                //characterControl.Bcollider.enabled = false;
+                characterControl.Bcollider.enabled = false;
             }
         }
     }

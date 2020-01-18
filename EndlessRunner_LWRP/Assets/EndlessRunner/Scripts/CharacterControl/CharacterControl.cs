@@ -69,6 +69,10 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
+        private void Update()
+        {
+            Time.timeScale = 0.15f;
+        }
         void FixedUpdate()
         {
             UpdateCenter();
@@ -116,6 +120,10 @@ namespace RunnerGame
                 Bcollider.size = Vector3.Lerp(Bcollider.size, targetSize_C,
                     Time.fixedDeltaTime * SizeUpdate_Speed_C);
             }
+        }
+        void OnCollisionEnter(Collision collision)
+        {
+
         }
         void OnCollisionStay(Collision collision)
         {
