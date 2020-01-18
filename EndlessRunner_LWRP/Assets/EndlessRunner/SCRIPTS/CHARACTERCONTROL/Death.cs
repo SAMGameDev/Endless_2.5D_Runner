@@ -17,8 +17,8 @@ namespace RunnerGame
         {
             if (characterControl.Death)
             {
-                Debug.Log("I am dead");
-                Destroy(this.gameObject);
+                characterControl.anim.enabled = false;
+                //characterControl.Bcollider.enabled = false;
             }
         }
     }
