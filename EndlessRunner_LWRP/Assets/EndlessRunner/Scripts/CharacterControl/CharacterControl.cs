@@ -12,8 +12,6 @@ namespace RunnerGame
         Run,
         Dash,
         OnSlope,
-        WallSlide,
-        WallJump,
     }
     public class CharacterControl : MonoBehaviour
     {
@@ -24,8 +22,9 @@ namespace RunnerGame
         [Header("DETECTORS")]
         public bool isGrounded;
         public bool isOnSlope;
+        public bool Death;
 
-        [Header("Floats")]    
+        [Header("Floats")]
         public float FallMultiplier;
         [SerializeField]
         public float lowJumpGravity;
@@ -128,9 +127,14 @@ namespace RunnerGame
             {
                 isOnSlope = true;
             }
+            if (collision.gameObject.CompareTag("Obsticel"))
+            {
+                Death = true;
+            }
         }
         void OnCollisionExit(Collision collision)
         {
+            Death = false;
             isGrounded = false;
             isOnSlope = false;
         }
