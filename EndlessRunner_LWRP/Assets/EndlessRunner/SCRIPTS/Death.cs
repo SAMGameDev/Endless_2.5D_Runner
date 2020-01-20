@@ -19,7 +19,7 @@ namespace RunnerGame
         {
             if (Control.Death)
             {
-                Control.RIGIDBODY.AddForce(-Vector3.forward * 3000, ForceMode.Force);              
+                Control.RIGIDBODY.AddForce(-Vector3.forward * 380, ForceMode.Force);              
                 Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
             }
         }
