@@ -12,6 +12,7 @@ namespace RunnerGame
         Run,
         Dash,
         OnSlope,
+        Die,
     }
     public class CharacterControl : MonoBehaviour
     {
@@ -69,10 +70,6 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
-        private void Update()
-        {
-            Time.timeScale = 0.15f;
-        }
         void FixedUpdate()
         {
             UpdateCenter();
@@ -123,7 +120,10 @@ namespace RunnerGame
         }
         void OnCollisionEnter(Collision collision)
         {
-
+            if (collision.gameObject.CompareTag("Obsticel"))
+            {
+                Death = true;
+            }
         }
         void OnCollisionStay(Collision collision)
         {
@@ -134,10 +134,6 @@ namespace RunnerGame
             if (collision.gameObject.CompareTag("Slope"))
             {
                 isOnSlope = true;
-            }
-            if (collision.gameObject.CompareTag("Obsticel"))
-            {
-                Death = true;
             }
         }
         void OnCollisionExit(Collision collision)
