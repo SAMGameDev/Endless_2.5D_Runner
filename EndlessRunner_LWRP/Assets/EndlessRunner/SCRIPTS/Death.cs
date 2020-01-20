@@ -13,13 +13,13 @@ namespace RunnerGame
         {
             Control = GetComponent<CharacterControl>();
         }
-
         // Update is called once per frame
         void Update()
         {
             if (Control.Death)
             {
-                Control.RIGIDBODY.AddForce(-Vector3.forward * 380, ForceMode.Force);              
+                Control.RIGIDBODY.velocity = Vector3.zero;
+                Control.RIGIDBODY.AddForce(-Vector3.forward * 11, ForceMode.VelocityChange);
                 Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
             }
         }
