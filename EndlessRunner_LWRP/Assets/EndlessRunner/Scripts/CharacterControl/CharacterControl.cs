@@ -120,17 +120,6 @@ namespace RunnerGame
                     Time.fixedDeltaTime * SizeUpdate_Speed_C);
             }
         }
-        void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("Obsticel"))
-            {
-                Death = true;
-            }
-            else
-            {
-                Death = false;
-            }
-        }
         void OnCollisionStay(Collision collision)
         {
             if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
@@ -140,6 +129,10 @@ namespace RunnerGame
             if (collision.gameObject.CompareTag("Slope"))
             {
                 isOnSlope = true;
+            }
+            if (collision.gameObject.CompareTag("Obsticel"))
+            {
+                Death = true;
             }
         }
         void OnCollisionExit(Collision collision)
