@@ -126,6 +126,10 @@ namespace RunnerGame
             {
                 Death = true;
             }
+            else
+            {
+                Death = false;
+            }
         }
         void OnCollisionStay(Collision collision)
         {
