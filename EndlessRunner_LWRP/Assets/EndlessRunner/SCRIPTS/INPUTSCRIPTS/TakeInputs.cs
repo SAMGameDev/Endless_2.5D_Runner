@@ -17,6 +17,11 @@ namespace RunnerGame
                 || Input.GetKeyDown(KeyCode.Space))
             {
                 characterControl.Jump = true;
+
+                if (!characterControl.startRunning)
+                {
+                    characterControl.startRunning = true;
+                }
             }
             else
             {
@@ -26,6 +31,10 @@ namespace RunnerGame
                || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 characterControl.Dash = true;
+                if (!characterControl.startRunning)
+                {
+                    characterControl.startRunning = true;
+                }
             }
             else
             {

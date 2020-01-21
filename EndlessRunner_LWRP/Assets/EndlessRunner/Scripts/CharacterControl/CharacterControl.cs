@@ -6,10 +6,10 @@ namespace RunnerGame
 {
     public enum TranistionParemeters
     {
+        Run,
         Jump,
         ForceTransition,
         Grounded,
-        Run,
         Dash,
         OnSlope,
         Die,
@@ -19,6 +19,7 @@ namespace RunnerGame
         [Header("INPUTS")]
         public bool Jump;
         public bool Dash;
+        public bool startRunning;
 
         [Header("DETECTORS")]
         public bool isGrounded;
@@ -58,6 +59,7 @@ namespace RunnerGame
         {
             QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = 65;
+            startRunning = false;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
         }
