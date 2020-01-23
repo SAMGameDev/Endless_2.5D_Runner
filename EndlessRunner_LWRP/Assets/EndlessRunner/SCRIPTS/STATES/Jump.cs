@@ -7,7 +7,8 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/Jump")]
     public class Jump : ScriptableObjectData
     {
-        public float JumpForce;
+        [SerializeField]
+        private float JumpForce;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             float normal_JumpForce = 13;
