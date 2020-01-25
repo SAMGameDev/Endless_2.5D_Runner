@@ -83,12 +83,12 @@ namespace RunnerGame
             //if character is falling increase acceraltion
             if (RIGIDBODY.velocity.y < 0f)
             {
-                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
+                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.fixedDeltaTime;
             }
             //if it's  in air make him fall don't keep going up
             else if (RIGIDBODY.velocity.y > 0f && Jump == false)
             {
-                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
+                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.fixedDeltaTime;
             }
             //fixing that bouncing effect On Slope
             if (isOnSlope)

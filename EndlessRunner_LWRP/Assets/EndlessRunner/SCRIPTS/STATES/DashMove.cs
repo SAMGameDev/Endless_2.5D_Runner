@@ -11,7 +11,7 @@ namespace RunnerGame
         protected float DashForce;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0, 0, 30);
+            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0, 0, DashForce);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
