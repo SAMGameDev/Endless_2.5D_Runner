@@ -7,7 +7,8 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/RunForward")]
     public class RunningForward : ScriptableObjectData
     {
-        public float speed;
+        [SerializeField]
+        protected float speed;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(TranistionParemeters.Dash.ToString(), false);

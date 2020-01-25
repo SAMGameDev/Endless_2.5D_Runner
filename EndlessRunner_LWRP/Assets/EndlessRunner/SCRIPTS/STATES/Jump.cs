@@ -8,7 +8,7 @@ namespace RunnerGame
     public class Jump : ScriptableObjectData
     {
         [SerializeField]
-        private float JumpForce;
+        protected float JumpForce;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             float normal_JumpForce = 11.5f;

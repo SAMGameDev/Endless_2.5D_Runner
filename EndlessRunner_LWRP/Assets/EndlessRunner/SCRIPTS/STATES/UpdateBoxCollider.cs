@@ -7,10 +7,14 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/UpdateBoxCollider")]
     public class UpdateBoxCollider : ScriptableObjectData
     {
-        public Vector3 targetCenter;
-        public float CenterUpdate_Speed;
-        public Vector3 targetSize;
-        public float SizeUpdate_Speed;
+        [SerializeField]
+        protected Vector3 targetCenter;
+        [SerializeField]
+        protected float CenterUpdate_Speed;
+        [SerializeField]
+        protected Vector3 targetSize;
+        [SerializeField]
+        protected float SizeUpdate_Speed;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.UpdateNow = true;

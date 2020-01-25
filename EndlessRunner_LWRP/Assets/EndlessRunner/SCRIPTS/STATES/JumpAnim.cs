@@ -7,7 +7,6 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/JumpAnim")]
     public class JumpAnim : ScriptableObjectData
     {
-        public float speed;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(TranistionParemeters.Dash.ToString(), false);
