@@ -6,8 +6,7 @@ namespace RunnerGame
 {
     public class Death : MonoBehaviour
     {
-        [SerializeField]
-        private CharacterControl Control;
+        protected CharacterControl Control;
         // Start is called before the first frame update
         void Start()
         {
