@@ -8,19 +8,22 @@ namespace RunnerGame
     public class DashMove : ScriptableObjectData
     {
         [SerializeField]
-        protected float DashForce;
+        protected float DashForce;      
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0,
-                4, DashForce);
+            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
+
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0,
+               0, DashForce);
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(TranistionParemeters.Dash.ToString(), false);
+
         }
     }
 
