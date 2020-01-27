@@ -13,6 +13,7 @@ namespace RunnerGame
         Dash,
         OnSlope,
         Die,
+        DoubleJump,
     }
     public class CharacterControl : MonoBehaviour
     {
@@ -71,6 +72,11 @@ namespace RunnerGame
             {
                 c.characterControl = this;
             }
+        }
+
+        void Update()
+        {
+            Time.timeScale = 0.7f;
         }
         void FixedUpdate()
         {

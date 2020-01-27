@@ -13,6 +13,6 @@ public class MoveFollowCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Euler(0,0,0);
+        transform.Translate(transform.forward * 15f * Time.deltaTime);
     }
 }
