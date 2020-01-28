@@ -10,17 +10,13 @@ namespace RunnerGame
         public bool CanDoubleJump;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             if (playerStateBase.characterControl.isGrounded)
             {
                 CanDoubleJump = true;
-
-                if (playerStateBase.characterControl.Jump)
-                {
-                    animator.SetBool(TranistionParemeters.DoubleJump.ToString(), true);
-                }
             }
             else
             {
