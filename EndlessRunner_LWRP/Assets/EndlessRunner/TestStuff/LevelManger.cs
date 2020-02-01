@@ -15,9 +15,9 @@ namespace RunnerGame
         private Transform playertransform;
 
         public float spawnZ = 0;
-        public float tileLength = 46.5f;
+        public float tileLength = 46.4f;
         private float AmountOfPlatforms = 3;
-        private float safeZone = 50;
+        private float safeZone = 65;
         private int lastIndexprefab = 0;
         // Start is called before the first frame update
         void Start()
@@ -34,7 +34,6 @@ namespace RunnerGame
                 {
                     SpawnTile();
                 }
-
             }
         }
         void Update()
