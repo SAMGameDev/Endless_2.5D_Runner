@@ -73,6 +73,12 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
+
+        void Update()
+        {
+            Time.timeScale = 0.2f;
+        }
+
         void FixedUpdate()
         {
             UpdateCenter();

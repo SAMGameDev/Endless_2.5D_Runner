@@ -15,7 +15,7 @@ namespace RunnerGame
         private Transform playertransform;
 
         public float spawnZ = 0;
-        public float tileLength = 46.4f;
+        public float tileLength = 47;
         private float AmountOfPlatforms = 3;
         private float safeZone = 65;
         private int lastIndexprefab = 0;
