@@ -58,8 +58,6 @@ namespace RunnerGame
         }
         void Awake()
         {
-            QualitySettings.vSyncCount = 0;
-            Application.targetFrameRate = 65;
             startRunning = false;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
