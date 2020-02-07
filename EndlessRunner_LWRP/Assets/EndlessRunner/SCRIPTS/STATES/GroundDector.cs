@@ -9,7 +9,6 @@ namespace RunnerGame
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -27,30 +26,9 @@ namespace RunnerGame
                 playerStateBase.characterControl.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
         }
-
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
 
         }
-        /* private bool isGrounded(CharacterControl control)
-         {
-             RaycastHit hit;
-             Physics.Raycast(control.Bcollider.bounds.center, -Vector3.up, out hit, control.Bcollider.bounds.extents.y + hieght);
-             Color rayColor;
-
-             if (hit.collider != null)
-             {
-                 rayColor = Color.white;
-                 Debug.Log(hit.collider.name);
-             }
-             else
-             {
-                 rayColor = Color.red;
-             }
-
-             Debug.DrawRay(control.Bcollider.bounds.center, -Vector3.up * (control.Bcollider.bounds.extents.y + hieght), rayColor);
-             return hit.collider != null;
-         }*/
     }
-
 }

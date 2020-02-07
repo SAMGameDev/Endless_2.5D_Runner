@@ -22,12 +22,12 @@ namespace RunnerGame
             {
                 JumpForce = Slope_JumpForce;
             }
-            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0, JumpForce, 
-                playerStateBase.characterControl.RIGIDBODY.velocity.z);
+            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3(0, JumpForce,
+              0);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-          
+
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

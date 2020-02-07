@@ -21,11 +21,8 @@ namespace RunnerGame
             }
             //  Debug.DrawRay(playerStateBase.characterControl.transform.position, -playerStateBase.characterControl.transform.up * 0.7f, Color.red);
         }
-
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
     }
-
 }

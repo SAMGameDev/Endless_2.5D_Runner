@@ -21,11 +21,9 @@ namespace RunnerGame
                 animator.SetBool(TranistionParemeters.OnSlope.ToString(), false);
             }
         }
-
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
 
         }
     }
-
 }

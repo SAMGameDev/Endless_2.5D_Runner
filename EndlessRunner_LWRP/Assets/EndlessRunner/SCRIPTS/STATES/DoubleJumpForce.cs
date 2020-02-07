@@ -22,5 +22,4 @@ namespace RunnerGame
             animator.SetBool(TranistionParemeters.DoubleJump.ToString(), false);
         }
     }
-
 }

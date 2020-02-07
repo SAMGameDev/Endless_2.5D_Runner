@@ -892,6 +892,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983514025}
   m_CullTransparentMesh: 0
+--- !u!4 &1020877261 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3396190807473097770, guid: f337ceb12f4717c43839d2d8747ed81d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3763394139138592849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1022201397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,8 +1560,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1020877261}
+  m_Follow: {fileID: 1020877261}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -1746,11 +1752,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: JodyMain
-      objectReference: {fileID: 0}
-    - target: {fileID: 1660560220283070390, guid: f337ceb12f4717c43839d2d8747ed81d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f337ceb12f4717c43839d2d8747ed81d, type: 3}
