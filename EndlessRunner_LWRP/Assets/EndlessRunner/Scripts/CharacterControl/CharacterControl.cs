@@ -39,11 +39,15 @@ namespace RunnerGame
         public float SizeUpdate_Speed_C;
         public Vector3 targetCenter_C;
         public float CenterUpdate_Speed_C;
+        //CCollider
+        public float targetHeight;
+        //CCollider ends
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
         public Animator anim;
         public BoxCollider Bcollider;
+        public CapsuleCollider Ccollider;
         private Rigidbody rb;
         public Rigidbody RIGIDBODY
         {
@@ -61,6 +65,7 @@ namespace RunnerGame
             startRunning = false;
             anim = GetComponentInChildren<Animator>();
             Bcollider = GetComponent<BoxCollider>();
+            Ccollider = GetComponent<CapsuleCollider>();
         }
         public void CacheCharacterControl(Animator animator)
         {
@@ -70,6 +75,10 @@ namespace RunnerGame
             {
                 c.characterControl = this;
             }
+        }
+        private void Update()
+        {
+            Time.timeScale = 0.4f;
         }
         void FixedUpdate()
         {
@@ -97,13 +106,22 @@ namespace RunnerGame
         }
         void UpdateCenter()
         {
+            /* if (!UpdateNow)
+             {
+                 return;
+             }
+             if (Vector3.SqrMagnitude(Bcollider.center - targetCenter_C) > 0.01f)
+             {
+                 Bcollider.center = Vector3.Lerp(Bcollider.center, targetCenter_C,
+                     Time.fixedDeltaTime * CenterUpdate_Speed_C);
+             }*/
             if (!UpdateNow)
             {
                 return;
             }
-            if (Vector3.SqrMagnitude(Bcollider.center - targetCenter_C) > 0.01f)
+            if (Vector3.SqrMagnitude(Ccollider.center - targetCenter_C) > 0.01f)
             {
-                Bcollider.center = Vector3.Lerp(Bcollider.center, targetCenter_C,
+                Ccollider.center = Vector3.Lerp(Ccollider.center, targetCenter_C,
                     Time.fixedDeltaTime * CenterUpdate_Speed_C);
             }
         }
@@ -113,11 +131,19 @@ namespace RunnerGame
             {
                 return;
             }
+            else
+            {
+                Ccollider.height = targetHeight;
+            }
+            /*if (!UpdateNow)
+            {
+                return;
+            }
             if (Vector3.SqrMagnitude(Bcollider.size - targetSize_C) > 0.01f)
             {
                 Bcollider.size = Vector3.Lerp(Bcollider.size, targetSize_C,
                     Time.fixedDeltaTime * SizeUpdate_Speed_C);
-            }
+            }*/
         }
 
         void OnCollisionEnter(Collision collision)
