@@ -61,6 +61,15 @@ namespace RunnerGame
             anim = GetComponentInChildren<Animator>();
             Ccollider = GetComponent<CapsuleCollider>();
         }
+        void Update()
+        {
+            ApplyGravity();
+        }
+        void FixedUpdate()
+        {
+            UpdateCenter();
+            UpdateSize();
+        }
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
@@ -70,23 +79,17 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
-        void FixedUpdate()
-        {
-            UpdateCenter();
-            UpdateSize();
-            ApplyGravity();
-        }
         void ApplyGravity()
         {
             //if character is falling increase acceraltion
             if (RIGIDBODY.velocity.y < 0f)
             {
-                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.fixedDeltaTime;
+                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
             }
             //if it's  in air make him fall don't keep going up
             else if (RIGIDBODY.velocity.y > 0f && Jump == false)
             {
-                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.fixedDeltaTime;
+                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
             }
             //fixing that bouncing effect On Slope
             if (isOnSlope)

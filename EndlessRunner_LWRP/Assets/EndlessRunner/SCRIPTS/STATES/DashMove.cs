@@ -10,13 +10,11 @@ namespace RunnerGame
         [SerializeField]
         protected float DashForce;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
-        {
-            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
+        {       
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.gameObject.transform.Translate
-                (Vector3.forward * DashForce * Time.deltaTime);
+            playerStateBase.characterControl.RIGIDBODY.AddRelativeForce(Vector3.forward * DashForce, ForceMode.Acceleration);
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

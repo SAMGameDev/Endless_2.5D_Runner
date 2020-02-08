@@ -17,10 +17,11 @@ namespace RunnerGame
             //playerStateBase.characterControl.transform.Translate
             //(Vector3.forward * speed * Time.deltaTime);
             playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
-              (0f, playerStateBase.characterControl.RIGIDBODY.velocity.y, speed);
+            (0f, playerStateBase.characterControl.RIGIDBODY.velocity.y, speed);
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+          
         }
     }
 }

@@ -16,7 +16,6 @@ namespace RunnerGame
         // Update is called once per frame
         void Update()
         {
-            Time.timeScale = 0.3f;
             if (Control.Death)
             {
                 Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
