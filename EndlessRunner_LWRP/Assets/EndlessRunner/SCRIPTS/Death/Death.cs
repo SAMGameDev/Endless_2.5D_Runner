@@ -18,8 +18,6 @@ namespace RunnerGame
         {
             if (Control.Death)
             {
-                //Control.RIGIDBODY.velocity = Vector3.zero;
-                // Control.RIGIDBODY.velocity = new Vector3(0, 0, -15);
                 Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
             }
         }
