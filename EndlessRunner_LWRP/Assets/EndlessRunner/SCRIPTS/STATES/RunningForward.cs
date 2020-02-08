@@ -8,14 +8,16 @@ namespace RunnerGame
     public class RunningForward : ScriptableObjectData
     {
         [SerializeField]
-        protected float speed = 14f;
+        protected float speed;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.gameObject.transform.Translate
-                (Vector3.forward * speed * Time.deltaTime);
+            //playerStateBase.characterControl.transform.Translate
+            //(Vector3.forward * speed * Time.deltaTime);
+            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
+              (0f, playerStateBase.characterControl.RIGIDBODY.velocity.y, speed);
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
