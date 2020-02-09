@@ -43,8 +43,7 @@ namespace RunnerGame
         [Header("SUB-COMPONENTS")]
         public Animator anim;      
         public CapsuleCollider Ccollider;
-        private Rigidbody rb;
-        public List<Collider> ragdollParts = new List<Collider>();
+        private Rigidbody rb;      
         public Rigidbody RIGIDBODY
         {
             get
@@ -58,48 +57,10 @@ namespace RunnerGame
         }
         void Awake()
         {
-            SetupRagdollParts();
             startRunning = false;
             anim = GetComponentInChildren<Animator>();
             Ccollider = GetComponent<CapsuleCollider>();
         }
-        void Update()
-        {
-            ApplyGravity();
-        }
-        void FixedUpdate()
-        {
-            UpdateCenter();
-            UpdateSize();
-        }
-
-        void SetupRagdollParts()
-        {
-            Collider[] ragdollColliders = this.GetComponentsInChildren<Collider>();
-
-            foreach (Collider c in ragdollColliders)
-            {
-                if (c.gameObject != this.gameObject)
-                {
-                    c.isTrigger = true;
-                    ragdollParts.Add(c);
-                }
-            }
-        }
-        public void TurnOnRagdoll()
-        {
-            anim.enabled = false;
-            anim.avatar = null;
-
-            foreach (Collider c in ragdollParts)
-            {
-                c.isTrigger = false;
-                c.attachedRigidbody.velocity = Vector3.zero;
-
-            }
-           // Ccollider.enabled = false;
-        }
-
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
@@ -109,6 +70,15 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
+        void Update()
+        {
+            ApplyGravity();
+        }
+        void FixedUpdate()
+        {
+            UpdateCenter();
+            UpdateSize();
+        }     
         void ApplyGravity()
         {
             //if character is falling increase acceraltion
