@@ -11,8 +11,8 @@ namespace RunnerGame
         protected float Backward_Force;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.AddForce(-Vector3.forward * Backward_Force, ForceMode.Force);
-
+            playerStateBase.characterControl.RIGIDBODY.isKinematic = true;
+            playerStateBase.characterControl.RIGIDBODY.MovePosition(-Vector3.forward * Backward_Force);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
