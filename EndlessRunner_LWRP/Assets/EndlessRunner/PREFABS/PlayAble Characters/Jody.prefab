@@ -577,7 +577,7 @@ CapsuleCollider:
   m_Radius: 0.3
   m_Height: 2.2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 1.03, z: 0}
 --- !u!114 &270396371363751242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,17 +596,15 @@ MonoBehaviour:
   isGrounded: 0
   isOnSlope: 0
   Death: 0
-  FallMultiplier: 9.2
-  lowJumpGravity: 3.8
+  FallMultiplier: 8
+  lowJumpGravity: 5
   slopeFroce: 500
-  targetSize_C: {x: 0, y: 0, z: 0}
-  SizeUpdate_Speed_C: 0
   targetCenter_C: {x: 0, y: 0, z: 0}
   CenterUpdate_Speed_C: 0
   targetHeight: 0
   UpdateNow: 0
   anim: {fileID: 0}
-  Bcollider: {fileID: 0}
+  CController: {fileID: 0}
   Ccollider: {fileID: 0}
 --- !u!114 &270396371363751243
 MonoBehaviour:

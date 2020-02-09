@@ -18,7 +18,8 @@ namespace RunnerGame
         {
             if (Control.Death)
             {
-                Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
+                // Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
+                Control.TurnOnRagdoll();
             }
         }
     }

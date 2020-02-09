@@ -8,11 +8,10 @@ namespace RunnerGame
     public class DeathForce : ScriptableObjectData
     {
         [SerializeField]
-        protected float speed;
+        protected float Backward_Force;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.gameObject.transform.Translate
-           (-Vector3.forward * speed * Time.deltaTime);
+            playerStateBase.characterControl.RIGIDBODY.AddForce(-Vector3.forward * Backward_Force, ForceMode.Force);
 
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

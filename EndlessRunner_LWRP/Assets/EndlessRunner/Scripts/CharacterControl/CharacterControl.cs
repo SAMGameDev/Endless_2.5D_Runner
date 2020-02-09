@@ -41,9 +41,10 @@ namespace RunnerGame
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
-        public Animator anim;
+        public Animator anim;      
         public CapsuleCollider Ccollider;
         private Rigidbody rb;
+        public List<Collider> ragdollParts = new List<Collider>();
         public Rigidbody RIGIDBODY
         {
             get
@@ -57,6 +58,7 @@ namespace RunnerGame
         }
         void Awake()
         {
+            SetupRagdollParts();
             startRunning = false;
             anim = GetComponentInChildren<Animator>();
             Ccollider = GetComponent<CapsuleCollider>();
@@ -70,6 +72,34 @@ namespace RunnerGame
             UpdateCenter();
             UpdateSize();
         }
+
+        void SetupRagdollParts()
+        {
+            Collider[] ragdollColliders = this.GetComponentsInChildren<Collider>();
+
+            foreach (Collider c in ragdollColliders)
+            {
+                if (c.gameObject != this.gameObject)
+                {
+                    c.isTrigger = true;
+                    ragdollParts.Add(c);
+                }
+            }
+        }
+        public void TurnOnRagdoll()
+        {
+            anim.enabled = false;
+            anim.avatar = null;
+
+            foreach (Collider c in ragdollParts)
+            {
+                c.isTrigger = false;
+                c.attachedRigidbody.velocity = Vector3.zero;
+
+            }
+           // Ccollider.enabled = false;
+        }
+
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
@@ -120,7 +150,6 @@ namespace RunnerGame
                 Ccollider.height = targetHeight;
             }
         }
-
         void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Obsticel"))
