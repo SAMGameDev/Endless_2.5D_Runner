@@ -13,7 +13,7 @@ namespace RunnerGame
         protected float forwardVel;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            float normal_JumpForce = 13;
+            float normal_JumpForce = 14;
             float Slope_JumpForce = 18;
 
             if (!playerStateBase.characterControl.isOnSlope)
@@ -34,7 +34,6 @@ namespace RunnerGame
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
             JumpForce = 0f;
         }
     }

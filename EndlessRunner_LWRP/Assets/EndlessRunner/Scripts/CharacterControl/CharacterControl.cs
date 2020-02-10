@@ -41,9 +41,9 @@ namespace RunnerGame
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
-        public Animator anim;      
+        public Animator anim;
         public CapsuleCollider Ccollider;
-        private Rigidbody rb;      
+        private Rigidbody rb;
         public Rigidbody RIGIDBODY
         {
             get
@@ -78,7 +78,7 @@ namespace RunnerGame
         {
             UpdateCenter();
             UpdateSize();
-        }     
+        }
         void ApplyGravity()
         {
             //if character is falling increase acceraltion
@@ -120,15 +120,16 @@ namespace RunnerGame
                 Ccollider.height = targetHeight;
             }
         }
-        void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Obsticel"))
             {
                 Death = true;
             }
         }
-        void OnCollisionStay(Collision collision)
+        private void OnCollisionStay(Collision collision)
         {
+
             if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
             {
                 isGrounded = true;
@@ -138,6 +139,7 @@ namespace RunnerGame
                 isOnSlope = true;
             }
         }
+
         void OnCollisionExit(Collision collision)
         {
             Death = false;
@@ -146,7 +148,3 @@ namespace RunnerGame
         }
     }
 }
-
-
-
-
