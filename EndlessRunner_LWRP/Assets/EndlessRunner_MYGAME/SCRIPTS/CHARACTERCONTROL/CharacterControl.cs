@@ -73,6 +73,7 @@ namespace RunnerGame
         }
         private void Update()
         {
+            Time.timeScale = 0.1f;
             ApplyGravity();
         }
         private void FixedUpdate()
@@ -144,8 +145,8 @@ namespace RunnerGame
 
         protected void OnCollisionExit(Collision collision)
         {
-            Death = false;
             isGrounded = false;
+            Death = false;
             isOnSlope = false;
         }
     }
