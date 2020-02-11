@@ -13,7 +13,8 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (playerStateBase.characterControl.Jump)
+            if (playerStateBase.characterControl.Jump &&
+                playerStateBase.characterControl.isGrounded == true)
             {
                 animator.SetBool(TranistionParemeters.Jump.ToString(), true);
             }

@@ -28,11 +28,12 @@ namespace RunnerGame
         public bool Death;
 
         [Header("Floats")]
-        public float FallMultiplier;
         [SerializeField]
-        public float lowJumpGravity;
+        protected float FallMultiplier;
         [SerializeField]
-        public float slopeFroce;
+        protected float lowJumpGravity;
+        [SerializeField]
+        protected float slopeFroce;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
@@ -55,7 +56,7 @@ namespace RunnerGame
                 return rb;
             }
         }
-        void Awake()
+        private void Awake()
         {
             startRunning = false;
             anim = GetComponentInChildren<Animator>();
@@ -70,17 +71,16 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
-        void Update()
+        private void Update()
         {
-            Time.timeScale = 0.3f;
             ApplyGravity();
         }
-        void FixedUpdate()
+        private void FixedUpdate()
         {
             UpdateCenter();
             UpdateSize();
         }
-        void ApplyGravity()
+        private void ApplyGravity()
         {
             //if character is falling increase acceraltion
             if (RIGIDBODY.velocity.y < 0f)
