@@ -23,7 +23,7 @@ namespace RunnerGame
             else
             {
                 JumpForce = Slope_JumpForce;
-            }          
+            }
             playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
                 (0f, JumpForce, forwardVel);
         }

@@ -58,7 +58,7 @@ namespace RunnerGame
         }
         private void Awake()
         {
-            startRunning = false;
+            startRunning = false;        
             anim = GetComponentInChildren<Animator>();
             Ccollider = GetComponent<CapsuleCollider>();
         }
@@ -73,7 +73,7 @@ namespace RunnerGame
         }
         private void Update()
         {
-            Time.timeScale = 0.1f;
+            Time.timeScale = 0.3f;
             ApplyGravity();
         }
         private void FixedUpdate()
@@ -131,23 +131,25 @@ namespace RunnerGame
                 Death = true;
             }
         }
-        protected void OnCollisionStay(Collision collision)
+
+        private void OnCollisionStay(Collision other)
         {
-            if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Slope"))
+            if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Slope"))
             {
                 isGrounded = true;
             }
-            if (collision.gameObject.CompareTag("Slope"))
+            if (other.gameObject.CompareTag("Slope"))
             {
                 isOnSlope = true;
             }
         }
 
-        protected void OnCollisionExit(Collision collision)
+        private void OnCollisionExit(Collision collision)
         {
             isGrounded = false;
             Death = false;
             isOnSlope = false;
         }
+
     }
 }

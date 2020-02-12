@@ -19,7 +19,9 @@ namespace RunnerGame
             {
                 playerStateBase.characterControl.transform.rotation = Quaternion.LookRotation(Vector3.Cross(playerStateBase.characterControl.transform.right, hit.normal));             
             }
-            //  Debug.DrawRay(playerStateBase.characterControl.transform.position, -playerStateBase.characterControl.transform.up * 0.7f, Color.red);
+            //  Debug.DrawRay
+            //(playerStateBase.characterControl.transform.position, 
+            ///-playerStateBase.characterControl.transform.up * 0.7f, Color.red);
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

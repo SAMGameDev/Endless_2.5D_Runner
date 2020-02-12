@@ -13,7 +13,7 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (playerStateBase.characterControl.isGrounded)
+           /* if (playerStateBase.characterControl.isGrounded)
             {
                 CanDash = true;
 
@@ -29,7 +29,7 @@ namespace RunnerGame
                     animator.SetBool(TranistionParemeters.Dash.ToString(), true);
                     CanDash = false;
                 }
-            }
+            }*/
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

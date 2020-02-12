@@ -540,7 +540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660560220283070390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.151, z: 3.22}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6790654092980177028}
@@ -563,7 +563,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!136 &5202981297439597758
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -574,10 +574,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 2.2
+  m_Radius: 0.35
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1.03, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &270396371363751242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,10 +593,10 @@ MonoBehaviour:
   Jump: 0
   Dash: 0
   startRunning: 0
-  isGrounded: 0
+  isGrounded: 1
   isOnSlope: 0
   Death: 0
-  FallMultiplier: 8
+  FallMultiplier: 9
   lowJumpGravity: 5
   slopeFroce: 500
   targetCenter_C: {x: 0, y: 0, z: 0}
@@ -604,8 +604,8 @@ MonoBehaviour:
   targetHeight: 0
   UpdateNow: 0
   anim: {fileID: 0}
-  CController: {fileID: 0}
   Ccollider: {fileID: 0}
+  Detector: {fileID: 0}
 --- !u!114 &270396371363751243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1586,7 +1586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3396190807473097765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.29, z: 0}
+  m_LocalPosition: {x: 0, y: 2.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1660560220283070285}
