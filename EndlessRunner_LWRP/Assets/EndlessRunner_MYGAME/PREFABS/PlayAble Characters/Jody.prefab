@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 270396371363751242}
   - component: {fileID: 270396371363751243}
   - component: {fileID: 3082031226663104452}
+  - component: {fileID: 401795643}
   m_Layer: 0
   m_Name: Jody
   m_TagString: Player
@@ -605,7 +606,6 @@ MonoBehaviour:
   UpdateNow: 0
   anim: {fileID: 0}
   Ccollider: {fileID: 0}
-  Detector: {fileID: 0}
 --- !u!114 &270396371363751243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,6 +630,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08773bc2d187b546a7882a72c2e8695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &401795643
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660560220283070390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.42, z: 0}
 --- !u!1 &1845547596389981902
 GameObject:
   m_ObjectHideFlags: 0
