@@ -167,11 +167,11 @@ GameObject:
   - component: {fileID: 799491937}
   m_Layer: 0
   m_Name: Obsticels
-  m_TagString: Untagged
+  m_TagString: Obsticel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &799491937
 Transform:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087693449}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.15, z: 69.27}
+  m_LocalPosition: {x: 0, y: 0.15, z: 72.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 318823131}
@@ -1010,9 +1010,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4884130474523194}
+  - component: {fileID: 4036560307331400704}
   m_Layer: 0
   m_Name: Big_trash_bin prefab
-  m_TagString: Untagged
+  m_TagString: Obsticel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1025,13 +1026,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520711247106064}
   m_LocalRotation: {x: -0, y: -0.79663473, z: -0, w: 0.604461}
-  m_LocalPosition: {x: 0, y: 0.16167462, z: 0.7939377}
+  m_LocalPosition: {x: 0, y: 0.16167462, z: 24.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4165393443846904}
   m_Father: {fileID: 799491937}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -105.62, z: 0}
+--- !u!65 &4036560307331400704
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520711247106064}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.21, y: 1.03, z: 1.77}
+  m_Center: {x: 0.26, y: 0.79, z: 0.09}
 --- !u!1 &1631846227154868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,7 +1288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721007903313408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5408934, y: 0.15000013, z: 1.92}
+  m_LocalPosition: {x: 1.5408934, y: 0.15000013, z: 25.356058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4993983850244106}
@@ -1292,7 +1306,6 @@ GameObject:
   - component: {fileID: 4165393443846904}
   - component: {fileID: 33267741298174990}
   - component: {fileID: 23550363647097368}
-  - component: {fileID: 64148542282271100}
   m_Layer: 0
   m_Name: Big_trash_bin
   m_TagString: Obsticel
@@ -1363,20 +1376,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64148542282271100
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809725336055878}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 221422f7266ae3249b686bbfb5989c70, type: 3}
 --- !u!1 &1825202595144352
 GameObject:
   m_ObjectHideFlags: 0

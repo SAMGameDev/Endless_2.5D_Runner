@@ -58,7 +58,7 @@ namespace RunnerGame
         }
         private void Awake()
         {
-            startRunning = false;        
+            startRunning = false;
             anim = GetComponentInChildren<Animator>();
             Ccollider = GetComponent<CapsuleCollider>();
         }
@@ -73,6 +73,7 @@ namespace RunnerGame
         }
         private void Update()
         {
+            Time.timeScale = 0.2f;
             ApplyGravity();
         }
         private void FixedUpdate()
