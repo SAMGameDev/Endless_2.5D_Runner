@@ -73,7 +73,6 @@ namespace RunnerGame
         }
         private void Update()
         {
-            Time.timeScale = 0.3f;
             ApplyGravity();
         }
         private void FixedUpdate()
