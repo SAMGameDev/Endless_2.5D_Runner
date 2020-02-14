@@ -11,14 +11,10 @@ namespace RunnerGame
         protected bool CanDoubleJump;
         [SerializeField]
         protected float DoubleJumpForce_Val;
-        [SerializeField]
-        protected float forwardVel;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            //playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
-            //  (0f, DoubleJumpForce_Val, forwardVel);
             playerStateBase.characterControl.RIGIDBODY.AddForce
-                (Vector3.up * DoubleJumpForce_Val, ForceMode.Force);
+                (playerStateBase.characterControl.transform.up * DoubleJumpForce_Val);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

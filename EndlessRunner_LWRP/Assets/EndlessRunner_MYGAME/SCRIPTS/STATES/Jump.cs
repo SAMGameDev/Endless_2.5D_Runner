@@ -9,8 +9,6 @@ namespace RunnerGame
     {
         [SerializeField]
         protected float JumpForce;
-        [SerializeField]
-        protected float forwardVel;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             float normal_JumpForce = 800;
@@ -27,7 +25,7 @@ namespace RunnerGame
             // playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
             //  (0f, JumpForce, forwardVel);
             playerStateBase.characterControl.RIGIDBODY.AddForce
-                (Vector3.up * JumpForce, ForceMode.Force);
+                (playerStateBase.characterControl.transform.up * JumpForce);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
