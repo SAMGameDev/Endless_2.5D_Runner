@@ -913,18 +913,15 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: Grounded
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: Dash
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5984723750503210836}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.13463897
+  m_TransitionDuration: 0.10923657
   m_TransitionOffset: 0
-  m_ExitTime: 0.55281097
+  m_ExitTime: 0.6371832
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1429,8 +1426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableObjectDatas:
-  - {fileID: 11400000, guid: 449aa4b858d76dc4885066561223cb55, type: 2}
   - {fileID: 11400000, guid: 0b53f75c209b89b408c45ed71a23e92e, type: 2}
+  - {fileID: 11400000, guid: 449aa4b858d76dc4885066561223cb55, type: 2}
   - {fileID: 11400000, guid: 23b09c48e4ea9644281fb0e93b754923, type: 2}
   - {fileID: 11400000, guid: 8a01f2f3cd8cce94992900cb4e0fb7d3, type: 2}
   - {fileID: 11400000, guid: 2300df8b518427147b3c32f14b811ad3, type: 2}
@@ -1507,7 +1504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableObjectDatas:
-  - {fileID: 11400000, guid: 133eafaa4c7cfa04f961b9163b51e3ea, type: 2}
+  - {fileID: 11400000, guid: d98433e474bdecf4691e1acb6b997042, type: 2}
   - {fileID: 11400000, guid: d3ea04ec1e8213c48b9e21bc34e2d71b, type: 2}
   - {fileID: 11400000, guid: b3840abe570313543b9f99e352337417, type: 2}
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
@@ -1555,9 +1552,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.00602597
+  m_TransitionDuration: 0.06596205
   m_TransitionOffset: 0
-  m_ExitTime: 0.9874134
+  m_ExitTime: 0.8691185
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1581,7 +1578,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dad11f85a323ada4ca775c2a5cd7b721, type: 2}
   - {fileID: 11400000, guid: b3840abe570313543b9f99e352337417, type: 2}
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
-  - {fileID: 11400000, guid: b0e9e2f7f3db80149832c4bbcf95bbe0, type: 2}
   characterControl: {fileID: 0}
 --- !u!1101 &9179965197916645537
 AnimatorStateTransition:

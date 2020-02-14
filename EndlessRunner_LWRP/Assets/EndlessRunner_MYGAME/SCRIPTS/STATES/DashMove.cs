@@ -12,7 +12,7 @@ namespace RunnerGame
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.RIGIDBODY.AddForce
-                (playerStateBase.characterControl.transform.forward * DashForce, ForceMode.VelocityChange);
+               (Vector3.forward * DashForce, ForceMode.VelocityChange);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

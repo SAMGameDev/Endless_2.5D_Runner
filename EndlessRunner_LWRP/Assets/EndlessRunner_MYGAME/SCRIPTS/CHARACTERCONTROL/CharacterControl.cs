@@ -80,6 +80,10 @@ namespace RunnerGame
             UpdateCenter();
             UpdateSize();
         }
+        public void RunForward(float speed)
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
         private void ApplyGravity()
         {
             //if character is falling increase acceraltion
@@ -98,7 +102,6 @@ namespace RunnerGame
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             }
         }
-        #region //update boxcollider functions
         void UpdateCenter()
         {
             if (!UpdateNow)
@@ -122,7 +125,6 @@ namespace RunnerGame
                 Ccollider.height = targetHeight;
             }
         }
-        #endregion
         protected void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Obsticel"))
