@@ -13,8 +13,11 @@ namespace RunnerGame
         protected float DoubleJumpForce_Val;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.AddForce
-                (playerStateBase.characterControl.transform.up * DoubleJumpForce_Val);
+            //playerStateBase.characterControl.RIGIDBODY.AddForce
+            // (playerStateBase.characterControl.transform.up * DoubleJumpForce_Val);
+
+            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
+                (0f, DoubleJumpForce_Val, 0f);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

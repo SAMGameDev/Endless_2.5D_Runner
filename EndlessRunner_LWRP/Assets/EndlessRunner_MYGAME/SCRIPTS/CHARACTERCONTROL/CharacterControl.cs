@@ -6,7 +6,7 @@ namespace RunnerGame
 {
     public enum TranistionParemeters
     {
-        Run,
+        Start,
         Jump,
         ForceTransition,
         Grounded,
@@ -20,7 +20,7 @@ namespace RunnerGame
         [Header("INPUTS")]
         public bool Jump;
         public bool Dash;
-        public bool startRunning;
+        public bool Start;
 
         [Header("DETECTORS")]
         public bool isGrounded;
@@ -58,7 +58,7 @@ namespace RunnerGame
         }
         private void Awake()
         {
-            startRunning = false;
+            Start = false;
             anim = GetComponentInChildren<Animator>();
             Ccollider = GetComponent<CapsuleCollider>();
         }
@@ -71,18 +71,20 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
-        private void Update()
+
+        public void Update()
         {
-            ApplyGravity();
+            Time.timeScale = 1;
         }
         private void FixedUpdate()
         {
+            ApplyGravity();
             UpdateCenter();
             UpdateSize();
         }
         public void RunForward(float speed)
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }
         private void ApplyGravity()
         {

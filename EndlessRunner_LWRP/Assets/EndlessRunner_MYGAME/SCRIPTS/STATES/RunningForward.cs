@@ -14,9 +14,6 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            // playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
-            //(0f, 0f, speed);
-
             playerStateBase.characterControl.RunForward(speed);
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

@@ -21,6 +21,10 @@ namespace RunnerGame
                 {
                     animator.SetBool(TranistionParemeters.Dash.ToString(), true);
                 }
+                else
+                {
+                    animator.SetBool(TranistionParemeters.Dash.ToString(), false);
+                }
             }
             else
             {
@@ -33,7 +37,6 @@ namespace RunnerGame
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
     }
 

@@ -563,7 +563,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!136 &5202981297439597758
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -574,7 +574,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.35
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -593,11 +593,11 @@ MonoBehaviour:
   Jump: 0
   Dash: 0
   startRunning: 0
-  isGrounded: 1
+  isGrounded: 0
   isOnSlope: 0
   Death: 0
-  FallMultiplier: 9
-  lowJumpGravity: 5
+  FallMultiplier: 4
+  lowJumpGravity: 3
   slopeFroce: 500
   targetCenter_C: {x: 0, y: 0, z: 0}
   CenterUpdate_Speed_C: 0

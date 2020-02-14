@@ -12,14 +12,13 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (playerStateBase.characterControl.startRunning)
+            if (playerStateBase.characterControl.Start)
             {
-                animator.SetBool(TranistionParemeters.Run.ToString(), true);
+                animator.SetBool(TranistionParemeters.Start.ToString(), true);
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
     }
 }

@@ -18,9 +18,9 @@ namespace RunnerGame
             {
                 characterControl.Jump = true;
 
-                if (!characterControl.startRunning)
+                if (!characterControl.Start)
                 {
-                    characterControl.startRunning = true;
+                    characterControl.Start = true;
                 }
             }
             else
@@ -31,14 +31,13 @@ namespace RunnerGame
                || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 characterControl.Dash = true;
-                if (!characterControl.startRunning)
+                if (!characterControl.Start)
                 {
-                    characterControl.startRunning = true;
+                    characterControl.Start = true;
                 }
             }
             else
             {
-
                 characterControl.Dash = false;
             }
         }
