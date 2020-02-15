@@ -8,12 +8,10 @@ namespace RunnerGame
     {
         protected CharacterControl Control;
 
-        // Start is called before the first frame update
         void Start()
         {
             Control = GetComponent<CharacterControl>();
         }
-        // Update is called once per frame
         void Update()
         {
             if (Control.Death)
