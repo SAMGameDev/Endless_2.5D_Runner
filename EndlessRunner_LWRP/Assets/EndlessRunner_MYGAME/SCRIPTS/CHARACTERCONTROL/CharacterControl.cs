@@ -134,6 +134,10 @@ namespace RunnerGame
             {
                 Death = true;
             }
+            if (collision.gameObject.CompareTag("Slope"))
+            {
+                isOnSlope = true;
+            }
         }
 
         private void OnCollisionStay(Collision other)
@@ -141,10 +145,6 @@ namespace RunnerGame
             if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Slope"))
             {
                 isGrounded = true;
-            }
-            if (other.gameObject.CompareTag("Slope"))
-            {
-                isOnSlope = true;
             }
         }
 
