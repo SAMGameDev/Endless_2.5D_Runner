@@ -72,11 +72,6 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
-
-        private void Update()
-        {
-            Time.timeScale = 0.2f;
-        }
         private void FixedUpdate()
         {
             ApplyGravity();
