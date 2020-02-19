@@ -21,10 +21,6 @@ namespace RunnerGame
                 {
                     animator.SetBool(TranistionParemeters.Dash.ToString(), true);
                 }
-                else
-                {
-                    animator.SetBool(TranistionParemeters.Dash.ToString(), false);
-                }
             }
             else
             {
