@@ -28,8 +28,7 @@ namespace RunnerGame
         public bool Death;
 
         [Header("Floats")]
-        [SerializeField]
-        protected float FallMultiplier;
+        public float FallMultiplier;
         [SerializeField]
         protected float lowJumpGravity;
         [SerializeField]

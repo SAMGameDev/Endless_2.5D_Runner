@@ -9,10 +9,13 @@ namespace RunnerGame
     {
         private GameObject CamFollow;
         private Transform followTarget;
-        private CinemachineVirtualCamera Cvm;
+        private CinemachineVirtualCamera cinemaMachine_virtualCamera;
+        private CinemachineTransposer cinemachine_Transposer;
         void Awake()
         {
-            Cvm = GetComponent<CinemachineVirtualCamera>();
+            cinemaMachine_virtualCamera = GetComponent<CinemachineVirtualCamera>();
+            cinemachine_Transposer = cinemaMachine_virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
+            cinemachine_Transposer.m_FollowOffset = new Vector3(22, 2, 0);
         }
 
         void Update()
@@ -22,8 +25,8 @@ namespace RunnerGame
                 CamFollow = GameObject.FindGameObjectWithTag("CamFollow"); ;
             }
             followTarget = CamFollow.transform;
-            Cvm.LookAt = followTarget;
-            Cvm.Follow = followTarget;
+            cinemaMachine_virtualCamera.LookAt = followTarget;
+            cinemaMachine_virtualCamera.Follow = followTarget;
         }
     }
 }

@@ -16,6 +16,11 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+            if (stateInfo.normalizedTime >= 0.5f)
+            {
+                playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
+                playerStateBase.characterControl.RIGIDBODY.useGravity = false;
+            }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
