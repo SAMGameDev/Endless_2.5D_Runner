@@ -11,7 +11,7 @@ namespace RunnerGame
         private Transform followTarget;
         private CinemachineVirtualCamera cinemaMachine_virtualCamera;
         private CinemachineTransposer cinemachine_Transposer;
-        void Awake()
+        void Start()
         {
             cinemaMachine_virtualCamera = GetComponent<CinemachineVirtualCamera>();
             cinemachine_Transposer = cinemaMachine_virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
