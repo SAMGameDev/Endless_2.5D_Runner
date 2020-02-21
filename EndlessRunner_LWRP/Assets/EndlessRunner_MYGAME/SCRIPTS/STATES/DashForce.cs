@@ -9,13 +9,10 @@ namespace RunnerGame
     {
         [SerializeField]
         protected float dashForce;
-        Vector3 resetVel;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.FallMultiplier = 0;
-            resetVel = Vector3.zero;
-
-            playerStateBase.characterControl.RIGIDBODY.velocity = resetVel;
+            playerStateBase.characterControl.FallMultiplier = 0;         
+            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -26,6 +23,7 @@ namespace RunnerGame
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.FallMultiplier = 9.8f;
+            animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Dash], false);
         }
     }
 
