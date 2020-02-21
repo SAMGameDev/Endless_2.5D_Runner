@@ -12,7 +12,6 @@ namespace RunnerGame
         Grounded,
         Dash,
         OnSlope,
-        Die,
         DoubleJump,
     }
     public class CharacterControl : MonoBehaviour
