@@ -21,7 +21,7 @@ namespace RunnerGame
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            animator.SetBool(TranistionParemeters.DoubleJump.ToString(), false);
+            animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], false);
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RunnerGame
 {
-    public class LevelManger : MonoBehaviour
+    public class LevelManger : Singleton<LevelManger>
     {
         public GameObject[] levelPrefabs;
         [SerializeField]

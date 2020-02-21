@@ -57,6 +57,7 @@ namespace RunnerGame
         }
         private void Awake()
         {
+
             Death = false;
             Start = false;
             anim = GetComponentInChildren<Animator>();

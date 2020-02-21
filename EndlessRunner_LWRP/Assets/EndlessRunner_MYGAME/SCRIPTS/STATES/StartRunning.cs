@@ -14,7 +14,8 @@ namespace RunnerGame
         {
             if (playerStateBase.characterControl.Start)
             {
-                animator.SetBool(TranistionParemeters.Start.ToString(), true);
+                animator.SetBool
+                    (HashManger.Instance.DicMainParameters[TranistionParemeters.Start], true);
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

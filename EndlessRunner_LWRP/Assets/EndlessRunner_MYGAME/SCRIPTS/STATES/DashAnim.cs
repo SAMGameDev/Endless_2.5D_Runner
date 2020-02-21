@@ -19,14 +19,14 @@ namespace RunnerGame
 
                 if (playerStateBase.characterControl.Dash)
                 {
-                    animator.SetBool(TranistionParemeters.Dash.ToString(), true);
+                    animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Dash], true);
                 }
             }
             else
             {
                 if (CanDash && playerStateBase.characterControl.Dash)
                 {
-                    animator.SetBool(TranistionParemeters.Dash.ToString(), true);
+                    animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Dash], true);
                     CanDash = false;
                 }
             }

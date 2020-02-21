@@ -21,7 +21,7 @@ namespace RunnerGame
             {
                 if (CanDoubleJump && playerStateBase.characterControl.Jump)
                 {
-                    animator.SetBool(TranistionParemeters.DoubleJump.ToString(), true);
+                    animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], true);
                     CanDoubleJump = false;
                 }
             }

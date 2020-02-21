@@ -14,11 +14,11 @@ namespace RunnerGame
         {
             if (playerStateBase.characterControl.isOnSlope)
             {
-                animator.SetBool(TranistionParemeters.OnSlope.ToString(), true);
+                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.OnSlope], true);
             }
             else
             {
-                animator.SetBool(TranistionParemeters.OnSlope.ToString(), false);
+                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.OnSlope], false);
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

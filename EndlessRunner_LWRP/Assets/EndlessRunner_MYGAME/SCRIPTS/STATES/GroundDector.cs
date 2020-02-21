@@ -14,11 +14,11 @@ namespace RunnerGame
         {
             if (playerStateBase.characterControl.isGrounded)
             {
-                animator.SetBool(TranistionParemeters.Grounded.ToString(), true);
+                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Grounded], true);
             }
             else
             {
-                animator.SetBool(TranistionParemeters.Grounded.ToString(), false);
+                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Grounded], false);
             }
 
             if (playerStateBase.characterControl.isGrounded && !playerStateBase.characterControl.isOnSlope)

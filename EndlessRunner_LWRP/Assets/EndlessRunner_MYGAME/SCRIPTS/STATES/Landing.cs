@@ -9,8 +9,8 @@ namespace RunnerGame
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            animator.SetBool(TranistionParemeters.Dash.ToString(), false);
-            animator.SetBool(TranistionParemeters.Jump.ToString(), false);
+            animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Dash], false);
+            animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Jump], false);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {        

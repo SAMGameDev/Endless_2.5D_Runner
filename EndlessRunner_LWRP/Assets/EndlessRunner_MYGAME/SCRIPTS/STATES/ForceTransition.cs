@@ -17,12 +17,12 @@ namespace RunnerGame
         {
             if (stateInfo.normalizedTime >= TransitionTiming)
             {
-                animator.SetBool(TranistionParemeters.ForceTransition.ToString(), true);
+                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.ForceTransition], true);
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            animator.SetBool(TranistionParemeters.ForceTransition.ToString(), false);
+            animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.ForceTransition], false);
         }
     }
 }
