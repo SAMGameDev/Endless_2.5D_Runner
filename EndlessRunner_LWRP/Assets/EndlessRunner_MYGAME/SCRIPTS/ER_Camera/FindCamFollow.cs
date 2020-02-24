@@ -15,7 +15,7 @@ namespace RunnerGame
         {
             cinemaMachine_virtualCamera = GetComponent<CinemachineVirtualCamera>();
             cinemachine_Transposer = cinemaMachine_virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
-            cinemachine_Transposer.m_FollowOffset = new Vector3(22, 2, 0);
+            cinemachine_Transposer.m_FollowOffset = new Vector3(22, 4, 0);
         }
 
         void Update()
