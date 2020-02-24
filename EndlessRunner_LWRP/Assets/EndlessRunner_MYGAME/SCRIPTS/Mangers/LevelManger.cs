@@ -18,7 +18,7 @@ namespace RunnerGame
         //73.6 previous
         private float tileLength;
         private float AmountOfPlatforms = 3f;
-        private float safeZone = 230f;
+        private float safeZone = 40f;
         private int lastIndexprefab = 0;
         // Start is called before the first frame update
         void Start()
