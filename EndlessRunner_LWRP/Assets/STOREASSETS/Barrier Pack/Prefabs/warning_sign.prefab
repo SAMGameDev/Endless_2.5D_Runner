@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 420576}
-  - component: {fileID: 6511588}
   - component: {fileID: 6589296}
   m_Layer: 0
   m_Name: warning_sign
@@ -33,19 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6511588
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128852}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0968826, y: 0.26840675, z: 1.9891384}
-  m_Center: {x: 0.08760529, y: 0.13371474, z: -0.0005598329}
 --- !u!65 &6589296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57,8 +43,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1791138, y: 1.7833648, z: 2.2228017}
-  m_Center: {x: 0.074748054, y: 1.1594934, z: -0.0022383295}
+  m_Size: {x: 0.1791138, y: 2, z: 2.2228017}
+  m_Center: {x: 0.074748054, y: 1, z: -0.0022383295}
 --- !u!1 &163896
 GameObject:
   m_ObjectHideFlags: 0

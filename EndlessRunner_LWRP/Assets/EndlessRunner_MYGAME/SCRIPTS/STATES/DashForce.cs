@@ -25,6 +25,7 @@ namespace RunnerGame
             playerStateBase.characterControl.FallMultiplier = 9.8f;
             animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Dash], false);
         }
+
     }
 
 }

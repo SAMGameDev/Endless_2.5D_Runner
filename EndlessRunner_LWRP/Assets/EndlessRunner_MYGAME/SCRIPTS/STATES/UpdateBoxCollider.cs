@@ -10,7 +10,7 @@ namespace RunnerGame
         [SerializeField]
         protected Vector3 targetCenter;
         [SerializeField]
-        protected float CenterUpdate_Speed;   
+        protected float CenterUpdate_Speed;
         [SerializeField]
         protected float targetHeight;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

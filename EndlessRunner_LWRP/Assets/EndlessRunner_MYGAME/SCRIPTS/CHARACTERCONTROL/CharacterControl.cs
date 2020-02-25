@@ -37,6 +37,7 @@ namespace RunnerGame
         public Vector3 targetCenter_C;
         public float CenterUpdate_Speed_C;
         public float targetHeight;
+        public float targetRadius;
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
@@ -61,6 +62,11 @@ namespace RunnerGame
             anim = GetComponentInChildren<Animator>();
             Ccollider = GetComponent<CapsuleCollider>();
         }
+
+        private void Update()
+        {
+            Time.timeScale = 0.15f;
+        }
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
@@ -74,7 +80,7 @@ namespace RunnerGame
         {
             ApplyGravity();
             UpdateCenter();
-            UpdateSize();
+            UpdateSize();       
         }
         public void RunForward(float speed)
         {
@@ -123,7 +129,8 @@ namespace RunnerGame
         }
         protected void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.CompareTag("Obsticel"))
+            if (collision.gameObject.CompareTag("Obsticel")
+                || collision.gameObject.CompareTag("KickAble"))
             {
                 Death = true;
             }
@@ -132,7 +139,6 @@ namespace RunnerGame
                 isOnSlope = true;
             }
         }
-
         private void OnCollisionStay(Collision other)
         {
             if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Slope"))
@@ -140,13 +146,11 @@ namespace RunnerGame
                 isGrounded = true;
             }
         }
-
         private void OnCollisionExit(Collision collision)
         {
             isGrounded = false;
             Death = false;
             isOnSlope = false;
         }
-
     }
 }
