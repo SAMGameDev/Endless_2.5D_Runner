@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 0
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25452247, g: 0.2099249, b: 0.36301363, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -554,7 +554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -1073,7 +1073,7 @@ Camera:
   m_GameObject: {fileID: 1022201397}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.754717, g: 0.72979707, b: 0.72979707, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1114,7 +1114,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022201397}
-  m_LocalRotation: {x: -0.043083243, y: -0.7057931, z: -0.043083087, w: 0.7057931}
+  m_LocalRotation: {x: -0.04308325, y: -0.705793, z: -0.04308308, w: 0.70579314}
   m_LocalPosition: {x: 24.4, y: -0.6000006, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1673,7 +1673,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692425238659099068}
-  m_LocalRotation: {x: -0.043083243, y: -0.7057931, z: -0.043083087, w: 0.7057931}
+  m_LocalRotation: {x: -0.04308325, y: -0.705793, z: -0.04308308, w: 0.70579314}
   m_LocalPosition: {x: 24.4, y: -0.6000006, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
