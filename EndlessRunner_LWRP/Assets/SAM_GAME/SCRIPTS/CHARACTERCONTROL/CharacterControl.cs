@@ -62,11 +62,6 @@ namespace RunnerGame
             anim = GetComponentInChildren<Animator>();
             Ccollider = GetComponent<CapsuleCollider>();
         }
-
-        private void Update()
-        {
-            Time.timeScale = 0.15f;
-        }
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
