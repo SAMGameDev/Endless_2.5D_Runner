@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RunnerGame
 {
-    public class LevelManger : Singleton<LevelManger>
+    public class LevelManger : MonoBehaviour
     {
         public GameObject[] levelPrefabs;
         [SerializeField]
@@ -15,12 +15,10 @@ namespace RunnerGame
 
         private float spawnZ = 0;
         [SerializeField]
-        //73.6 previous
-        private float tileLength;
-        private float AmountOfPlatforms = 3f;
-        private float safeZone = 250;
-        private int lastIndexprefab = 0;
-        // Start is called before the first frame update
+        protected float tileLength;
+        protected float AmountOfPlatforms = 2f;
+        protected float safeZone = 70f;
+        protected int lastIndexprefab = 0;
         void Start()
         {
             playertransform = GameObject.FindGameObjectWithTag("Player").transform;

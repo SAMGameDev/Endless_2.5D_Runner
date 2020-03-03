@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8060386845521157673}
   - component: {fileID: 8060386845521157672}
   - component: {fileID: 5105120595727586471}
+  - component: {fileID: 2221201172631188577}
   m_Layer: 0
   m_Name: CasualFemale
   m_TagString: Player
@@ -91,6 +92,7 @@ MonoBehaviour:
   targetCenter_C: {x: 0, y: 0, z: 0}
   CenterUpdate_Speed_C: 0
   targetHeight: 0
+  targetRadius: 0
   UpdateNow: 0
   anim: {fileID: 0}
   Ccollider: {fileID: 0}
@@ -116,6 +118,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f08773bc2d187b546a7882a72c2e8695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2221201172631188577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8869810365859896533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e00eb95c6ce9d84fb2b7b871d282097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6895676478987170640

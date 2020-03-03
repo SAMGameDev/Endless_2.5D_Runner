@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2932862448422839034}
   - component: {fileID: 2932862448422839035}
-  - component: {fileID: 763358069}
   m_Layer: 0
   m_Name: LevelManger
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,21 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPrefabs:
-  - {fileID: 5612171876018964889, guid: 32613f6ccf1a9d64596b85c0e3bdef3e, type: 3}
-  - {fileID: 3825420354262824543, guid: 5adb7b2a4d15696499d65f2547419732, type: 3}
-  - {fileID: 227709100368647613, guid: 15acbee8dcd898340a24a3586679c58b, type: 3}
+  - {fileID: 1597048577658236709, guid: 834fd824f6a4e494e9409b5337b97d0c, type: 3}
   activeTiles: []
   playertransform: {fileID: 0}
-  tileLength: 234
---- !u!114 &763358069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2932862448422839013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e00eb95c6ce9d84fb2b7b871d282097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  tileLength: 62

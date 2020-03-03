@@ -508,7 +508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4002324319817943517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.39, z: 0}
+  m_LocalPosition: {x: 0, y: 3.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7078716484590449472}
@@ -837,6 +837,7 @@ GameObject:
   - component: {fileID: 8572458450000949575}
   - component: {fileID: 8572458450000949574}
   - component: {fileID: 6913670334268881865}
+  - component: {fileID: 1287787629445895783}
   m_Layer: 0
   m_Name: 'CasualMale '
   m_TagString: Player
@@ -914,6 +915,7 @@ MonoBehaviour:
   targetCenter_C: {x: 0, y: 0, z: 0}
   CenterUpdate_Speed_C: 0
   targetHeight: 0
+  targetRadius: 0
   UpdateNow: 0
   anim: {fileID: 0}
   Ccollider: {fileID: 0}
@@ -939,6 +941,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f08773bc2d187b546a7882a72c2e8695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1287787629445895783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7078716484590449595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e00eb95c6ce9d84fb2b7b871d282097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7293350287372009438

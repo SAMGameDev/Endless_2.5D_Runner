@@ -50,7 +50,7 @@ namespace RunnerGame
 
         public void Restart()
         {
-            SceneManager.LoadScene("MyScene");
+            SceneManager.LoadScene(0);
             Time.timeScale = 1f;
             GameIsPaused = false;
         }
