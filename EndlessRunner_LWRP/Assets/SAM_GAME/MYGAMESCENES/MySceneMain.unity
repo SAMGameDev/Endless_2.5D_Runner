@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientSkyColor: {r: 0.2995283, g: 0.3671573, b: 0.5, a: 1}
+  m_AmbientEquatorColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -943,7 +943,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022201397}
-  m_LocalRotation: {x: 0.063502066, y: -0.70424956, z: 0.06350222, w: 0.7042496}
+  m_LocalRotation: {x: 0.06350206, y: -0.70424956, z: 0.06350223, w: 0.7042496}
   m_LocalPosition: {x: 28, y: 5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1017,6 +1017,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PoliceGirl
       objectReference: {fileID: 0}
+    - target: {fileID: 3822089229041749169, guid: 31daeac43fc236f45ab420f28f49dd58,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 067523aaa4dae7745909cd1a1a2e67c0, type: 2}
     - target: {fileID: 8734943951355523688, guid: 31daeac43fc236f45ab420f28f49dd58,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1030,6 +1035,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1165255436}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1247175268
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 852203512026481867, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334682626782769850, guid: 9cfb01b82f0b5b943a65ee5679c99e49,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9cfb01b82f0b5b943a65ee5679c99e49, type: 3}
 --- !u!1001 &1798062779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1562,7 +1636,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692425238659099068}
-  m_LocalRotation: {x: 0.063502066, y: -0.70424956, z: 0.06350222, w: 0.7042496}
+  m_LocalRotation: {x: 0.06350206, y: -0.70424956, z: 0.06350223, w: 0.7042496}
   m_LocalPosition: {x: 28, y: 5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
