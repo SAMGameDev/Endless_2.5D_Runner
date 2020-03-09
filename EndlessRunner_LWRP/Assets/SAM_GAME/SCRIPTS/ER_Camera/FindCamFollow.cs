@@ -10,12 +10,9 @@ namespace RunnerGame
         private GameObject CamFollow;
         private Transform followTarget;
         private CinemachineVirtualCamera cinemaMachine_virtualCamera;
-        private CinemachineTransposer cinemachine_Transposer;
         void Start()
         {
             cinemaMachine_virtualCamera = GetComponent<CinemachineVirtualCamera>();
-            cinemachine_Transposer = cinemaMachine_virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
-            cinemachine_Transposer.m_FollowOffset = new Vector3(22, 4, 0);
         }
 
         void Update()

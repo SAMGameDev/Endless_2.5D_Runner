@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272156429126902770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4, y: 0, z: -15.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8734943951355523688}
@@ -64,10 +64,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
-  m_Height: 3
+  m_Radius: 0.3
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1.4, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &390758881916854542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,16 +214,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1272156429126902537}
     m_Modifications:
-    - target: {fileID: -8671977129038613269, guid: 6ee562b8590b6c44bb0ebbd93d1e20a4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.019222675
-      objectReference: {fileID: 0}
-    - target: {fileID: -8671977129038613269, guid: 6ee562b8590b6c44bb0ebbd93d1e20a4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.07291834
-      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 6ee562b8590b6c44bb0ebbd93d1e20a4,
         type: 3}
       propertyPath: m_Controller
@@ -231,12 +221,12 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 2aa9a019840b089418b6e9661b861471, type: 2}
     - target: {fileID: -6057140222963153312, guid: 6ee562b8590b6c44bb0ebbd93d1e20a4,
         type: 3}
-      propertyPath: m_ApplyRootMotion
+      propertyPath: m_CullingMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: 6ee562b8590b6c44bb0ebbd93d1e20a4,
         type: 3}
-      propertyPath: m_CullingMode
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6ee562b8590b6c44bb0ebbd93d1e20a4,
