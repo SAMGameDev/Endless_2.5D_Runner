@@ -17,7 +17,7 @@ namespace RunnerGame
         [SerializeField]
         protected float tileLength;
         protected float AmountOfPlatforms = 2f;
-        protected float safeZone = 85f;
+        protected float safeZone = 140f;
         protected int lastIndexprefab = 0;
         void Start()
         {
