@@ -16,8 +16,10 @@ namespace RunnerGame
         private float spawnZ = 0;
         [SerializeField]
         protected float tileLength;
-        protected float AmountOfPlatforms = 2f;
-        protected float safeZone = 140f;
+        [SerializeField]
+        protected float AmountOfPlatforms;
+        [SerializeField]
+        protected float safeZone;
         protected int lastIndexprefab = 0;
         void Start()
         {
