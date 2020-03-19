@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42672542, g: 0.2660514, b: 0.14252472, a: 1}
+  m_IndirectSpecularColor: {r: 0.4274383, g: 0.26610178, b: 0.14252342, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -55,28 +55,28 @@ LightmapSettings:
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
-    m_Resolution: 2
-    m_BakeResolution: 40
-    m_AtlasSize: 1024
+    m_Resolution: 4
+    m_BakeResolution: 60
+    m_AtlasSize: 2048
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_ExtractAmbientOcclusion: 0
-    m_Padding: 8
+    m_Padding: 10
     m_LightmapParameters: {fileID: 0}
-    m_LightmapsBakeMode: 0
+    m_LightmapsBakeMode: 1
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 1
-    m_BakeBackend: 1
+    m_BakeBackend: 0
     m_PVRSampling: 1
-    m_PVRDirectSampleCount: 32
+    m_PVRDirectSampleCount: 36
     m_PVRSampleCount: 512
-    m_PVRBounces: 2
+    m_PVRBounces: 1
     m_PVREnvironmentSampleCount: 256
     m_PVREnvironmentReferencePointCount: 2048
     m_PVRFilteringMode: 1
@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 1272156429126902537, guid: 31daeac43fc236f45ab420f28f49dd58,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16
+      value: -16.4
       objectReference: {fileID: 0}
     - target: {fileID: 1272156429126902537, guid: 31daeac43fc236f45ab420f28f49dd58,
         type: 3}
@@ -527,7 +527,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -576,7 +576,7 @@ PrefabInstance:
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16
+      value: -16.4
       objectReference: {fileID: 0}
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
@@ -620,6 +620,95 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f67a727aa475cc14fa9e1e370780364d, type: 3}
+--- !u!1001 &2059268496
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3683447299439266732, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_Name
+      value: ScifiLights
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683447299439266733, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695978217823279695, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950340708565958172, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407540640669450709, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899690777148685197, guid: 4682cd8d4b342d9438304560576ae94f,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4682cd8d4b342d9438304560576ae94f, type: 3}
 --- !u!1001 &3270880736710121291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -655,7 +744,7 @@ PrefabInstance:
     - target: {fileID: 6707076264486225369, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16
+      value: -16.4
       objectReference: {fileID: 0}
     - target: {fileID: 6707076264486225369, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
