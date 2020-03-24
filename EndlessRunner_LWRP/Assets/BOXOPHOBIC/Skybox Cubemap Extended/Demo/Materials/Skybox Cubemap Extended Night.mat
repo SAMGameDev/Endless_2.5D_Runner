@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Skybox Cubemap Extended Night
   m_Shader: {fileID: 4800000, guid: 82881a2d011b0964696411c822cdd00b, type: 3}
-  m_ShaderKeywords: _ENABLEFOG_ON
+  m_ShaderKeywords: _ENABLEROTATION_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -83,9 +83,9 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EnableFog: 1
-    - _EnableRotation: 0
-    - _Exposure: 1
+    - _EnableFog: 0
+    - _EnableRotation: 1
+    - _Exposure: 2
     - _Float0: 0
     - _FogFill: 0
     - _FogHeight: 0.5
@@ -101,8 +101,8 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rotation: 0
-    - _RotationSpeed: 2
+    - _Rotation: 222
+    - _RotationSpeed: 0
     - _Rotationn: 1
     - _SkyboxExtended: 1
     - _SmoothnessTextureChannel: 0
@@ -115,4 +115,4 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Tex_HDR: {r: 1, g: 1, b: 0, a: 0}
-    - _TintColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+    - _TintColor: {r: 0, g: 0.12635791, b: 0.24528301, a: 1}
