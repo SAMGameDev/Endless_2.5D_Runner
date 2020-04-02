@@ -23,12 +23,8 @@ namespace RunnerGame
                     characterControl.Start = true;
                 }
             }
-            else
-            {
-                characterControl.Jump = false;
-            }
-            if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > Screen.width / 2
-               || Input.GetKeyDown(KeyCode.RightArrow))
+       else if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > Screen.width / 2
+                || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 characterControl.Dash = true;
                 if (!characterControl.Start)
@@ -38,6 +34,7 @@ namespace RunnerGame
             }
             else
             {
+                characterControl.Jump = false;
                 characterControl.Dash = false;
             }
         }

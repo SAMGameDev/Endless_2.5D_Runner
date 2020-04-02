@@ -9,7 +9,7 @@ namespace RunnerGame
         public Vector2 fingerDownPos;
         public Vector2 fingerUpPos;
         public bool detectSwipeAfterRelase = false;
-        public float SWIPE_THRESHOLD = 20f;
+        public float SWIPE_THRESHOLD;
 
         private CharacterControl control;
 
@@ -34,12 +34,14 @@ namespace RunnerGame
                     if (!detectSwipeAfterRelase)
                     {
                         fingerDownPos = touch.position;
+                        DetectSwipe();
                     }
                 }
 
                 if (touch.phase == TouchPhase.Ended)
                 {
                     fingerDownPos = touch.position;
+                    DetectSwipe();
                 }
             }
         }
@@ -61,44 +63,49 @@ namespace RunnerGame
                 Debug.Log("Vertical Swipe Detected!");
                 if (fingerDownPos.y - fingerUpPos.y > 0)
                 {
-                    OnSwipeUp();
-                }
-                else if (fingerDownPos.y - fingerUpPos.y < 0)
-                {
-                    OnSwipeDown();
-                }
-                fingerUpPos = fingerDownPos;
+                    control.Jump = true;
 
+                    if (!control.Start)
+                    {
+                        control.Start = true;
+                    }
+                }
+                // else if (fingerDownPos.y - fingerUpPos.y < 0)
+                // {
+                //   OnSwipeDown();
+                //}                    
+                fingerUpPos = fingerDownPos;
             }
+
             else if (HorizontalMoveValue() > SWIPE_THRESHOLD && HorizontalMoveValue() > VerticalMoveValue())
             {
                 Debug.Log("Horizontal Swipe Detected!");
                 if (fingerDownPos.x - fingerUpPos.x > 0)
                 {
-                    OnSwipeRight();
+                    control.Dash = true;
+                    if (!control.Start)
+                    {
+                        control.Start = true;
+                    }
                 }
-                // else if (fingerDownPos.x - fingerUpPos.x < 0)
-                //{
-                //  OnSwipeLeft();
-                //}
                 fingerUpPos = fingerDownPos;
-
             }
             else
             {
-                Debug.Log("No Swipe Detected!");
+                control.Jump = false;
+                control.Dash = false;
             }
         }
 
         void OnSwipeUp()
         {
-            Debug.Log("Swiped Up");
+          
         }
 
-        void OnSwipeDown()
-        {
-            Debug.Log("Swiped down");
-        }
+        // void OnSwipeDown()
+        // {
+        // Debug.Log("Swiped down");
+        // }
         //  void OnSwipeLeft()
         // {
         //  //Do something when swiped left
@@ -106,7 +113,7 @@ namespace RunnerGame
 
         void OnSwipeRight()
         {
-            //Do something when swiped right
+           
         }
     }
 }
