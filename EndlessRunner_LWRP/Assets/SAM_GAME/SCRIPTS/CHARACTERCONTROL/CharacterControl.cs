@@ -71,11 +71,16 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
+
+        private void Update()
+        {
+            //Time.timeScale = 0.1f;
+        }
         private void FixedUpdate()
         {
             ApplyGravity();
             UpdateCenter();
-            UpdateSize();       
+            UpdateSize();
         }
         public void RunForward(float speed)
         {
@@ -122,16 +127,11 @@ namespace RunnerGame
                 Ccollider.height = targetHeight;
             }
         }
-        protected void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.CompareTag("Obsticel")
-                || collision.gameObject.CompareTag("KickAble"))
+            if (collision.gameObject.CompareTag("Obsticel"))
             {
                 Death = true;
-            }
-            if (collision.gameObject.CompareTag("Slope"))
-            {
-                isOnSlope = true;
             }
         }
         private void OnCollisionStay(Collision other)
@@ -140,12 +140,15 @@ namespace RunnerGame
             {
                 isGrounded = true;
             }
+           // if (other.gameObject.CompareTag("Slope"))
+           // {
+              //  isOnSlope = true;
+            //}
         }
         private void OnCollisionExit(Collision collision)
         {
             isGrounded = false;
-            Death = false;
-            isOnSlope = false;
+            Death = false;          
         }
     }
 }
