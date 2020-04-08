@@ -15,7 +15,7 @@ namespace RunnerGame
         // Start is called before the first frame update
         void Start()
         {
-            control = GameObject.FindObjectOfType<CharacterControl>();
+            control = FindObjectOfType<CharacterControl>();
         }
 
         // Update is called once per frame
