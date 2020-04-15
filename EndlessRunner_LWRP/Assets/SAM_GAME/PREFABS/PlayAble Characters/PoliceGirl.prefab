@@ -170,9 +170,9 @@ GameObject:
   - component: {fileID: 2994142489569738184}
   - component: {fileID: 5663372037333721338}
   - component: {fileID: 390758881916854542}
-  - component: {fileID: 390758881916854543}
   - component: {fileID: 3200218901059283840}
   - component: {fileID: 5072111988747332179}
+  - component: {fileID: 6034759419322138318}
   m_Layer: 0
   m_Name: PoliceGirl
   m_TagString: Player
@@ -254,18 +254,6 @@ MonoBehaviour:
   UpdateNow: 0
   anim: {fileID: 0}
   Ccollider: {fileID: 0}
---- !u!114 &390758881916854543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272156429126902770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88cd2bcffb359084fb1603325c51b55a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3200218901059283840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +278,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e00eb95c6ce9d84fb2b7b871d282097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6034759419322138318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272156429126902770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b4f634c7fab05458a81a7d706f3cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  control: {fileID: 0}
 --- !u!1 &1493710909258736208
 GameObject:
   m_ObjectHideFlags: 0
