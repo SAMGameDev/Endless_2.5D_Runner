@@ -792,6 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptableObjectDatas:
   - {fileID: 11400000, guid: 0ede3e070dcfab1449cdfbb118ff8e60, type: 2}
+  - {fileID: 11400000, guid: a9d82587ec326ce4184091aa43c3f535, type: 2}
   characterControl: {fileID: 0}
 --- !u!1101 &2818631662985683448
 AnimatorStateTransition:
@@ -912,9 +913,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.099298656
+  m_TransitionDuration: 0.03657183
   m_TransitionOffset: 0
-  m_ExitTime: 0.6701912
+  m_ExitTime: 0.87853384
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -984,6 +985,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Grounded
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: Jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3917400183248669363}

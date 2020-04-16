@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIInputControl : MonoBehaviour
 {
@@ -23,20 +24,19 @@ public class UIInputControl : MonoBehaviour
         {
             control.Start = true;
         }
-
         control.Jump = false;
     }
 
     public void OnDashPressed()
     {
-        if (!control.Start)
-        {
-            control.Start = true;
-        }
         control.Dash = true;
     }
     public void OnDashReleased()
     {
+        if (!control.Start)
+        {
+            control.Start = true;
+        }
         control.Dash = false;
     }
 }

@@ -225,7 +225,7 @@ CapsuleCollider:
   m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!114 &390758881916854542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,6 +241,8 @@ MonoBehaviour:
   Jump: 0
   Dash: 0
   Start: 0
+  canDoubleJump: 0
+  DoubleJump: 0
   isGrounded: 0
   isOnSlope: 0
   Death: 0
