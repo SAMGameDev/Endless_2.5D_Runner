@@ -39,4 +39,19 @@ public class UIInputControl : MonoBehaviour
         }
         control.Dash = false;
     }
+
+    public void OnSlidePressed()
+    {
+        control.isOnSlope = true;
+    }
+
+    public void OnSlideReleased()
+    {
+        if (!control.Start)
+        {
+            control.Start = true;
+        }
+
+        control.isOnSlope = false;
+    }
 }
