@@ -1,57 +1,63 @@
-﻿using RunnerGame;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class UIInputControl : MonoBehaviour
+namespace RunnerGame
 {
-    [SerializeField] private CharacterControl control;
-
-    private void Awake()
+    public class UIInputControl : MonoBehaviour
     {
-        control = GetComponent<CharacterControl>();
-    }
-
-    public void OnJumpPressed()
-    {
-        control.Jump = true;
-    }
-
-    public void OnJumpReleased()
-    {
-        if (!control.Start)
+        [SerializeField] private CharacterControl control;
+        private void Awake()
         {
-            control.Start = true;
-        }
-        control.Jump = false;
-    }
-
-    public void OnDashPressed()
-    {
-        control.Dash = true;
-    }
-    public void OnDashReleased()
-    {
-        if (!control.Start)
-        {
-            control.Start = true;
-        }
-        control.Dash = false;
-    }
-
-    public void OnSlidePressed()
-    {
-        control.isOnSlope = true;
-    }
-
-    public void OnSlideReleased()
-    {
-        if (!control.Start)
-        {
-            control.Start = true;
+            control = GetComponent<CharacterControl>();
         }
 
-        control.isOnSlope = false;
+        private void Update()
+        {
+            Time.timeScale = 0.1f;
+        }
+
+        public void OnJumpPressed()
+        {
+            control.Jump = true;
+        }
+
+        public void OnJumpReleased()
+        {
+            if (!control.Start)
+            {
+                control.Start = true;
+            }
+
+            control.Jump = false;
+        }
+
+        public void OnDashPressed()
+        {
+            control.Dash = true;
+        }
+        public void OnDashReleased()
+        {
+            if (!control.Start)
+            {
+                control.Start = true;
+            }
+            control.Dash = false;
+        }
+
+        public void OnSlidePressed()
+        {
+            control.isOnSlope = true;
+        }
+
+        public void OnSlideReleased()
+        {
+            if (!control.Start)
+            {
+                control.Start = true;
+            }
+            control.isOnSlope = false;
+        }
     }
 }

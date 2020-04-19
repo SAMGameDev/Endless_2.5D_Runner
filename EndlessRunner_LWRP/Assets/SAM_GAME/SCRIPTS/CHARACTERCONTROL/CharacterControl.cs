@@ -20,20 +20,14 @@ namespace RunnerGame
         public bool Jump;
         public bool Dash;
         public bool Start;
-        public bool canDoubleJump;
         public bool DoubleJump;
 
         [Header("DETECTORS")]
         public bool isGrounded;
         public bool isOnSlope;
         public bool Death;
-
-        [Header("Floats")]
-        public float FallMultiplier;
-        [SerializeField]
-        protected float lowJumpGravity;
-        [SerializeField]
-        protected float slopeFroce;
+       
+        public float FallMultiplier = 9.8f;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
@@ -73,11 +67,6 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
-
-        private void Update()
-        {
-            Time.timeScale = 1;
-        }
         private void FixedUpdate()
         {
             ApplyGravity();
@@ -90,6 +79,9 @@ namespace RunnerGame
         }
         private void ApplyGravity()
         {
+            float lowJumpGravity = 4.2f;
+            float slopeFroce = 500;
+
             //if character is falling increase acceraltion
             if (RIGIDBODY.velocity.y < 0f)
             {
@@ -129,28 +121,25 @@ namespace RunnerGame
                 Ccollider.height = targetHeight;
             }
         }
-        private void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("Obsticel"))
-            {
-                Death = true;
-            }
-        }
         private void OnCollisionStay(Collision other)
         {
             if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Slope"))
             {
                 isGrounded = true;
             }
-           // if (other.gameObject.CompareTag("Slope"))
-           // {
-              //  isOnSlope = true;
+            if (other.gameObject.CompareTag("Obsticel"))
+            {
+                Death = true;
+            }
+            // if (other.gameObject.CompareTag("Slope"))
+            // {
+            //  isOnSlope = true;
             //}
         }
         private void OnCollisionExit(Collision collision)
         {
             isGrounded = false;
-            Death = false;          
+            Death = false;
         }
     }
 }
