@@ -515,8 +515,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.000001, y: 3, z: 5.1956005}
-  m_Center: {x: -2.5000005, y: 1.5, z: -2.402201}
+  m_Size: {x: 5.000001, y: 5.5, z: 5.1956005}
+  m_Center: {x: -2.5000005, y: 0, z: -2.402201}
 --- !u!1 &4001595582421515125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,9 +1141,10 @@ GameObject:
   - component: {fileID: 4001595583588459500}
   - component: {fileID: 4001595583591288986}
   - component: {fileID: 4001595583590173504}
+  - component: {fileID: 1581770597}
   m_Layer: 0
   m_Name: SM_Bld_Apartment_01 (3)
-  m_TagString: Untagged
+  m_TagString: Obsticel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1210,6 +1211,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1581770597
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001595583588158210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.000001, y: 5.6, z: 5.1956005}
+  m_Center: {x: -2.5000043, y: 0, z: -2.402201}
 --- !u!1 &4001595584101351425
 GameObject:
   m_ObjectHideFlags: 0

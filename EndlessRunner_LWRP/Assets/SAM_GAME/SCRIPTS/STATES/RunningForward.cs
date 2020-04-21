@@ -8,7 +8,7 @@ namespace RunnerGame
     public class RunningForward : ScriptableObjectData
     {
         [SerializeField]
-        protected float speed;
+        private float speed;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }

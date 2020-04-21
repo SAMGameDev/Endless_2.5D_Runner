@@ -172,8 +172,7 @@ GameObject:
   - component: {fileID: 390758881916854542}
   - component: {fileID: 3200218901059283840}
   - component: {fileID: 5072111988747332179}
-  - component: {fileID: 6034759419322138318}
-  - component: {fileID: 3574796444580680584}
+  - component: {fileID: 6588329146985609389}
   m_Layer: 0
   m_Name: PoliceGirl
   m_TagString: Player
@@ -242,14 +241,11 @@ MonoBehaviour:
   Jump: 0
   Dash: 0
   Start: 0
-  canDoubleJump: 0
   DoubleJump: 0
   isGrounded: 0
   isOnSlope: 0
   Death: 0
   FallMultiplier: 9.8
-  lowJumpGravity: 4.2
-  slopeFroce: 500
   targetCenter_C: {x: 0, y: 0, z: 0}
   CenterUpdate_Speed_C: 0
   targetHeight: 0
@@ -281,20 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e00eb95c6ce9d84fb2b7b871d282097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6034759419322138318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272156429126902770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b4f634c7fab05458a81a7d706f3cf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  control: {fileID: 0}
---- !u!114 &3574796444580680584
+--- !u!114 &6588329146985609389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

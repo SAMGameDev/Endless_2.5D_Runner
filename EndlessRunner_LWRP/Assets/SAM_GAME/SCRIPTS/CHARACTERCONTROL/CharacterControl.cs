@@ -26,7 +26,7 @@ namespace RunnerGame
         public bool isGrounded;
         public bool isOnSlope;
         public bool Death;
-       
+
         public float FallMultiplier = 9.8f;
 
         [Header("UpdateBoxCollider")]
@@ -77,6 +77,7 @@ namespace RunnerGame
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }
+        #region ApplyGravity
         private void ApplyGravity()
         {
             float lowJumpGravity = 4.2f;
@@ -98,6 +99,7 @@ namespace RunnerGame
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             }
         }
+        #endregion
         void UpdateCenter()
         {
             if (!UpdateNow)

@@ -7,7 +7,7 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/DoubleJumpAnim")]
     public class DoubleJumpAnim : ScriptableObjectData
     {
-        public bool CanDoubleJump;
+        private bool CanDoubleJump;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }
