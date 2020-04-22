@@ -14,7 +14,7 @@ namespace RunnerGame
 
         private void Update()
         {
-           // Time.timeScale = 0.15f;
+            Time.timeScale = 0.075f;
         }
 
         public void OnJumpPressed()
