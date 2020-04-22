@@ -5,7 +5,7 @@ using Cinemachine;
 
 namespace RunnerGame
 {
-    public class FindCamFollow : MonoBehaviour
+    public class CameraController : MonoBehaviour
     {
         private GameObject CamFollow;
         private Transform followTarget;

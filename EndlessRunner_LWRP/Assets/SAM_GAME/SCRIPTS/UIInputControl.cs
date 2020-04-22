@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 namespace RunnerGame
 {
@@ -15,7 +14,7 @@ namespace RunnerGame
 
         private void Update()
         {
-            Time.timeScale = 1;
+           // Time.timeScale = 0.15f;
         }
 
         public void OnJumpPressed()

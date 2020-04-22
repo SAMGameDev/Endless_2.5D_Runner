@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 3200218901059283840}
   - component: {fileID: 5072111988747332179}
   - component: {fileID: 6588329146985609389}
+  - component: {fileID: 2293749523910255184}
   m_Layer: 0
   m_Name: PoliceGirl
   m_TagString: Player
@@ -284,11 +285,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272156429126902770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88cd2bcffb359084fb1603325c51b55a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2293749523910255184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272156429126902770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b4f634c7fab05458a81a7d706f3cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  control: {fileID: 0}
 --- !u!1 &1493710909258736208
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,8 +410,8 @@ Animator:
   m_GameObject: {fileID: 1854257205473911792}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6ee562b8590b6c44bb0ebbd93d1e20a4, type: 3}
-  m_Controller: {fileID: 9100000, guid: 17a730f0a0a17914fb9e218950fd974a, type: 2}
-  m_CullingMode: 1
+  m_Controller: {fileID: 9100000, guid: 73ff7108721a56646bedad99b4bdfcfb, type: 2}
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
