@@ -11,7 +11,7 @@ namespace RunnerGame
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                control.isOnSlope = true;
+                control.Slide = true;
             }
             else
             {

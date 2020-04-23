@@ -21,7 +21,7 @@ namespace RunnerGame
                 animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Grounded], false);
             }
 
-            if (playerStateBase.characterControl.isGrounded && !playerStateBase.characterControl.isOnSlope)
+            if (playerStateBase.characterControl.isGrounded && !playerStateBase.characterControl.Slide)
             {
                 playerStateBase.characterControl.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }

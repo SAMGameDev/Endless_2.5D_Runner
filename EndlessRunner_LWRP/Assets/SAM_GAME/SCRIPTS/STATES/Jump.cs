@@ -14,7 +14,7 @@ namespace RunnerGame
             float normal_JumpForce = 780;
             float Slope_JumpForce = 1000;
 
-            if (!playerStateBase.characterControl.isOnSlope)
+            if (!playerStateBase.characterControl.Slide)
             {
                 JumpForce = normal_JumpForce;
             }

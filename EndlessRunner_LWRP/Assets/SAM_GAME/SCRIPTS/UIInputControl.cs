@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
@@ -47,7 +45,7 @@ namespace RunnerGame
 
         public void OnSlidePressed()
         {
-            control.isOnSlope = true;
+            control.Slide = true;
         }
 
         public void OnSlideReleased()
@@ -56,7 +54,7 @@ namespace RunnerGame
             {
                 control.Start = true;
             }
-            control.isOnSlope = false;
+            control.Slide = false;
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
@@ -11,7 +9,7 @@ namespace RunnerGame
         ForceTransition,
         Grounded,
         Dash,
-        OnSlope,
+        Slide,
         DoubleJump,
     }
     public class CharacterControl : MonoBehaviour
@@ -21,10 +19,10 @@ namespace RunnerGame
         public bool Dash;
         public bool Start;
         public bool DoubleJump;
+        public bool Slide;
 
         [Header("DETECTORS")]
-        public bool isGrounded;
-        public bool isOnSlope;
+        public bool isGrounded;      
         public bool Death;
 
         public float FallMultiplier = 9.8f;
@@ -94,7 +92,7 @@ namespace RunnerGame
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
             }
             //fixing that bouncing effect On Slope
-            if (isOnSlope)
+            if (Slide)
             {
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             }
@@ -133,10 +131,6 @@ namespace RunnerGame
             {
                 Death = true;
             }
-            // if (other.gameObject.CompareTag("Slope"))
-            // {
-            //  isOnSlope = true;
-            //}
         }
         private void OnCollisionExit(Collision collision)
         {
