@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
-    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/SlopeDetector")]
-    public class SlopeDetector : ScriptableObjectData
+    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/SlideAnim")]
+    public class SlideAnim : ScriptableObjectData
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -23,7 +21,6 @@ namespace RunnerGame
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
     }
 }

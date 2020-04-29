@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace RunnerGame
 {
@@ -12,49 +14,78 @@ namespace RunnerGame
 
         private void Update()
         {
-            Time.timeScale = 0.075f;
+            Time.timeScale = 1;
         }
 
+        #region Jump
         public void OnJumpPressed()
-        {
-            control.Jump = true;
-        }
-
-        public void OnJumpReleased()
         {
             if (!control.Start)
             {
                 control.Start = true;
             }
-
+            else
+            {
+                control.clickCount++;
+                control.Jump = true;
+                StartCoroutine(TurnOff(0.2f));
+            }
+           
+        }
+        public void OnJumpReleased()
+        {
             control.Jump = false;
         }
+        #endregion
 
+        #region Dash
         public void OnDashPressed()
         {
-            control.Dash = true;
+            if (!control.Start)
+            {
+                control.Start = true;
+            }
+            else
+            {
+                control.Dash = true;
+            }
         }
         public void OnDashReleased()
         {
-            if (!control.Start)
-            {
-                control.Start = true;
-            }
             control.Dash = false;
         }
+        #endregion
 
         public void OnSlidePressed()
         {
-            control.Slide = true;
-        }
-
-        public void OnSlideReleased()
-        {
             if (!control.Start)
             {
                 control.Start = true;
             }
+            else
+            {
+                control.Slide = true;
+                StartCoroutine(TurnOff(0.25f));
+            }         
+        }
+        public void OnSlideReleased()
+        {
             control.Slide = false;
+        }
+
+        IEnumerator TurnOff(float time)
+        {
+            yield return new WaitForSeconds(time);
+            Debug.Log("it worked");
+            if (control.Slide)
+            {
+                control.Slide = false;
+            }
+            else if (control.Jump)
+            {
+                control.Jump = false;
+            }
+
         }
     }
 }

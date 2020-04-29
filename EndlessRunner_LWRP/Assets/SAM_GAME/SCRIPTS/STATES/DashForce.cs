@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
@@ -23,7 +21,6 @@ namespace RunnerGame
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.FallMultiplier = 9.8f;
-            animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Dash], false);
         }
 
     }

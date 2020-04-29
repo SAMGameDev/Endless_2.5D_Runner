@@ -5,7 +5,7 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/DoubleJumpAnim")]
     public class DoubleJumpAnim : ScriptableObjectData
     {
-        [SerializeField] private bool CanDoubleJump;
+        [SerializeField] private bool CanDoubleJump = true;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }
@@ -17,7 +17,8 @@ namespace RunnerGame
             }
             else
             {
-                if (CanDoubleJump && playerStateBase.characterControl.Jump)
+                if (CanDoubleJump && playerStateBase.characterControl.Jump
+                    && playerStateBase.characterControl.clickCount == 2)
                 {
                     animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], true);
                     CanDoubleJump = false;
@@ -26,6 +27,7 @@ namespace RunnerGame
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+          
         }
     }
 }

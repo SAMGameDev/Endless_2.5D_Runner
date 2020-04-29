@@ -22,21 +22,23 @@ namespace RunnerGame
         public bool Slide;
 
         [Header("DETECTORS")]
-        public bool isGrounded;      
+        public bool isGrounded = true;
+        public bool isJumping;
         public bool Death;
 
         public float FallMultiplier = 9.8f;
+        public int clickCount = 0;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
+        public Vector3 targetsize;
         public float CenterUpdate_Speed_C;
-        public float targetHeight;
-        public float targetRadius;
+        public float sizeUpdate_Speed;
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
         public Animator anim;
-        public CapsuleCollider Ccollider;
+        public BoxCollider bCollider;
         private Rigidbody rb;
         public Rigidbody RIGIDBODY
         {
@@ -49,34 +51,45 @@ namespace RunnerGame
                 return rb;
             }
         }
-        private void Awake()
+        void Awake()
         {
             Death = false;
             Start = false;
             anim = GetComponentInChildren<Animator>();
-            Ccollider = GetComponent<CapsuleCollider>();
+            bCollider = GetComponent<BoxCollider>();
         }
-        public void CacheCharacterControl(Animator animator)
+        void FixedUpdate()
         {
-            PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
-
-            foreach (PlayerStateBase c in arr)
-            {
-                c.characterControl = this;
-            }
-        }
-        private void FixedUpdate()
-        {
-            ApplyGravity();
             UpdateCenter();
             UpdateSize();
+            ApplyGravity();
         }
-        public void RunForward(float speed)
+
+        void UpdateCenter()
         {
-            RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
+            if (!UpdateNow)
+            {
+                return;
+            }
+            if (Vector3.SqrMagnitude(bCollider.center - targetCenter_C) > 0.01f)
+            {
+                bCollider.center = Vector3.Lerp(bCollider.center, targetCenter_C,
+                    Time.deltaTime * CenterUpdate_Speed_C);
+            }
         }
-        #region ApplyGravity
-        private void ApplyGravity()
+        void UpdateSize()
+        {
+            if (!UpdateNow)
+            {
+                return;
+            }
+            if (Vector3.SqrMagnitude(bCollider.size - targetsize) > 0.01f)
+            {
+                bCollider.size = Vector3.Lerp(bCollider.size, targetsize,
+                    Time.deltaTime * sizeUpdate_Speed);
+            }
+        }
+        void ApplyGravity()
         {
             float lowJumpGravity = 4.2f;
             float slopeFroce = 500;
@@ -97,31 +110,7 @@ namespace RunnerGame
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             }
         }
-        #endregion
-        void UpdateCenter()
-        {
-            if (!UpdateNow)
-            {
-                return;
-            }
-            if (Vector3.SqrMagnitude(Ccollider.center - targetCenter_C) > 0.01f)
-            {
-                Ccollider.center = Vector3.Lerp(Ccollider.center, targetCenter_C,
-                    Time.fixedDeltaTime * CenterUpdate_Speed_C);
-            }
-        }
-        void UpdateSize()
-        {
-            if (!UpdateNow)
-            {
-                return;
-            }
-            else
-            {
-                Ccollider.height = targetHeight;
-            }
-        }
-        private void OnCollisionStay(Collision other)
+        void OnCollisionStay(Collision other)
         {
             if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Slope"))
             {
@@ -132,10 +121,26 @@ namespace RunnerGame
                 Death = true;
             }
         }
-        private void OnCollisionExit(Collision collision)
+        void OnCollisionExit(Collision collision)
         {
             isGrounded = false;
             Death = false;
         }
+
+        public void RunForward(float speed)
+        {
+            RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
+        }
+
+        public void CacheCharacterControl(Animator animator)
+        {
+            PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
+
+            foreach (PlayerStateBase c in arr)
+            {
+                c.characterControl = this;
+            }
+        }
+
     }
 }
