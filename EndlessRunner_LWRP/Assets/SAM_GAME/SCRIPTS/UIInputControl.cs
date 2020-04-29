@@ -14,7 +14,7 @@ namespace RunnerGame
 
         private void Update()
         {
-            Time.timeScale = 1;
+            Time.timeScale = 0.03f;
         }
 
         #region Jump
