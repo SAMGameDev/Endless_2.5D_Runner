@@ -12,11 +12,6 @@ namespace RunnerGame
             control = GetComponent<CharacterControl>();
         }
 
-        private void Update()
-        {
-            Time.timeScale = 0.03f;
-        }
-
         #region Jump
         public void OnJumpPressed()
         {
@@ -28,7 +23,7 @@ namespace RunnerGame
             {
                 control.clickCount++;
                 control.Jump = true;
-                StartCoroutine(TurnOff(0.2f));
+                StartCoroutine(TurnOff(0.05f));
             }
            
         }
@@ -48,6 +43,7 @@ namespace RunnerGame
             else
             {
                 control.Dash = true;
+                CameraManger.Instance.ShakeCamera(0.03f);
             }
         }
         public void OnDashReleased()

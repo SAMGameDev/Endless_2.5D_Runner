@@ -39,7 +39,7 @@ namespace RunnerGame
         [Header("SUB-COMPONENTS")]
         public Animator anim;
         public BoxCollider bCollider;
-        private Rigidbody rb;
+       [SerializeField] private Rigidbody rb;
         public Rigidbody RIGIDBODY
         {
             get
