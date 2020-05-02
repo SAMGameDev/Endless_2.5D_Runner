@@ -12,9 +12,8 @@ namespace RunnerGame
     }
     public class CameraController : MonoBehaviour
     {
-        [SerializeField] private Animator animator;
-        [SerializeField] private GameObject CamFollow;
-        [SerializeField] private CinemachineVirtualCamera[] arr;
+        private Animator animator;
+        GameObject CamFollow;
         public Animator ANIMATOR
         {
             get
@@ -28,7 +27,9 @@ namespace RunnerGame
         }
         private void Awake()
         {
-            arr = GameObject.FindObjectsOfType<CinemachineVirtualCamera>();
+            CinemachineVirtualCamera[] arr;
+
+            arr = FindObjectsOfType<CinemachineVirtualCamera>();
 
             if (CamFollow == null)
             {

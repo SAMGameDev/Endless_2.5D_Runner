@@ -7,8 +7,7 @@ namespace RunnerGame
     public class CameraManger : Singleton<CameraManger>
     {
         private Coroutine routine;
-
-        [SerializeField] private CameraController camController;
+        private CameraController camController;
 
         public CameraController CAMERACONTROLLER
         {

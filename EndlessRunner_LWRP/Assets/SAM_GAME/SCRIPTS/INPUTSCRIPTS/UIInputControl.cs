@@ -12,11 +12,6 @@ namespace RunnerGame
             control = GetComponent<CharacterControl>();
         }
 
-        private void Update()
-        {
-            Time.timeScale = 0.15f;
-        }
-
         #region Jump
         public void OnJumpPressed()
         {
@@ -77,7 +72,6 @@ namespace RunnerGame
         IEnumerator TurnOff(float time)
         {
             yield return new WaitForSeconds(time);
-            Debug.Log("it worked");
             if (control.Slide)
             {
                 control.Slide = false;
