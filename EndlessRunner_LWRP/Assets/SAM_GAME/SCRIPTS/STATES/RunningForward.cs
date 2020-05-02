@@ -5,7 +5,7 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/RunForward")]
     public class RunningForward : ScriptableObjectData
     {
-        [SerializeField] private float speed;
+        [SerializeField] protected float speed;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }

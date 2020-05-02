@@ -12,7 +12,9 @@ namespace RunnerGame
     }
     public class CameraController : MonoBehaviour
     {
-        private Animator animator;
+        [SerializeField] private Animator animator;
+        [SerializeField] private GameObject CamFollow;
+        [SerializeField] private CinemachineVirtualCamera[] arr;
         public Animator ANIMATOR
         {
             get
@@ -24,19 +26,21 @@ namespace RunnerGame
                 return animator;
             }
         }
-       // private GameObject CamFollow;
-       // private Transform followTarget;
-        
-       /* void Update()
+        private void Awake()
         {
+            arr = GameObject.FindObjectsOfType<CinemachineVirtualCamera>();
+
             if (CamFollow == null)
             {
                 CamFollow = GameObject.FindGameObjectWithTag("CamFollow"); ;
             }
-            followTarget = CamFollow.transform;          
-            statDrive.LookAt = followTarget;
-            statDrive.Follow = followTarget;
-        }*/
+
+            foreach (CinemachineVirtualCamera virtualCameras in arr)
+            {
+                virtualCameras.LookAt = CamFollow.transform;
+                virtualCameras.Follow = CamFollow.transform;
+            }
+        }
 
         public void TriggerCamera(CameraTrigger trigger)
         {
