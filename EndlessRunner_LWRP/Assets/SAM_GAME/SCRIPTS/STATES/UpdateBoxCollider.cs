@@ -8,7 +8,7 @@ namespace RunnerGame
         [SerializeField]
         protected Vector3 targetCenter;
         [SerializeField]
-        protected Vector3 targetSize;
+        protected float targetHieght;
         [SerializeField]
         protected float CenterUpdate_Speed;
         [SerializeField]
@@ -19,7 +19,7 @@ namespace RunnerGame
             playerStateBase.characterControl.UpdateNow = true;
 
             playerStateBase.characterControl.targetCenter_C = targetCenter;
-            playerStateBase.characterControl.targetsize = targetSize;
+            playerStateBase.characterControl.targetHieght = targetHieght;
             playerStateBase.characterControl.CenterUpdate_Speed_C = CenterUpdate_Speed;
             playerStateBase.characterControl.sizeUpdate_Speed = sizeUpdateSpeed;
         }

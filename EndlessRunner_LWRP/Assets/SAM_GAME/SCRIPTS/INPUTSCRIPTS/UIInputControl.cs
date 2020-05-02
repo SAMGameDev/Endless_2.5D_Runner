@@ -12,6 +12,11 @@ namespace RunnerGame
             control = GetComponent<CharacterControl>();
         }
 
+        private void Update()
+        {
+            Time.timeScale = 0.15f;
+        }
+
         #region Jump
         public void OnJumpPressed()
         {

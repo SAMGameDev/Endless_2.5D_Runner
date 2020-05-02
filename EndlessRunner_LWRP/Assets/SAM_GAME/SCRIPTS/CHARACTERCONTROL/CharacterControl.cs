@@ -31,14 +31,14 @@ namespace RunnerGame
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
-        public Vector3 targetsize;
+        public float targetHieght;
         public float CenterUpdate_Speed_C;
         public float sizeUpdate_Speed;
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
         public Animator anim;
-        public BoxCollider bCollider;
+        public CapsuleCollider cCollider;
        [SerializeField] private Rigidbody rb;
         public Rigidbody RIGIDBODY
         {
@@ -56,7 +56,8 @@ namespace RunnerGame
             Death = false;
             Start = false;
             anim = GetComponentInChildren<Animator>();
-            bCollider = GetComponent<BoxCollider>();
+            cCollider = GetComponent<CapsuleCollider>();
+           // bCollider = GetComponent<BoxCollider>();
         }
         void FixedUpdate()
         {
@@ -71,9 +72,9 @@ namespace RunnerGame
             {
                 return;
             }
-            if (Vector3.SqrMagnitude(bCollider.center - targetCenter_C) > 0.01f)
+            if (Vector3.SqrMagnitude(cCollider.center - targetCenter_C) > 0.01f)
             {
-                bCollider.center = Vector3.Lerp(bCollider.center, targetCenter_C,
+                cCollider.center = Vector3.Lerp(cCollider.center, targetCenter_C,
                     Time.deltaTime * CenterUpdate_Speed_C);
             }
         }
@@ -83,11 +84,11 @@ namespace RunnerGame
             {
                 return;
             }
-            if (Vector3.SqrMagnitude(bCollider.size - targetsize) > 0.01f)
+            else
             {
-                bCollider.size = Vector3.Lerp(bCollider.size, targetsize,
-                    Time.deltaTime * sizeUpdate_Speed);
+                cCollider.height = targetHieght;
             }
+           
         }
         void ApplyGravity()
         {
