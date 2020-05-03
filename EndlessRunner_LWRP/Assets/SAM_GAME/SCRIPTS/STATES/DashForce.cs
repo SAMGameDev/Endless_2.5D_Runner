@@ -11,6 +11,7 @@ namespace RunnerGame
         {
             playerStateBase.characterControl.FallMultiplier = 0;
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
+            CameraManger.Instance.ShakeCamera(0.03f);
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

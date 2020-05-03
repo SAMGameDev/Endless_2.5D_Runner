@@ -42,8 +42,7 @@ namespace RunnerGame
             }
             else
             {
-                control.Dash = true;
-                CameraManger.Instance.ShakeCamera(0.03f);
+                control.Dash = true;               
             }
         }
         public void OnDashReleased()

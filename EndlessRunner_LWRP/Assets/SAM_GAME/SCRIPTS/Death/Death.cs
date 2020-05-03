@@ -16,8 +16,9 @@ namespace RunnerGame
         {
             if (Control.Death)
             {
-                CameraManger.Instance.ShakeCamera(0.35f);
+                CameraManger.Instance.ShakeCamera(0.4f);
                 Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
+                StopAllCoroutines();
             }
         }
     }
