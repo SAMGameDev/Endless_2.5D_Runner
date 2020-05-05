@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Cinemachine;
 
 namespace RunnerGame
@@ -25,7 +23,8 @@ namespace RunnerGame
                 return animator;
             }
         }
-        private void Awake()
+       
+        private void OnEnable()
         {
             CinemachineVirtualCamera[] arr;
 

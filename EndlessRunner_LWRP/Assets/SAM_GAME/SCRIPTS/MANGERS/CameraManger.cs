@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace RunnerGame
@@ -7,6 +6,7 @@ namespace RunnerGame
     public class CameraManger : Singleton<CameraManger>
     {
         private Coroutine routine;
+        public Camera mainCamera;
         private CameraController camController;
 
         public CameraController CAMERACONTROLLER
@@ -19,6 +19,12 @@ namespace RunnerGame
                 }
                 return camController;
             }
+        }
+
+        private void Awake()
+        {
+            GameObject camObj = GameObject.FindGameObjectWithTag("MainCamera");
+            mainCamera = camObj.GetComponent<Camera>();
         }
 
         IEnumerator CamShake(float sec)

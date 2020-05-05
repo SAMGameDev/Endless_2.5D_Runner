@@ -14,6 +14,9 @@ namespace RunnerGame
     }
     public class CharacterControl : MonoBehaviour
     {
+        [Header("CharacterType")]
+        public PlayableCharacterTypes Type;
+
         [Header("INPUTS")]
         public bool Jump;
         public bool Dash;
