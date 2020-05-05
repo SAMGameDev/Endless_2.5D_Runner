@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Cinemachine;
 
 namespace RunnerGame
 {
@@ -6,8 +7,8 @@ namespace RunnerGame
     {
         public CharacterSelect characterSelect;
         private string ObjName;
-       
-        private void Start()
+        GameObject CamFollow;
+        private void Awake()
         {
             switch (characterSelect.SelectedCharacter)
             {
@@ -34,7 +35,28 @@ namespace RunnerGame
             obj.transform.position = this.transform.position;
             GetComponent<MeshRenderer>().enabled = false;
 
-           
+            /* this cinemachine related block of code , you put this in
+             * characterSpawn.Cs. now i am asking why didn't you put it in
+             * CameraController.Cs or CameraManger since it is camera related code. 
+             * YES IT WORKING PERFECTLY NO BUG OR SOMETHING JUST ASKING.
+             * 
+             * OPEN CameraController.cs
+            */
+
+            CinemachineVirtualCamera[] arr;
+
+            arr = FindObjectsOfType<CinemachineVirtualCamera>();
+
+            if (CamFollow == null)
+            {
+                CamFollow = GameObject.FindGameObjectWithTag("CamFollow"); ;
+            }
+
+            foreach (CinemachineVirtualCamera virtualCameras in arr)
+            {
+                virtualCameras.LookAt = CamFollow.transform;
+                virtualCameras.Follow = CamFollow.transform;
+            }
         }
     }
 }
