@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
@@ -8,7 +6,7 @@ namespace RunnerGame
     {
         Ray _ray;
         RaycastHit hit;
-        public PlayableCharacterTypes mouseHoverd_Character;
+        public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect select;
 
         private void Update()
@@ -19,25 +17,39 @@ namespace RunnerGame
             {
                 CharacterControl control = hit.collider.gameObject.GetComponent<CharacterControl>();
 
-                if(control != null)
+                if (control != null)
                 {
-                    mouseHoverd_Character = control.Type;
+                    selectedCharacter = control.Type;
                 }
                 else
                 {
-                    mouseHoverd_Character = PlayableCharacterTypes.NONE;
+                    selectedCharacter = PlayableCharacterTypes.NONE;
                 }
             }
 
-            if(Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
-                if(mouseHoverd_Character != PlayableCharacterTypes.NONE)
+                if (selectedCharacter != PlayableCharacterTypes.NONE)
                 {
-                    select.SelectedCharacter = mouseHoverd_Character;
+                    select.SelectedCharacter = selectedCharacter;
                 }
                 else
                 {
                     select.SelectedCharacter = PlayableCharacterTypes.NONE;
+                }
+
+                foreach (CharacterControl c in CharacterManger.Instance.characters)
+                {
+                    if (c.Type == selectedCharacter)
+                    {
+                        c.anim.SetBool(HashManger.Instance.DicMainParameters
+                            [TranistionParemeters.OnClick], true);
+                    }
+                    else
+                    {
+                        c.anim.SetBool(HashManger.Instance.DicMainParameters
+                                                    [TranistionParemeters.OnClick], false);
+                    }
                 }
             }
         }

@@ -11,6 +11,7 @@ namespace RunnerGame
         Dash,
         Slide,
         DoubleJump,
+        OnClick,
     }
     public class CharacterControl : MonoBehaviour
     {
@@ -42,7 +43,7 @@ namespace RunnerGame
         [Header("SUB-COMPONENTS")]
         public Animator anim;
         public CapsuleCollider cCollider;
-       [SerializeField] private Rigidbody rb;
+        [SerializeField] private Rigidbody rb;
         public Rigidbody RIGIDBODY
         {
             get
@@ -60,8 +61,17 @@ namespace RunnerGame
             Start = false;
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
-           // bCollider = GetComponent<BoxCollider>();
+            RegisterCharacter();
         }
+
+        private void RegisterCharacter()
+        {
+            if (!CharacterManger.Instance.characters.Contains(this))
+            {
+                CharacterManger.Instance.characters.Add(this);
+            }
+        }
+
         void FixedUpdate()
         {
             UpdateCenter();
@@ -91,7 +101,7 @@ namespace RunnerGame
             {
                 cCollider.height = targetHieght;
             }
-           
+
         }
         void ApplyGravity()
         {

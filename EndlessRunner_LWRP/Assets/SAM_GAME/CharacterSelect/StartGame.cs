@@ -10,8 +10,7 @@ namespace RunnerGame
     }
     public class StartGame : MonoBehaviour
     {
-        public CharacterSelect GetSelectedCharacter;
-       
+        public CharacterSelect GetSelectedCharacter;       
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Return))

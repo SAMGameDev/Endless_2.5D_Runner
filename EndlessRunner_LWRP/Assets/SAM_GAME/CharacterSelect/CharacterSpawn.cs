@@ -11,7 +11,6 @@ namespace RunnerGame
         private GameObject CamFollow;
         private void Awake()
         {
-
             switch (characterSelect.SelectedCharacter)
             {
                 case PlayableCharacterTypes.Mike:
