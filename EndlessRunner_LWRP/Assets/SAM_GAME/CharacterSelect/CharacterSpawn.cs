@@ -6,25 +6,58 @@ namespace RunnerGame
     public class CharacterSpawn : MonoBehaviour
     {
         public CharacterSelect characterSelect;
+        [SerializeField] private CharacterControl character;
         private string ObjName;
-        GameObject CamFollow;
+        private GameObject CamFollow;
         private void Awake()
         {
+
             switch (characterSelect.SelectedCharacter)
             {
-                case PlayableCharacterTypes.EmmaPolice:
+                case PlayableCharacterTypes.Mike:
                     {
-                        ObjName = "EmmaPolice";
+                        ObjName = "Mike";
                     }
                     break;
-                case PlayableCharacterTypes.JaneJacket:
+                case PlayableCharacterTypes.James:
                     {
-                        ObjName = "JaneJacket";
+                        ObjName = "James";
                     }
                     break;
-                case PlayableCharacterTypes.JessicaCoat:
+                case PlayableCharacterTypes.Liam:
                     {
-                        ObjName = "JessicaCoat";
+                        ObjName = "Liam";
+                    }
+                    break;
+                case PlayableCharacterTypes.Noah:
+                    {
+                        ObjName = "Noah";
+                    }
+                    break;
+                case PlayableCharacterTypes.Charlotte:
+                    {
+                        ObjName = "Charlotte";
+                    }
+                    break;
+
+                case PlayableCharacterTypes.Emma:
+                    {
+                        ObjName = "Emma";
+                    }
+                    break;
+                case PlayableCharacterTypes.Jane:
+                    {
+                        ObjName = "Jane";
+                    }
+                    break;
+                case PlayableCharacterTypes.Jessica:
+                    {
+                        ObjName = "Jessica";
+                    }
+                    break;
+                case PlayableCharacterTypes.William:
+                    {
+                        ObjName = "William";
                     }
                     break;
             }
@@ -33,15 +66,15 @@ namespace RunnerGame
                 typeof(GameObject))) as GameObject;
 
             obj.transform.position = this.transform.position;
+
             GetComponent<MeshRenderer>().enabled = false;
 
-            /* this cinemachine related block of code , you put this in
-             * characterSpawn.Cs. now i am asking why didn't you put it in
-             * CameraController.Cs or CameraManger since it is camera related code. 
-             * YES IT WORKING PERFECTLY NO BUG OR SOMETHING JUST ASKING.
-             * 
-             * OPEN CameraController.cs
-            */
+            character = FindObjectOfType<CharacterControl>();
+
+            if (characterSelect.SelectedCharacter != PlayableCharacterTypes.NONE)
+            {
+                character.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("PlayerAnimator");
+            }
 
             CinemachineVirtualCamera[] arr;
 

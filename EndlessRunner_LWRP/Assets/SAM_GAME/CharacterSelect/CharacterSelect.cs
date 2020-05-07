@@ -1,15 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
     public enum PlayableCharacterTypes
     {
         NONE,
-        JessicaCoat,
-        JaneJacket,
-        EmmaPolice
+        Mike,
+        James,
+        Liam,
+        Noah,
+        Charlotte,
+        Jessica,
+        Jane,
+        Emma,
+        William
     }
 
     [CreateAssetMenu(fileName = "characterSelect", menuName = "ScriptableObject/CharacterSelect/CharacterSelect")]

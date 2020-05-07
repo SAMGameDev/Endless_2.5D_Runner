@@ -71,6 +71,7 @@ namespace RunnerGame
         IEnumerator TurnOff(float time)
         {
             yield return new WaitForSeconds(time);
+
             if (control.Slide)
             {
                 control.Slide = false;
