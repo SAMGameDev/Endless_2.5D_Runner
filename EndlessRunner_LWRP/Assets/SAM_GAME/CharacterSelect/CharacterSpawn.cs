@@ -66,13 +66,12 @@ namespace RunnerGame
 
             obj.transform.position = this.transform.position;
 
-            GetComponent<MeshRenderer>().enabled = false;
-
             character = FindObjectOfType<CharacterControl>();
 
             if (characterSelect.SelectedCharacter != PlayableCharacterTypes.NONE)
             {
-                character.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("PlayerAnimator");
+                character.anim.runtimeAnimatorController =
+                    Resources.Load<RuntimeAnimatorController>("PlayerAnimator");
             }
 
             CinemachineVirtualCamera[] arr;
