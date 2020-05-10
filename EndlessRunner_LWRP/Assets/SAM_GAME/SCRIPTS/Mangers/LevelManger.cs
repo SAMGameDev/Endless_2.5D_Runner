@@ -20,6 +20,7 @@ namespace RunnerGame
         [SerializeField]
         protected float safeZone;
         protected int lastIndexprefab = 0;
+
         void Start()
         {
             playertransform = GameObject.FindGameObjectWithTag("Player").transform;
