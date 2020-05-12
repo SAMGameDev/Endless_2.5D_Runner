@@ -40,7 +40,7 @@ namespace RunnerGame
         public float sizeUpdate_Speed;
         public bool UpdateNow;
 
-        public GameObject Camfollow;
+        public Transform spinTransform;
 
         [Header("SUB-COMPONENTS")]
         public Animator anim;
@@ -58,7 +58,7 @@ namespace RunnerGame
             }
         }
         void Awake()
-        {
+        {           
             Death = false;
             Start = false;
             anim = GetComponentInChildren<Animator>();

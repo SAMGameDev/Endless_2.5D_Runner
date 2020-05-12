@@ -51,8 +51,8 @@ namespace RunnerGame
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                             [TranistionParemeters.OnClick], true);
 
-                        vCam.Follow = c.Camfollow.transform;
-                        vCam.LookAt = c.Camfollow.transform;
+                        vCam.Follow = c.spinTransform;
+                        vCam.LookAt = c.spinTransform;
 
                     }
                     else
