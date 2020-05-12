@@ -40,6 +40,8 @@ namespace RunnerGame
         public float sizeUpdate_Speed;
         public bool UpdateNow;
 
+        public GameObject Camfollow;
+
         [Header("SUB-COMPONENTS")]
         public Animator anim;
         public CapsuleCollider cCollider;

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Cinemachine;
 
 namespace RunnerGame
 {
@@ -8,6 +9,11 @@ namespace RunnerGame
         RaycastHit hit;
         public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect select;
+        [SerializeField] private CinemachineVirtualCamera vCam;
+        private void Awake()
+        {
+            vCam = FindObjectOfType<CinemachineVirtualCamera>();
+        }
 
         private void Update()
         {
@@ -44,6 +50,10 @@ namespace RunnerGame
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                             [TranistionParemeters.OnClick], true);
+
+                        vCam.Follow = c.Camfollow.transform;
+                        vCam.LookAt = c.Camfollow.transform;
+
                     }
                     else
                     {
