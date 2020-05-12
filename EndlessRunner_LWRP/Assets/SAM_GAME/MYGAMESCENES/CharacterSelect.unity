@@ -123,12 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &2885446 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 110243767729082448, guid: f928d2b16a9de804bace128d62881952,
-    type: 3}
-  m_PrefabInstance: {fileID: 6849840715179589403}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &565309748
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,17 +728,17 @@ PrefabInstance:
     - target: {fileID: 6707076265268538578, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_XDamping
-      value: 0.065
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6707076265268538578, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_YDamping
-      value: 0.065
+      value: 0.085
       objectReference: {fileID: 0}
     - target: {fileID: 6707076265268538578, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_ZDamping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6707076265268538578, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
@@ -760,6 +754,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AngularDamping
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707076265268538578, guid: a3d30a50b081e0b4c86d6228286b0687,
+        type: 3}
+      propertyPath: m_FollowOffset.x
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3d30a50b081e0b4c86d6228286b0687, type: 3}
@@ -841,12 +840,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1658437111 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 390823770197267165, guid: 5cc5690ff4704ff40a1e532e9ce97ea9,
-    type: 3}
-  m_PrefabInstance: {fileID: 3910919620669217474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1763794116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,11 +1279,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4276405785058717175, guid: 5cc5690ff4704ff40a1e532e9ce97ea9,
-        type: 3}
-      propertyPath: spinTransform
-      value: 
-      objectReference: {fileID: 1658437111}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc5690ff4704ff40a1e532e9ce97ea9, type: 3}
 --- !u!1001 &5117806303122128967
@@ -1636,11 +1624,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mike
       objectReference: {fileID: 0}
-    - target: {fileID: 8240781060545666087, guid: f928d2b16a9de804bace128d62881952,
-        type: 3}
-      propertyPath: spinTransform
-      value: 
-      objectReference: {fileID: 2885446}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f928d2b16a9de804bace128d62881952, type: 3}
 --- !u!1001 &7504930070579356294
