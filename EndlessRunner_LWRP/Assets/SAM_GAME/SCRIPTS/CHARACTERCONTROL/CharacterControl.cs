@@ -30,6 +30,7 @@ namespace RunnerGame
         public bool isJumping;
         public bool Death;
 
+        [Header("FLOATS")]
         public float FallMultiplier = 9.8f;
         public int clickCount = 0;
 
@@ -58,7 +59,7 @@ namespace RunnerGame
             }
         }
         void Awake()
-        {           
+        {         
             Death = false;
             Start = false;
             anim = GetComponentInChildren<Animator>();
