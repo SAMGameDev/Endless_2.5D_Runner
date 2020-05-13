@@ -9,7 +9,9 @@ namespace RunnerGame
         RaycastHit hit;
         public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect select;
+
         [SerializeField] private CinemachineVirtualCamera vCam;
+
         private void Awake()
         {
             vCam = FindObjectOfType<CinemachineVirtualCamera>();
@@ -53,7 +55,6 @@ namespace RunnerGame
 
                         vCam.Follow = c.spinTransform;
                         vCam.LookAt = c.spinTransform;
-
                     }
                     else
                     {
