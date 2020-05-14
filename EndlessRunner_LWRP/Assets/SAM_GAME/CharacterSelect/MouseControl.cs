@@ -19,7 +19,8 @@ namespace RunnerGame
 
         private void Update()
         {
-            _ray = CameraManger.Instance.mainCamera.ScreenPointToRay(Input.mousePosition);
+            _ray = CameraManger.Instance.mainCamera.ScreenPointToRay
+                (Input.mousePosition);
 
             if (Physics.Raycast(_ray, out hit))
             {
@@ -35,7 +36,7 @@ namespace RunnerGame
                 }
             }
             else { return; }
-           
+
             if (Input.GetMouseButtonDown(0))
             {
                 if (selectedCharacter != PlayableCharacterTypes.NONE)
