@@ -28,13 +28,14 @@ namespace RunnerGame
                 if (control != null)
                 {
                     selectedCharacter = control.Type;
-                }         
+                }
+                else
+                {
+                    selectedCharacter = PlayableCharacterTypes.NONE;
+                }
             }
-            else
-            {
-                selectedCharacter = PlayableCharacterTypes.NONE;
-            }
-
+            else { return; }
+           
             if (Input.GetMouseButtonDown(0))
             {
                 if (selectedCharacter != PlayableCharacterTypes.NONE)
