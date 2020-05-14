@@ -28,11 +28,11 @@ namespace RunnerGame
                 if (control != null)
                 {
                     selectedCharacter = control.Type;
-                }
-                else
-                {
-                    selectedCharacter = PlayableCharacterTypes.NONE;
-                }
+                }         
+            }
+            else
+            {
+                selectedCharacter = PlayableCharacterTypes.NONE;
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -50,16 +50,20 @@ namespace RunnerGame
                 {
                     if (c.Type == selectedCharacter)
                     {
-                        c.anim.SetBool(HashManger.Instance.DicMainParameters
-                            [TranistionParemeters.OnClick], true);
-
                         vCam.Follow = c.spinTransform;
                         vCam.LookAt = c.spinTransform;
+
+                        c.anim.SetBool(HashManger.Instance.DicMainParameters
+                                          [TranistionParemeters.OnClick], true);
+                    }
+                    else if (selectedCharacter == PlayableCharacterTypes.NONE)
+                    {
+                        return;
                     }
                     else
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
-                                                    [TranistionParemeters.OnClick], false);
+                                          [TranistionParemeters.OnClick], false);
                     }
                 }
             }
