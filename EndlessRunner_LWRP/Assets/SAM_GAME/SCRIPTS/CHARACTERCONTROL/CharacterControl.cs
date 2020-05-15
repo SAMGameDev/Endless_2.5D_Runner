@@ -41,8 +41,6 @@ namespace RunnerGame
         public float sizeUpdate_Speed;
         public bool UpdateNow;
 
-        public Transform spinTransform;
-
         [Header("SUB-COMPONENTS")]
         public Animator anim;
         public CapsuleCollider cCollider;
@@ -59,7 +57,7 @@ namespace RunnerGame
             }
         }
         void Awake()
-        {         
+        {
             Death = false;
             Start = false;
             anim = GetComponentInChildren<Animator>();
