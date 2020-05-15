@@ -5,8 +5,6 @@ namespace RunnerGame
 {
     public class MouseControl : MonoBehaviour
     {
-        Ray _ray;
-        RaycastHit hit;
         public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect select;
 
@@ -19,6 +17,9 @@ namespace RunnerGame
 
         private void Update()
         {
+            Ray _ray;
+            RaycastHit hit;
+
             _ray = CameraManger.Instance.mainCamera.ScreenPointToRay
                 (Input.mousePosition);
 
