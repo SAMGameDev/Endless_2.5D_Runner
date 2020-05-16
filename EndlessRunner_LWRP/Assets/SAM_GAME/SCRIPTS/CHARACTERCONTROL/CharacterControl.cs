@@ -15,6 +15,8 @@ namespace RunnerGame
     }
     public class CharacterControl : MonoBehaviour
     {
+        public Transform resetObj;
+
         [Header("CharacterType")]
         public PlayableCharacterTypes Type;
 
