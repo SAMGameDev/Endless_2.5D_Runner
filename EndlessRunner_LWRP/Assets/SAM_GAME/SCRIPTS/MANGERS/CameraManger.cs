@@ -7,7 +7,7 @@ namespace RunnerGame
     {
         private Coroutine routine;
         public Camera mainCamera;
-        private CameraController camController;
+        public CameraController camController;
 
         public CameraController CAMERACONTROLLER
         {

@@ -158,7 +158,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372755707}
-  m_LocalRotation: {x: -0.00000079141955, y: 1, z: 3e-45, w: 1e-45}
+  m_LocalRotation: {x: -0.00000079141955, y: 1, z: -1e-45, w: 1e-45}
   m_LocalPosition: {x: 0.0060186386, y: 1.3025028, z: 17.47351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -225,7 +225,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503884421}
-  m_LocalRotation: {x: -0.00000079141955, y: 1, z: -1e-45, w: 1e-45}
+  m_LocalRotation: {x: -0.00000079141955, y: 1, z: 3e-45, w: 1e-45}
   m_LocalPosition: {x: -9.993981, y: 1.3025028, z: 17.47351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -493,7 +493,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303722630}
-  m_LocalRotation: {x: -0.00000079141955, y: 1, z: 3e-45, w: 1e-45}
+  m_LocalRotation: {x: -0.00000079141955, y: 1, z: -1e-45, w: 1e-45}
   m_LocalPosition: {x: -5.9939814, y: 1.3025028, z: 17.47351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1312,7 +1312,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6277181187126889607}
-  m_LocalRotation: {x: -0.00000079141955, y: 1, z: 3e-45, w: 1e-45}
+  m_LocalRotation: {x: -0.00000079141955, y: 1, z: -1e-45, w: 1e-45}
   m_LocalPosition: {x: -1.9939814, y: 1.3025028, z: 17.47351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1431,6 +1431,10 @@ MonoBehaviour:
   - {fileID: 110851225}
   - {fileID: 503884422}
   m_Instructions:
+  - m_FullHash: 1618655017
+    m_VirtualCamera: {fileID: 8258914871333932939}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
   - m_FullHash: -1907413854
     m_VirtualCamera: {fileID: 6277181187126889606}
     m_ActivateAfter: 0
@@ -1443,9 +1447,33 @@ MonoBehaviour:
     m_VirtualCamera: {fileID: 372755708}
     m_ActivateAfter: 0
     m_MinDuration: 0
+  - m_FullHash: 1931563006
+    m_VirtualCamera: {fileID: 608641084}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
+  - m_FullHash: 236466454
+    m_VirtualCamera: {fileID: 749136323}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
+  - m_FullHash: -1629351926
+    m_VirtualCamera: {fileID: 15560303}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
+  - m_FullHash: -786770585
+    m_VirtualCamera: {fileID: 1303722631}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
+  - m_FullHash: 1128173318
+    m_VirtualCamera: {fileID: 110851225}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
+  - m_FullHash: -1651322182
+    m_VirtualCamera: {fileID: 503884422}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
   m_DefaultBlend:
     m_Style: 6
-    m_Time: 1
+    m_Time: 0.85
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -1459,6 +1487,20 @@ MonoBehaviour:
   - m_Hash: 267687377
     m_ParentHash: 756556552
   - m_Hash: 1046692940
+    m_ParentHash: 756556552
+  - m_Hash: 1618655017
+    m_ParentHash: 756556552
+  - m_Hash: 1931563006
+    m_ParentHash: 756556552
+  - m_Hash: 236466454
+    m_ParentHash: 756556552
+  - m_Hash: -1629351926
+    m_ParentHash: 756556552
+  - m_Hash: -786770585
+    m_ParentHash: 756556552
+  - m_Hash: 1128173318
+    m_ParentHash: 756556552
+  - m_Hash: -1651322182
     m_ParentHash: 756556552
 --- !u!1 &6277181187959093054
 GameObject:

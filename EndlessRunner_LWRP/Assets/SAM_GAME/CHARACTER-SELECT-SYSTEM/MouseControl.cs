@@ -8,10 +8,6 @@ namespace RunnerGame
         public CharacterSelect select;
         [SerializeField] Animator characterselect_camController;
 
-        private void Awake()
-        {
-            characterselect_camController = GameObject.Find("CameraController-CS").GetComponent<Animator>();
-        }
         private void Update()
         {
             Ray _ray;
