@@ -6,7 +6,7 @@ namespace RunnerGame
     {
         public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect select;
-        [SerializeField] Animator characterselect_camController;
+        [SerializeField] protected Animator characterselect_camController;
 
         private void Update()
         {

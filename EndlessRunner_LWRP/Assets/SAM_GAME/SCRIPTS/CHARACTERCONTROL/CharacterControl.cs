@@ -15,8 +15,6 @@ namespace RunnerGame
     }
     public class CharacterControl : MonoBehaviour
     {
-        public Transform resetObj;
-
         [Header("CharacterType")]
         public PlayableCharacterTypes Type;
 
@@ -67,12 +65,9 @@ namespace RunnerGame
             RegisterCharacter();
         }
 
-        private void RegisterCharacter()
+        public void RunForward(float speed)
         {
-            if (!CharacterManger.Instance.characters.Contains(this))
-            {
-                CharacterManger.Instance.characters.Add(this);
-            }
+            RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }
 
         void FixedUpdate()
@@ -80,31 +75,6 @@ namespace RunnerGame
             UpdateCenter();
             UpdateSize();
             ApplyGravity();
-        }
-
-        void UpdateCenter()
-        {
-            if (!UpdateNow)
-            {
-                return;
-            }
-            if (Vector3.SqrMagnitude(cCollider.center - targetCenter_C) > 0.01f)
-            {
-                cCollider.center = Vector3.Lerp(cCollider.center, targetCenter_C,
-                    Time.deltaTime * CenterUpdate_Speed_C);
-            }
-        }
-        void UpdateSize()
-        {
-            if (!UpdateNow)
-            {
-                return;
-            }
-            else
-            {
-                cCollider.height = targetHieght;
-            }
-
         }
         void ApplyGravity()
         {
@@ -143,12 +113,30 @@ namespace RunnerGame
             isGrounded = false;
             Death = false;
         }
-
-        public void RunForward(float speed)
+        void UpdateCenter()
         {
-            RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
+            if (!UpdateNow)
+            {
+                return;
+            }
+            if (Vector3.SqrMagnitude(cCollider.center - targetCenter_C) > 0.01f)
+            {
+                cCollider.center = Vector3.Lerp(cCollider.center, targetCenter_C,
+                    Time.deltaTime * CenterUpdate_Speed_C);
+            }
         }
+        void UpdateSize()
+        {
+            if (!UpdateNow)
+            {
+                return;
+            }
+            else
+            {
+                cCollider.height = targetHieght;
+            }
 
+        }           
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
@@ -156,6 +144,13 @@ namespace RunnerGame
             foreach (PlayerStateBase c in arr)
             {
                 c.characterControl = this;
+            }
+        }
+        private void RegisterCharacter()
+        {
+            if (!CharacterManger.Instance.characters.Contains(this))
+            {
+                CharacterManger.Instance.characters.Add(this);
             }
         }
 
