@@ -135,7 +135,6 @@ namespace RunnerGame
             {
                 cCollider.height = targetHieght;
             }
-
         }           
         public void CacheCharacterControl(Animator animator)
         {
@@ -153,6 +152,5 @@ namespace RunnerGame
                 CharacterManger.Instance.characters.Add(this);
             }
         }
-
     }
 }
