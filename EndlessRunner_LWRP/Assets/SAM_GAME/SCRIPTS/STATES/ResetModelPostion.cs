@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace RunnerGame
 {
-    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/Test")]
-    public class Test : ScriptableObjectData
+    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/ResetModelPostion")]
+    public class ResetModelPostion : ScriptableObjectData
     {
         public Transform t;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
