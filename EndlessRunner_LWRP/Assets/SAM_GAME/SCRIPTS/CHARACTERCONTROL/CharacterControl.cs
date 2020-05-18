@@ -22,17 +22,14 @@ namespace RunnerGame
         public bool Jump;
         public bool Dash;
         public bool Start;
-        public bool DoubleJump;
         public bool Slide;
 
         [Header("DETECTORS")]
         public bool isGrounded = true;
-        public bool isJumping;
         public bool Death;
 
         [Header("FLOATS")]
         public float FallMultiplier = 9.8f;
-        public int clickCount = 0;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;

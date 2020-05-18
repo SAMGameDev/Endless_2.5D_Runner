@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
@@ -16,9 +14,9 @@ namespace RunnerGame
         {
             if (Control.Death)
             {
-                CameraManger.Instance.ShakeCamera(0.4f);
-                Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
                 StopAllCoroutines();
+                CameraManger.Instance.ShakeCamera(0.4f);
+                Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");               
             }
         }
     }
