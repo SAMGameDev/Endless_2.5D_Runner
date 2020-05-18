@@ -70,6 +70,7 @@ namespace RunnerGame
 
             if (characterSelect.SelectedCharacter != PlayableCharacterTypes.NONE)
             {
+                character.isStarted = true;
                 character.anim.runtimeAnimatorController =
                     Resources.Load<RuntimeAnimatorController>("PlayerAnimator");
             }

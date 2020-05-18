@@ -15,46 +15,53 @@ namespace RunnerGame
             int splitScreen = Screen.height / 2;
             int spitscreenHori = Screen.width / 2;
 
-            if (Input.GetMouseButtonDown(0)
-               && Input.mousePosition.y >= splitScreen
-               && Input.mousePosition.x <= spitscreenHori)
+            if (characterControl.isStarted)
             {
-                if (!characterControl.Start)
+                if (Input.GetMouseButtonDown(0)
+                   && Input.mousePosition.y >= splitScreen
+                   && Input.mousePosition.x <= spitscreenHori)
                 {
-                    characterControl.Start = true;
+                    if (!characterControl.StartRun)
+                    {
+                        characterControl.StartRun = true;
+                    }
+                    else
+                    {
+                        characterControl.Jump = true;
+                    }
+                }
+                else if (Input.GetMouseButtonUp(0) && Input.mousePosition.y < splitScreen && Input.mousePosition.x <= spitscreenHori)
+                {
+                    if (!characterControl.StartRun)
+                    {
+                        characterControl.StartRun = true;
+                    }
+                    else
+                    {
+                        characterControl.Slide = true;
+                        StartCoroutine(TurnOff(0.3f));
+                    }
+                }
+                else if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > spitscreenHori)
+                {
+                    if (!characterControl.StartRun)
+                    {
+                        characterControl.StartRun = true;
+                    }
+                    else
+                    {
+                        characterControl.Dash = true;
+                    }
                 }
                 else
                 {
-                    characterControl.Jump = true;
-                }
-            }
-            else if (Input.GetMouseButtonUp(0) && Input.mousePosition.y < splitScreen && Input.mousePosition.x <= spitscreenHori)
-            {
-                if (!characterControl.Start)
-                {
-                    characterControl.Start = true;
-                }
-                else
-                {
-                    characterControl.Slide = true;
-                    StartCoroutine(TurnOff(0.3f));
-                }
-            }
-            else if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > spitscreenHori)
-            {
-                if (!characterControl.Start)
-                {
-                    characterControl.Start = true;
-                }
-                else
-                {
-                    characterControl.Dash = true;
+                    characterControl.Jump = false;
+                    characterControl.Dash = false;
                 }
             }
             else
             {
-                characterControl.Jump = false;
-                characterControl.Dash = false;
+                return;
             }
         }
         IEnumerator TurnOff(float time)

@@ -4,7 +4,7 @@ namespace RunnerGame
 {
     public enum TranistionParemeters
     {
-        Start,
+        StartRun,
         Jump,
         ForceTransition,
         Grounded,
@@ -21,8 +21,9 @@ namespace RunnerGame
         [Header("INPUTS")]
         public bool Jump;
         public bool Dash;
-        public bool Start;
+        public bool StartRun;
         public bool Slide;
+        public bool isStarted = false;
 
         [Header("DETECTORS")]
         public bool isGrounded = true;
@@ -35,7 +36,6 @@ namespace RunnerGame
         public Vector3 targetCenter_C;
         public float targetHieght;
         public float CenterUpdate_Speed_C;
-        public float sizeUpdate_Speed;
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
@@ -56,7 +56,7 @@ namespace RunnerGame
         void Awake()
         {
             Death = false;
-            Start = false;
+            StartRun = false;
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
             RegisterCharacter();

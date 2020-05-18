@@ -10,10 +10,7 @@ namespace RunnerGame
         [SerializeField]
         protected float targetHieght;
         [SerializeField]
-        protected float CenterUpdate_Speed;
-        [SerializeField]
-        protected float sizeUpdateSpeed;
-     
+        protected float CenterUpdate_Speed;       
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.UpdateNow = true;
@@ -21,7 +18,6 @@ namespace RunnerGame
             playerStateBase.characterControl.targetCenter_C = targetCenter;
             playerStateBase.characterControl.targetHieght = targetHieght;
             playerStateBase.characterControl.CenterUpdate_Speed_C = CenterUpdate_Speed;
-            playerStateBase.characterControl.sizeUpdate_Speed = sizeUpdateSpeed;
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

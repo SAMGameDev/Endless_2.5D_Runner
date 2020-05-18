@@ -10,10 +10,10 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (playerStateBase.characterControl.Start)
+            if (playerStateBase.characterControl.StartRun)
             {
                 animator.SetBool
-                    (HashManger.Instance.DicMainParameters[TranistionParemeters.Start], true);
+                    (HashManger.Instance.DicMainParameters[TranistionParemeters.StartRun], true);
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
