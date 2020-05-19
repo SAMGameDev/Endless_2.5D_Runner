@@ -12,11 +12,11 @@ namespace RunnerGame
         }
         void Update()
         {
-            int splitScreen = Screen.height / 2;
-            int spitscreenHori = Screen.width / 2;
-
             if (characterControl.isStarted)
             {
+                int splitScreen = Screen.height / 2;
+                int spitscreenHori = Screen.width / 2;
+
                 if (Input.GetMouseButtonDown(0)
                    && Input.mousePosition.y >= splitScreen
                    && Input.mousePosition.x <= spitscreenHori)
