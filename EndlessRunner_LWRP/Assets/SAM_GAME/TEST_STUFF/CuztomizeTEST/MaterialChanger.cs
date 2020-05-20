@@ -1,6 +1,4 @@
-﻿using UnityEditor;
-using UnityEditor.SceneManagement;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
@@ -10,7 +8,7 @@ namespace RunnerGame
         public SkinnedMeshRenderer skinnedMesh;
         public CharacterSelect selectedCharacter;
         public CharacterControl control;
-        public PrefabOverride prefabOverride;
+
         [Header("Variables")]
         public Material[] materials;
         int arraycount = 0;
@@ -36,10 +34,6 @@ namespace RunnerGame
                 }
             }
         }
-
-       
-
-       
     }
 }
 
