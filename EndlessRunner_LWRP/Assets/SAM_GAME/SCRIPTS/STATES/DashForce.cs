@@ -9,9 +9,9 @@ namespace RunnerGame
         protected float dashForce;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.FallMultiplier = 0;
-            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
             CameraManger.Instance.ShakeCamera(0.03f);
+            playerStateBase.characterControl.FallMultiplier = 0;
+            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;           
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -21,7 +21,7 @@ namespace RunnerGame
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.FallMultiplier = 9.8f;
+            playerStateBase.characterControl.FallMultiplier = 9.8f;           
         }
 
     }

@@ -1745,6 +1745,7 @@ GameObject:
   - component: {fileID: 9049800522730724250}
   - component: {fileID: 6094054895530856724}
   - component: {fileID: 1527178450793671519}
+  - component: {fileID: 2716543751702285429}
   m_Layer: 0
   m_Name: Noah
   m_TagString: Player
@@ -1814,7 +1815,7 @@ MonoBehaviour:
   Type: 4
   Jump: 0
   Dash: 0
-  Start: 0
+  StartRun: 0
   Slide: 0
   isStarted: 0
   isGrounded: 1
@@ -1851,6 +1852,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88cd2bcffb359084fb1603325c51b55a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2716543751702285429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592087148131473766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42871e20fd1f52643af05077dae3f21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinnedMesh: {fileID: 0}
+  selectedCharacter: {fileID: 0}
+  control: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 62e25ef75a2216f418d06453c9ad15cb, type: 2}
+  - {fileID: 2100000, guid: ee5d59fcc8497a641905c26644c20880, type: 2}
+  - {fileID: 2100000, guid: a8e32d2cd442e564aa46c99f0ae7c0c8, type: 2}
+  - {fileID: 2100000, guid: 49ef76ea47782eb4b93ac08b234fd6c3, type: 2}
 --- !u!1 &7780591179821226362
 GameObject:
   m_ObjectHideFlags: 0

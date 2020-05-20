@@ -54,7 +54,7 @@ namespace RunnerGame
             }
         }
         void Awake()
-        {
+        {          
             Death = false;
             StartRun = false;
             anim = GetComponentInChildren<Animator>();
@@ -132,7 +132,7 @@ namespace RunnerGame
             {
                 cCollider.height = targetHieght;
             }
-        }           
+        }
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();

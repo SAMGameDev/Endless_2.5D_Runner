@@ -5,7 +5,7 @@ namespace RunnerGame
 {
     public class TakeInputs : MonoBehaviour
     {
-        private CharacterControl characterControl;
+        private CharacterControl characterControl;       
         void Awake()
         {
             characterControl = GetComponent<CharacterControl>();

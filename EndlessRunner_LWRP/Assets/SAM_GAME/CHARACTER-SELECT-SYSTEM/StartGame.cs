@@ -6,12 +6,13 @@ namespace RunnerGame
     enum Scenes
     {
         CharacterSelect,
+        CharlotteCustomize,
         MainScene,
     }
     public class StartGame : MonoBehaviour
     {
         public CharacterSelect GetSelectedCharacter;
-       
+
         public void SelectCharacter()
         {
             if (GetSelectedCharacter.SelectedCharacter !=

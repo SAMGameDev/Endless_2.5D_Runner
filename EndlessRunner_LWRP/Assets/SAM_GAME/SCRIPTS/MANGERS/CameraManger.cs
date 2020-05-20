@@ -15,7 +15,7 @@ namespace RunnerGame
             {
                 if (camController == null)
                 {
-                    camController = GameObject.FindObjectOfType<CameraController>();
+                    camController = FindObjectOfType<CameraController>();
                 }
                 return camController;
             }
