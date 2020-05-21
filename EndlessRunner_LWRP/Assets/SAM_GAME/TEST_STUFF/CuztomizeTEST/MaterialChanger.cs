@@ -38,7 +38,14 @@ namespace RunnerGame
                     {
                         instance = this;
                         DontDestroyOnLoad(instance);
-                    }                    
+                    }
+                    else
+                    {
+                        if (control.isStarted)
+                        {
+                            Destroy(gameObject);
+                        }
+                    }
                 }
             }
         }
