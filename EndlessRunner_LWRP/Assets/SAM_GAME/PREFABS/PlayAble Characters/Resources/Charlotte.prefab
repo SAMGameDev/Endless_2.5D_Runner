@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinnedMesh: {fileID: 0}
-  selectedCharacter: {fileID: 0}
+  selectedCharacter: {fileID: 11400000, guid: e24765b944e40084c8fe6579a68b3d98, type: 2}
   control: {fileID: 0}
   materials:
   - {fileID: 2100000, guid: 62e25ef75a2216f418d06453c9ad15cb, type: 2}
@@ -860,6 +860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6791450207379408289}
   - component: {fileID: 6791450207370131943}
+  - component: {fileID: 5241558209368564070}
   m_Layer: 0
   m_Name: CharlotteModel
   m_TagString: Untagged
@@ -902,6 +903,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5241558209368564070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791450207379728467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3168f1b0953cfa74aaa1363def511145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6791450207379730479
 GameObject:
   m_ObjectHideFlags: 0

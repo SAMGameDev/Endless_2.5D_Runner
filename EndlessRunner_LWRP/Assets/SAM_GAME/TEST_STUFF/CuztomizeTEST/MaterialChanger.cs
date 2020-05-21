@@ -9,6 +9,8 @@ namespace RunnerGame
         public CharacterSelect selectedCharacter;
         public CharacterControl control;
 
+        public static MaterialChanger instance;
+
         [Header("Variables")]
         public Material[] materials;
         int arraycount = 0;
@@ -31,6 +33,12 @@ namespace RunnerGame
                         arraycount = 0;
                     }
                     skinnedMesh.material = materials[arraycount];
+
+                    if (instance == null)
+                    {
+                        instance = this;
+                        DontDestroyOnLoad(instance);
+                    }                    
                 }
             }
         }
