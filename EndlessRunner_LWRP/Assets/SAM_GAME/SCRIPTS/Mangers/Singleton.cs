@@ -14,7 +14,7 @@ namespace RunnerGame
                     GameObject obj = new GameObject();
                     _instance = obj.AddComponent<T>();
                     obj.name = typeof(T).ToString();
-                }
+                }               
                 return _instance;
             }
         }

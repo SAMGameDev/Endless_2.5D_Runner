@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 namespace RunnerGame
 {
@@ -13,7 +11,7 @@ namespace RunnerGame
             {
                 if(control.Type == characterTypes)
                 {
-                    return control;
+                    return control;               
                 }
             }
 

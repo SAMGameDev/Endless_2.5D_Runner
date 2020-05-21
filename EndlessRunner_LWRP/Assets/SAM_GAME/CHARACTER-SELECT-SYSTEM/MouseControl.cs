@@ -49,17 +49,16 @@ namespace RunnerGame
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], true);
                     }
-                    else if (selectedCharacter == PlayableCharacterTypes.NONE)
-                    {
-                        return;
-                    }
                     else
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], false);
                     }
+                    if (selectedCharacter == PlayableCharacterTypes.NONE)
+                    {
+                        return;
+                    }
                 }
-
                 characterselect_camController.SetBool
                     (selectedCharacter.ToString(), true);
             }

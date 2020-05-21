@@ -3,24 +3,21 @@ using UnityEngine;
 
 namespace RunnerGame
 {
-    public class UITest : MonoBehaviour
+    public class DontDestroyTest : MonoBehaviour
     {
-        //int splitScreen = Screen.height / 2;
-        //int spitscreenHori = Screen.width / 2;
-
-        //public static UITest instance;
+        public static DontDestroyTest instance;
 
         private void Awake()
         {
-            //if (instance == null)
-            //{
-            //    instance = this;
-            //    DontDestroyOnLoad(instance);
-            //}
-            //else
-            //{
-            //    Destroy(this);
-            //}
+            if (instance == null)
+            {
+                instance = this;
+                DontDestroyOnLoad(instance);
+            }
+            else
+            {
+                Destroy(this);
+            }
         }
 
         private void Update()
