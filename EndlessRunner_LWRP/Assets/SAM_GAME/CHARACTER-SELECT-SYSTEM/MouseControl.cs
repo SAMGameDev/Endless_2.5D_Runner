@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace RunnerGame
 {
@@ -48,11 +49,15 @@ namespace RunnerGame
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], true);
+
+                        DontDestroyOnLoad(c.gameObject);
                     }
                     else
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], false);
+                        SceneManager.MoveGameObjectToScene(c.gameObject,
+                            SceneManager.GetActiveScene());
                     }
                     if (selectedCharacter == PlayableCharacterTypes.NONE)
                     {
