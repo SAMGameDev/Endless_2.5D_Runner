@@ -18,21 +18,39 @@ namespace RunnerGame
             skinnedMesh = GetComponentInChildren<SkinnedMeshRenderer>();
             control = GetComponent<CharacterControl>();
         }
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                if (selectedCharacter.SelectedCharacter == control.Type)
-                {
-                    arraycount++;
+        //private void Update()
+        //{
+        //    if (Input.GetKeyDown(KeyCode.D))
+        //    {
+        //        if (selectedCharacter.SelectedCharacter == control.Type)
+        //        {
+        //            arraycount--;
 
-                    if (arraycount >= materials.Length)
-                    {
-                        arraycount = 0;
-                    }
-                    skinnedMesh.material = materials[arraycount];
+        //            if (arraycount <= materials.Length)
+        //            {
+        //                arraycount = 0;
+        //            }
+        //            skinnedMesh.material = materials[arraycount];
+        //        }
+
+        //        Debug.Log(arraycount);
+        //    }
+        //}
+
+        public void ClothChangeForward()
+        {
+            if (selectedCharacter.SelectedCharacter == control.Type)
+            {
+                arraycount++;
+
+                if (arraycount >= materials.Length)
+                {
+                    arraycount = 0;
                 }
+                skinnedMesh.material = materials[arraycount];
             }
+
+            Debug.Log(arraycount);
         }
     }
 }
