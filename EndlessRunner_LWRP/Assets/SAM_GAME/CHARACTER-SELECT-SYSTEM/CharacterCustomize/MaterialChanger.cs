@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
 namespace RunnerGame
 {
@@ -18,49 +17,45 @@ namespace RunnerGame
             skinnedMesh = GetComponentInChildren<SkinnedMeshRenderer>();
             control = GetComponent<CharacterControl>();
         }
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                ClothChangeForward();
-                Debug.Log(arraycount);
-            }
-            //if (Input.GetKeyDown(KeyCode.LeftArrow))
-            //{
-            //    ClothChangeBackWards();
-            //    Debug.Log(arraycount);
-            //}
-        }
 
         public void ClothChangeForward()
         {
-            arraycount++;
-
-            if (selectedCharacter.SelectedCharacter == control.Type)
+            if (!control.isStarted)
             {
-                if (arraycount >= materials.Length)
-                {
-                    arraycount = 0;
-                }
+                arraycount++;
 
-                skinnedMesh.material = materials[arraycount];
+                if (selectedCharacter.SelectedCharacter == control.Type)
+                {
+                    if (arraycount >= materials.Length)
+                    {
+                        arraycount = 0;
+                    }
+
+                    skinnedMesh.material = materials[arraycount];
+                }
             }
         }
 
-        //public void ClothChangeBackWards()
-        //{
-        //    arraycount--;
+        public void ClothChangeBackWards()
+        {
+            if (!control.isStarted)
+            {
+                if (arraycount > 0)
+                {
+                    arraycount--;
+                }
 
-        //    if (selectedCharacter.SelectedCharacter == control.Type)
-        //    {
-        //        if (arraycount <= materials.Length)
-        //        {
-        //            arraycount = 0;
-        //        }
+                if (selectedCharacter.SelectedCharacter == control.Type)
+                {
+                    if (arraycount <= -1)
+                    {
+                        arraycount = 0;
+                    }
 
-        //        skinnedMesh.material = materials[arraycount];
-        //    }
-        //}
+                    skinnedMesh.material = materials[arraycount];
+                }
+            }
+        }
     }
 }
 

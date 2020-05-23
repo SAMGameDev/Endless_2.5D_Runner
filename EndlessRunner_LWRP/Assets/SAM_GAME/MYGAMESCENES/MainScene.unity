@@ -21,10 +21,10 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientEquatorColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
+  m_AmbientGroundColor: {r: 0.25943398, g: 0.6357463, b: 1, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
   m_HaloStrength: 0.5
@@ -415,11 +415,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1409174905762904339, guid: 028d24acb3ae73e49a236b7a0a522b9c,
-        type: 3}
-      propertyPath: m_FollowOffset.x
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5663900297025937940, guid: 028d24acb3ae73e49a236b7a0a522b9c,
         type: 3}
       propertyPath: m_ChildCameras.Array.size
@@ -489,21 +484,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5663900297523676173, guid: 028d24acb3ae73e49a236b7a0a522b9c,
-        type: 3}
-      propertyPath: m_FrequencyGain
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 5663900297523676173, guid: 028d24acb3ae73e49a236b7a0a522b9c,
-        type: 3}
-      propertyPath: m_AmplitudeGain
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5663900297523676175, guid: 028d24acb3ae73e49a236b7a0a522b9c,
-        type: 3}
-      propertyPath: m_FollowOffset.x
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 028d24acb3ae73e49a236b7a0a522b9c, type: 3}
