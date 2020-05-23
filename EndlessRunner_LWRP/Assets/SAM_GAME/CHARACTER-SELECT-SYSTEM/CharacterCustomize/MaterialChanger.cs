@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace RunnerGame
 {
@@ -10,9 +11,8 @@ namespace RunnerGame
         public CharacterControl control;
 
         [Header("Variables")]
-        public Material[] materials;
+        [SerializeField] protected Material[] materials;
         int arraycount = 0;
-
         private void Awake()
         {
             skinnedMesh = GetComponentInChildren<SkinnedMeshRenderer>();
@@ -23,7 +23,13 @@ namespace RunnerGame
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 ClothChangeForward();
+                Debug.Log(arraycount);
             }
+            //if (Input.GetKeyDown(KeyCode.LeftArrow))
+            //{
+            //    ClothChangeBackWards();
+            //    Debug.Log(arraycount);
+            //}
         }
 
         public void ClothChangeForward()
@@ -36,9 +42,25 @@ namespace RunnerGame
                 {
                     arraycount = 0;
                 }
+
                 skinnedMesh.material = materials[arraycount];
             }
         }
+
+        //public void ClothChangeBackWards()
+        //{
+        //    arraycount--;
+
+        //    if (selectedCharacter.SelectedCharacter == control.Type)
+        //    {
+        //        if (arraycount <= materials.Length)
+        //        {
+        //            arraycount = 0;
+        //        }
+
+        //        skinnedMesh.material = materials[arraycount];
+        //    }
+        //}
     }
 }
 
