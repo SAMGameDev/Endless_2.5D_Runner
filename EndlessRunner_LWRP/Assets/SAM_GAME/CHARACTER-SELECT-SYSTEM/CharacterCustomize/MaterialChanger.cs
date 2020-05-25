@@ -17,7 +17,6 @@ namespace RunnerGame
             skinnedMesh = GetComponentInChildren<SkinnedMeshRenderer>();
             control = GetComponent<CharacterControl>();
         }
-
         public void ClothChangeForward()
         {
             if (!control.isStarted)
@@ -35,7 +34,6 @@ namespace RunnerGame
                 }
             }
         }
-
         public void ClothChangeBackWards()
         {
             if (!control.isStarted)

@@ -5,7 +5,10 @@ namespace RunnerGame
 {
     public class TakeInputs : MonoBehaviour
     {
-        private CharacterControl characterControl;       
+        private CharacterControl characterControl;
+
+        int splitScreenY = Screen.height / 2;
+        int splitScreenX = Screen.width / 2;
         void Awake()
         {
             characterControl = GetComponent<CharacterControl>();
@@ -14,12 +17,10 @@ namespace RunnerGame
         {
             if (characterControl.isStarted)
             {
-                int splitScreen = Screen.height / 2;
-                int spitscreenHori = Screen.width / 2;
 
                 if (Input.GetMouseButtonDown(0)
-                   && Input.mousePosition.y >= splitScreen
-                   && Input.mousePosition.x <= spitscreenHori)
+                   && Input.mousePosition.y >= splitScreenY
+                   && Input.mousePosition.x <= splitScreenX)
                 {
                     if (!characterControl.StartRun)
                     {
@@ -30,7 +31,7 @@ namespace RunnerGame
                         characterControl.Jump = true;
                     }
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.mousePosition.y < splitScreen && Input.mousePosition.x <= spitscreenHori)
+                else if (Input.GetMouseButtonUp(0) && Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
                 {
                     if (!characterControl.StartRun)
                     {
@@ -42,7 +43,7 @@ namespace RunnerGame
                         StartCoroutine(TurnOff(0.3f));
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > spitscreenHori)
+                else if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > splitScreenX || Input.GetKeyUp(KeyCode.RightShift))
                 {
                     if (!characterControl.StartRun)
                     {
@@ -58,10 +59,6 @@ namespace RunnerGame
                     characterControl.Jump = false;
                     characterControl.Dash = false;
                 }
-            }
-            else
-            {
-                return;
             }
         }
         IEnumerator TurnOff(float time)

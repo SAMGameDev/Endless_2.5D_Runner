@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
-    NearClipPlane: 0.5
+    NearClipPlane: 0.1
     FarClipPlane: 1000
     Dutch: 0
     LensShift: {x: 0, y: 0}
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_BindingMode: 4
   m_FollowOffset: {x: 10, y: 0.5, z: 0}
   m_XDamping: 0
-  m_YDamping: 0.15
-  m_ZDamping: 0
+  m_YDamping: 0.02
+  m_ZDamping: 0.025
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -238,10 +238,10 @@ MonoBehaviour:
   m_VerticalDamping: 0.5
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_DeadZoneWidth: 0.1
-  m_DeadZoneHeight: 0.25
-  m_SoftZoneWidth: 0.25
-  m_SoftZoneHeight: 0.7
+  m_DeadZoneWidth: 0.5
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 1
+  m_SoftZoneHeight: 0.6
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -283,6 +283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707076264486225368, guid: a3d30a50b081e0b4c86d6228286b0687,
+        type: 3}
+      propertyPath: m_Lens.NearClipPlane
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6707076264486225369, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
@@ -344,20 +349,35 @@ PrefabInstance:
       propertyPath: m_FollowOffset.x
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6707076265268538578, guid: a3d30a50b081e0b4c86d6228286b0687,
+        type: 3}
+      propertyPath: m_YDamping
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707076265268538578, guid: a3d30a50b081e0b4c86d6228286b0687,
+        type: 3}
+      propertyPath: m_ZDamping
+      value: 0.025
+      objectReference: {fileID: 0}
     - target: {fileID: 6707076265268538579, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_DeadZoneWidth
-      value: 0.34
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6707076265268538579, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_SoftZoneWidth
-      value: 0.56
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6707076265268538579, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_DeadZoneHeight
-      value: 0.35
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707076265268538579, guid: a3d30a50b081e0b4c86d6228286b0687,
+        type: 3}
+      propertyPath: m_SoftZoneHeight
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3d30a50b081e0b4c86d6228286b0687, type: 3}
