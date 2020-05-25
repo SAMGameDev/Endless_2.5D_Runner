@@ -43,7 +43,7 @@ namespace RunnerGame
                         StartCoroutine(TurnOff(0.3f));
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > splitScreenX || Input.GetKeyUp(KeyCode.RightShift))
+                else if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > splitScreenX)
                 {
                     if (!characterControl.StartRun)
                     {

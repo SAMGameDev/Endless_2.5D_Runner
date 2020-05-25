@@ -238,10 +238,10 @@ MonoBehaviour:
   m_VerticalDamping: 0.5
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_DeadZoneWidth: 0.5
+  m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 1
-  m_SoftZoneHeight: 0.6
+  m_SoftZoneWidth: 0
+  m_SoftZoneHeight: 0
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -352,12 +352,12 @@ PrefabInstance:
     - target: {fileID: 6707076265268538578, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_YDamping
-      value: 0.02
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6707076265268538578, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_ZDamping
-      value: 0.025
+      value: 0.065
       objectReference: {fileID: 0}
     - target: {fileID: 6707076265268538579, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
@@ -367,7 +367,7 @@ PrefabInstance:
     - target: {fileID: 6707076265268538579, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_SoftZoneWidth
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6707076265268538579, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
@@ -377,7 +377,7 @@ PrefabInstance:
     - target: {fileID: 6707076265268538579, guid: a3d30a50b081e0b4c86d6228286b0687,
         type: 3}
       propertyPath: m_SoftZoneHeight
-      value: 0.6
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3d30a50b081e0b4c86d6228286b0687, type: 3}
