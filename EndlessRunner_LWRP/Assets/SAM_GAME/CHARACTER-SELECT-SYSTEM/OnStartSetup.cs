@@ -3,14 +3,14 @@ using Cinemachine;
 
 namespace RunnerGame
 {
-    public class CharacterSpawn : MonoBehaviour
+    public class OnStartSetup : MonoBehaviour
     {
         public CharacterSelect characterSelect;
-        private CharacterControl character;
+        private CharacterControl characterControl;
+        CinemachineVirtualCamera[] arr;
         private GameObject CamFollow;
         public Transform animTrans;
-
-        //private string ObjName;
+       
         private void Awake()
         {
             #region BigAss Comment Related TO Old Spawn System
@@ -70,22 +70,21 @@ namespace RunnerGame
             // obj.transform.position = this.transform.position;
             #endregion
 
-            character = FindObjectOfType<CharacterControl>();
-            animTrans = character.anim.GetComponent<Transform>();
+            characterControl = FindObjectOfType<CharacterControl>();
+            animTrans = characterControl.anim.GetComponent<Transform>();
 
-            if (animTrans.position != character.transform.position)
+            if (animTrans.position != characterControl.transform.position)
             {
-                animTrans.position = character.transform.position;
+                animTrans.position = characterControl.transform.position;
             }
 
             if (characterSelect.SelectedCharacter != PlayableCharacterTypes.NONE)
             {
-                character.isStarted = true;
-                character.gameObject.transform.position = gameObject.transform.position;
-                character.anim.runtimeAnimatorController =
+                characterControl.isStarted = true;
+                characterControl.gameObject.transform.position = gameObject.transform.position;
+                characterControl.anim.runtimeAnimatorController =
                     Resources.Load<RuntimeAnimatorController>("PlayerAnimator");
             }
-            CinemachineVirtualCamera[] arr;
 
             arr = FindObjectsOfType<CinemachineVirtualCamera>();
 
@@ -93,10 +92,21 @@ namespace RunnerGame
             {
                 CamFollow = GameObject.FindGameObjectWithTag("CamFollow"); ;
             }
-            foreach (CinemachineVirtualCamera virtualCameras in arr)
+            foreach (CinemachineVirtualCamera virtualCamera in arr)
             {
-                virtualCameras.LookAt = CamFollow.transform;
-                virtualCameras.Follow = CamFollow.transform;
+                virtualCamera.LookAt = CamFollow.transform;
+                virtualCamera.Follow = CamFollow.transform;
+            }
+        }
+        private void LateUpdate()
+        {
+            if (characterControl.Death)
+            {
+                foreach (CinemachineVirtualCamera virtualCamera in arr)
+                {
+                    virtualCamera.LookAt = null;
+                    virtualCamera.Follow = null;
+                }
             }
         }
     }

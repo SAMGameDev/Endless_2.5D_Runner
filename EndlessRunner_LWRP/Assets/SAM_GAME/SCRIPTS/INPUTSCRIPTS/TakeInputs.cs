@@ -17,8 +17,7 @@ namespace RunnerGame
         {
             if (characterControl.isStarted)
             {
-
-                if (Input.GetMouseButtonDown(0)
+                if (Input.GetMouseButtonUp(0)
                    && Input.mousePosition.y >= splitScreenY
                    && Input.mousePosition.x <= splitScreenX)
                 {
@@ -43,7 +42,7 @@ namespace RunnerGame
                         StartCoroutine(TurnOff(0.3f));
                     }
                 }
-                else if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > splitScreenX)
+                else if (Input.GetMouseButtonUp(0) && Input.mousePosition.x > splitScreenX)
                 {
                     if (!characterControl.StartRun)
                     {

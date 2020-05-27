@@ -9,7 +9,9 @@ namespace RunnerGame
     }
     public class CameraController : MonoBehaviour
     {
-        private Animator animator;     
+        public Transform animTrans;
+
+        private Animator animator;
         public Animator ANIMATOR
         {
             get
@@ -20,8 +22,8 @@ namespace RunnerGame
                 }
                 return animator;
             }
-        }
 
+        }
         public void TriggerCamera(CameraTrigger trigger)
         {
             ANIMATOR.SetTrigger(trigger.ToString());

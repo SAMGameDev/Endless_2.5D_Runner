@@ -7,6 +7,8 @@ namespace RunnerGame
     {
         [SerializeField]
         protected float dashForce;
+        [SerializeField]
+        private float fallMultiplier;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             CameraManger.Instance.ShakeCamera(0.03f);
@@ -21,7 +23,7 @@ namespace RunnerGame
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.FallMultiplier = 9.8f;           
+            playerStateBase.characterControl.FallMultiplier = fallMultiplier;           
         }
 
     }

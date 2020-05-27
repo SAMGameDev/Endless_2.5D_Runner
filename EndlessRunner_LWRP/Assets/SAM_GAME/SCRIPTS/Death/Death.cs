@@ -5,10 +5,10 @@ namespace RunnerGame
     public class Death : MonoBehaviour
     {
         protected CharacterControl Control;
-
+        
         void Start()
         {
-            Control = GetComponent<CharacterControl>();
+            Control = GetComponent<CharacterControl>();         
         }
         void Update()
         {
@@ -16,7 +16,7 @@ namespace RunnerGame
             {
                 CameraManger.Instance.ShakeCamera(0.3f);
                 Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
-            }          
+            }
         }
     }
 }
