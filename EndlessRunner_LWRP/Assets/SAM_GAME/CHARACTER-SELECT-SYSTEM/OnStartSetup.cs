@@ -98,7 +98,7 @@ namespace RunnerGame
                 virtualCamera.Follow = CamFollow.transform;
             }
         }
-        private void LateUpdate()
+        private void Update()
         {
             if (characterControl.Death)
             {
