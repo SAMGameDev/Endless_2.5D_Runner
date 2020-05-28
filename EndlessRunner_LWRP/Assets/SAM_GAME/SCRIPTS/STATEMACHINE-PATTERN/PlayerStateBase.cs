@@ -7,6 +7,7 @@ namespace RunnerGame
     {
         public List<ScriptableObjectData> scriptableObjectDatas = new List<ScriptableObjectData>();
         public CharacterControl characterControl;
+
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             if (characterControl == null)
@@ -20,6 +21,7 @@ namespace RunnerGame
                 d.OnEnter(this, animator, stateInfo);
             }
         }
+
         public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             foreach (ScriptableObjectData d in scriptableObjectDatas)
@@ -27,6 +29,7 @@ namespace RunnerGame
                 d.OnUpdate(this, animator, stateInfo);
             }
         }
+
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             foreach (ScriptableObjectData d in scriptableObjectDatas)

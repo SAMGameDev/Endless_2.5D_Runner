@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace RunnerGame
 {
@@ -7,13 +7,15 @@ namespace RunnerGame
     {
         private CharacterControl characterControl;
 
-        int splitScreenY = Screen.height / 2;
-        int splitScreenX = Screen.width / 2;
-        void Awake()
+        private int splitScreenY = Screen.height / 2;
+        private int splitScreenX = Screen.width / 2;
+
+        private void Awake()
         {
             characterControl = GetComponent<CharacterControl>();
         }
-        void Update()
+
+        private void Update()
         {
             if (characterControl.isStarted)
             {
@@ -60,7 +62,8 @@ namespace RunnerGame
                 }
             }
         }
-        IEnumerator TurnOff(float time)
+
+        private IEnumerator TurnOff(float time)
         {
             yield return new WaitForSeconds(time);
 
@@ -71,4 +74,3 @@ namespace RunnerGame
         }
     }
 }
-

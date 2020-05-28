@@ -7,11 +7,13 @@ namespace RunnerGame
         Default,
         Shake,
     }
+
     public class CameraController : MonoBehaviour
     {
         public Transform animTrans;
 
         private Animator animator;
+
         public Animator ANIMATOR
         {
             get
@@ -22,12 +24,11 @@ namespace RunnerGame
                 }
                 return animator;
             }
-
         }
+
         public void TriggerCamera(CameraTrigger trigger)
         {
             ANIMATOR.SetTrigger(trigger.ToString());
         }
     }
 }
-

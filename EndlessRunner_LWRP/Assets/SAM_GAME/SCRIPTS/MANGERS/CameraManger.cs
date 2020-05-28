@@ -27,7 +27,7 @@ namespace RunnerGame
             mainCamera = camObj.GetComponent<Camera>();
         }
 
-        IEnumerator CamShake(float sec)
+        private IEnumerator CamShake(float sec)
         {
             CAMERACONTROLLER.TriggerCamera(CameraTrigger.Shake);
             yield return new WaitForSeconds(sec);
@@ -45,4 +45,3 @@ namespace RunnerGame
         }
     }
 }
-

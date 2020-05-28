@@ -6,17 +6,21 @@ namespace RunnerGame
     {
         [Header("Components")]
         public SkinnedMeshRenderer skinnedMesh;
+
         public CharacterSelect selectedCharacter;
         public CharacterControl control;
 
         [Header("Variables")]
         [SerializeField] protected Material[] materials;
-        int arraycount = 0;
+
+        private int arraycount = 0;
+
         private void Awake()
         {
             skinnedMesh = GetComponentInChildren<SkinnedMeshRenderer>();
             control = GetComponent<CharacterControl>();
         }
+
         public void ClothChangeForward()
         {
             if (!control.isStarted)
@@ -34,6 +38,7 @@ namespace RunnerGame
                 }
             }
         }
+
         public void ClothChangeBackWards()
         {
             if (!control.isStarted)
@@ -56,4 +61,3 @@ namespace RunnerGame
         }
     }
 }
-

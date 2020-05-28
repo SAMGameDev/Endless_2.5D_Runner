@@ -22,4 +22,3 @@ namespace RunnerGame
         public PlayableCharacterTypes SelectedCharacter;
     }
 }
-

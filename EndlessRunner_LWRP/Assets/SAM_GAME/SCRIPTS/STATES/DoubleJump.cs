@@ -6,9 +6,11 @@ namespace RunnerGame
     public class DoubleJump : ScriptableObjectData
     {
         [SerializeField] private bool CanDoubleJump = true;
+
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }
+
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             if (playerStateBase.characterControl.isGrounded)
@@ -24,9 +26,9 @@ namespace RunnerGame
                 }
             }
         }
+
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-          
         }
     }
 }

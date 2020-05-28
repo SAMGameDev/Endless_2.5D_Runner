@@ -3,12 +3,13 @@ using UnityEngine.SceneManagement;
 
 namespace RunnerGame
 {
-    enum Scenes
+    internal enum Scenes
     {
         CharacterSelect,
         CharlotteCustomize,
         MainScene,
     }
+
     public class StartGame : MonoBehaviour
     {
         public CharacterSelect GetSelectedCharacter;
@@ -20,6 +21,7 @@ namespace RunnerGame
                 LoadScene();
             }
         }
+
         public void LoadScene()
         {
             if (GetSelectedCharacter.SelectedCharacter !=
@@ -30,4 +32,3 @@ namespace RunnerGame
         }
     }
 }
-

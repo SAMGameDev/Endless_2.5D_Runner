@@ -12,10 +12,11 @@ namespace RunnerGame
             playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
                 (0f, DoubleJumpForce_Val, 0f);
         }
+
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
+
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], false);

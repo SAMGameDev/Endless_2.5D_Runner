@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using Cinemachine;
+﻿using Cinemachine;
+using UnityEngine;
 
 namespace RunnerGame
 {
@@ -7,13 +7,14 @@ namespace RunnerGame
     {
         public CharacterSelect characterSelect;
         private CharacterControl characterControl;
-        CinemachineVirtualCamera[] arr;
+        private CinemachineVirtualCamera[] arr;
         private GameObject CamFollow;
         public Transform animTrans;
-       
+
         private void Awake()
         {
             #region BigAss Comment Related TO Old Spawn System
+
             //    switch (characterSelect.SelectedCharacter)
             //    {
             //        case PlayableCharacterTypes.Mike:
@@ -68,7 +69,8 @@ namespace RunnerGame
             //   typeof(GameObject))) as GameObject;
 
             // obj.transform.position = this.transform.position;
-            #endregion
+
+            #endregion BigAss Comment Related TO Old Spawn System
 
             characterControl = FindObjectOfType<CharacterControl>();
             animTrans = characterControl.anim.GetComponent<Transform>();
@@ -98,6 +100,7 @@ namespace RunnerGame
                 virtualCamera.Follow = CamFollow.transform;
             }
         }
+
         private void Update()
         {
             if (characterControl.Death)
@@ -111,4 +114,3 @@ namespace RunnerGame
         }
     }
 }
-

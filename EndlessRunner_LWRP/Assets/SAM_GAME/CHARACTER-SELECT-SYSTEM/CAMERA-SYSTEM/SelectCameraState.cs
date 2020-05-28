@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
@@ -11,11 +9,10 @@ namespace RunnerGame
             PlayableCharacterTypes[] arr = System.Enum.GetValues
                 (typeof(PlayableCharacterTypes)) as PlayableCharacterTypes[];
 
-            foreach(PlayableCharacterTypes p in arr)
+            foreach (PlayableCharacterTypes p in arr)
             {
                 animator.SetBool(p.ToString(), false);
             }
         }
     }
 }
-

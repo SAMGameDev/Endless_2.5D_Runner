@@ -6,6 +6,7 @@ namespace RunnerGame
     public class LevelManger : MonoBehaviour
     {
         public GameObject[] levelPrefabs;
+
         [SerializeField]
         private List<GameObject> activeTiles = new List<GameObject>();
 
@@ -13,15 +14,19 @@ namespace RunnerGame
         private Transform playertransform;
 
         private float spawnZ = 0;
+
         [SerializeField]
         protected float tileLength;
+
         [SerializeField]
         protected float AmountOfPlatforms;
+
         [SerializeField]
         protected float safeZone;
+
         protected int lastIndexprefab = 0;
 
-        void Start()
+        private void Start()
         {
             playertransform = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -37,7 +42,8 @@ namespace RunnerGame
                 }
             }
         }
-        void Update()
+
+        private void Update()
         {
             if (playertransform.position.z - safeZone > (spawnZ - AmountOfPlatforms * tileLength))
             {
@@ -45,7 +51,8 @@ namespace RunnerGame
                 DestroyPlatform();
             }
         }
-        void SpawnTile(int prefabIndex = -1)
+
+        private void SpawnTile(int prefabIndex = -1)
         {
             GameObject go;
             if (prefabIndex == -1)
@@ -57,11 +64,13 @@ namespace RunnerGame
             spawnZ += tileLength;
             activeTiles.Add(go);
         }
-        void DestroyPlatform()
+
+        private void DestroyPlatform()
         {
             Destroy(activeTiles[0]);
             activeTiles.RemoveAt(0);
         }
+
         private int RandomPrefabIndex()
         {
             if (levelPrefabs.Length <= 1)
@@ -79,4 +88,3 @@ namespace RunnerGame
         }
     }
 }
-

@@ -8,9 +8,11 @@ namespace RunnerGame
         [SerializeField]
         [Range(0.01f, 1f)]
         protected float TransitionTiming;
+
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }
+
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             if (stateInfo.normalizedTime >= TransitionTiming)
@@ -18,6 +20,7 @@ namespace RunnerGame
                 animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.ForceTransition], true);
             }
         }
+
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.ForceTransition], false);

@@ -13,6 +13,7 @@ namespace RunnerGame
         DoubleJump,
         OnClick,
     }
+
     public class CharacterControl : MonoBehaviour
     {
         [Header("CharacterType")]
@@ -20,6 +21,7 @@ namespace RunnerGame
 
         [Header("INPUTS")]
         public bool Jump;
+
         public bool Dash;
         public bool StartRun;
         public bool Slide;
@@ -27,6 +29,7 @@ namespace RunnerGame
 
         [Header("DETECTORS")]
         public bool isGrounded = true;
+
         public bool Death;
 
         [Header("FLOATS")]
@@ -34,14 +37,17 @@ namespace RunnerGame
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
+
         public float targetHieght;
         public float CenterUpdate_Speed_C;
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
         public Animator anim;
+
         public CapsuleCollider cCollider;
         [SerializeField] private Rigidbody rb;
+
         public Rigidbody RIGIDBODY
         {
             get
@@ -53,7 +59,8 @@ namespace RunnerGame
                 return rb;
             }
         }
-        void Awake()
+
+        private void Awake()
         {
             Death = false;
             StartRun = false;
@@ -61,17 +68,20 @@ namespace RunnerGame
             cCollider = GetComponent<CapsuleCollider>();
             RegisterCharacter();
         }
+
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }
-        void FixedUpdate()
+
+        private void FixedUpdate()
         {
             UpdateCenter();
             UpdateSize();
             ApplyGravity();
         }
-        void ApplyGravity()
+
+        private void ApplyGravity()
         {
             float lowJumpGravity = 4.2f;
             float slopeFroce = 500;
@@ -92,7 +102,8 @@ namespace RunnerGame
                 RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             }
         }
-        void OnCollisionStay(Collision other)
+
+        private void OnCollisionStay(Collision other)
         {
             if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Slope"))
             {
@@ -103,12 +114,14 @@ namespace RunnerGame
                 Death = true;
             }
         }
-        void OnCollisionExit(Collision collision)
+
+        private void OnCollisionExit(Collision collision)
         {
             isGrounded = false;
             Death = false;
         }
-        void UpdateCenter()
+
+        private void UpdateCenter()
         {
             if (!UpdateNow)
             {
@@ -120,7 +133,8 @@ namespace RunnerGame
                     Time.deltaTime * CenterUpdate_Speed_C);
             }
         }
-        void UpdateSize()
+
+        private void UpdateSize()
         {
             if (!UpdateNow)
             {
@@ -131,6 +145,7 @@ namespace RunnerGame
                 cCollider.height = targetHieght;
             }
         }
+
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
@@ -140,6 +155,7 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
+
         private void RegisterCharacter()
         {
             if (!CharacterManger.Instance.characters.Contains(this))

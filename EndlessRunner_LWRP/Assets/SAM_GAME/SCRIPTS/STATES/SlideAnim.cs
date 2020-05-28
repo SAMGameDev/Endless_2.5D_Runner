@@ -8,6 +8,7 @@ namespace RunnerGame
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }
+
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             if (playerStateBase.characterControl.Slide)
@@ -19,6 +20,7 @@ namespace RunnerGame
                 animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Slide], false);
             }
         }
+
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }

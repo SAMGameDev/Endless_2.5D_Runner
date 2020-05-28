@@ -9,11 +9,10 @@ namespace RunnerGame
             CameraTrigger[] arr = System.Enum.GetValues(typeof(CameraTrigger))
                 as CameraTrigger[];
 
-            foreach(CameraTrigger t in arr)
+            foreach (CameraTrigger t in arr)
             {
                 CameraManger.Instance.CAMERACONTROLLER.ANIMATOR.ResetTrigger(t.ToString());
             }
         }
     }
 }
-

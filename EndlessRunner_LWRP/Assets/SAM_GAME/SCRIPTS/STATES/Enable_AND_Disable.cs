@@ -10,9 +10,11 @@ namespace RunnerGame
             playerStateBase.characterControl.RIGIDBODY.useGravity = true;
             playerStateBase.characterControl.anim.applyRootMotion = false;
         }
+
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }
+
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }

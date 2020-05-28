@@ -5,12 +5,13 @@ namespace RunnerGame
     public class Death : MonoBehaviour
     {
         protected CharacterControl Control;
-        
-        void Start()
+
+        private void Start()
         {
-            Control = GetComponent<CharacterControl>();         
+            Control = GetComponent<CharacterControl>();
         }
-        void Update()
+
+        private void Update()
         {
             if (Control.Death)
             {

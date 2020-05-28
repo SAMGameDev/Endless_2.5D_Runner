@@ -11,11 +11,10 @@ namespace RunnerGame
         {
             TranistionParemeters[] arr = System.Enum.GetValues(typeof(TranistionParemeters)) as TranistionParemeters[];
 
-            foreach(TranistionParemeters t in arr)
+            foreach (TranistionParemeters t in arr)
             {
                 DicMainParameters.Add(t, Animator.StringToHash(t.ToString()));
             }
         }
     }
 }
-
