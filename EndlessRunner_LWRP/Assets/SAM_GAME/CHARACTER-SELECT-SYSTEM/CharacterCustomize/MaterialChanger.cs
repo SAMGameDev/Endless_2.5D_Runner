@@ -23,6 +23,8 @@ namespace RunnerGame
 
         public void ClothChangeForward()
         {
+            AudioManger.instance.SoundPlay("Click");
+
             if (!control.isStarted)
             {
                 arraycount++;
@@ -41,6 +43,8 @@ namespace RunnerGame
 
         public void ClothChangeBackWards()
         {
+            AudioManger.instance.SoundPlay("Click");
+
             if (!control.isStarted)
             {
                 if (arraycount > 0)

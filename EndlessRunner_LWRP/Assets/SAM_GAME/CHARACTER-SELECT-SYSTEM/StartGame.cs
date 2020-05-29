@@ -14,16 +14,10 @@ namespace RunnerGame
     {
         public CharacterSelect GetSelectedCharacter;
 
-        public void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                LoadScene();
-            }
-        }
-
         public void LoadScene()
         {
+            AudioManger.instance.SoundPlay("Click");
+
             if (GetSelectedCharacter.SelectedCharacter !=
                 PlayableCharacterTypes.NONE)
             {

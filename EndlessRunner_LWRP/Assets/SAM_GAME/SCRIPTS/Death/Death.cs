@@ -17,6 +17,7 @@ namespace RunnerGame
             {
                 CameraManger.Instance.ShakeCamera(0.3f);
                 Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
+                AudioManger.instance.SoundPlay("Death");
             }
         }
     }

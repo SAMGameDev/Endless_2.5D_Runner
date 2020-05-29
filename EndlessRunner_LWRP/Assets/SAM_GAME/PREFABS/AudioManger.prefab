@@ -44,9 +44,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Run
-    loop: 1
+  - name: Death
+    loop: 0
+    playOnAwake: 0
     volume: 1
-    pitch: 2
-    clip: {fileID: 8300000, guid: c896088201e204246a4f38b5a0131760, type: 3}
+    spatialBlend: 0
+    pitch: 1
+    clip: {fileID: 8300000, guid: 6a60efcd63ecde942a14c21e8063aeb4, type: 3}
+    source: {fileID: 0}
+  - name: Click
+    loop: 0
+    playOnAwake: 0
+    volume: 1
+    spatialBlend: 0
+    pitch: 2.65
+    clip: {fileID: 8300000, guid: faa8d484efbe5a64897015d06dcc6c57, type: 3}
     source: {fileID: 0}

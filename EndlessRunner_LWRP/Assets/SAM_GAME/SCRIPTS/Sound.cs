@@ -7,9 +7,13 @@ namespace RunnerGame
     {
         public string name;
         public bool loop;
+        public bool playOnAwake;
 
         [Range(0, 1)]
         public float volume;
+
+        [Range(0, 1)]
+        public float spatialBlend;
 
         [Range(.1f, 3f)]
         public float pitch;

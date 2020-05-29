@@ -13,8 +13,7 @@ namespace RunnerGame
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RunForward(speed);
-            //AudioManger.instance.SoundPlay("Run");
+            playerStateBase.characterControl.RunForward(speed);     
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
