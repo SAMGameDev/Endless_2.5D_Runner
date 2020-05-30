@@ -5,12 +5,17 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/DoubleJumpForce")]
     public class DoubleJumpForce : ScriptableObjectData
     {
+        [SerializeField] private float DoubleJumpForce_Val;
+
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            float DoubleJumpForce_Val = 13F;
+            //playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
+            //    (0f, DoubleJumpForce_Val, 0f);
 
-            playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
-                (0f, DoubleJumpForce_Val, 0f);
+            // playerStateBase.characterControl.FallMultiplier = 0;
+
+            playerStateBase.characterControl.RIGIDBODY.AddRelativeForce(Vector3.up
+                * DoubleJumpForce_Val);
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
@@ -20,6 +25,7 @@ namespace RunnerGame
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], false);
+           // playerStateBase.characterControl.FallMultiplier = 4f;
         }
     }
 }

@@ -10,10 +10,9 @@ namespace RunnerGame
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.AddForce
+            playerStateBase.characterControl.RIGIDBODY.AddRelativeForce
                (playerStateBase.characterControl.transform.up * jumpForce);
-
-            // float normal_JumpForce = 780;
+        
             //float Slope_JumpForce = 1000;
 
             //if (!playerStateBase.characterControl.Slide)
@@ -34,7 +33,7 @@ namespace RunnerGame
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            //jumpForce = 0f;
+           
         }
     }
 }

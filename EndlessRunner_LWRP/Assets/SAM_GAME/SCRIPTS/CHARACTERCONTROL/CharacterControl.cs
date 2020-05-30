@@ -33,7 +33,7 @@ namespace RunnerGame
         public bool Death;
 
         [Header("FLOATS")]
-        public float FallMultiplier = 9.8f;
+        public float FallMultiplier;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
@@ -84,7 +84,8 @@ namespace RunnerGame
         private void ApplyGravity()
         {
             float lowJumpGravity = 4.2f;
-            float slopeFroce = 500;
+
+            //float slopeFroce = 500;
 
             //if character is falling increase acceraltion
             if (RIGIDBODY.velocity.y < 0f)
@@ -96,11 +97,11 @@ namespace RunnerGame
             {
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
             }
-            //fixing that bouncing effect On Slope
-            if (Slide)
-            {
-                RIGIDBODY.AddForce(Vector3.down * slopeFroce);
-            }
+            ////fixing that bouncing effect On Slope
+            //if (Slide)
+            //{
+            //    RIGIDBODY.AddForce(Vector3.down * slopeFroce);
+            //}
         }
 
         private void OnCollisionStay(Collision other)
