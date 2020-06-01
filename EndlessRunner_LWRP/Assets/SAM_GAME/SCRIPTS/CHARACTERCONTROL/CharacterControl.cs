@@ -46,7 +46,7 @@ namespace RunnerGame
         public Animator anim;
 
         public CapsuleCollider cCollider;
-        [SerializeField] private Rigidbody rb;
+        private Rigidbody rb;
 
         public Rigidbody RIGIDBODY
         {
@@ -116,7 +116,7 @@ namespace RunnerGame
             }
         }
 
-        private void OnCollisionExit(Collision collision)
+        private void OnCollisionExit()
         {
             isGrounded = false;
             Death = false;

@@ -24,6 +24,10 @@ namespace RunnerGame
                     animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], true);
                     CanDoubleJump = false;
                 }
+                else
+                {
+                    animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], false);
+                }
             }
         }
 

@@ -10,8 +10,10 @@ namespace RunnerGame
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.AddRelativeForce
-               (playerStateBase.characterControl.transform.up * jumpForce);
+            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
+
+            playerStateBase.characterControl.RIGIDBODY.AddForce
+               (playerStateBase.characterControl.transform.up * jumpForce, ForceMode.Impulse);
         
             //float Slope_JumpForce = 1000;
 

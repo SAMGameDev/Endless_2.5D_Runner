@@ -9,13 +9,13 @@ namespace RunnerGame
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            //playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
-            //    (0f, DoubleJumpForce_Val, 0f);
+            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
 
-            // playerStateBase.characterControl.FallMultiplier = 0;
+            playerStateBase.characterControl.RIGIDBODY.AddForce
+                  (playerStateBase.characterControl.transform.up * DoubleJumpForce_Val, ForceMode.Impulse);
 
-            playerStateBase.characterControl.RIGIDBODY.AddRelativeForce(Vector3.up
-                * DoubleJumpForce_Val);
+            //  playerStateBase.characterControl.RIGIDBODY.velocity = new Vector3
+            //   (0f, DoubleJumpForce_Val, playerStateBase.characterControl.RIGIDBODY.velocity.z);
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
@@ -25,7 +25,6 @@ namespace RunnerGame
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], false);
-           // playerStateBase.characterControl.FallMultiplier = 4f;
         }
     }
 }

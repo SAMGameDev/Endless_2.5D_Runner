@@ -21,7 +21,8 @@ namespace RunnerGame
             {
                 if (Input.GetMouseButtonUp(0)
                    && Input.mousePosition.y >= splitScreenY
-                   && Input.mousePosition.x <= splitScreenX)
+                   && Input.mousePosition.x <= splitScreenX
+                   || Input.GetKeyDown(KeyCode.UpArrow))
                 {
                     if (!characterControl.StartRun)
                     {
@@ -32,7 +33,8 @@ namespace RunnerGame
                         characterControl.Jump = true;
                     }
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
+                else if (Input.GetMouseButtonUp(0) && Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX || Input.GetKeyDown(KeyCode.DownArrow))
+
                 {
                     if (!characterControl.StartRun)
                     {
@@ -44,7 +46,8 @@ namespace RunnerGame
                         StartCoroutine(TurnOff(0.3f));
                     }
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.mousePosition.x > splitScreenX)
+                else if (Input.GetMouseButtonUp(0) && Input.mousePosition.x > splitScreenX || Input.GetKeyDown(KeyCode.RightArrow))
+
                 {
                     if (!characterControl.StartRun)
                     {

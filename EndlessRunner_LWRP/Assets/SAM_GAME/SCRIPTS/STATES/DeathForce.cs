@@ -6,20 +6,24 @@ namespace RunnerGame
     public class DeathForce : ScriptableObjectData
     {
         [SerializeField]
-        protected float Backward_Force;
+        protected float backwardForce;
+
+        [Range(0f, 1f)]
+        public float timing;
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.RIGIDBODY.AddForce
-                (-playerStateBase.characterControl.transform.forward * Backward_Force);
+                (-playerStateBase.characterControl.transform.forward * backwardForce, ForceMode.Impulse);
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (stateInfo.normalizedTime >= 0.65f)
+            if (stateInfo.normalizedTime >= timing)
             {
                 playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
                 playerStateBase.characterControl.RIGIDBODY.useGravity = false;
+                playerStateBase.characterControl.cCollider.enabled = false;
             }
         }
 
