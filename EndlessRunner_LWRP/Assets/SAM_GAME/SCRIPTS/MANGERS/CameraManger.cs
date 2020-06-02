@@ -9,6 +9,9 @@ namespace RunnerGame
         public Camera mainCamera;
         public CameraController camController;
 
+        //test
+        //public CharacterControl control;
+
         public CameraController CAMERACONTROLLER
         {
             get
@@ -25,8 +28,10 @@ namespace RunnerGame
         {
             GameObject camObj = GameObject.FindGameObjectWithTag("MainCamera");
             mainCamera = camObj.GetComponent<Camera>();
+           // control = FindObjectOfType<CharacterControl>();
         }
 
+      
         private IEnumerator CamShake(float sec)
         {
             CAMERACONTROLLER.TriggerCamera(CameraTrigger.Shake);

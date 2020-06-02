@@ -6,6 +6,7 @@ namespace RunnerGame
     {
         Default,
         Shake,
+        Jump,
     }
 
     public class CameraController : MonoBehaviour

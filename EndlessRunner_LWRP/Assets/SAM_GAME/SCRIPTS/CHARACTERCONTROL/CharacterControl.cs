@@ -16,6 +16,9 @@ namespace RunnerGame
 
     public class CharacterControl : MonoBehaviour
     {
+        [Header("CHARACTER-GENDER")]
+        public CharacterGender gender;
+
         [Header("CharacterType")]
         public PlayableCharacterTypes Type;
 

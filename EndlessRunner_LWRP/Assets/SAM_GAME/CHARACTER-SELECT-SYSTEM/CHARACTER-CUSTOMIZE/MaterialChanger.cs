@@ -21,10 +21,10 @@ namespace RunnerGame
             control = GetComponent<CharacterControl>();
         }
 
-        //private void Update()
-        //{
-        //    Time.timeScale = 0.2f;
-        //}
+        private void Update()
+        {
+            Time.timeScale = 0.25f;
+        }
 
         public void ClothChangeForward()
         {

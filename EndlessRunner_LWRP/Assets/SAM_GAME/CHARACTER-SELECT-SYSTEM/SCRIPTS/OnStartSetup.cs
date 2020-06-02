@@ -7,7 +7,7 @@ namespace RunnerGame
     {
         public CharacterSelect characterSelect;
         private CharacterControl characterControl;
-        [SerializeField] private CinemachineVirtualCamera[] arr;
+        [SerializeField] private CinemachineVirtualCamera[] VirtualCameras;
         private GameObject CamFollow;
         public Transform animTrans;
 
@@ -88,13 +88,13 @@ namespace RunnerGame
                     Resources.Load<RuntimeAnimatorController>("PlayerAnimator");
             }
 
-            arr = FindObjectsOfType<CinemachineVirtualCamera>();
+            VirtualCameras = FindObjectsOfType<CinemachineVirtualCamera>();
 
             if (CamFollow == null)
             {
                 CamFollow = GameObject.FindGameObjectWithTag("CamFollow");
             }
-            foreach (CinemachineVirtualCamera virtualCamera in arr)
+            foreach (CinemachineVirtualCamera virtualCamera in VirtualCameras)
             {
                 virtualCamera.LookAt = CamFollow.transform;
                 virtualCamera.Follow = CamFollow.transform;
@@ -105,7 +105,7 @@ namespace RunnerGame
         {
             if (characterControl.Death)
             {
-                foreach (CinemachineVirtualCamera virtualCamera in arr)
+                foreach (CinemachineVirtualCamera virtualCamera in VirtualCameras)
                 {
                     virtualCamera.LookAt = null;
                     virtualCamera.Follow = null;

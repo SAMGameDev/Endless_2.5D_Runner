@@ -2,6 +2,12 @@
 
 namespace RunnerGame
 {
+    public enum CharacterGender
+    {
+        MALE,
+        FEMALE
+    }
+
     public enum PlayableCharacterTypes
     {
         NONE,
