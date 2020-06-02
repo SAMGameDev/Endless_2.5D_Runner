@@ -30,6 +30,7 @@ namespace RunnerGame
         [Header("DETECTORS")]
         public bool isGrounded = true;
 
+        public bool isDoubleJumping = false;
         public bool Death;
 
         [Header("FLOATS")]
