@@ -24,7 +24,6 @@ namespace RunnerGame
 
         [Header("INPUTS")]
         public bool Jump;
-
         public bool Dash;
         public bool StartRun;
         public bool Slide;

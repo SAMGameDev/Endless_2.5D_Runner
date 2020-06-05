@@ -9,13 +9,13 @@ namespace RunnerGame
 
         private void Awake()
         {
-            control = FindObjectOfType<CharacterControl>();
+            control = GetComponentInParent<CharacterControl>();
         }
 
         private void Update()
         {
-            //    transform.position = new Vector3(control.transform.position.x,
-            //      0f, control.transform.position.z) + offset;
+            transform.position = new Vector3(control.transform.position.x,
+              0f, control.transform.position.z) + offset;
 
             if (control.transform.position.y < 0)
             {
