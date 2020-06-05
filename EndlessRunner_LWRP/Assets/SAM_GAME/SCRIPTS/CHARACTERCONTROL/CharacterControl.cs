@@ -38,10 +38,10 @@ namespace RunnerGame
 
         [Header("FLOATS")]
         public float FallMultiplier;
+        public float PullMultiplier;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
-
         public float targetHieght;
         public float CenterUpdate_Speed_C;
         public bool UpdateNow;
@@ -63,7 +63,6 @@ namespace RunnerGame
                 return rb;
             }
         }
-
         private void Awake()
         {
             Death = false;
@@ -84,48 +83,43 @@ namespace RunnerGame
             UpdateSize();
             ApplyGravity();
         }
-
         private void ApplyGravity()
         {
-            float lowJumpGravity = 4.2f;
-
-            //float slopeFroce = 500;
-
-            //if character is falling increase acceraltion
             if (RIGIDBODY.velocity.y < 0f)
             {
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
+
             }
-            //if it's  in air make him fall don't keep going up
             else if (RIGIDBODY.velocity.y > 0f && Jump == false)
             {
-                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (lowJumpGravity - 1) * Time.deltaTime;
+                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (PullMultiplier - 1) * Time.deltaTime;
             }
+
             ////fixing that bouncing effect On Slope
             //if (Slide)
             //{
             //    RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             //}
         }
-
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Obsticel"))
+            {
+                Death = true;
+            }
+        }
         private void OnCollisionStay(Collision other)
         {
             if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Slope"))
             {
                 isGrounded = true;
             }
-            if (other.gameObject.CompareTag("Obsticel"))
-            {
-                Death = true;
-            }
         }
-
         private void OnCollisionExit()
         {
             isGrounded = false;
             Death = false;
         }
-
         private void UpdateCenter()
         {
             if (!UpdateNow)
@@ -138,7 +132,6 @@ namespace RunnerGame
                     Time.deltaTime * CenterUpdate_Speed_C);
             }
         }
-
         private void UpdateSize()
         {
             if (!UpdateNow)
@@ -150,7 +143,6 @@ namespace RunnerGame
                 cCollider.height = targetHieght;
             }
         }
-
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
@@ -160,7 +152,6 @@ namespace RunnerGame
                 c.characterControl = this;
             }
         }
-
         private void RegisterCharacter()
         {
             if (!CharacterManger.Instance.characters.Contains(this))

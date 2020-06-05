@@ -1842,6 +1842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5318861b8206a440814d51fdf4d2046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gender: 0
   Type: 1
   Jump: 0
   Dash: 0
@@ -1849,15 +1850,16 @@ MonoBehaviour:
   Slide: 0
   isStarted: 0
   isGrounded: 1
+  isDoubleJumping: 0
   Death: 0
-  FallMultiplier: 4
+  FallMultiplier: 5
+  PullMultiplier: 3
   targetCenter_C: {x: 0, y: 0, z: 0}
   targetHieght: 0
   CenterUpdate_Speed_C: 0
   UpdateNow: 0
   anim: {fileID: 0}
   cCollider: {fileID: 0}
-  rb: {fileID: 0}
 --- !u!114 &7122580545057127683
 MonoBehaviour:
   m_ObjectHideFlags: 0

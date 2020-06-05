@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace RunnerGame
 {
@@ -23,7 +25,7 @@ namespace RunnerGame
 
         private void Update()
         {
-            Time.timeScale = 0.2f;
+            Time.timeScale = 1f;
         }
 
         public void ClothChangeForward()

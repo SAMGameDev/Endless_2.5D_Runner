@@ -15,6 +15,7 @@ namespace RunnerGame
 
             playerStateBase.characterControl.RIGIDBODY.AddForce
                (playerStateBase.characterControl.transform.up * jumpForce, ForceMode.Impulse);
+         
 
             //float Slope_JumpForce = 1000;
 
@@ -36,7 +37,7 @@ namespace RunnerGame
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            
+
         }
     }
 }

@@ -44,19 +44,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Death
+  - name: FemaleDeath
     loop: 0
     playOnAwake: 0
     volume: 1
     spatialBlend: 0
     pitch: 1
-    clip: {fileID: 8300000, guid: 6a60efcd63ecde942a14c21e8063aeb4, type: 3}
+    clip: {fileID: 8300000, guid: baa52a354ca76f1499d30ecc1099ffbd, type: 3}
     source: {fileID: 0}
   - name: Click
     loop: 0
     playOnAwake: 0
     volume: 1
     spatialBlend: 0
-    pitch: 2.65
+    pitch: 1
     clip: {fileID: 8300000, guid: faa8d484efbe5a64897015d06dcc6c57, type: 3}
+    source: {fileID: 0}
+  - name: MaleDeath
+    loop: 0
+    playOnAwake: 0
+    volume: 1
+    spatialBlend: 0
+    pitch: 1
+    clip: {fileID: 8300000, guid: 14c3c51eea32b2f43ba09aabd4ff10a2, type: 3}
     source: {fileID: 0}
