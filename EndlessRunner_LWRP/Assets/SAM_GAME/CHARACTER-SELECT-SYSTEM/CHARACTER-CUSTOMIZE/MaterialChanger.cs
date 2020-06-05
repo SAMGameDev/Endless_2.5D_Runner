@@ -23,7 +23,7 @@ namespace RunnerGame
 
         private void Update()
         {
-            Time.timeScale = 0.25f;
+            Time.timeScale = 0.2f;
         }
 
         public void ClothChangeForward()

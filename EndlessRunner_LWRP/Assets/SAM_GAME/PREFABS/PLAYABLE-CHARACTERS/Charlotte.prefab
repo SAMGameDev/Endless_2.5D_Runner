@@ -64,7 +64,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2932495285954094084}
-  - {fileID: 4795136405552690565}
   - {fileID: 6791450207379408289}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -173,36 +172,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: ee26ded8aeae32044836748251f93891, type: 2}
   - {fileID: 2100000, guid: 912f300affe60c543ac3ac40ef980902, type: 2}
   - {fileID: 2100000, guid: 49ef76ea47782eb4b93ac08b234fd6c3, type: 2}
---- !u!1 &4795136405552690562
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4795136405552690565}
-  m_Layer: 0
-  m_Name: sceneFollow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4795136405552690565
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4795136405552690562}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.06, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4624363777018934629}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6791450207379522107
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +852,7 @@ Transform:
   - {fileID: 6791450207379421035}
   - {fileID: 6791450207379497279}
   m_Father: {fileID: 4624363777018934629}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6791450207370131943
 Animator:

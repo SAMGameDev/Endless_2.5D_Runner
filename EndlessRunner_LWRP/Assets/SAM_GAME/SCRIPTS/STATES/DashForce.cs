@@ -13,7 +13,7 @@ namespace RunnerGame
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CameraManger.Instance.ShakeCamera(0.03f);
+            CameraManger.Instance.ShakeCamera(0.035f);
             playerStateBase.characterControl.FallMultiplier = 0;
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
         }

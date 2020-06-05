@@ -17,7 +17,15 @@ namespace RunnerGame
             {
                 CameraManger.Instance.ShakeCamera(0.3f);
                 Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
-                AudioManger.instance.SoundPlay("Death");
+                
+                if (Control.gender == CharacterGender.MALE)
+                {
+                    AudioManger.instance.SoundPlay("MaleDeath");
+                }
+                else if (Control.gender == CharacterGender.FEMALE)
+                {
+                    AudioManger.instance.SoundPlay("FemaleDeath");
+                }
             }
         }
     }

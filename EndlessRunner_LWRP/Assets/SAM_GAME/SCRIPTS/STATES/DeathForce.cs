@@ -21,9 +21,9 @@ namespace RunnerGame
         {
             if (stateInfo.normalizedTime >= timing)
             {
-                playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
-                playerStateBase.characterControl.RIGIDBODY.useGravity = false;
                 playerStateBase.characterControl.cCollider.enabled = false;
+                playerStateBase.characterControl.RIGIDBODY.useGravity = false;
+                playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;                  
             }
         }
 
