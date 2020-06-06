@@ -7,7 +7,7 @@ namespace RunnerGame
     {
         CharacterSelect,
         CharlotteCustomize,
-        MainScene,
+        GameScene,
     }
 
     public class StartGame : MonoBehaviour
@@ -21,7 +21,7 @@ namespace RunnerGame
             if (GetSelectedCharacter.SelectedCharacter !=
                 PlayableCharacterTypes.NONE)
             {
-                SceneManager.LoadScene(Scenes.MainScene.ToString());
+                SceneManager.LoadScene(Scenes.GameScene.ToString());
             }
         }
     }
