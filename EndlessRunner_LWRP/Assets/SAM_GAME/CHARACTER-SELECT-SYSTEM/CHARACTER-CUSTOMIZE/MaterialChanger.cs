@@ -21,11 +21,6 @@ namespace RunnerGame
             control = GetComponent<CharacterControl>();
         }
 
-        private void Update()
-        {
-            Time.timeScale = 1f;
-        }
-
         public void ClothChangeForward()
         {
             AudioManger.instance.SoundPlay("Click");

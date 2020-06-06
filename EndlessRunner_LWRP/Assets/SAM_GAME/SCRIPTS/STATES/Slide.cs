@@ -7,7 +7,7 @@ namespace RunnerGame
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.useGravity = false;
+            CameraManger.Instance.camController.ANIMATOR.SetTrigger(CameraTrigger.Slide.ToString());       
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
@@ -16,6 +16,7 @@ namespace RunnerGame
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+            CameraManger.Instance.camController.ANIMATOR.SetTrigger(CameraTrigger.Default.ToString());
         }
     }
 }

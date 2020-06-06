@@ -12,15 +12,23 @@ namespace RunnerGame
             control = GetComponentInParent<CharacterControl>();
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
-            transform.position = new Vector3(control.transform.position.x,
-              0f, control.transform.position.z) + offset;
-
             if (control.transform.position.y < 0)
             {
                 transform.position = new Vector3(control.transform.position.x,
               control.transform.position.y, control.transform.position.z) + offset;
+            }
+
+            if (!control.isDoubleJumping)
+            {
+                transform.position = new Vector3(control.transform.position.x,
+             0f, control.transform.position.z) + offset;
+            }
+            else
+            {
+                transform.position = new Vector3(control.transform.position.x,
+             control.transform.position.y, control.transform.position.z) + offset;
             }
         }
     }

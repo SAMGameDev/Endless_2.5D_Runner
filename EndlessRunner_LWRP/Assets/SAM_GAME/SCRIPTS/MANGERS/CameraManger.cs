@@ -8,10 +8,7 @@ namespace RunnerGame
         private Coroutine routine;
         public Camera mainCamera;
         public CameraController camController;
-
-        //test
-        //public CharacterControl control;
-
+       
         public CameraController CAMERACONTROLLER
         {
             get
@@ -27,8 +24,7 @@ namespace RunnerGame
         private void Awake()
         {
             GameObject camObj = GameObject.FindGameObjectWithTag("MainCamera");
-            mainCamera = camObj.GetComponent<Camera>();
-           // control = FindObjectOfType<CharacterControl>();
+            mainCamera = camObj.GetComponent<Camera>();          
         }
 
       
