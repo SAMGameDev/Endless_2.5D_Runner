@@ -47,5 +47,18 @@ namespace RunnerGame
 
             s.source.Play();
         }
+
+        public void Setup(string name)
+        {
+            Sound s = Array.Find(sounds, sounds => sounds.name == name);
+
+            if (s == null)
+            {
+                Debug.LogError("Sound: " + name + " Not Found");
+                return;
+            }
+
+            s.source.PlayOneShot(s.clip);
+        }
     }
 }

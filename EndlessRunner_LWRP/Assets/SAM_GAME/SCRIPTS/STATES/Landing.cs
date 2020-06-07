@@ -7,7 +7,7 @@ namespace RunnerGame
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CameraManger.Instance.camController.TriggerCamera(CameraTrigger.Default);
+            AudioManger.instance.SoundPlay("Landing");
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
