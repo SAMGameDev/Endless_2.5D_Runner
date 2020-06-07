@@ -14,7 +14,7 @@ namespace RunnerGame
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             CameraManger.Instance.ShakeCamera(0.035f);
-            AudioManger.instance.SoundPlay("Dash");
+           // AudioManger.instance.SoundPlay("Dash");
             playerStateBase.characterControl.FallMultiplier = 0;
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
         }
