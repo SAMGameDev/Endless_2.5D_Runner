@@ -7,8 +7,7 @@ namespace RunnerGame
     {
         public string name;
         public bool loop;
-        public bool playOnAwake;
-
+        
         [Range(0, 1)]
         public float volume;
 

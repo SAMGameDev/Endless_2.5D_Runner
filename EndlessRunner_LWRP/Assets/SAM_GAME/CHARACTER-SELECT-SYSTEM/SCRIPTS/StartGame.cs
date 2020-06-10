@@ -19,8 +19,8 @@ namespace RunnerGame
             if (GetSelectedCharacter.SelectedCharacter !=
                 PlayableCharacterTypes.NONE)
             {
-                AudioManger.instance.SoundPlay("Click");
-                SceneManager.LoadScene(Scenes.GameScene.ToString());
+                GenralAudioManger.instance.SoundPlay("Click");
+                SceneManager.LoadSceneAsync(Scenes.GameScene.ToString());
             }
         }
     }

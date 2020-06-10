@@ -23,7 +23,7 @@ namespace RunnerGame
 
         public void ClothChangeForward()
         {
-            AudioManger.instance.SoundPlay("Click");
+            GenralAudioManger.instance.SoundPlay("Click");
 
             if (!control.isStarted)
             {
@@ -43,7 +43,7 @@ namespace RunnerGame
 
         public void ClothChangeBackWards()
         {
-            AudioManger.instance.SoundPlay("Click");
+            GenralAudioManger.instance.SoundPlay("Click");
 
             if (!control.isStarted)
             {
