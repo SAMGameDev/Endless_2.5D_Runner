@@ -31,8 +31,7 @@ namespace RunnerGame
 
         [Header("DETECTORS")]
         public bool isGrounded = true;
-
-        public bool isDoubleJumping = false;
+        public bool isDead = false;
         public bool Death;
 
         [Header("FLOATS")]
@@ -100,9 +99,10 @@ namespace RunnerGame
             //    RIGIDBODY.AddForce(Vector3.down * slopeFroce);
             //}
         }
-        private void OnCollisionEnter(Collision other)
+
+        private void OnCollisionEnter(Collision collision)
         {
-            if (other.gameObject.CompareTag("Obsticel"))
+            if (collision.gameObject.CompareTag("Obsticel"))
             {
                 Death = true;
             }
@@ -117,7 +117,6 @@ namespace RunnerGame
         private void OnCollisionExit()
         {
             isGrounded = false;
-            Death = false;
         }
         private void UpdateCenter()
         {

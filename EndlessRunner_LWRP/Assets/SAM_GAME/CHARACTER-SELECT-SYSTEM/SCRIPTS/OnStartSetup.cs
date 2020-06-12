@@ -1,4 +1,5 @@
 ﻿using Cinemachine;
+using System.Collections;
 using UnityEngine;
 
 namespace RunnerGame
@@ -6,10 +7,12 @@ namespace RunnerGame
     public class OnStartSetup : MonoBehaviour
     {
         public CharacterSelect characterSelect;
-        private CharacterControl characterControl;
+        [SerializeField] private GameObject Player;
+        [SerializeField] private CharacterControl characterControl;
         [SerializeField] private CinemachineVirtualCamera[] VirtualCameras;
-        private GameObject CamFollow;
-        public Transform animTrans;
+
+        private Transform CamFollow;
+        public Transform CharacterModel_Transform;
 
         private void Awake()
         {
@@ -72,12 +75,14 @@ namespace RunnerGame
 
             #endregion BigAss Comment Related TO Old Spawn System
 
-            characterControl = FindObjectOfType<CharacterControl>();
-            animTrans = characterControl.anim.GetComponent<Transform>();
+            Player = GameObject.FindGameObjectWithTag("Player");
 
-            if (animTrans.position != characterControl.transform.position)
+            characterControl = Player.GetComponent<CharacterControl>();
+            CharacterModel_Transform = characterControl.anim.GetComponent<Transform>();
+
+            if (CharacterModel_Transform.position != characterControl.transform.position)
             {
-                animTrans.position = characterControl.transform.position;
+                CharacterModel_Transform.position = characterControl.transform.position;
             }
 
             if (characterSelect.SelectedCharacter != PlayableCharacterTypes.NONE)
@@ -88,29 +93,45 @@ namespace RunnerGame
                     Resources.Load<RuntimeAnimatorController>("PlayerAnimator");
             }
 
-            VirtualCameras = FindObjectsOfType<CinemachineVirtualCamera>();
-
             if (CamFollow == null)
             {
-                CamFollow = GameObject.FindGameObjectWithTag("CamFollow");
+                CamFollow = GameObject.FindGameObjectWithTag("CamFollow").transform;
             }
+
+            VirtualCameras = FindObjectsOfType<CinemachineVirtualCamera>();
+
             foreach (CinemachineVirtualCamera virtualCamera in VirtualCameras)
             {
-                virtualCamera.LookAt = CamFollow.transform;
-                virtualCamera.Follow = CamFollow.transform;
+                virtualCamera.LookAt = CamFollow;
+                virtualCamera.Follow = CamFollow;
             }
+
+            StartCoroutine(DeathChecker(0.001f));
         }
 
-        private void Update()
+        private IEnumerator DeathChecker(float time)
         {
+            yield return new WaitForSeconds(time);
+
             if (characterControl.Death)
             {
                 foreach (CinemachineVirtualCamera virtualCamera in VirtualCameras)
                 {
-                    virtualCamera.LookAt = null;
-                    virtualCamera.Follow = null;
+                    if (virtualCamera.LookAt != null && virtualCamera.Follow != null)
+                    {
+                        virtualCamera.LookAt = null;
+                        virtualCamera.Follow = null;                    
+                    }
                 }
+                StopAllCoroutines();
+                characterControl.Death = false;
             }
+            else
+            {
+                StartCoroutine(DeathChecker(0.5f));
+            }
+            Debug.Log("routine Runed");
+
         }
     }
 }

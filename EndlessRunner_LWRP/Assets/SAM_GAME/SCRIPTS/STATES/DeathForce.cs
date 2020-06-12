@@ -14,7 +14,7 @@ namespace RunnerGame
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.RIGIDBODY.AddForce
-                (-playerStateBase.characterControl.transform.forward * backwardForce, ForceMode.Impulse);
+                (-playerStateBase.characterControl.transform.forward * backwardForce);
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
