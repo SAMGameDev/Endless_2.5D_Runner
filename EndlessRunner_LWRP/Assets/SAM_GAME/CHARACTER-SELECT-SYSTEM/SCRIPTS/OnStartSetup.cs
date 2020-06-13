@@ -84,23 +84,23 @@ namespace RunnerGame
                 CharacterModel_Transform.position = characterControl.transform.position;
             }
 
-            switch (characterSelect.SelectedCharacter)
-            {
-                case PlayableCharacterTypes.Jane:
-                    characterControl.anim.runtimeAnimatorController =
-                    Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JANE");
-                    break;
-            }
-            characterControl.isStarted = true;
-            characterControl.gameObject.transform.position = gameObject.transform.position;
-
-            //if (characterSelect.SelectedCharacter != PlayableCharacterTypes.NONE)
+            //switch (characterSelect.SelectedCharacter)
             //{
-            //    characterControl.isStarted = true;
-            //    characterControl.gameObject.transform.position = gameObject.transform.position;
-            //    characterControl.anim.runtimeAnimatorController =
-            //        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR");
+            //    case PlayableCharacterTypes.Jane:
+            //        characterControl.anim.runtimeAnimatorController =
+            //        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JANE");
+            //        break;
             //}
+            //characterControl.isStarted = true;
+            //characterControl.gameObject.transform.position = gameObject.transform.position;
+
+            if (characterSelect.SelectedCharacter != PlayableCharacterTypes.NONE)
+            {
+                characterControl.isStarted = true;
+                characterControl.gameObject.transform.position = gameObject.transform.position;
+                characterControl.anim.runtimeAnimatorController =
+                    Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR");
+            }
 
             if (CamFollow == null)
             {
