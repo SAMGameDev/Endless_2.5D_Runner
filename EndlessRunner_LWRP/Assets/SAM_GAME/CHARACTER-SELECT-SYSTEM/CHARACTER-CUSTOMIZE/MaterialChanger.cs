@@ -20,7 +20,11 @@ namespace RunnerGame
             skinnedMesh = GetComponentInChildren<SkinnedMeshRenderer>();
             control = GetComponent<CharacterControl>();
         }
-       
+        void Update()
+        {
+            Time.timeScale = 0.7f;
+        }
+
         public void ClothChangeForward()
         {
             GenralAudioManger.instance.SoundPlay("Click");
