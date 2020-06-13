@@ -76,7 +76,6 @@ namespace RunnerGame
             #endregion BigAss Comment Related TO Old Spawn System
 
             Player = GameObject.FindGameObjectWithTag("Player");
-
             characterControl = Player.GetComponent<CharacterControl>();
             CharacterModel_Transform = characterControl.anim.GetComponent<Transform>();
 
@@ -85,13 +84,23 @@ namespace RunnerGame
                 CharacterModel_Transform.position = characterControl.transform.position;
             }
 
-            if (characterSelect.SelectedCharacter != PlayableCharacterTypes.NONE)
+            switch (characterSelect.SelectedCharacter)
             {
-                characterControl.isStarted = true;
-                characterControl.gameObject.transform.position = gameObject.transform.position;
-                characterControl.anim.runtimeAnimatorController =
-                    Resources.Load<RuntimeAnimatorController>("PlayerAnimator");
+                case PlayableCharacterTypes.Jane:
+                    characterControl.anim.runtimeAnimatorController =
+                    Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JANE");
+                    break;
             }
+            characterControl.isStarted = true;
+            characterControl.gameObject.transform.position = gameObject.transform.position;
+
+            //if (characterSelect.SelectedCharacter != PlayableCharacterTypes.NONE)
+            //{
+            //    characterControl.isStarted = true;
+            //    characterControl.gameObject.transform.position = gameObject.transform.position;
+            //    characterControl.anim.runtimeAnimatorController =
+            //        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR");
+            //}
 
             if (CamFollow == null)
             {
@@ -106,10 +115,10 @@ namespace RunnerGame
                 virtualCamera.Follow = CamFollow;
             }
 
-            StartCoroutine(DeathChecker(0.001f));
+            StartCoroutine(CameraStopper(0.001f));
         }
 
-        private IEnumerator DeathChecker(float time)
+        private IEnumerator CameraStopper(float time)
         {
             yield return new WaitForSeconds(time);
 
@@ -120,7 +129,7 @@ namespace RunnerGame
                     if (virtualCamera.LookAt != null && virtualCamera.Follow != null)
                     {
                         virtualCamera.LookAt = null;
-                        virtualCamera.Follow = null;                    
+                        virtualCamera.Follow = null;
                     }
                 }
                 StopAllCoroutines();
@@ -128,10 +137,8 @@ namespace RunnerGame
             }
             else
             {
-                StartCoroutine(DeathChecker(0.5f));
+                StartCoroutine(CameraStopper(0.4f));
             }
-            Debug.Log("routine Runed");
-
         }
     }
 }
