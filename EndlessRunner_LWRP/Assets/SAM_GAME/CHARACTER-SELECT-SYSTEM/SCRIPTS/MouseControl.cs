@@ -9,6 +9,18 @@ namespace RunnerGame
         public CharacterSelect select_SO;
         [SerializeField] protected Animator characterselect_camController;
 
+        private void Start()
+        {
+            foreach (CharacterControl c in CharacterManger.Instance.characters)
+            {
+                if (select_SO.SelectedCharacter != PlayableCharacterTypes.NONE
+                    && select_SO.SelectedCharacter == c.Type)
+                {
+                    DontDestroyOnLoad(c.gameObject);
+                }
+            }
+        }
+
         private void Update()
         {
             Ray _ray;
@@ -19,7 +31,7 @@ namespace RunnerGame
 
             if (Physics.Raycast(_ray, out hit))
             {
-                CharacterControl control = hit.collider.gameObject.GetComponent<CharacterControl>();
+                CharacterControl control = hit.collider.GetComponent<CharacterControl>();
 
                 if (control != null)
                 {
@@ -30,8 +42,11 @@ namespace RunnerGame
                     selectedCharacter = PlayableCharacterTypes.NONE;
                 }
             }
-            else { return; }
-
+            else
+            {
+                return;
+            }
+           
             if (Input.GetMouseButtonDown(0))
             {
                 if (selectedCharacter != PlayableCharacterTypes.NONE)
@@ -57,9 +72,8 @@ namespace RunnerGame
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], false);
                         SceneManager.MoveGameObjectToScene(c.gameObject,
-                            SceneManager.GetActiveScene());
+                           SceneManager.GetActiveScene());
                     }
-
                     if (selectedCharacter == PlayableCharacterTypes.NONE)
                     {
                         return;

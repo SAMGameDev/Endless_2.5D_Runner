@@ -5,9 +5,8 @@ namespace RunnerGame
 {
     internal enum Scenes
     {
-        CharacterSelect,
-        CharlotteCustomize,
-        GameScene,
+        CharacterSelect,     
+        GameScene
     }
 
     public class StartGame : MonoBehaviour
