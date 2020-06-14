@@ -6,7 +6,7 @@ namespace RunnerGame
     public class MouseControl : MonoBehaviour
     {
         public PlayableCharacterTypes selectedCharacter;
-        public CharacterSelect select;
+        public CharacterSelect select_SO;
         [SerializeField] protected Animator characterselect_camController;
 
         private void Update()
@@ -36,11 +36,11 @@ namespace RunnerGame
             {
                 if (selectedCharacter != PlayableCharacterTypes.NONE)
                 {
-                    select.SelectedCharacter = selectedCharacter;
+                    select_SO.SelectedCharacter = selectedCharacter;
                 }
                 else
                 {
-                    select.SelectedCharacter = PlayableCharacterTypes.NONE;
+                    select_SO.SelectedCharacter = PlayableCharacterTypes.NONE;
                 }
 
                 foreach (CharacterControl c in CharacterManger.Instance.characters)
@@ -59,6 +59,7 @@ namespace RunnerGame
                         SceneManager.MoveGameObjectToScene(c.gameObject,
                             SceneManager.GetActiveScene());
                     }
+
                     if (selectedCharacter == PlayableCharacterTypes.NONE)
                     {
                         return;
