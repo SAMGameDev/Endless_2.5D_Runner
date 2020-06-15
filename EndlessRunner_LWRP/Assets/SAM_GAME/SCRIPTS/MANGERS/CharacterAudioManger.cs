@@ -10,7 +10,7 @@ namespace RunnerGame
         public AudioClip Land;
         public AudioClip Dash;
         public AudioClip[] grunts;
-
+        
         [Header("Components")]
         public AudioSource source;
         public CharacterControl control;
@@ -25,6 +25,11 @@ namespace RunnerGame
         {
             AudioClip clip = GetRandomClip();
             source.PlayOneShot(clip);
+        }
+
+        private AudioClip GetRandomClip()
+        {
+            return RunClips[Random.Range(0, RunClips.Length)];
         }
 
         public void Landing()
@@ -53,12 +58,7 @@ namespace RunnerGame
                     }
                     break;
             }           
-        }
-
-        private AudioClip GetRandomClip()
-        {
-            return RunClips[Random.Range(0, RunClips.Length)];
-        }
+        }       
     }
 }
 

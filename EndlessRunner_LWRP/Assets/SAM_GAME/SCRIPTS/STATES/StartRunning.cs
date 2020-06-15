@@ -14,12 +14,14 @@ namespace RunnerGame
             if (playerStateBase.characterControl.StartRun)
             {
                 animator.SetBool
-                    (HashManger.Instance.DicMainParameters[TranistionParemeters.StartRun], true);
+                    (HashManger.Instance.DicMainParameters[TranistionParemeters.StartRun],
+                    true);
             }
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+            CameraManger.Instance.CAMERACONTROLLER.TriggerCamera(CameraTrigger.Default);
         }
     }
 }

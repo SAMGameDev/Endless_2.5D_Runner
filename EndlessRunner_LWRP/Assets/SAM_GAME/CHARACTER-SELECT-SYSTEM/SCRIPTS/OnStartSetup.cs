@@ -122,8 +122,6 @@ namespace RunnerGame
                     characterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_MIKE");
                     break;
-
-
             }
             characterControl.isStarted = true;
             characterControl.gameObject.transform.position = gameObject.transform.position;
@@ -171,7 +169,7 @@ namespace RunnerGame
             }
             else
             {
-                StartCoroutine(CameraStopper(0.4f));
+                StartCoroutine(CameraStopper(0.25f));
             }
         }
     }
