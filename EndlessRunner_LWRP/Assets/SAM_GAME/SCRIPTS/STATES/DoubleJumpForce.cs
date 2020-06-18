@@ -9,6 +9,7 @@ namespace RunnerGame
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+            playerStateBase.characterControl.isDoubleJumping = true;
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
 
             playerStateBase.characterControl.RIGIDBODY.AddForce
@@ -21,7 +22,8 @@ namespace RunnerGame
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], false);          
+            playerStateBase.characterControl.isDoubleJumping = false;
+            animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], false);
         }
     }
 }

@@ -13,7 +13,6 @@ namespace RunnerGame
         DoubleJump,
         OnClick,
     }
-
     public class CharacterControl : MonoBehaviour
     {
         [Header("CHARACTER-GENDER")]
@@ -31,7 +30,7 @@ namespace RunnerGame
 
         [Header("DETECTORS")]
         public bool isGrounded = true;
-        public bool isDead = false;
+        public bool isDoubleJumping = false;
         public bool Death;
 
         [Header("FLOATS")]
@@ -73,6 +72,7 @@ namespace RunnerGame
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
+            //transform.Translate(transform.forward * speed * Time.deltaTime);
         }
 
         private void FixedUpdate()

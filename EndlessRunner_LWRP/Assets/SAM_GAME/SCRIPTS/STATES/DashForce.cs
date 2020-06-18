@@ -17,6 +17,7 @@ namespace RunnerGame
             // AudioManger.instance.SoundPlay("Dash");
             playerStateBase.characterControl.FallMultiplier = 0;
             playerStateBase.characterControl.RIGIDBODY.useGravity = false;
+           // playerStateBase.characterControl.cCollider.isTrigger = true;
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
         }
 
@@ -29,6 +30,7 @@ namespace RunnerGame
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+           // playerStateBase.characterControl.cCollider.isTrigger = false;
             playerStateBase.characterControl.FallMultiplier = fallMultiplier;
             playerStateBase.characterControl.RIGIDBODY.useGravity = true;
         }

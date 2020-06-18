@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3665002059369404020}
+  - component: {fileID: 6686930836563262006}
   m_Layer: 0
   m_Name: camFollow
   m_TagString: CamFollow
@@ -30,6 +31,20 @@ Transform:
   m_Father: {fileID: 6504298757476140821}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6686930836563262006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3665002059369404027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f708c32dc5bd3b444bf997fee7ddfd12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  control: {fileID: 0}
+  offset: {x: 0, y: 2, z: 0}
 --- !u!1 &6083382770738432057
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,7 +1933,7 @@ CapsuleCollider:
   m_Radius: 0.25
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1.085, z: 0}
+  m_Center: {x: 0, y: 0.99, z: 0}
 --- !u!114 &5658830020459382034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1939,7 +1954,7 @@ MonoBehaviour:
   Slide: 0
   isStarted: 0
   isGrounded: 1
-  isDead: 0
+  isDoubleJumping: 0
   Death: 0
   FallMultiplier: 5
   PullMultiplier: 3

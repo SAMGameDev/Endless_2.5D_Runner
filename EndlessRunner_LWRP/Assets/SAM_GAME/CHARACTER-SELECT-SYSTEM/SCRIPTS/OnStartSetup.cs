@@ -149,6 +149,10 @@ namespace RunnerGame
 
             StartCoroutine(CameraStopper(0.001f));
         }
+        private void Update()
+        {
+            Time.timeScale = 1;
+        }
 
         private IEnumerator CameraStopper(float time)
         {
@@ -169,7 +173,7 @@ namespace RunnerGame
             }
             else
             {
-                StartCoroutine(CameraStopper(0.25f));
+                StartCoroutine(CameraStopper(0.2f));
             }
         }
     }
