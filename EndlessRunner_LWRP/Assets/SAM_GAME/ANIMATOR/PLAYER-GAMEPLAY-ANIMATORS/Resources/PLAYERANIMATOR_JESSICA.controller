@@ -622,7 +622,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PLAYERANIMATOR_CHARLOTTE
+  m_Name: PLAYERANIMATOR_JESSICA
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Jump
@@ -1157,6 +1157,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 288588811d17a7041bfcf1e3eec5c5c0, type: 2}
   - {fileID: 11400000, guid: 06d75c0583e507f4783f8817761006cb, type: 2}
   - {fileID: 11400000, guid: 70454dc7aaf4e574bb640b16a134fbdb, type: 2}
+  - {fileID: 11400000, guid: 992975f3274d9e24099676d6e5f13c3a, type: 2}
   characterControl: {fileID: 0}
 --- !u!1102 &5308029095494222015
 AnimatorState:
@@ -1180,7 +1181,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 676aba72a9e64594aa3519287189f1d9,
+  m_Motion: {fileID: 7687083576015573896, guid: 15922ff37f5bae14d94ea1406365b7d5,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -1315,7 +1316,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Running
-  m_Speed: 1
+  m_Speed: 1.05
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8929500999484007425}
@@ -1332,7 +1333,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 3a370e77256c40c41b89440c42a5d1d8,
+  m_Motion: {fileID: -203655887218126122, guid: e44d1f22fffde434395aaa09c388a890,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -1489,7 +1490,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: c8bfb39bb9a4dc446a6325e155267c81, type: 2}
   - {fileID: 11400000, guid: 5384aefae5f192342b9a3ea1c404ca49, type: 2}
-  - {fileID: 11400000, guid: 992975f3274d9e24099676d6e5f13c3a, type: 2}
   characterControl: {fileID: 0}
 --- !u!1101 &8972129023848469343
 AnimatorStateTransition:

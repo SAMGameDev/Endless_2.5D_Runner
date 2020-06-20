@@ -622,7 +622,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PLAYERANIMATOR
+  m_Name: PLAYERANIMATOR_LIAM
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Jump
@@ -1157,6 +1157,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 288588811d17a7041bfcf1e3eec5c5c0, type: 2}
   - {fileID: 11400000, guid: 06d75c0583e507f4783f8817761006cb, type: 2}
   - {fileID: 11400000, guid: 70454dc7aaf4e574bb640b16a134fbdb, type: 2}
+  - {fileID: 11400000, guid: 992975f3274d9e24099676d6e5f13c3a, type: 2}
   characterControl: {fileID: 0}
 --- !u!1102 &5308029095494222015
 AnimatorState:
@@ -1166,7 +1167,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IDLE
-  m_Speed: 1.35
+  m_Speed: 1.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4282071706458111211}
@@ -1180,7 +1181,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 30f4734f5d4bdf049af80c84f7d5148d,
+  m_Motion: {fileID: -203655887218126122, guid: 89179efe4300bd949aa6da674ad1a3b1,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -1240,7 +1241,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sliding
-  m_Speed: 1
+  m_Speed: 1.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1638045696874038690}
@@ -1256,7 +1257,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: fc0ef4aff97b2554c99ba241674504b5,
+  m_Motion: {fileID: -203655887218126122, guid: 63e7f702bc1186546b193c530a29e236,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -1332,7 +1333,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 1fc532ff6a5a18e48bf7418f645b50c7,
+  m_Motion: {fileID: -203655887218126122, guid: cf6b152524a534540a95d88674ef9e64,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -1489,7 +1490,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: c8bfb39bb9a4dc446a6325e155267c81, type: 2}
   - {fileID: 11400000, guid: 5384aefae5f192342b9a3ea1c404ca49, type: 2}
-  - {fileID: 11400000, guid: 992975f3274d9e24099676d6e5f13c3a, type: 2}
   characterControl: {fileID: 0}
 --- !u!1101 &8972129023848469343
 AnimatorStateTransition:
@@ -1511,9 +1511,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.18783253
+  m_TransitionDuration: 0.25394154
   m_TransitionOffset: 0
-  m_ExitTime: 0.6632421
+  m_ExitTime: 0.93750036
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

@@ -9,15 +9,14 @@ namespace RunnerGame
         protected float dashForce;
 
         [SerializeField]
-        private float fallMultiplier;
+        protected float fallMultiplier;
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CameraManger.Instance.ShakeCamera(0.035f);
-            // AudioManger.instance.SoundPlay("Dash");
+            CameraManger.Instance.ShakeCamera(0.2f);
             playerStateBase.characterControl.FallMultiplier = 0;
             playerStateBase.characterControl.RIGIDBODY.useGravity = false;
-           // playerStateBase.characterControl.cCollider.isTrigger = true;
+            // playerStateBase.characterControl.cCollider.isTrigger = true;
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
         }
 
@@ -30,7 +29,7 @@ namespace RunnerGame
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-           // playerStateBase.characterControl.cCollider.isTrigger = false;
+            // playerStateBase.characterControl.cCollider.isTrigger = false;
             playerStateBase.characterControl.FallMultiplier = fallMultiplier;
             playerStateBase.characterControl.RIGIDBODY.useGravity = true;
         }

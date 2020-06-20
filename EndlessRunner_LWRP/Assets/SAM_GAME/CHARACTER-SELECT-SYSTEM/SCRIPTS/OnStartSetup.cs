@@ -1,18 +1,30 @@
-﻿using Cinemachine;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
     public class OnStartSetup : MonoBehaviour
     {
-        public CharacterSelect characterSelect;
+        [SerializeField] protected CharacterSelect characterSelect;
         [SerializeField] private GameObject Player;
-        [SerializeField] private CharacterControl characterControl;
-        [SerializeField] private CinemachineVirtualCamera[] VirtualCameras;
+        private CharacterControl characterControl;
 
-        private Transform CamFollow;
+        //[SerializeField] private CinemachineVirtualCamera[] VirtualCameras;
+        //private Transform CamFollow;
+
         public Transform CharacterModel_Transform;
+
+        public CharacterControl GetCharacterControl
+        {
+            get
+            {
+                if (characterControl == null)
+                {
+                    Player = GameObject.FindGameObjectWithTag("Player");
+                    characterControl = Player.GetComponent<CharacterControl>();
+                }
+                return characterControl;
+            }
+        }
 
         private void Awake()
         {
@@ -75,9 +87,7 @@ namespace RunnerGame
 
             #endregion BigAss Comment Related TO Old Spawn System
 
-            Player = GameObject.FindGameObjectWithTag("Player");
-            characterControl = Player.GetComponent<CharacterControl>();
-            CharacterModel_Transform = characterControl.anim.GetComponent<Transform>();
+            CharacterModel_Transform = GetCharacterControl.anim.GetComponent<Transform>();
 
             if (CharacterModel_Transform.position != characterControl.transform.position)
             {
@@ -90,91 +100,54 @@ namespace RunnerGame
                     characterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_CHARLOTTE");
                     break;
+
                 case PlayableCharacterTypes.Jane:
                     characterControl.anim.runtimeAnimatorController =
                     Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JANE");
                     break;
+
                 case PlayableCharacterTypes.Noah:
                     characterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_NOAH");
                     break;
+
                 case PlayableCharacterTypes.Jessica:
                     characterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JESSICA");
                     break;
+
                 case PlayableCharacterTypes.Emma:
                     characterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_EMMA");
                     break;
+
                 case PlayableCharacterTypes.William:
                     characterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_WILLIAM");
                     break;
+
                 case PlayableCharacterTypes.Liam:
                     characterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_LIAM");
                     break;
+
                 case PlayableCharacterTypes.James:
                     characterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JAMES");
                     break;
+
                 case PlayableCharacterTypes.Mike:
                     characterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_MIKE");
                     break;
+
             }
             characterControl.isStarted = true;
             characterControl.gameObject.transform.position = gameObject.transform.position;
-
-            //if (characterSelect.SelectedCharacter != PlayableCharacterTypes.NONE)
-            //{
-            //    characterControl.isStarted = true;
-            //    characterControl.gameObject.transform.position = gameObject.transform.position;
-            //    characterControl.anim.runtimeAnimatorController =
-            //        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR");
-            //}
-
-            if (CamFollow == null)
-            {
-                CamFollow = GameObject.FindGameObjectWithTag("CamFollow").transform;
-            }
-
-            VirtualCameras = FindObjectsOfType<CinemachineVirtualCamera>();
-
-            foreach (CinemachineVirtualCamera virtualCamera in VirtualCameras)
-            {
-                virtualCamera.LookAt = CamFollow;
-                virtualCamera.Follow = CamFollow;
-            }
-
-            StartCoroutine(CameraStopper(0.001f));
         }
         private void Update()
         {
-            Time.timeScale = 1;
-        }
-
-        private IEnumerator CameraStopper(float time)
-        {
-            yield return new WaitForSeconds(time);
-
-            if (characterControl.Death)
-            {
-                foreach (CinemachineVirtualCamera virtualCamera in VirtualCameras)
-                {
-                    if (virtualCamera.LookAt != null && virtualCamera.Follow != null)
-                    {
-                        virtualCamera.LookAt = null;
-                        virtualCamera.Follow = null;
-                    }
-                }
-                StopAllCoroutines();
-                characterControl.Death = false;
-            }
-            else
-            {
-                StartCoroutine(CameraStopper(0.2f));
-            }
+            Time.timeScale = 1f;
         }
     }
 }

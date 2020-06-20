@@ -2,6 +2,10 @@
 
 namespace RunnerGame
 {
+    public enum TAGS
+    {
+        Obsticel,
+    }
     public enum TranistionParemeters
     {
         StartRun,
@@ -92,12 +96,6 @@ namespace RunnerGame
             {
                 RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (PullMultiplier - 1) * Time.deltaTime;
             }
-
-            ////fixing that bouncing effect On Slope
-            //if (Slide)
-            //{
-            //    RIGIDBODY.AddForce(Vector3.down * slopeFroce);
-            //}
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -118,6 +116,15 @@ namespace RunnerGame
         {
             isGrounded = false;
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.isTrigger && other.tag == TAGS.Obsticel.ToString())
+            {
+                Death = true;
+            }
+        }
+
         private void UpdateCenter()
         {
             if (!UpdateNow)

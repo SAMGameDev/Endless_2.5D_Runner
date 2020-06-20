@@ -5,10 +5,12 @@ namespace RunnerGame
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/DoubleJumpForce")]
     public class DoubleJumpForce : ScriptableObjectData
     {
-        [SerializeField] private float DoubleJumpForce_Val;
+        [SerializeField] protected float DoubleJumpForce_Val;
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+            CameraManger.Instance.CAMERACONTROLLER.ANIMATOR.SetTrigger(CameraTriggers.Default.ToString());
+
             playerStateBase.characterControl.isDoubleJumping = true;
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
 

@@ -8,7 +8,7 @@ namespace RunnerGame
         private Coroutine routine;
         public Camera mainCamera;
         public CameraController camController;
-       
+
         public CameraController CAMERACONTROLLER
         {
             get
@@ -24,15 +24,14 @@ namespace RunnerGame
         private void Awake()
         {
             GameObject camObj = GameObject.FindGameObjectWithTag("MainCamera");
-            mainCamera = camObj.GetComponent<Camera>();          
+            mainCamera = camObj.GetComponent<Camera>();
         }
 
-      
         private IEnumerator CamShake(float sec)
         {
-            CAMERACONTROLLER.TriggerCamera(CameraTrigger.Shake);
+            CAMERACONTROLLER.TriggerCamera(CameraTriggers.Shake);
             yield return new WaitForSeconds(sec);
-            CAMERACONTROLLER.TriggerCamera(CameraTrigger.Default);
+            CAMERACONTROLLER.TriggerCamera(CameraTriggers.Default);
         }
 
         public void ShakeCamera(float sec)

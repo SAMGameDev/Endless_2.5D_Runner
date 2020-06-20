@@ -6,12 +6,24 @@ namespace RunnerGame
     {
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            CameraTrigger[] arr = System.Enum.GetValues(typeof(CameraTrigger))
-                as CameraTrigger[];
+            CameraTriggers[] arr = System.Enum.GetValues(typeof(CameraTriggers))
+                as CameraTriggers[];
 
-            foreach (CameraTrigger t in arr)
+            foreach (CameraTriggers t in arr)
             {
                 CameraManger.Instance.CAMERACONTROLLER.ANIMATOR.ResetTrigger(t.ToString());
+            }
+        }
+
+        public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+        {
+            if (stateInfo.normalizedTime >= 0.6f)
+            {
+                if (stateInfo.IsName("Shake"))
+                {
+                    CameraManger.Instance.
+                        CAMERACONTROLLER.ANIMATOR.SetTrigger(CameraTriggers.Default.ToString());
+                }
             }
         }
     }

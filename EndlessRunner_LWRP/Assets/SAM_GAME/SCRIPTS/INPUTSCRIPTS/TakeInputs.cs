@@ -22,7 +22,7 @@ namespace RunnerGame
                 if (Input.GetMouseButtonUp(0)
                    && Input.mousePosition.y >= splitScreenY
                    && Input.mousePosition.x <= splitScreenX
-                   || Input.GetKeyDown(KeyCode.UpArrow))
+                   || Input.GetKeyDown(KeyCode.Space))
                 {
                     if (!characterControl.StartRun)
                     {
