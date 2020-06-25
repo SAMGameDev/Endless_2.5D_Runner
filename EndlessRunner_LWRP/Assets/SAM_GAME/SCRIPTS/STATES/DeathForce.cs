@@ -8,8 +8,9 @@ namespace RunnerGame
         [SerializeField]
         protected float backwardForce;
 
+        [SerializeField]
         [Range(0f, 1f)]
-        public float timing;
+        protected float animationTime;
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -18,12 +19,10 @@ namespace RunnerGame
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (stateInfo.normalizedTime >= timing)
+            if (stateInfo.normalizedTime >= animationTime)
             {
-                playerStateBase.characterControl.Death = false;
-                playerStateBase.characterControl.cCollider.enabled = false;
-                playerStateBase.characterControl.RIGIDBODY.useGravity = false;
                 playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
+                playerStateBase.characterControl.Death = false;
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

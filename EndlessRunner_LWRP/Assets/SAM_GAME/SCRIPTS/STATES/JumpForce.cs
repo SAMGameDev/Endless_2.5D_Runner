@@ -38,7 +38,6 @@ namespace RunnerGame
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            //CameraManger.Instance.CAMERACONTROLLER.ANIMATOR.SetTrigger(CameraTrigger.Default.ToString());
         }
     }
 }
