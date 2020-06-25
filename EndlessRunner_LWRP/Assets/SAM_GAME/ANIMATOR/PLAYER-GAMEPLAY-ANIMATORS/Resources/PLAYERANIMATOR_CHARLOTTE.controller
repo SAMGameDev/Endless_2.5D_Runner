@@ -334,7 +334,7 @@ AnimatorStateMachine:
     m_Position: {x: 1380, y: 1470, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -103564464421338367}
-    m_Position: {x: -390, y: 1430, z: 0}
+    m_Position: {x: -290, y: 1430, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5308029095494222015}
     m_Position: {x: -310, y: 260, z: 0}
@@ -620,7 +620,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Flying Kick
+  m_Name: Dash
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -638,7 +638,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 4e5fd6a30fbbba645a67518eef3b26a4,
+  m_Motion: {fileID: -203655887218126122, guid: 60c6c2095b2f5b04abd00e0a518494e8,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -1160,9 +1160,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.09796113
+  m_TransitionDuration: 0.107901454
   m_TransitionOffset: 0
-  m_ExitTime: 0.87418926
+  m_ExitTime: 0.85714877
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
