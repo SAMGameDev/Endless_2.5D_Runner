@@ -5,11 +5,8 @@ namespace RunnerGame
     public class OnStartSetup : MonoBehaviour
     {
         [SerializeField] protected CharacterSelect characterSelect;
-        [SerializeField] private GameObject Player;
+        [SerializeField] protected GameObject Player;
         private CharacterControl characterControl;
-
-        //[SerializeField] private CinemachineVirtualCamera[] VirtualCameras;
-        //private Transform CamFollow;
 
         public Transform CharacterModel_Transform;
 
