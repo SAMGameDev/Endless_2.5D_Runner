@@ -22,7 +22,6 @@ namespace RunnerGame
                 return characterControl;
             }
         }
-
         private void Awake()
         {
             #region BigAss Comment Related TO Old Spawn System
@@ -137,7 +136,6 @@ namespace RunnerGame
                     characterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_MIKE");
                     break;
-
             }
             characterControl.isStarted = true;
             characterControl.gameObject.transform.position = gameObject.transform.position;

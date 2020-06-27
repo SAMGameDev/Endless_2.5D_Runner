@@ -38,8 +38,8 @@ namespace RunnerGame
         public bool Death;
 
         [Header("FLOATS")]
-        public float FallMultiplier;
-        public float PullMultiplier;
+        public float GravityMultipier;
+        public float PullMultipier;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
@@ -76,26 +76,29 @@ namespace RunnerGame
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
-            //transform.Translate(transform.forward * speed * Time.deltaTime);
         }
 
         private void FixedUpdate()
         {
+            ApplyGravity();
             UpdateCenter();
             UpdateSize();
-            ApplyGravity();
         }
         private void ApplyGravity()
         {
-            if (RIGIDBODY.velocity.y < 0f)
+            if (RIGIDBODY.velocity.y < 0)
             {
-                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
+                RIGIDBODY.velocity += (Vector3.down * GravityMultipier);
+            }
+            //if (RIGIDBODY.velocity.y > 0 && !Jump)
+            //{
+            //    RIGIDBODY.velocity += (Vector3.down * PullMultipier);
+            //}
 
-            }
-            else if (RIGIDBODY.velocity.y > 0f && Jump == false)
-            {
-                RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (PullMultiplier - 1) * Time.deltaTime;
-            }
+            //if (RIGIDBODY.velocity.y < 0f)
+            //{
+            //    RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
+            //}
         }
 
         private void OnCollisionEnter(Collision collision)

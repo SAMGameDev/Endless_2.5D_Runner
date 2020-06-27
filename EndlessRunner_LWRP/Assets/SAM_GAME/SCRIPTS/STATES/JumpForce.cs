@@ -14,7 +14,8 @@ namespace RunnerGame
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
 
             playerStateBase.characterControl.RIGIDBODY.AddForce
-               (playerStateBase.characterControl.transform.up * jumpForce, ForceMode.Impulse);
+              (playerStateBase.characterControl.transform.up * jumpForce, ForceMode.Impulse);
+
             #region slope jump
             //float Slope_JumpForce = 1000;
 
@@ -30,10 +31,8 @@ namespace RunnerGame
             //  (0f, JumpForce, forwardVel);
             #endregion
         }
-
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
-        {
-
+        {  
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
