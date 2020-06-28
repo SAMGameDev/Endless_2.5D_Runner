@@ -72,12 +72,10 @@ namespace RunnerGame
             cCollider = GetComponent<CapsuleCollider>();
             RegisterCharacter();
         }
-
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }
-
         private void FixedUpdate()
         {
             ApplyGravity();
@@ -90,17 +88,7 @@ namespace RunnerGame
             {
                 RIGIDBODY.velocity += (Vector3.down * GravityMultipier);
             }
-            //if (RIGIDBODY.velocity.y > 0 && !Jump)
-            //{
-            //    RIGIDBODY.velocity += (Vector3.down * PullMultipier);
-            //}
-
-            //if (RIGIDBODY.velocity.y < 0f)
-            //{
-            //    RIGIDBODY.velocity += Vector3.up * Physics.gravity.y * (FallMultiplier - 1) * Time.deltaTime;
-            //}
         }
-
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.CompareTag("Obsticel"))
@@ -119,7 +107,6 @@ namespace RunnerGame
         {
             isGrounded = false;
         }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.isTrigger && other.tag == TAGS.Obsticel.ToString())
@@ -127,7 +114,6 @@ namespace RunnerGame
                 Death = true;
             }
         }
-
         private void UpdateCenter()
         {
             if (!UpdateNow)

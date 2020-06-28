@@ -10,8 +10,6 @@ namespace RunnerGame
 
         [SerializeField]
         protected AnimationCurve gravity;
-        //[SerializeField]
-        //protected AnimationCurve pull;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
@@ -20,7 +18,6 @@ namespace RunnerGame
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.GravityMultipier = gravity.Evaluate(stateInfo.normalizedTime);
-            //playerStateBase.characterControl.PullMultipier = pull.Evaluate(stateInfo.normalizedTime);
 
             if (stateInfo.normalizedTime >= transition)
             {
@@ -31,7 +28,6 @@ namespace RunnerGame
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.GravityMultipier = 0f;
-            //playerStateBase.characterControl.PullMultipier = 0f;
         }
     }
 }
