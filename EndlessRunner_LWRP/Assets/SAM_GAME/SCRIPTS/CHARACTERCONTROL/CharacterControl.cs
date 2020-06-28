@@ -2,10 +2,6 @@
 
 namespace RunnerGame
 {
-    public enum TAGS
-    {
-        Obsticel,
-    }
     public enum TranistionParemeters
     {
         StartRun,
@@ -15,6 +11,7 @@ namespace RunnerGame
         Dash,
         Slide,
         DoubleJump,
+        Die,
         OnClick,
     }
     public class CharacterControl : MonoBehaviour
@@ -39,7 +36,6 @@ namespace RunnerGame
 
         [Header("FLOATS")]
         public float GravityMultipier;
-        public float PullMultipier;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
@@ -89,16 +85,17 @@ namespace RunnerGame
                 RIGIDBODY.velocity += (Vector3.down * GravityMultipier);
             }
         }
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if (collision.gameObject.CompareTag("Obsticel"))
+            if (other.gameObject.CompareTag("Obsticel"))
             {
                 Death = true;
             }
         }
         private void OnCollisionStay(Collision other)
         {
-            if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Slope"))
+            if (other.gameObject.CompareTag("Ground")
+                || other.gameObject.CompareTag("Slope"))
             {
                 isGrounded = true;
             }
@@ -106,13 +103,6 @@ namespace RunnerGame
         private void OnCollisionExit()
         {
             isGrounded = false;
-        }
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.isTrigger && other.tag == TAGS.Obsticel.ToString())
-            {
-                Death = true;
-            }
         }
         private void UpdateCenter()
         {

@@ -14,16 +14,19 @@ namespace RunnerGame
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.AddForce
-                (-playerStateBase.characterControl.transform.forward * backwardForce, ForceMode.Impulse);
+            CameraManger.Instance.ShakeCamera(0.3f);
+
+            playerStateBase.characterControl.RIGIDBODY.AddForce(Vector3.back * backwardForce, ForceMode.Impulse);
+
+            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
+
+            if (!playerStateBase.characterControl.RIGIDBODY.useGravity)
+            {
+                playerStateBase.characterControl.RIGIDBODY.useGravity = true;
+            }
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (stateInfo.normalizedTime >= animationTime)
-            {
-                playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
-                playerStateBase.characterControl.Death = false;
-            }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
