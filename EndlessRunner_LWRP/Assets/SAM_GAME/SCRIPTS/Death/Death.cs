@@ -15,9 +15,13 @@ namespace RunnerGame
         {
             if (Control.Death)
             {
-                // Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
+                //Control.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("DeathAnimator");
                 Control.anim.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], true);
                 Control.Death = false;
+            }
+            else
+            {
+                Control.anim.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], false);
             }
         }
     }

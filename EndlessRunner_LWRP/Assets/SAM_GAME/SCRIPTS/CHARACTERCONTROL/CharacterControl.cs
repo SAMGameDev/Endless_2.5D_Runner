@@ -85,7 +85,19 @@ namespace RunnerGame
                 RIGIDBODY.velocity += (Vector3.down * GravityMultipier);
             }
         }
+
+        #region OnTrigger
         private void OnTriggerEnter(Collider other)
+        {
+            if (other.isTrigger && other.gameObject.CompareTag("Obsticel"))
+            {
+                Death = true;
+            }
+        }
+        #endregion
+
+        #region OnCollision
+        private void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.CompareTag("Obsticel"))
             {
@@ -104,6 +116,7 @@ namespace RunnerGame
         {
             isGrounded = false;
         }
+        #endregion
         private void UpdateCenter()
         {
             if (!UpdateNow)
