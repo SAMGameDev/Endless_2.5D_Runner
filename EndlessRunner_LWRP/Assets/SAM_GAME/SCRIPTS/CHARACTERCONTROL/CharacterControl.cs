@@ -36,6 +36,7 @@ namespace RunnerGame
 
         [Header("FLOATS")]
         public float GravityMultipier;
+        public float speed;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
@@ -68,12 +69,13 @@ namespace RunnerGame
             cCollider = GetComponent<CapsuleCollider>();
             RegisterCharacter();
         }
-        public void RunForward(float speed)
+        public void RunForward()
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }
         private void FixedUpdate()
         {
+            RunForward();
             ApplyGravity();
             UpdateCenter();
             UpdateSize();

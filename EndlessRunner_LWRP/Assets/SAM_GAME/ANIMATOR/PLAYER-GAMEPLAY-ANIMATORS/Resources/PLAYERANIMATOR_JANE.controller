@@ -375,7 +375,7 @@ AnimatorStateMachine:
     m_Position: {x: -310, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8159188026643298751}
-    m_Position: {x: 110, y: 60, z: 0}
+    m_Position: {x: -10, y: -50, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 2811817670188154252}
@@ -574,14 +574,28 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.1928674
+  m_TransitionDuration: 0.22846061
   m_TransitionOffset: 0
-  m_ExitTime: 0.9124388
+  m_ExitTime: 0.84772384
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-1415706681593740470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101ebb669a5f5a946b0f2836c9b378a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptableObjectDatas: []
+  characterControl: {fileID: 0}
 --- !u!1102 &-703026984018532256
 AnimatorState:
   serializedVersion: 5
@@ -868,9 +882,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.07878417
+  m_TransitionDuration: 0.12065989
   m_TransitionOffset: 0
-  m_ExitTime: 0.9573505
+  m_ExitTime: 0.8584681
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -993,9 +1007,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.1049912
+  m_TransitionDuration: 0.21685559
   m_TransitionOffset: 0
-  m_ExitTime: 0.94071054
+  m_ExitTime: 0.8780665
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1029,7 +1043,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jumping
+  m_Name: Double-Jumping
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1052,6 +1066,28 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &3969074244611187554
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 7254284013093707124}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.84375
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &4072430131596754259
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1179,9 +1215,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.01211673
+  m_TransitionDuration: 0.16847262
   m_TransitionOffset: 0
-  m_ExitTime: 0.993985
+  m_ExitTime: 0.82782304
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1283,9 +1319,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.007157862
+  m_TransitionDuration: 0.010157585
   m_TransitionOffset: 0
-  m_ExitTime: 0.9973097
+  m_ExitTime: 0.99595976
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1642,9 +1678,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.027104795
+  m_TransitionDuration: 0.15926707
   m_TransitionOffset: 0
-  m_ExitTime: 0.95166785
+  m_ExitTime: 0.8383873
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1711,9 +1747,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.22133744
+  m_TransitionDuration: 0.4423337
   m_TransitionOffset: 0
-  m_ExitTime: 0.9726304
+  m_ExitTime: 0.87278694
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
