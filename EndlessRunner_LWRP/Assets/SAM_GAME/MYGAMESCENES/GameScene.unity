@@ -14,19 +14,19 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogMode: 1
+  m_FogDensity: 0.1
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 0.800291, b: 0.4575472, a: 1}
   m_AmbientEquatorColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
   m_AmbientGroundColor: {r: 0.25943398, g: 0.6357463, b: 1, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.038806386, g: 0.19429907, b: 0.5330598, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028454, g: 0.22571416, b: 0.30692196, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -213,7 +213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: 160, z: 0}
 --- !u!1001 &425628298
 PrefabInstance:
@@ -309,7 +309,7 @@ PrefabInstance:
     - target: {fileID: 6585207866036754288, guid: 5b3fb2ff06279024186ba29c2e523dfd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6585207866036754288, guid: 5b3fb2ff06279024186ba29c2e523dfd,
         type: 3}
@@ -377,6 +377,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6951685512506285635, guid: f67a727aa475cc14fa9e1e370780364d,
+        type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -415,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
