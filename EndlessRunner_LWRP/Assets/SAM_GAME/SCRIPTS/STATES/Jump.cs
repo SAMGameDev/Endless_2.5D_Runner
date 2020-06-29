@@ -6,8 +6,7 @@ namespace RunnerGame
     public class Jump : ScriptableObjectData
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
-        {
-            // animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Dash], false);
+        {          
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
