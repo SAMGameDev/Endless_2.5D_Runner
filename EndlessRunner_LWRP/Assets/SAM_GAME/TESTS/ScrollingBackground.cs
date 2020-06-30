@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 
 namespace RunnerGame
 {
@@ -12,18 +9,18 @@ namespace RunnerGame
         public Transform camTransfor;
         private Vector3 lastCamPostion;
 
-        [SerializeField]
-        private float texturUniteSizeZ;
-        [SerializeField]
-        private float texturUnitesizeY;
+        //[SerializeField]
+        //private float texturUniteSizeZ;
+        //[SerializeField]
+        //private float texturUnitesizeY;
         void Start()
         {
             camTransfor = Camera.main.transform;
             lastCamPostion = camTransfor.position;
-            Sprite sprite = GetComponent<SpriteRenderer>().sprite;
-            Texture2D texture = sprite.texture;
-            texturUniteSizeZ = texture.width / sprite.pixelsPerUnit;
-            texturUnitesizeY = texture.height / sprite.pixelsPerUnit;
+            //Sprite sprite = GetComponent<SpriteRenderer>().sprite;
+            //Texture2D texture = sprite.texture;
+            //texturUniteSizeZ = texture.width / sprite.pixelsPerUnit;
+            //texturUnitesizeY = texture.height / sprite.pixelsPerUnit;
         }
         void LateUpdate()
         {
