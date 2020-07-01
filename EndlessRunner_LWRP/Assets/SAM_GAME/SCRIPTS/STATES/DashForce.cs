@@ -28,7 +28,6 @@ namespace RunnerGame
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.RIGIDBODY.useGravity = true;
-            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
         }
     }
 }
