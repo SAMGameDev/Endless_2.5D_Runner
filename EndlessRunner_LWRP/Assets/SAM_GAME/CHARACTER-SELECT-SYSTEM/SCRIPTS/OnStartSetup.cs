@@ -140,5 +140,10 @@ namespace RunnerGame
             characterControl.isStarted = true;
             characterControl.gameObject.transform.position = gameObject.transform.position;
         }
+
+        private void Update()
+        {
+            Time.timeScale = 0.05f;
+        }
     }
 }
