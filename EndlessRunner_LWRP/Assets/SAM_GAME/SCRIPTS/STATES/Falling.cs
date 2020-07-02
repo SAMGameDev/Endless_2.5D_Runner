@@ -21,7 +21,8 @@ namespace RunnerGame
 
             if (stateInfo.normalizedTime >= transition)
             {
-                CameraManger.Instance.CAMERACONTROLLER.ANIMATOR.SetTrigger(CameraTriggers.Default.ToString());
+                CameraManger.Instance.CAMERACONTROLLER.ANIMATOR.SetTrigger
+                    (CameraTriggers.Default.ToString());
             }
         }
 
