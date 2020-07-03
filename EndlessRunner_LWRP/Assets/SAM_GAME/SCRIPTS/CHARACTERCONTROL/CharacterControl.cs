@@ -70,7 +70,7 @@ namespace RunnerGame
             RegisterCharacter();
         }
 
-        public void RunForward(ref float speed)
+        public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }

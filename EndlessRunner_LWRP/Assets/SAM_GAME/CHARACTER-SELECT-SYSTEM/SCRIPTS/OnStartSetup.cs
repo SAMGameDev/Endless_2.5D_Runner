@@ -90,6 +90,7 @@ namespace RunnerGame
                 CharacterModel_Transform.position = characterControl.transform.position;
             }
 
+            #region Change Animator
             switch (characterSelect.SelectedCharacter)
             {
                 case PlayableCharacterTypes.Charlotte:
@@ -139,6 +140,7 @@ namespace RunnerGame
             }
             characterControl.isStarted = true;
             characterControl.gameObject.transform.position = gameObject.transform.position;
+            #endregion
         }
     }
 }

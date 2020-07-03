@@ -20,7 +20,6 @@ namespace RunnerGame
                 }
             }
         }
-
         private void Update()
         {
             Ray _ray;
@@ -71,6 +70,7 @@ namespace RunnerGame
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], false);
+
                         SceneManager.MoveGameObjectToScene(c.gameObject,
                            SceneManager.GetActiveScene());
                     }
@@ -79,8 +79,7 @@ namespace RunnerGame
                         return;
                     }
                 }
-                characterselect_camController.SetBool
-                    (selectedCharacter.ToString(), true);
+                characterselect_camController.SetBool(selectedCharacter.ToString(), true);
             }
         }
     }
