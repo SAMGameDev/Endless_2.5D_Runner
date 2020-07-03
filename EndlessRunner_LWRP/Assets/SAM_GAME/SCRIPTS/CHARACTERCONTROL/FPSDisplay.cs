@@ -7,8 +7,7 @@ public class FPSDisplay : MonoBehaviour
     private void Update()
     {
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
-    }
-
+    }    
     private void OnGUI()
     {
         int w = Screen.width, h = Screen.height;

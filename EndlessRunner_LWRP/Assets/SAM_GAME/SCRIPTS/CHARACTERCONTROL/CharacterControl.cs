@@ -69,6 +69,7 @@ namespace RunnerGame
             cCollider = GetComponent<CapsuleCollider>();
             RegisterCharacter();
         }
+
         public void RunForward(ref float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
