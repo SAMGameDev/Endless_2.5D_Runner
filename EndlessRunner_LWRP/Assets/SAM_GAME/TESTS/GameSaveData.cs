@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using System.Collections.Generic;
+using System.Collections;
 
 namespace RunnerGame
 {
@@ -6,8 +10,11 @@ namespace RunnerGame
     {
         public CharacterSelect SelectedCharacterData;
         public string objName;
+
+        public string persitancename;
         private void Awake()
         {
+
             if (SelectedCharacterData.SelectedCharacter != PlayableCharacterTypes.NONE)
             {
                 switch (SelectedCharacterData.SelectedCharacter)
