@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
-using System.Collections.Generic;
-using System.Collections;
 
 namespace RunnerGame
 {
@@ -13,7 +11,11 @@ namespace RunnerGame
 
         private void Awake()
         {
+            LoadSelectedCharacter();
+        }
 
+        private void Start()
+        {
             if (SelectedCharacterData.SelectedCharacter != PlayableCharacterTypes.NONE)
             {
                 switch (SelectedCharacterData.SelectedCharacter)
@@ -50,19 +52,19 @@ namespace RunnerGame
                 GameObject obj = Instantiate(Resources.Load(objName,
                typeof(GameObject))) as GameObject;
 
-                obj.transform.position = this.transform.position;
-                obj.transform.rotation = this.transform.rotation;
+                obj.transform.position = transform.position;
+                obj.transform.rotation = transform.rotation;
             }
-        }
-
-        public void SaveSelectedCharacter()
-        {
-
-        }
-
+        }     
         public void LoadSelectedCharacter()
         {
-
+            if (File.Exists(Application.persistentDataPath + "/SavedData/SelectedCharacter.dat"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(Application.persistentDataPath + "/SavedData/SelectedCharacter.dat", FileMode.Open);
+                JsonUtility.FromJsonOverwrite((string)bf.Deserialize(file), SelectedCharacterData);
+                file.Close();
+            }
         }
     }
 }
