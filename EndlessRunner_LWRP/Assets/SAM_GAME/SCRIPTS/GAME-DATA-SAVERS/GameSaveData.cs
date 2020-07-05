@@ -7,13 +7,12 @@ namespace RunnerGame
     public class GameSaveData : MonoBehaviour
     {
         public CharacterSelect SelectedCharacterData;
-        public string objName;
 
+        private string objName;
         private void Awake()
         {
             LoadSelectedCharacter();
         }
-
         private void Start()
         {
             if (SelectedCharacterData.SelectedCharacter != PlayableCharacterTypes.NONE)
@@ -53,9 +52,10 @@ namespace RunnerGame
                typeof(GameObject))) as GameObject;
 
                 obj.transform.position = transform.position;
-                obj.transform.rotation = transform.rotation;
+
+                DontDestroyOnLoad(obj);
             }
-        }     
+        }
         public void LoadSelectedCharacter()
         {
             if (File.Exists(Application.persistentDataPath + "/SavedData/SelectedCharacter.dat"))

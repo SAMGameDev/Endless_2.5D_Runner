@@ -9,8 +9,7 @@ namespace RunnerGame
         GameScene,
         MainMenu,
     }
-
-    public class StartGame : MonoBehaviour
+    public class SceneLoader : MonoBehaviour
     {
         public CharacterSelect GetSelectedCharacter;
 
@@ -23,12 +22,10 @@ namespace RunnerGame
                 SceneManager.LoadSceneAsync(Scenes.GameScene.ToString());
             }
         }
-
         public void LoadMenu()
         {
             SceneManager.LoadSceneAsync(Scenes.MainMenu.ToString());
         }
-
         public void LoadCharacterSelectScene()
         {
             SceneManager.LoadSceneAsync(Scenes.CharacterSelect.ToString());
