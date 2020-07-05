@@ -11,7 +11,6 @@ namespace RunnerGame
         public CharacterSelect SelectedCharacterData;
         public string objName;
 
-        public string persitancename;
         private void Awake()
         {
 
@@ -54,6 +53,16 @@ namespace RunnerGame
                 obj.transform.position = this.transform.position;
                 obj.transform.rotation = this.transform.rotation;
             }
+        }
+
+        public void SaveSelectedCharacter()
+        {
+
+        }
+
+        public void LoadSelectedCharacter()
+        {
+
         }
     }
 }
