@@ -11,6 +11,7 @@ namespace RunnerGame
         public CharacterControl control;
 
         [Header("Variables")]
+        [SerializeField] protected MaterialChangeData matData;
         [SerializeField] protected Material[] materials;
 
         private int arraycount = 0;
@@ -19,7 +20,16 @@ namespace RunnerGame
         {
             skinnedMesh = GetComponentInChildren<SkinnedMeshRenderer>();
             control = GetComponent<CharacterControl>();
+            matData.currentMaterial = materials[0];
+            matData.matName = materials[0].name;
         }
+
+        private void Update()
+        {
+            matData.currentMaterial = materials[arraycount];
+            matData.matName = materials[arraycount].name;
+        }
+
         public void ClothChangeForward()
         {
             GenralAudioManger.instance.SoundPlay("Click");
@@ -34,7 +44,6 @@ namespace RunnerGame
                     {
                         arraycount = 0;
                     }
-
                     skinnedMesh.material = materials[arraycount];
                 }
             }

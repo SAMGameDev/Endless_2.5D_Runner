@@ -8,54 +8,70 @@ namespace RunnerGame
     {
         public CharacterSelect SelectedCharacterData;
 
-        private string objName;
-        private void Awake()
+        //private string objName;
+        //private void Awake()
+        //{
+        //    LoadSelectedCharacter();
+        //}
+        //private void Start()
+        //{
+        //    #region Spawn
+        //    //if (SelectedCharacterData.SelectedCharacter != PlayableCharacterTypes.NONE)
+        //    //{
+        //    //    switch (SelectedCharacterData.SelectedCharacter)
+        //    //    {
+        //    //        case PlayableCharacterTypes.Charlotte:
+        //    //            objName = "Charlotte";
+        //    //            break;
+        //    //        case PlayableCharacterTypes.Emma:
+        //    //            objName = "Emma";
+        //    //            break;
+        //    //        case PlayableCharacterTypes.James:
+        //    //            objName = "James";
+        //    //            break;
+        //    //        case PlayableCharacterTypes.Jane:
+        //    //            objName = "Jane";
+        //    //            break;
+        //    //        case PlayableCharacterTypes.Jessica:
+        //    //            objName = "Jessica";
+        //    //            break;
+        //    //        case PlayableCharacterTypes.Liam:
+        //    //            objName = "Liam";
+        //    //            break;
+        //    //        case PlayableCharacterTypes.Mike:
+        //    //            objName = "Mike";
+        //    //            break;
+        //    //        case PlayableCharacterTypes.Noah:
+        //    //            objName = "Noah";
+        //    //            break;
+        //    //        case PlayableCharacterTypes.William:
+        //    //            objName = "William";
+        //    //            break;
+        //    //    }
+
+        //    //    GameObject obj = Instantiate(Resources.Load(objName,
+        //    //   typeof(GameObject))) as GameObject;
+
+        //    //    obj.transform.position = transform.position;
+
+        //    //    DontDestroyOnLoad(obj);
+        //    //}
+        //    #endregion
+        //}
+       
+        public void SaveSelectedCharacter()
         {
-            LoadSelectedCharacter();
-        }
-        private void Start()
-        {
-            if (SelectedCharacterData.SelectedCharacter != PlayableCharacterTypes.NONE)
+            if (!Directory.Exists(Application.persistentDataPath + "/SavedData"))
             {
-                switch (SelectedCharacterData.SelectedCharacter)
-                {
-                    case PlayableCharacterTypes.Charlotte:
-                        objName = "Charlotte";
-                        break;
-                    case PlayableCharacterTypes.Emma:
-                        objName = "Emma";
-                        break;
-                    case PlayableCharacterTypes.James:
-                        objName = "James";
-                        break;
-                    case PlayableCharacterTypes.Jane:
-                        objName = "Jane";
-                        break;
-                    case PlayableCharacterTypes.Jessica:
-                        objName = "Jessica";
-                        break;
-                    case PlayableCharacterTypes.Liam:
-                        objName = "Liam";
-                        break;
-                    case PlayableCharacterTypes.Mike:
-                        objName = "Mike";
-                        break;
-                    case PlayableCharacterTypes.Noah:
-                        objName = "Noah";
-                        break;
-                    case PlayableCharacterTypes.William:
-                        objName = "William";
-                        break;
-                }
-
-                GameObject obj = Instantiate(Resources.Load(objName,
-               typeof(GameObject))) as GameObject;
-
-                obj.transform.position = transform.position;
-
-                DontDestroyOnLoad(obj);
+                Directory.CreateDirectory(Application.persistentDataPath + "/SavedData");
             }
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Create(Application.persistentDataPath + "/SavedData/SelectedCharacter.dat");
+            var jason = JsonUtility.ToJson(SelectedCharacterData);
+            bf.Serialize(file, jason);
+            file.Close();
         }
+
         public void LoadSelectedCharacter()
         {
             if (File.Exists(Application.persistentDataPath + "/SavedData/SelectedCharacter.dat"))

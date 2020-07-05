@@ -1,27 +1,15 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
 
 namespace RunnerGame
 {
     public class MouseControl : MonoBehaviour
-    {
+    {       
         public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect SelectedCharacterData;
         [SerializeField] protected Animator characterselect_camController;
 
-        private void Start()
-        {
-            foreach (CharacterControl c in CharacterManger.Instance.characters)
-            {
-                if (SelectedCharacterData.SelectedCharacter != PlayableCharacterTypes.NONE
-                    && SelectedCharacterData.SelectedCharacter == c.Type)
-                {
-                    DontDestroyOnLoad(c.gameObject);
-                }
-            }
-        }
+        public GameSaveData SaveData;
+
         private void Update()
         {
             Ray _ray;
@@ -83,23 +71,9 @@ namespace RunnerGame
                 characterselect_camController.SetBool(selectedCharacter.ToString(), true);
             }
         }
-
         public void OnDisable()
         {
-            SaveSelectedCharacter();
-        }
-
-        public void SaveSelectedCharacter()
-        {
-            if (!Directory.Exists(Application.persistentDataPath + "/SavedData"))
-            {
-                Directory.CreateDirectory(Application.persistentDataPath + "/SavedData");
-            }
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Create(Application.persistentDataPath + "/SavedData/SelectedCharacter.dat");
-            var jason = JsonUtility.ToJson(SelectedCharacterData);
-            bf.Serialize(file, jason);
-            file.Close();
+            SaveData.SaveSelectedCharacter();
         }
     }
 }
