@@ -22,7 +22,7 @@ namespace RunnerGame
                 return characterControl;
             }
         }
-        private void Awake()
+        private void Start()
         {
             #region BigAss Comment Related TO Old Spawn System
 
@@ -83,6 +83,7 @@ namespace RunnerGame
 
             #endregion BigAss Comment Related TO Old Spawn System
 
+            //reset postion of 3d model to colliders gameobject postion
             CharacterModel_Transform = GetCharacterControl.anim.GetComponent<Transform>();
 
             if (CharacterModel_Transform.position != characterControl.transform.position)
@@ -139,7 +140,7 @@ namespace RunnerGame
                     break;
             }
             characterControl.isStarted = true;
-            characterControl.gameObject.transform.position = gameObject.transform.position;
+           // characterControl.gameObject.transform.position = gameObject.transform.position;
             #endregion
         }
     }

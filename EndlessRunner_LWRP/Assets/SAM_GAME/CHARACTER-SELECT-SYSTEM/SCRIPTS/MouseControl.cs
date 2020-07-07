@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace RunnerGame
 {
     public class MouseControl : MonoBehaviour
-    {       
+    {
         public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect SelectedCharacterData;
         [SerializeField] protected Animator characterselect_camController;
-
-        public GameSaveData SaveData;
 
         private void Update()
         {
@@ -53,15 +52,15 @@ namespace RunnerGame
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], true);
-                        // DontDestroyOnLoad(c.gameObject);
+                        //DontDestroyOnLoad(c.gameObject);
                     }
                     else
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], false);
 
-                        // SceneManager.MoveGameObjectToScene(c.gameObject,
-                        //   SceneManager.GetActiveScene());
+                        //   SceneManager.MoveGameObjectToScene(c.gameObject,
+                        //  SceneManager.GetActiveScene());
                     }
                     if (selectedCharacter == PlayableCharacterTypes.NONE)
                     {
@@ -70,10 +69,6 @@ namespace RunnerGame
                 }
                 characterselect_camController.SetBool(selectedCharacter.ToString(), true);
             }
-        }
-        public void OnDisable()
-        {
-            SaveData.SaveSelectedCharacter();
         }
     }
 }

@@ -4,19 +4,17 @@ namespace RunnerGame
 {
     public class PlayerSpawner : MonoBehaviour
     {
-        public GameSaveData saveData;
-        //  public CharacterSelect SelectedCharacterData;
+        public CharacterSelect SelectedCharacter;
         private string objName;
 
-        public void Awake()
+        private void OnEnable()
         {
-            saveData.LoadSelectedCharacter();
-        }
-        private void Start()
-        {
-            if (saveData.SelectedCharacterData.SelectedCharacter != PlayableCharacterTypes.NONE)
+            //instansiting character in mainmenu according to saved data in SO,
+            //LOADING AND INSTANSITING DEPENDS ON IT
+
+            if (SelectedCharacter.SelectedCharacter != PlayableCharacterTypes.NONE)
             {
-                switch (saveData.SelectedCharacterData.SelectedCharacter)
+                switch (SelectedCharacter.SelectedCharacter)
                 {
                     case PlayableCharacterTypes.Charlotte:
                         objName = "Charlotte";
@@ -47,10 +45,10 @@ namespace RunnerGame
                         break;
                 }
 
-                GameObject obj = Instantiate(Resources.Load(objName,
-               typeof(GameObject))) as GameObject;
+                GameObject player = Instantiate(Resources.Load(objName,
+                  typeof(GameObject))) as GameObject;
 
-                obj.transform.position = transform.position;
+                player.transform.position = transform.position;
             }
         }
     }

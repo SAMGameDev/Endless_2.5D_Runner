@@ -6,6 +6,6 @@ namespace RunnerGame
     public class MaterialChangeData : ScriptableObject
     {
         public Material currentMaterial;
-        public string matName;
+        public string matName;        
     }
 }
