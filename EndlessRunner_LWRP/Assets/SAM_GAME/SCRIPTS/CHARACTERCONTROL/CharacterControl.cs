@@ -44,10 +44,8 @@ namespace RunnerGame
         public float CenterUpdate_Speed_C;
         public bool UpdateNow;
 
-        [Header("SUB-COMPONENTS")]
-        [SerializeField]
+        [Header("SUB-COMPONENTS")]       
         public Animator anim;
-
         public CapsuleCollider cCollider;
         private Rigidbody rb;
 
