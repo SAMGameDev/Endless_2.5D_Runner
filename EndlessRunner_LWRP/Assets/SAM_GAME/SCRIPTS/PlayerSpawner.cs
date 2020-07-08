@@ -5,12 +5,12 @@ namespace RunnerGame
     public class PlayerSpawner : MonoBehaviour
     {
         public CharacterSelect SelectedCharacter;
-        private string objName;
 
+        private string objName;
         private void OnEnable()
         {
             //instansiting character in mainmenu according to saved data in SO,
-            //LOADING AND INSTANSITING DEPENDS ON IT
+            //LOADING DEPENDS ON INSTANSITING 
 
             if (SelectedCharacter.SelectedCharacter != PlayableCharacterTypes.NONE)
             {
@@ -46,7 +46,7 @@ namespace RunnerGame
                 }
 
                 GameObject player = Instantiate(Resources.Load(objName,
-                  typeof(GameObject))) as GameObject;
+                 typeof(GameObject))) as GameObject;
 
                 player.transform.position = transform.position;
             }

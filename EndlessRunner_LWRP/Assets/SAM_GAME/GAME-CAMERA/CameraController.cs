@@ -33,11 +33,12 @@ namespace RunnerGame
             }
         }
 
-        public void Awake()
+        public void Start()
         {
             InitialCameraSetUp();
         }
 
+        //assign follow object when game starts
         void InitialCameraSetUp()
         {
             VirtualCameras = FindObjectsOfType<CinemachineVirtualCamera>();
@@ -56,6 +57,7 @@ namespace RunnerGame
             StartCoroutine(CameraStopper(0f));
         }
 
+        //check if player is dead, if it is unassign follow object/ stop following
         private IEnumerator CameraStopper(float time)
         {
             yield return new WaitForSeconds(time);

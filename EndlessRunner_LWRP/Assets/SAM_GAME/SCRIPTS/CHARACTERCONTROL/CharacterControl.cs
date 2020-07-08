@@ -45,6 +45,7 @@ namespace RunnerGame
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
+        [SerializeField]
         public Animator anim;
 
         public CapsuleCollider cCollider;

@@ -5,10 +5,11 @@ namespace RunnerGame
     public class OnStartSetup : MonoBehaviour
     {
         [SerializeField] protected CharacterSelect characterSelect;
-        [SerializeField] protected GameObject Player;
+
+        [SerializeField]
         private CharacterControl characterControl;
 
-        public Transform CharacterModel_Transform;
+        //public Transform CharacterModel_Transform;
 
         public CharacterControl GetCharacterControl
         {
@@ -16,13 +17,13 @@ namespace RunnerGame
             {
                 if (characterControl == null)
                 {
-                    Player = GameObject.FindGameObjectWithTag("Player");
+                    GameObject Player = GameObject.FindGameObjectWithTag("Player");
                     characterControl = Player.GetComponent<CharacterControl>();
                 }
                 return characterControl;
             }
         }
-        private void Start()
+        private void Awake()
         {
             #region BigAss Comment Related TO Old Spawn System
 
@@ -83,64 +84,67 @@ namespace RunnerGame
 
             #endregion BigAss Comment Related TO Old Spawn System
 
-            //reset postion of 3d model to colliders gameobject postion
-            CharacterModel_Transform = GetCharacterControl.anim.GetComponent<Transform>();
+            //reset postion of 3d model to colliders gameobject postion , USE ONLY IF PLAYER COMES
+            // FROM DontDestroyOnLoad METHOD
 
-            if (CharacterModel_Transform.position != characterControl.transform.position)
-            {
-                CharacterModel_Transform.position = characterControl.transform.position;
-            }
+            // CharacterModel_Transform = GetCharacterControl.anim.GetComponent<Transform>();
+
+            // if (CharacterModel_Transform.position != characterControl.transform.position)
+            // {
+            //    CharacterModel_Transform.position = characterControl.transform.position;
+            //}
 
             #region Change Animator
+            // Changes Animator to gameplay animator
             switch (characterSelect.SelectedCharacter)
             {
                 case PlayableCharacterTypes.Charlotte:
-                    characterControl.anim.runtimeAnimatorController =
+                    GetCharacterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_CHARLOTTE");
                     break;
 
                 case PlayableCharacterTypes.Jane:
-                    characterControl.anim.runtimeAnimatorController =
+                    GetCharacterControl.anim.runtimeAnimatorController =
                     Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JANE");
                     break;
 
                 case PlayableCharacterTypes.Noah:
-                    characterControl.anim.runtimeAnimatorController =
+                    GetCharacterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_NOAH");
                     break;
 
                 case PlayableCharacterTypes.Jessica:
-                    characterControl.anim.runtimeAnimatorController =
+                    GetCharacterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JESSICA");
                     break;
 
                 case PlayableCharacterTypes.Emma:
-                    characterControl.anim.runtimeAnimatorController =
+                    GetCharacterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_EMMA");
                     break;
 
                 case PlayableCharacterTypes.William:
-                    characterControl.anim.runtimeAnimatorController =
+                    GetCharacterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_WILLIAM");
                     break;
 
                 case PlayableCharacterTypes.Liam:
-                    characterControl.anim.runtimeAnimatorController =
+                    GetCharacterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_LIAM");
                     break;
 
                 case PlayableCharacterTypes.James:
-                    characterControl.anim.runtimeAnimatorController =
+                    GetCharacterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JAMES");
                     break;
 
                 case PlayableCharacterTypes.Mike:
-                    characterControl.anim.runtimeAnimatorController =
+                    GetCharacterControl.anim.runtimeAnimatorController =
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_MIKE");
                     break;
             }
             characterControl.isStarted = true;
-           // characterControl.gameObject.transform.position = gameObject.transform.position;
+            // characterControl.gameObject.transform.position = gameObject.transform.position;
             #endregion
         }
     }
