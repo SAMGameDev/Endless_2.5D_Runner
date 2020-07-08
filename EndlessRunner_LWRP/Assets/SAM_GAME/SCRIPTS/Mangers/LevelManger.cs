@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     public class LevelManger : MonoBehaviour
     {

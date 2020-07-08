@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     public class CharacterManger : Singleton<CharacterManger>
     {

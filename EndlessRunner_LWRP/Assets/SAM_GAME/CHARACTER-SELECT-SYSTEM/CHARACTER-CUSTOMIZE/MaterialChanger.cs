@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     public class MaterialChanger : MonoBehaviour
     {
@@ -37,7 +37,6 @@ namespace RunnerGame
                 skinnedMesh.material = materials[arraycount];
             }
         }
-
         public void ClothChangeBackWards()
         {
             GenralAudioManger.instance.SoundPlay("Click");

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     public class TakeInputs : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     public class CameraState : StateMachineBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     [RequireComponent(typeof(AudioSource))]
     public class CharacterAudioManger : MonoBehaviour

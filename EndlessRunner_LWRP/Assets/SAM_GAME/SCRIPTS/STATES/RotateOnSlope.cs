@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/RotateOnSlope")]
     public class RotateOnSlope : ScriptableObjectData

@@ -2,7 +2,7 @@
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     public class GameSaveData : MonoBehaviour
     {

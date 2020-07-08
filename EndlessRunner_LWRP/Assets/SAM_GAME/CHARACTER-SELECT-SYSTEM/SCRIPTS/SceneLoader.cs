@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     internal enum Scenes
     {

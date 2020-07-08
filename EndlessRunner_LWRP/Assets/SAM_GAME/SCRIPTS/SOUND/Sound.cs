@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     [System.Serializable]
     public class Sound

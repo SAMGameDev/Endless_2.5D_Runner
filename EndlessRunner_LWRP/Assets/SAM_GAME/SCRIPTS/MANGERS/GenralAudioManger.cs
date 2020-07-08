@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     public class GenralAudioManger : MonoBehaviour
     {

@@ -2,7 +2,7 @@
 using Cinemachine;
 using System.Collections;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     public enum CameraTriggers
     {

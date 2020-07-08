@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {

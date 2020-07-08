@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace RunnerGame
+namespace EndlessRunning
 {
     [CreateAssetMenu(fileName = "MaterialData", menuName = "ScriptableObject/CharacterSelect/MaterialDataHolder")]
     public class MaterialChangeData : ScriptableObject
