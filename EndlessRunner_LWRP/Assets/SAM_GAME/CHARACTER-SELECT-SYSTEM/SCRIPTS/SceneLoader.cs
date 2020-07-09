@@ -12,16 +12,7 @@ namespace EndlessRunning
     }
     public class SceneLoader : MonoBehaviour
     {
-        public CharacterSelect GetSelectedCharacter;
-        public void LoadGameScene()
-        {
-            if (GetSelectedCharacter.SelectedCharacter !=
-                PlayableCharacterTypes.NONE)
-            {
-                GenralAudioManger.instance.SoundPlay("Click");
-                SceneManager.LoadSceneAsync(Scenes.GameScene.ToString());
-            }
-        }
+        public CharacterSelect GetSelectedCharacter;       
         public void LoadMenu()
         {
             SceneManager.LoadSceneAsync(Scenes.MainMenu.ToString());
