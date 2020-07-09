@@ -12,7 +12,6 @@ namespace EndlessRunning
     }
     public class SceneLoader : MonoBehaviour
     {
-        public CharacterSelect GetSelectedCharacter;       
         public void LoadMenu()
         {
             SceneManager.LoadSceneAsync(Scenes.MainMenu.ToString());
@@ -21,10 +20,13 @@ namespace EndlessRunning
         {
             SceneManager.LoadSceneAsync(Scenes.CharacterSelect.ToString());
         }
-
         public void LoadCharacterCustomize()
         {
             SceneManager.LoadSceneAsync(Scenes.CharacterCustomize.ToString());
+        }
+        public void LoadGameScene()
+        {
+            SceneManager.LoadSceneAsync(Scenes.GameScene.ToString());
         }
     }
 }
