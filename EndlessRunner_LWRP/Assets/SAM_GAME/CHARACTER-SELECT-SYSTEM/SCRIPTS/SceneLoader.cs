@@ -6,13 +6,13 @@ namespace EndlessRunning
     internal enum Scenes
     {
         CharacterSelect,
+        CharacterCustomize,
         GameScene,
         MainMenu,
     }
     public class SceneLoader : MonoBehaviour
     {
         public CharacterSelect GetSelectedCharacter;
-
         public void LoadGameScene()
         {
             if (GetSelectedCharacter.SelectedCharacter !=
@@ -29,6 +29,11 @@ namespace EndlessRunning
         public void LoadCharacterSelectScene()
         {
             SceneManager.LoadSceneAsync(Scenes.CharacterSelect.ToString());
+        }
+
+        public void LoadCharacterCustomize()
+        {
+            SceneManager.LoadSceneAsync(Scenes.CharacterCustomize.ToString());
         }
     }
 }

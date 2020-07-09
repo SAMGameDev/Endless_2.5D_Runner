@@ -49,6 +49,8 @@ namespace EndlessRunning
                  typeof(GameObject))) as GameObject;
 
                 player.transform.position = transform.position;
+
+                gameObject.SetActive(false);
             }
         }
     }

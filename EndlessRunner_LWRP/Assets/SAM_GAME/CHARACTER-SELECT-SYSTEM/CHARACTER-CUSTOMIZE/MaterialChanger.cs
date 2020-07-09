@@ -6,7 +6,6 @@ namespace EndlessRunning
     {
         [Header("Components")]
         public SkinnedMeshRenderer skinnedMesh;
-
         public CharacterSelect selectedCharacter;
         public CharacterControl control;
 
@@ -34,7 +33,8 @@ namespace EndlessRunning
                     arraycount = 0;
                 }
 
-                skinnedMesh.material = materials[arraycount];
+                skinnedMesh.material = materials[arraycount];              
+                Debug.LogWarning(arraycount);
             }
         }
         public void ClothChangeBackWards()
@@ -54,6 +54,7 @@ namespace EndlessRunning
                 }
 
                 skinnedMesh.material = materials[arraycount];
+                Debug.LogWarning(arraycount);
             }
         }
     }

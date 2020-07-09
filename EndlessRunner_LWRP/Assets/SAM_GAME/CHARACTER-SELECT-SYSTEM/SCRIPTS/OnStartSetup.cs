@@ -144,6 +144,8 @@ namespace EndlessRunning
                     break;
             }
             characterControl.isStarted = true;
+
+            gameObject.SetActive(false);
             // characterControl.gameObject.transform.position = gameObject.transform.position;
             #endregion
         }
