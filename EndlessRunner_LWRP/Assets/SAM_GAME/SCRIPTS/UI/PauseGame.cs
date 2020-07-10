@@ -5,18 +5,17 @@ namespace EndlessRunning
 {
     public class PauseGame : MonoBehaviour
     {
-        [SerializeField]
-        private CharacterControl control;
-
         public static bool GameIsPaused = false;
         public GameObject PauseMenu;
-        // Start is called before the first frame update
-        void Start()
+
+        public CharacterControl character;
+
+        private void Start()
         {
-            control = FindObjectOfType<CharacterControl>();
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            character = player.GetComponent<CharacterControl>();
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (Input.GetKeyUp(KeyCode.Escape))
@@ -29,33 +28,38 @@ namespace EndlessRunning
                 {
                     Pause();
                 }
-            }         
+            }
         }
-
-        public void Resume()
-        {
-            PauseMenu.SetActive(false);
-            Time.timeScale = 1f;
-            GameIsPaused = false;
-        }
-
         public void Pause()
         {
             PauseMenu.SetActive(true);
             Time.timeScale = 0f;
             GameIsPaused = true;
+            character.isStarted = false;
         }
-
+        public void Resume()
+        {
+            PauseMenu.SetActive(false);
+            Time.timeScale = 1f;
+            GameIsPaused = false;
+            character.isStarted = true;
+        }
         public void Restart()
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
             Time.timeScale = 1f;
             GameIsPaused = false;
         }
-
         public void QuitGame()
         {
             Application.Quit();
+        }
+        public void OnDisable()
+        {
+            if (Time.timeScale <= 0f)
+            {
+                Time.timeScale = 1f;
+            }
         }
     }
 }

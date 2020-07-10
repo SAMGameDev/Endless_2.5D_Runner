@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6585207866036754288}
   - component: {fileID: 7795700557044065833}
-  - component: {fileID: 4302341635983471134}
   m_Layer: 0
   m_Name: OnStartSetup
   m_TagString: Untagged
@@ -45,17 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSelect: {fileID: 11400000, guid: e24765b944e40084c8fe6579a68b3d98, type: 2}
-  Player: {fileID: 0}
-  CharacterModel_Transform: {fileID: 0}
---- !u!114 &4302341635983471134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6585207866036754284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e00eb95c6ce9d84fb2b7b871d282097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  characterControl: {fileID: 0}

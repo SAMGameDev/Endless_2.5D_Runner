@@ -10,7 +10,6 @@ namespace EndlessRunning
         private CharacterControl characterControl;
 
         //public Transform CharacterModel_Transform;
-
         public CharacterControl GetCharacterControl
         {
             get
@@ -144,8 +143,6 @@ namespace EndlessRunning
                     break;
             }
             characterControl.isStarted = true;
-
-            gameObject.SetActive(false);
             // characterControl.gameObject.transform.position = gameObject.transform.position;
             #endregion
         }
