@@ -4,11 +4,18 @@ namespace EndlessRunning
 {
     public class CharacterControlCache : MonoBehaviour
     {
-        public CharacterControl characterControl;
-        private void Start()
+        private CharacterControl characterControl;
+        public CharacterControl GetCharacterControl
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            characterControl = player.GetComponent<CharacterControl>();          
+            get
+            {
+                if (characterControl == null)
+                {
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    characterControl = player.GetComponent<CharacterControl>();
+                }
+                return characterControl;
+            }
         }
     }
 }

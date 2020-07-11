@@ -60,7 +60,7 @@ namespace EndlessRunning
         {
             yield return new WaitForSeconds(time);
 
-            if (CachedControl.characterControl.Death)
+            if (CachedControl.GetCharacterControl.Death)
             {
                 foreach (CinemachineVirtualCamera cams in VirtualCameras)
                 {
