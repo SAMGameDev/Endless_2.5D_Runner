@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace EndlessRunning
 {
@@ -36,6 +37,12 @@ namespace EndlessRunning
             //    CharacterModel_Transform.position = characterControl.transform.position;
             //}
             #endregion
+            StartCoroutine(ChangeAnimator(0.008f));
+        }
+
+        IEnumerator ChangeAnimator(float time)
+        {
+            yield return new WaitForSeconds(time);
 
             #region Change Animator
             // Changes Animator to gameplay animator
@@ -89,6 +96,8 @@ namespace EndlessRunning
             CachedControl.characterControl.isStarted = true;
             gameObject.SetActive(false);
             #endregion
+
+            StopCoroutine("FindCharacterControl");
         }
     }
 }
