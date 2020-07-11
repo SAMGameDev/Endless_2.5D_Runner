@@ -44,7 +44,7 @@ namespace EndlessRunning
         public float CenterUpdate_Speed_C;
         public bool UpdateNow;
 
-        [Header("SUB-COMPONENTS")]       
+        [Header("SUB-COMPONENTS")]
         public Animator anim;
         public CapsuleCollider cCollider;
         private Rigidbody rb;
@@ -145,9 +145,9 @@ namespace EndlessRunning
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
 
-            foreach (PlayerStateBase c in arr)
+            foreach (PlayerStateBase p in arr)
             {
-                c.characterControl = this;
+                p.characterControl = this;
             }
         }
         private void RegisterCharacter()

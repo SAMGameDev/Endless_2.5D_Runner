@@ -8,13 +8,7 @@ namespace EndlessRunning
         public static bool GameIsPaused = false;
         public GameObject PauseMenu;
 
-        public CharacterControl character;
-
-        private void Start()
-        {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            character = player.GetComponent<CharacterControl>();
-        }
+        [SerializeField] protected CharacterControlCache ControlCache;
 
         void Update()
         {
@@ -35,14 +29,14 @@ namespace EndlessRunning
             PauseMenu.SetActive(true);
             Time.timeScale = 0f;
             GameIsPaused = true;
-            character.isStarted = false;
+            ControlCache.characterControl.isStarted = false;
         }
         public void Resume()
         {
             PauseMenu.SetActive(false);
             Time.timeScale = 1f;
             GameIsPaused = false;
-            character.isStarted = true;
+            ControlCache.characterControl.isStarted = true;
         }
         public void Restart()
         {

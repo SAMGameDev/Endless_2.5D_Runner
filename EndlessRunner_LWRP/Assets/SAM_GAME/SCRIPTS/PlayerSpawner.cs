@@ -7,7 +7,7 @@ namespace EndlessRunning
         public CharacterSelect SelectedCharacter;
 
         private string objName;
-        private void OnEnable()
+        private void Awake()
         {
             //instansiting character in mainmenu according to saved data in SO,
             //LOADING DEPENDS ON INSTANSITING 

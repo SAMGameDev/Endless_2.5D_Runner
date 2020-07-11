@@ -14,8 +14,7 @@ namespace EndlessRunning
     public class CameraController : MonoBehaviour
     {
         [SerializeField] protected CinemachineVirtualCamera[] VirtualCameras;
-
-        [SerializeField] protected OnStartSetup onStartSetup;
+        [SerializeField] protected CharacterControlCache CachedControl;
 
         private Transform CamFollow;
 
@@ -36,6 +35,7 @@ namespace EndlessRunning
         public void Start()
         {
             InitialCameraSetUp();
+            StartCoroutine(CameraStopper(0.05f));
         }
 
         //assign follow object when game starts
@@ -53,8 +53,6 @@ namespace EndlessRunning
                 virtualCamera.LookAt = CamFollow;
                 virtualCamera.Follow = CamFollow;
             }
-
-            StartCoroutine(CameraStopper(0f));
         }
 
         //check if player is dead, if it is unassign follow object/ stop following
@@ -62,22 +60,21 @@ namespace EndlessRunning
         {
             yield return new WaitForSeconds(time);
 
-            if (onStartSetup.GetCharacterControl.Death)
+            if (CachedControl.characterControl.Death)
             {
-                foreach (CinemachineVirtualCamera virtualCamera in VirtualCameras)
+                foreach (CinemachineVirtualCamera cams in VirtualCameras)
                 {
-                    if (virtualCamera.LookAt != null && virtualCamera.Follow != null)
+                    if (cams.LookAt != null && cams.Follow != null)
                     {
-                        virtualCamera.LookAt = null;
-                        virtualCamera.Follow = null;
+                        cams.LookAt = null;
+                        cams.Follow = null;
                     }
                 }
-                onStartSetup.GetCharacterControl.Death = false;
                 StopAllCoroutines();
             }
             else
             {
-                StartCoroutine(CameraStopper(0.2f));
+                StartCoroutine(CameraStopper(0.15f));
             }
         }
         public void TriggerCamera(CameraTriggers trigger)
