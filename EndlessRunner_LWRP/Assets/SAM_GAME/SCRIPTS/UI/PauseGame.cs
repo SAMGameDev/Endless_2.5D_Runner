@@ -6,7 +6,7 @@ namespace EndlessRunning
     public class PauseGame : MonoBehaviour
     {
         public static bool GameIsPaused = false;
-        public GameObject PauseMenu;
+        [SerializeField] protected GameObject PauseMenu;
 
         [SerializeField] protected CharacterControlCache ControlCache;
 
