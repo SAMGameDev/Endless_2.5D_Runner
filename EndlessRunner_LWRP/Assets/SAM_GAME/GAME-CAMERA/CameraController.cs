@@ -36,6 +36,7 @@ namespace EndlessRunning
         {
             InitialCameraSetUp();
             StartCoroutine(CameraStopper(0.05f));
+
         }
 
         //assign follow object when game starts
