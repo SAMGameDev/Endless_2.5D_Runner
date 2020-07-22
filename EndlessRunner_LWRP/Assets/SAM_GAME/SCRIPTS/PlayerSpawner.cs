@@ -44,7 +44,6 @@ namespace EndlessRunning
                         objName = "William";
                         break;
                 }
-
                 GameObject player = Instantiate(Resources.Load(objName,
                  typeof(GameObject))) as GameObject;
 
