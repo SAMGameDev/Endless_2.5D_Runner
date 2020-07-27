@@ -4,12 +4,14 @@ namespace EndlessRunning
 {
     public class PlayerSpawner : MonoBehaviour
     {
-        public CharacterSelect SelectedCharacter;
+        [SerializeField]
+        protected CharacterSelect SelectedCharacter;
 
         private string objName;
         private void Awake()
         {
-            //instansiting character in mainmenu according to saved data in SO,
+            //instansiting character in MainMenu (ALSO IN GAME SCENE)
+            //according to saved data in SO,
             //LOADING DEPENDS ON INSTANSITING 
 
             if (SelectedCharacter.SelectedCharacter != PlayableCharacterTypes.NONE)

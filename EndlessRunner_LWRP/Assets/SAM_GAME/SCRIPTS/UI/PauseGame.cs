@@ -5,11 +5,9 @@ namespace EndlessRunning
 {
     public class PauseGame : MonoBehaviour
     {
-        public static bool GameIsPaused = false;
+        private static bool GameIsPaused = false;
         [SerializeField] protected GameObject PauseMenu;
-
-        [SerializeField] protected CharacterControlCache ControlCache;
-
+        [SerializeField] protected CacheCharacterControl ControlCache;
         void Update()
         {
             if (Input.GetKeyUp(KeyCode.Escape))

@@ -14,7 +14,7 @@ namespace EndlessRunning
     public class CameraController : MonoBehaviour
     {
         [SerializeField] protected CinemachineVirtualCamera[] VirtualCameras;
-        [SerializeField] protected CharacterControlCache CachedControl;
+        [SerializeField] protected CacheCharacterControl CachedControl;
 
         private Transform CamFollow;
 

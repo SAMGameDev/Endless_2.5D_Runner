@@ -79,6 +79,8 @@ namespace EndlessRunning
             UpdateCenter();
             UpdateSize();
         }
+
+        #region Gravity Apply
         private void ApplyGravity()
         {
             if (RIGIDBODY.velocity.y < 0)
@@ -86,8 +88,10 @@ namespace EndlessRunning
                 RIGIDBODY.velocity += (Vector3.down * GravityMultipier);
             }
         }
+        #endregion
 
         #region OnTrigger
+        // Death With On Trigger when there's no surface Under Player
         private void OnTriggerEnter(Collider other)
         {
             if (other.isTrigger && other.gameObject.CompareTag("Obsticel"))
@@ -98,6 +102,7 @@ namespace EndlessRunning
         #endregion
 
         #region OnCollision
+        // DEATH WHEN PLAYER COLLIDE WITH ANY OBSTECLE
         private void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.CompareTag("Obsticel"))
@@ -118,6 +123,10 @@ namespace EndlessRunning
             isGrounded = false;
         }
         #endregion
+
+        #region Update Collider on Runtime
+
+        //UPDATE COLLIDERS (SIZE AND CENTER) WHEN PLAYER JUMPS, FALLS, SLIDE ETC
         private void UpdateCenter()
         {
             if (!UpdateNow)
@@ -141,6 +150,12 @@ namespace EndlessRunning
                 cCollider.height = targetHieght;
             }
         }
+        #endregion
+
+        #region Caching CharacterControl in playerStateBase
+
+        // THIS FUNCTION GETTING ALL PLAYERSTATEBASE AND FILLING CHARACTERCONTROL VARIABLE
+        // IN ALL PLAYERSTATEBASE WITH THIS SCRIPT (CHARACTERcONTROL)
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
@@ -150,6 +165,7 @@ namespace EndlessRunning
                 p.characterControl = this;
             }
         }
+        #endregion
         private void RegisterCharacter()
         {
             if (!CharacterManger.Instance.characters.Contains(this))
