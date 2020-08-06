@@ -186,7 +186,6 @@ namespace EndlessRunning
                 CharacterManger.Instance.characters.Add(this);
             }
         }
-
         void SpherePosCalculator()
         {
             float top = cCollider.bounds.center.y + (cCollider.bounds.size.y / 2);
