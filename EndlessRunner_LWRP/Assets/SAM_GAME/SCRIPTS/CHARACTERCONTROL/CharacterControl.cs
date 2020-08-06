@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace EndlessRunning
 {
@@ -27,6 +28,8 @@ namespace EndlessRunning
         public bool Dash;
         public bool StartRun;
         public bool Slide;
+
+        [Header("Extra_Bools")]
         public bool isStarted = false;
 
         [Header("DETECTORS")]
@@ -49,6 +52,10 @@ namespace EndlessRunning
         public CapsuleCollider cCollider;
         private Rigidbody rb;
 
+        [Header("RayCast")]
+        public GameObject edgeSphere;
+        public List<GameObject> spheres = new List<GameObject>();
+
         public Rigidbody RIGIDBODY
         {
             get
@@ -66,12 +73,18 @@ namespace EndlessRunning
             StartRun = false;
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
+            SpherePosCalculator();
             RegisterCharacter();
         }
 
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
+        }
+
+        private void Update()
+        {
+            Time.timeScale = 0.1f;
         }
         private void FixedUpdate()
         {
@@ -103,13 +116,13 @@ namespace EndlessRunning
 
         #region OnCollision
         // DEATH WHEN PLAYER COLLIDE WITH ANY OBSTECLE
-        private void OnCollisionEnter(Collision other)
-        {
-            if (other.gameObject.CompareTag("Obsticel"))
-            {
-                Death = true;
-            }
-        }
+        //private void OnCollisionEnter(Collision other)
+        //{
+        //    if (other.gameObject.CompareTag("Obsticel"))
+        //    {
+        //        Death = true;
+        //    }
+        //}
         private void OnCollisionStay(Collision other)
         {
             if (other.gameObject.CompareTag("Ground")
@@ -172,6 +185,41 @@ namespace EndlessRunning
             {
                 CharacterManger.Instance.characters.Add(this);
             }
+        }
+
+        void SpherePosCalculator()
+        {
+            float top = cCollider.bounds.center.y + (cCollider.bounds.size.y / 2);
+            float bottom = cCollider.bounds.center.y - (cCollider.bounds.size.y / 2);
+            float front = cCollider.bounds.center.z + (cCollider.bounds.size.z / 2);
+
+            GameObject topSphere = CreateEdgeSpheres(new Vector3(0f, top, front));
+            GameObject bottomSphere = CreateEdgeSpheres(new Vector3(0f, bottom, front));
+
+            topSphere.transform.parent = transform;
+            bottomSphere.transform.parent = transform;
+
+            spheres.Add(topSphere);
+            spheres.Add(bottomSphere);
+
+            float section = (topSphere.transform.position - bottomSphere.transform.position).magnitude / 4f;
+
+            for (int i = 0; i < 4; ++i)
+            {
+                Vector3 pos = topSphere.transform.position + (Vector3.down * section * (i + 1));
+
+                GameObject middleSpheres = CreateEdgeSpheres(pos);
+
+                middleSpheres.transform.parent = transform;
+
+                spheres.Add(middleSpheres);
+            }
+
+        }
+        GameObject CreateEdgeSpheres(Vector3 pos)
+        {
+            GameObject obj = Instantiate(edgeSphere, pos, Quaternion.identity);
+            return obj;
         }
     }
 }
