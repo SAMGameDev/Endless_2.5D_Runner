@@ -52,9 +52,9 @@ namespace EndlessRunning
         public CapsuleCollider cCollider;
         private Rigidbody rb;
 
-        [Header("RayCast")]
-        public GameObject edgeSphere;
-        public List<GameObject> spheres = new List<GameObject>();
+        //[Header("RayCast")]
+        //public GameObject edgeSphere;
+        //public List<GameObject> spheres = new List<GameObject>();
 
         public Rigidbody RIGIDBODY
         {
@@ -73,7 +73,6 @@ namespace EndlessRunning
             StartRun = false;
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
-            SpherePosCalculator();
             RegisterCharacter();
         }
 
@@ -129,6 +128,10 @@ namespace EndlessRunning
                 || other.gameObject.CompareTag("Slope"))
             {
                 isGrounded = true;
+            }
+            if (other.gameObject.CompareTag("Obsticel"))
+            {
+                Death = true;
             }
         }
         private void OnCollisionExit()
@@ -186,39 +189,42 @@ namespace EndlessRunning
                 CharacterManger.Instance.characters.Add(this);
             }
         }
-        void SpherePosCalculator()
-        {
-            float top = cCollider.bounds.center.y + (cCollider.bounds.size.y / 2);
-            float bottom = cCollider.bounds.center.y - (cCollider.bounds.size.y / 2);
-            float front = cCollider.bounds.center.z + (cCollider.bounds.size.z / 2);
 
-            GameObject topSphere = CreateEdgeSpheres(new Vector3(0f, top, front));
-            GameObject bottomSphere = CreateEdgeSpheres(new Vector3(0f, bottom, front));
+        #region RayCast Death TestCode
+        //void SpherePosCalculator()
+        //{
+        //    float top = cCollider.bounds.center.y + (cCollider.bounds.size.y / 2);
+        //    float bottom = cCollider.bounds.center.y - (cCollider.bounds.size.y / 2);
+        //    float front = cCollider.bounds.center.z + (cCollider.bounds.size.z / 2);
 
-            topSphere.transform.parent = transform;
-            bottomSphere.transform.parent = transform;
+        //    GameObject topSphere = CreateEdgeSpheres(new Vector3(0f, top, front));
+        //    GameObject bottomSphere = CreateEdgeSpheres(new Vector3(0f, bottom, front));
 
-            spheres.Add(topSphere);
-            spheres.Add(bottomSphere);
+        //    topSphere.transform.parent = transform;
+        //    bottomSphere.transform.parent = transform;
 
-            float section = (topSphere.transform.position - bottomSphere.transform.position).magnitude / 4f;
+        //    spheres.Add(topSphere);
+        //    spheres.Add(bottomSphere);
 
-            for (int i = 0; i < 4; ++i)
-            {
-                Vector3 pos = topSphere.transform.position + (Vector3.down * section * (i + 1));
+        //    float section = (topSphere.transform.position - bottomSphere.transform.position).magnitude / 4f;
 
-                GameObject middleSpheres = CreateEdgeSpheres(pos);
+        //    for (int i = 0; i < 4; ++i)
+        //    {
+        //        Vector3 pos = topSphere.transform.position + (Vector3.down * section * (i + 1));
 
-                middleSpheres.transform.parent = transform;
+        //        GameObject middleSpheres = CreateEdgeSpheres(pos);
 
-                spheres.Add(middleSpheres);
-            }
+        //        middleSpheres.transform.parent = transform;
 
-        }
-        GameObject CreateEdgeSpheres(Vector3 pos)
-        {
-            GameObject obj = Instantiate(edgeSphere, pos, Quaternion.identity);
-            return obj;
-        }
+        //        spheres.Add(middleSpheres);
+        //    }
+
+        //}
+        //GameObject CreateEdgeSpheres(Vector3 pos)
+        //{
+        //    GameObject obj = Instantiate(edgeSphere, pos, Quaternion.identity);
+        //    return obj;
+        //}
+        #endregion
     }
 }

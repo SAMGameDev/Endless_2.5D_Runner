@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 namespace EndlessRunning
 {
@@ -11,37 +12,35 @@ namespace EndlessRunning
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (Die(playerStateBase.characterControl))
-            {
-                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], true);
-            }
-            else
-            {
-                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], false);
-            }
+            //if (Die(playerStateBase.characterControl))
+            //{
+            //    Debug.LogWarning("RayCast worked");
+            //    animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], true);
+               
+            //}
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }
 
-        bool Die(CharacterControl control)
-        {
-            foreach (GameObject o in control.spheres)
-            {
-                RaycastHit hitInfo;
+        //bool Die(CharacterControl control)
+        //{
+        //    foreach (GameObject o in control.spheres)
+        //    {
+        //        RaycastHit hitInfo;
 
-                Debug.DrawRay(o.transform.position, Vector3.forward * 1f, Color.yellow, 0.01f);
+        //        Debug.DrawRay(o.transform.position, Vector3.forward * 1f, Color.yellow, 0.01f);
 
-                if (Physics.Raycast(o.transform.position, Vector3.forward, out hitInfo, rayDist))
-                {
-                    if (hitInfo.collider.gameObject.tag == "Obsticel")
-                    {
-                        return true;
-                    }
-                }
-            }
-            return false;
+        //        if (Physics.Raycast(o.transform.position, Vector3.forward, out hitInfo, rayDist))
+        //        {
+        //            if (hitInfo.collider.gameObject.tag == "Obsticel")
+        //            {
+        //                return true;
+        //            }
+        //        }
+        //    }
+        //    return false;
 
-        }
+        //}
     }
 }

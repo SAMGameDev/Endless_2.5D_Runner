@@ -356,7 +356,7 @@ AnimatorStateMachine:
     m_Position: {x: -310, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2370731593176621238}
-    m_Position: {x: -340, y: 40, z: 0}
+    m_Position: {x: -230, y: 10, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 5004502809453923652}
@@ -371,11 +371,11 @@ AnimatorStateMachine:
   - {fileID: 2336092912445452234}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 5004502809453923652}
-    second: []
   - first: {fileID: -8849790823568524052}
     second: []
   - first: {fileID: 322122364469334475}
+    second: []
+  - first: {fileID: 5004502809453923652}
     second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -470, y: -50, z: 0}
@@ -509,7 +509,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2300df8b518427147b3c32f14b811ad3, type: 2}
   - {fileID: 11400000, guid: 2f90b39e9a4f3ff42813375074711c0f, type: 2}
   - {fileID: 11400000, guid: a9d82587ec326ce4184091aa43c3f535, type: 2}
-  - {fileID: 11400000, guid: 44ced53b4c86b204dbed43314c589a1a, type: 2}
   characterControl: {fileID: 0}
 --- !u!1101 &-1638045696874038690
 AnimatorStateTransition:
@@ -692,49 +691,49 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Jump
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: DoubleJump
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Dash
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Slide
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Die
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ForceTransition
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: StartRun
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -906,9 +905,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.0033564568
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.9943894
+  m_ExitTime: 0.9997837
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
