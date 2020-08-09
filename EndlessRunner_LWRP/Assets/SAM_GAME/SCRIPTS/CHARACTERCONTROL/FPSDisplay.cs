@@ -1,27 +1,29 @@
-﻿using EndlessRunning;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class FPSDisplay : MonoBehaviour
+namespace EndlessRunning
 {
-    private float deltaTime = 0.0f;
-    
-    private void Update()
+    public class FPSDisplay : MonoBehaviour
     {
-        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
-    }
-    private void OnGUI()
-    {
-        int w = Screen.width, h = Screen.height;
+        private float deltaTime = 0.0f;
 
-        GUIStyle style = new GUIStyle();
+        private void Update()
+        {
+            deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+        }
+        private void OnGUI()
+        {
+            int w = Screen.width, h = Screen.height;
 
-        Rect rect = new Rect(0, 0, w, h * 2 / 100);
-        style.alignment = TextAnchor.UpperCenter;
-        style.fontSize = h * 3 / 100;
-        style.normal.textColor = Color.red; //new Color(5f, 5f, 5f, 1.0f);
-        float msec = deltaTime * 1000.0f;
-        float fps = 1.0f / deltaTime;
-        string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
-        GUI.Label(rect, text, style);
+            GUIStyle style = new GUIStyle();
+
+            Rect rect = new Rect(0, 0, w, h * 2 / 100);
+            style.alignment = TextAnchor.UpperCenter;
+            style.fontSize = h * 3 / 100;
+            style.normal.textColor = Color.red; //new Color(5f, 5f, 5f, 1.0f);
+            float msec = deltaTime * 1000.0f;
+            float fps = 1.0f / deltaTime;
+            string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
+            GUI.Label(rect, text, style);
+        }
     }
 }

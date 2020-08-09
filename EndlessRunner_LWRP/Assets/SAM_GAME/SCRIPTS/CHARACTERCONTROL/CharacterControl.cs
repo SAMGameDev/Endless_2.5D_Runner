@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
 namespace EndlessRunning
 {
@@ -51,11 +50,6 @@ namespace EndlessRunning
         public Animator anim;
         public CapsuleCollider cCollider;
         private Rigidbody rb;
-
-        //[Header("RayCast")]
-        //public GameObject edgeSphere;
-        //public List<GameObject> spheres = new List<GameObject>();
-
         public Rigidbody RIGIDBODY
         {
             get
@@ -79,11 +73,6 @@ namespace EndlessRunning
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
-        }
-
-        private void Update()
-        {
-            Time.timeScale = 0.1f;
         }
         private void FixedUpdate()
         {
@@ -115,13 +104,13 @@ namespace EndlessRunning
 
         #region OnCollision
         // DEATH WHEN PLAYER COLLIDE WITH ANY OBSTECLE
-        //private void OnCollisionEnter(Collision other)
-        //{
-        //    if (other.gameObject.CompareTag("Obsticel"))
-        //    {
-        //        Death = true;
-        //    }
-        //}
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Obsticel"))
+            {
+                Death = true;
+            }
+        }
         private void OnCollisionStay(Collision other)
         {
             if (other.gameObject.CompareTag("Ground")
@@ -129,14 +118,11 @@ namespace EndlessRunning
             {
                 isGrounded = true;
             }
-            if (other.gameObject.CompareTag("Obsticel"))
-            {
-                Death = true;
-            }
         }
         private void OnCollisionExit()
         {
             isGrounded = false;
+            Death = false;
         }
         #endregion
 
@@ -182,6 +168,8 @@ namespace EndlessRunning
             }
         }
         #endregion
+
+        #region Register CharacterControl In Manger
         private void RegisterCharacter()
         {
             if (!CharacterManger.Instance.characters.Contains(this))
@@ -189,6 +177,7 @@ namespace EndlessRunning
                 CharacterManger.Instance.characters.Add(this);
             }
         }
+        #endregion
 
         #region RayCast Death TestCode
         //void SpherePosCalculator()

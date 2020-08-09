@@ -7,7 +7,6 @@ namespace EndlessRunning
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase
             playerStateBase.characterControl.Death = false;
             animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], false);
             CameraManger.Instance.ShakeCamera(0.3f);
