@@ -178,42 +178,5 @@ namespace EndlessRunning
             }
         }
         #endregion
-
-        #region RayCast Death TestCode
-        //void SpherePosCalculator()
-        //{
-        //    float top = cCollider.bounds.center.y + (cCollider.bounds.size.y / 2);
-        //    float bottom = cCollider.bounds.center.y - (cCollider.bounds.size.y / 2);
-        //    float front = cCollider.bounds.center.z + (cCollider.bounds.size.z / 2);
-
-        //    GameObject topSphere = CreateEdgeSpheres(new Vector3(0f, top, front));
-        //    GameObject bottomSphere = CreateEdgeSpheres(new Vector3(0f, bottom, front));
-
-        //    topSphere.transform.parent = transform;
-        //    bottomSphere.transform.parent = transform;
-
-        //    spheres.Add(topSphere);
-        //    spheres.Add(bottomSphere);
-
-        //    float section = (topSphere.transform.position - bottomSphere.transform.position).magnitude / 4f;
-
-        //    for (int i = 0; i < 4; ++i)
-        //    {
-        //        Vector3 pos = topSphere.transform.position + (Vector3.down * section * (i + 1));
-
-        //        GameObject middleSpheres = CreateEdgeSpheres(pos);
-
-        //        middleSpheres.transform.parent = transform;
-
-        //        spheres.Add(middleSpheres);
-        //    }
-
-        //}
-        //GameObject CreateEdgeSpheres(Vector3 pos)
-        //{
-        //    GameObject obj = Instantiate(edgeSphere, pos, Quaternion.identity);
-        //    return obj;
-        //}
-        #endregion
     }
 }

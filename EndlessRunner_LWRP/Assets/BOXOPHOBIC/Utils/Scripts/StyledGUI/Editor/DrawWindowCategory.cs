@@ -1,12 +1,12 @@
 ﻿// Cristian Pop - https://boxophobic.com/
 
-using UnityEngine;
-using UnityEditor;
 using Boxophobic.Constants;
+using UnityEditor;
+using UnityEngine;
 
 namespace Boxophobic.StyledGUI
 {
-    public partial class StyledGUI 
+    public partial class StyledGUI
     {
         public static void DrawWindowCategory(string bannerText)
         {

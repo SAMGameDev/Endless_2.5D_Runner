@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
 namespace EndlessRunning
 {
@@ -10,7 +9,7 @@ namespace EndlessRunning
         public AudioClip Land;
         public AudioClip Dash;
         public AudioClip[] grunts;
-        
+
         [Header("Components")]
         public AudioSource source;
         public CharacterControl control;
@@ -57,8 +56,8 @@ namespace EndlessRunning
                         source.PlayOneShot(grunts[1]);
                     }
                     break;
-            }           
-        }       
+            }
+        }
     }
 }
 

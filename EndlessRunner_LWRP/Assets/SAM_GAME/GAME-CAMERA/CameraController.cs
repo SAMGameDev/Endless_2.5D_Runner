@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using Cinemachine;
+﻿using Cinemachine;
 using System.Collections;
+using UnityEngine;
 
 namespace EndlessRunning
 {

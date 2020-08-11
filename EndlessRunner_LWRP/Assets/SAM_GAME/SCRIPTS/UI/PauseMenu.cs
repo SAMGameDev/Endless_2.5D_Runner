@@ -3,10 +3,10 @@ using UnityEngine.SceneManagement;
 
 namespace EndlessRunning
 {
-    public class PauseGame : MonoBehaviour
+    public class PauseMenu : MonoBehaviour
     {
         private static bool GameIsPaused = false;
-        [SerializeField] protected GameObject PauseMenu;
+        [SerializeField] protected GameObject PauseMenu_gameobject;
         [SerializeField] protected CacheCharacterControl ControlCache;
         void Update()
         {
@@ -24,21 +24,21 @@ namespace EndlessRunning
         }
         public void Pause()
         {
-            PauseMenu.SetActive(true);
+            PauseMenu_gameobject.SetActive(true);
             Time.timeScale = 0f;
             GameIsPaused = true;
             ControlCache.GetCharacterControl.isStarted = false;
         }
         public void Resume()
         {
-            PauseMenu.SetActive(false);
+            PauseMenu_gameobject.SetActive(false);
             Time.timeScale = 1f;
             GameIsPaused = false;
             ControlCache.GetCharacterControl.isStarted = true;
         }
         public void Restart()
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadSceneAsync(Scenes.GameScene.ToString());
             Time.timeScale = 1f;
             GameIsPaused = false;
         }

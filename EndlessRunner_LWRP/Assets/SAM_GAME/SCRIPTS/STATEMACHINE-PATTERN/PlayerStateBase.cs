@@ -15,7 +15,7 @@ namespace EndlessRunning
             if (characterControl == null)
             {
                 CharacterControl control = animator.transform.root.GetComponent<CharacterControl>();
-                control.CacheCharacterControl(animator);              
+                control.CacheCharacterControl(animator);
             }
 
             foreach (ScriptableObjectData d in scriptableObjectDatas)

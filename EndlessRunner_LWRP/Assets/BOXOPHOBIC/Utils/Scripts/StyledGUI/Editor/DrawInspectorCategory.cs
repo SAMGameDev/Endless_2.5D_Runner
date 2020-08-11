@@ -1,16 +1,16 @@
 ﻿// Cristian Pop - https://boxophobic.com/
 
-using UnityEngine;
-using UnityEditor;
 using Boxophobic.Constants;
+using UnityEditor;
+using UnityEngine;
 
 namespace Boxophobic.StyledGUI
 {
-    public partial class StyledGUI 
+    public partial class StyledGUI
     {
         public static void DrawInspectorCategory(Rect position, string bannerText)
         {
-            var categoryFullRect = new Rect(position.position.x, position.position.y + 10, position.width, position.height);            
+            var categoryFullRect = new Rect(position.position.x, position.position.y + 10, position.width, position.height);
             var categoryBeginRect = new Rect(categoryFullRect.position.x, categoryFullRect.position.y, 10, 20);
             var categoryMiddleRect = new Rect(categoryFullRect.position.x + 10, categoryFullRect.position.y, categoryFullRect.xMax - 32, 20);
             var categoryEndRect = new Rect(categoryFullRect.xMax - 10, categoryFullRect.position.y, 10, 20);

@@ -7,7 +7,7 @@ namespace EndlessRunning
     {
         public string name;
         public bool loop;
-        
+
         [Range(0, 1)]
         public float volume;
 

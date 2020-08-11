@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace EndlessRunning
 {
-    internal enum Scenes
+    public enum Scenes
     {
         CharacterSelect,
         CharacterCustomize,

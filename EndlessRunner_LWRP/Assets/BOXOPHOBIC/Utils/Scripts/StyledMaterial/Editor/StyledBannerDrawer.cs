@@ -1,8 +1,8 @@
 ﻿// Cristian Pop - https://boxophobic.com/
 
-using UnityEngine;
-using UnityEditor;
 using Boxophobic.Constants;
+using UnityEditor;
+using UnityEngine;
 
 namespace Boxophobic.StyledGUI
 {
@@ -82,7 +82,7 @@ namespace Boxophobic.StyledGUI
             }
 #else
             if (GUI.Button(iconRect, CONSTANT.IconEdit, new GUIStyle { alignment = TextAnchor.MiddleCenter }))
-            {     
+            {
                 AssetDatabase.OpenAsset(Shader.Find(shader.name), 1);
             }
 #endif

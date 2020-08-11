@@ -1,7 +1,7 @@
 ﻿// Cristian Pop - https://boxophobic.com/
 
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Boxophobic.StyledGUI
 {
@@ -22,7 +22,7 @@ namespace Boxophobic.StyledGUI
                 {
                     allLayers[i] = "Missing";
                 }
-                else 
+                else
                 {
                     allLayers[i] = LayerMask.LayerToName(i);
                 }

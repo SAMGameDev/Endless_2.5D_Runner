@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using Boxophobic.StyledGUI;
+﻿using Boxophobic.StyledGUI;
+using UnityEngine;
 
 [StyledMonoHideScriptField]
 public class StyledMonoBehaviour : MonoBehaviour

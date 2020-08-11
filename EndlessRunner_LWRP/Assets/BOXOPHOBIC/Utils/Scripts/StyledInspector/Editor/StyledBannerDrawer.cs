@@ -1,8 +1,8 @@
 ﻿// Cristian Pop - https://boxophobic.com/
 
-using UnityEngine;
-using UnityEditor;
 using Boxophobic.Constants;
+using UnityEditor;
+using UnityEngine;
 
 namespace Boxophobic.StyledGUI
 {
@@ -48,7 +48,7 @@ namespace Boxophobic.StyledGUI
                 {
                     bannerColor = new Color(a.colorR, a.colorG, a.colorB, 1f);
                     guiColor = CONSTANT.ColorDarkGray;
-                }                
+                }
             }
             else
             {
