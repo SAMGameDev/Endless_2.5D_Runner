@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 namespace EndlessRunning
 {
@@ -61,6 +62,7 @@ namespace EndlessRunning
                 return rb;
             }
         }
+        #region Unity Default Methods
         private void Awake()
         {
             Death = false;
@@ -69,17 +71,19 @@ namespace EndlessRunning
             cCollider = GetComponent<CapsuleCollider>();
             RegisterCharacter();
         }
-
-        public void RunForward(float speed)
-        {
-            RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
-        }
         private void FixedUpdate()
         {
             ApplyGravity();
             UpdateCenter();
             UpdateSize();
         }
+        #endregion
+        #region RunForward
+        public void RunForward(float speed)
+        {
+            RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
+        }
+        #endregion
 
         #region Gravity Apply
         private void ApplyGravity()
