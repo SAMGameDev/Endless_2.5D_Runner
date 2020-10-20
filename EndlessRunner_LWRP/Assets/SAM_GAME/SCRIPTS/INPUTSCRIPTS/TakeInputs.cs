@@ -26,20 +26,16 @@ namespace EndlessRunning
                         characterControl.StartRun = true;
                     }
 
-                    if (Input.mousePosition.y >= splitScreenY &&
-                        Input.mousePosition.x <= splitScreenX
-                        || Input.GetKeyDown(KeyCode.Space))
+                    if (Input.mousePosition.y >= splitScreenY && Input.mousePosition.x <= splitScreenX)
                     {
                         characterControl.Jump = true;
                     }
-                    else if (Input.mousePosition.y < splitScreenY &&
-                    Input.mousePosition.x <= splitScreenX
-                    || Input.GetKeyDown(KeyCode.DownArrow))
+                    else if (Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
                     {
                         characterControl.Slide = true;
                         StartCoroutine(TurnOff(0.25f));
                     }
-                    else if (Input.mousePosition.x > splitScreenX || Input.GetKeyDown(KeyCode.RightArrow))
+                    else if (Input.mousePosition.x > splitScreenX)
                     {
                         characterControl.Dash = true;
                     }
