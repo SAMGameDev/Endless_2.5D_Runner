@@ -34,7 +34,6 @@ namespace EndlessRunning
 
         [Header("DETECTORS")]
         public bool isGrounded = true;
-        public bool isDoubleJumping = false;
         public bool Death;
 
         [Header("FLOATS")]
@@ -71,6 +70,12 @@ namespace EndlessRunning
             cCollider = GetComponent<CapsuleCollider>();
             RegisterCharacter();
         }
+
+        private void Update()
+        {
+            Time.timeScale = 1f;
+        }
+
         private void FixedUpdate()
         {
             ApplyGravity();
