@@ -35,7 +35,7 @@ namespace EndlessRunning
         public void Start()
         {
             InitialCameraSetUp();
-            StartCoroutine(CameraStopper(0.05f));
+            StartCoroutine(CameraStopper(0.03f));
 
         }
 
@@ -71,11 +71,10 @@ namespace EndlessRunning
                         cams.Follow = null;
                     }
                 }
-                StopAllCoroutines();
             }
             else
             {
-                StartCoroutine(CameraStopper(0.15f));
+                StartCoroutine(CameraStopper(0.03f));
             }
         }
         public void TriggerCamera(CameraTriggers trigger)
