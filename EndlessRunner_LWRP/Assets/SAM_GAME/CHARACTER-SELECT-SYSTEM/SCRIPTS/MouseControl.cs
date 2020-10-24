@@ -22,7 +22,7 @@ namespace EndlessRunning
 
                 if (control != null)
                 {
-                    selectedCharacter = control.Type;
+                    selectedCharacter = control.type;
                 }
                 else
                 {
@@ -47,7 +47,7 @@ namespace EndlessRunning
 
                 foreach (CharacterControl c in CharacterManger.Instance.characters)
                 {
-                    if (c.Type == selectedCharacter)
+                    if (c.type == selectedCharacter)
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], true);

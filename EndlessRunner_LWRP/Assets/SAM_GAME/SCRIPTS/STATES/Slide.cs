@@ -10,14 +10,14 @@ namespace EndlessRunning
         protected float Transitions;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CameraManger.Instance.camController.ANIMATOR.SetTrigger(CameraTriggers.Slide.ToString());
+            CameraManger.Instance.camController.animator.SetTrigger(CameraTriggers.Slide.ToString());
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             if (stateInfo.normalizedTime >= Transitions)
             {
-                CameraManger.Instance.camController.ANIMATOR.SetTrigger(CameraTriggers.Default.ToString());
+                CameraManger.Instance.camController.animator.SetTrigger(CameraTriggers.Default.ToString());
             }
         }
 

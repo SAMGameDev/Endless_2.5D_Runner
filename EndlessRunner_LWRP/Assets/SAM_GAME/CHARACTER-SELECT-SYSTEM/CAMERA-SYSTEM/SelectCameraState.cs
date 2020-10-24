@@ -4,8 +4,8 @@ namespace EndlessRunning
 {
     public class SelectCameraState : StateMachineBehaviour
     {
-        override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-        {
+         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) 
+         {
             PlayableCharacterTypes[] arr = System.Enum.GetValues
                 (typeof(PlayableCharacterTypes)) as PlayableCharacterTypes[];
 
@@ -13,6 +13,6 @@ namespace EndlessRunning
             {
                 animator.SetBool(p.ToString(), false);
             }
-        }
+         }
     }
 }

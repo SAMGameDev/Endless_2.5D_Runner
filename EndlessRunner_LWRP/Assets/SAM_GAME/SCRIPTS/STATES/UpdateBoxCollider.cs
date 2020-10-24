@@ -19,7 +19,7 @@ namespace EndlessRunning
             playerStateBase.characterControl.UpdateNow = true;
 
             playerStateBase.characterControl.targetCenter_C = targetCenter;
-            playerStateBase.characterControl.targetHieght = targetHieght;
+            playerStateBase.characterControl.targetHeight = targetHieght;
             playerStateBase.characterControl.CenterUpdate_Speed_C = CenterUpdate_Speed;
         }
 

@@ -10,7 +10,7 @@ namespace EndlessRunning
         {
             foreach (CharacterControl control in characters)
             {
-                if (control.Type == characterTypes)
+                if (control.type == characterTypes)
                 {
                     return control;
                 }

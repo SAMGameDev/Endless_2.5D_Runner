@@ -11,7 +11,7 @@ namespace EndlessRunning
 
             foreach (CameraTriggers t in arr)
             {
-                CameraManger.Instance.CAMERACONTROLLER.ANIMATOR.ResetTrigger(t.ToString());
+                CameraManger.Instance.CAMERACONTROLLER.animator.ResetTrigger(t.ToString());
             }
         }
 
@@ -22,7 +22,7 @@ namespace EndlessRunning
                 if (stateInfo.IsName("Shake"))
                 {
                     CameraManger.Instance.
-                        CAMERACONTROLLER.ANIMATOR.SetTrigger(CameraTriggers.Default.ToString());
+                        CAMERACONTROLLER.animator.SetTrigger(CameraTriggers.Default.ToString());
                 }
             }
         }

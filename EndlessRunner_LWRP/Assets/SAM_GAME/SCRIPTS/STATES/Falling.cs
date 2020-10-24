@@ -15,17 +15,17 @@ namespace EndlessRunning
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.GravityMultipier = gravity.Evaluate(stateInfo.normalizedTime);
+            playerStateBase.characterControl.gravityMultiplier = gravity.Evaluate(stateInfo.normalizedTime);
 
             if (stateInfo.normalizedTime >= transition)
             {
-                CameraManger.Instance.CAMERACONTROLLER.ANIMATOR.SetTrigger
+                CameraManger.Instance.CAMERACONTROLLER.animator.SetTrigger
                     (CameraTriggers.Default.ToString());
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.GravityMultipier = 0f;
+            playerStateBase.characterControl.gravityMultiplier = 0f;
         }
     }
 }

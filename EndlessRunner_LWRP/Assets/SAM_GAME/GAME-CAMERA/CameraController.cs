@@ -1,6 +1,7 @@
 ﻿using Cinemachine;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace EndlessRunning
 {
@@ -12,42 +13,29 @@ namespace EndlessRunning
         Jump,
     }
     public class CameraController : MonoBehaviour
-    {
-        [SerializeField] protected CinemachineVirtualCamera[] VirtualCameras;
-        [SerializeField] protected CacheCharacterControl CachedControl;
+    { 
+        [SerializeField] protected CinemachineVirtualCamera[] Virtualcameras;
+        [SerializeField] protected CacheCharacterControl cachedControl;
 
         private Transform CamFollow;
-
-        private Animator animator;
-
-        public Animator ANIMATOR
-        {
-            get
-            {
-                if (animator == null)
-                {
-                    animator = GetComponent<Animator>();
-                }
-                return animator;
-            }
-        }
-        public void Start()
+        public Animator animator;
+        private void Start()
         {
             InitialCameraSetUp();
-            StartCoroutine(CameraStopper(0.01f));
-
+            animator = GetComponent<Animator>();
+            StartCoroutine(CameraStopper(0.03f));
         }
         //assign follow object when game starts
-        void InitialCameraSetUp()
+        private void InitialCameraSetUp()
         {
-            VirtualCameras = FindObjectsOfType<CinemachineVirtualCamera>();
+            Virtualcameras = FindObjectsOfType<CinemachineVirtualCamera>();
 
             if (CamFollow == null)
             {
                 CamFollow = GameObject.FindGameObjectWithTag("CamFollow").transform;
             }
 
-            foreach (CinemachineVirtualCamera virtualCamera in VirtualCameras)
+            foreach (var virtualCamera in Virtualcameras)
             {
                 virtualCamera.LookAt = CamFollow;
                 virtualCamera.Follow = CamFollow;
@@ -57,26 +45,23 @@ namespace EndlessRunning
         private IEnumerator CameraStopper(float time)
         {
             yield return new WaitForSeconds(time);
-
-            if (CachedControl.GetCharacterControl.Death)
+            
+            if (cachedControl.GetCharacterControl.GameOver)
             {
-                foreach (CinemachineVirtualCamera cams in VirtualCameras)
+                foreach (var cams in Virtualcameras)
                 {
-                    if (cams.LookAt != null && cams.Follow != null)
-                    {
                         cams.LookAt = null;
                         cams.Follow = null;
-                    }
                 }
             }
             else
             {
-                StartCoroutine(CameraStopper(0.01f));
+                StartCoroutine(CameraStopper(0.03f));
             }
         }
         public void TriggerCamera(CameraTriggers trigger)
         {
-            ANIMATOR.SetTrigger(trigger.ToString());
+            animator.SetTrigger(trigger.ToString());
         }
     }
 }

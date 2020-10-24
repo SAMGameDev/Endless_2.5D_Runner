@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 namespace EndlessRunning
 {
@@ -19,9 +20,9 @@ namespace EndlessRunning
     {
         [Header("CHARACTER-GENDER")]
         public CharacterGender gender;
-
+        
         [Header("CharacterType")]
-        public PlayableCharacterTypes Type;
+        public PlayableCharacterTypes type;
 
         [Header("INPUTS")]
         public bool Jump;
@@ -29,20 +30,21 @@ namespace EndlessRunning
         public bool StartRun;
         public bool Slide;
 
-        [Header("Extra_Bools")]
+        [Header("ExtraBool")]
         public bool isStarted = false;
 
         [Header("DETECTORS")]
         public bool isGrounded = true;
         public bool Death;
+        public bool GameOver = false;
 
         [Header("FLOATS")]
-        public float GravityMultipier;
+        public float gravityMultiplier;
         public float speed;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
-        public float targetHieght;
+        public float targetHeight;
         public float CenterUpdate_Speed_C;
         public bool UpdateNow;
 
@@ -70,12 +72,6 @@ namespace EndlessRunning
             cCollider = GetComponent<CapsuleCollider>();
             RegisterCharacter();
         }
-
-        private void Update()
-        {
-            Time.timeScale = 1f;
-        }
-
         private void FixedUpdate()
         {
             ApplyGravity();
@@ -95,7 +91,7 @@ namespace EndlessRunning
         {
             if (RIGIDBODY.velocity.y < 0)
             {
-                RIGIDBODY.velocity += (Vector3.down * GravityMultipier);
+                RIGIDBODY.velocity += (Vector3.down * gravityMultiplier);
             }
         }
         #endregion
@@ -104,7 +100,7 @@ namespace EndlessRunning
         // Death With On Trigger when there's no surface Under Player
         private void OnTriggerEnter(Collider other)
         {
-            if (other.isTrigger && other.gameObject.CompareTag("Obsticel"))
+            if (other.isTrigger && other.gameObject.CompareTag("Obstacle"))
             {
                 Death = true;
             }
@@ -115,7 +111,7 @@ namespace EndlessRunning
         // DEATH WHEN PLAYER COLLIDE WITH ANY OBSTECLE
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.CompareTag("Obsticel"))
+            if (other.gameObject.CompareTag("Obstacle"))
             {
                 Death = true;
             }
@@ -158,7 +154,7 @@ namespace EndlessRunning
             }
             else
             {
-                cCollider.height = targetHieght;
+                cCollider.height = targetHeight;
             }
         }
         #endregion
