@@ -31,14 +31,12 @@ namespace EndlessRunning
                 return animator;
             }
         }
-
         public void Start()
         {
             InitialCameraSetUp();
-            StartCoroutine(CameraStopper(0.03f));
+            StartCoroutine(CameraStopper(0.01f));
 
         }
-
         //assign follow object when game starts
         void InitialCameraSetUp()
         {
@@ -55,7 +53,6 @@ namespace EndlessRunning
                 virtualCamera.Follow = CamFollow;
             }
         }
-
         //check if player is dead, if it is unassign follow object/ stop following
         private IEnumerator CameraStopper(float time)
         {
@@ -74,7 +71,7 @@ namespace EndlessRunning
             }
             else
             {
-                StartCoroutine(CameraStopper(0.03f));
+                StartCoroutine(CameraStopper(0.01f));
             }
         }
         public void TriggerCamera(CameraTriggers trigger)

@@ -19,7 +19,6 @@ namespace EndlessRunning
                 {
                     case true:
                         Control.anim.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], true);
-                        Control.Death = false;
                         break;
                     case false:
                         Control.anim.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], false);
