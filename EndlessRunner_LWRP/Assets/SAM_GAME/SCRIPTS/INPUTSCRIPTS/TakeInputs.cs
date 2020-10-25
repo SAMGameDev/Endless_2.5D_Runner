@@ -17,34 +17,38 @@ namespace EndlessRunning
 
         private void Update()
         {
-            if (!characterControl.isStarted) return;
-            if (Input.GetMouseButtonUp(0))
+            if (characterControl.isStarted)
             {
-                if (!characterControl.StartRun)
+                ;
+                if (Input.GetMouseButtonUp(0))
                 {
-                    characterControl.StartRun = true;
-                }
+                    if (!characterControl.StartRun)
+                    {
+                        characterControl.StartRun = true;
+                    }
 
-                if (Input.mousePosition.y >= splitScreenY && Input.mousePosition.x <= splitScreenX)
-                {
-                    characterControl.Jump = true;
+                    if (Input.mousePosition.y >= splitScreenY && Input.mousePosition.x <= splitScreenX)
+                    {
+                        characterControl.Jump = true;
+                    }
+                    else if (Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
+                    {
+                        characterControl.Slide = true;
+                        StartCoroutine(TurnOff(0.25f));
+                    }
+                    else if (Input.mousePosition.x > splitScreenX)
+                    {
+                        characterControl.Dash = true;
+                    }
                 }
-                else if (Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
+                else
                 {
-                    characterControl.Slide = true;
-                    StartCoroutine(TurnOff(0.25f));
+                    characterControl.Jump = false;
+                    characterControl.Dash = false;
                 }
-                else if (Input.mousePosition.x > splitScreenX)
-                {
-                    characterControl.Dash = true;
-                }
-            }
-            else
-            {
-                characterControl.Jump = false;
-                characterControl.Dash = false;
             }
         }
+
         private IEnumerator TurnOff(float time)
         {
             yield return new WaitForSeconds(time);
