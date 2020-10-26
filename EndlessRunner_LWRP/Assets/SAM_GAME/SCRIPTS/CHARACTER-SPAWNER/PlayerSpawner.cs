@@ -14,7 +14,7 @@ namespace EndlessRunning
             //according to saved data in SO,
             //LOADING DEPENDS ON INSTANSITING 
 
-            if (SelectedCharacter.SelectedCharacter != PlayableCharacterTypes.NONE)
+            if (SelectedCharacter.SelectedCharacter != PlayableCharacterTypes.None)
             {
                 switch (SelectedCharacter.SelectedCharacter)
                 {

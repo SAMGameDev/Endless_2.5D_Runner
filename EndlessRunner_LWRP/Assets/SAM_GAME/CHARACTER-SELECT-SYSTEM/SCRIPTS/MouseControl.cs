@@ -25,19 +25,19 @@ namespace EndlessRunning
                 }
                 else
                 {
-                    selectedCharacter = PlayableCharacterTypes.NONE;
+                    selectedCharacter = PlayableCharacterTypes.None;
                 }
             }
 
             if (Input.GetMouseButtonDown(0))
             {
-                if (selectedCharacter != PlayableCharacterTypes.NONE)
+                if (selectedCharacter != PlayableCharacterTypes.None)
                 {
                     SelectedCharacterData.SelectedCharacter = selectedCharacter;
                 }
                 else
                 {
-                    SelectedCharacterData.SelectedCharacter = PlayableCharacterTypes.NONE;
+                    SelectedCharacterData.SelectedCharacter = PlayableCharacterTypes.None;
                 }
 
                 foreach (CharacterControl c in CharacterManger.Instance.characters)
@@ -52,7 +52,7 @@ namespace EndlessRunning
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], false);
                     }
-                    if (selectedCharacter == PlayableCharacterTypes.NONE)
+                    if (selectedCharacter == PlayableCharacterTypes.None)
                     {
                         return;
                     }

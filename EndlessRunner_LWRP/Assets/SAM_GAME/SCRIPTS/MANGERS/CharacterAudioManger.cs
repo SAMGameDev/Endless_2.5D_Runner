@@ -46,12 +46,12 @@ namespace EndlessRunning
         {
             switch (control.gender)
             {
-                case CharacterGender.MALE:
+                case CharacterGender.Male:
                     {
                         source.PlayOneShot(grunts[0]);
                     }
                     break;
-                case CharacterGender.FEMALE:
+                case CharacterGender.Female:
                     {
                         source.PlayOneShot(grunts[1]);
                     }

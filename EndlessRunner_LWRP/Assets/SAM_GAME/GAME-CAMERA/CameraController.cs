@@ -16,28 +16,28 @@ namespace EndlessRunning
         [SerializeField] protected CinemachineVirtualCamera[] Virtualcameras;
         [SerializeField] protected CacheCharacterControl cachedControl;
 
-        private Transform CamFollow;
+        private Transform camFollow;
         public Animator animator;
         private void Start()
         {
             InitialCameraSetUp();
             animator = GetComponent<Animator>();
-            StartCoroutine(CameraStopper(0.03f));
+            StartCoroutine(CameraStopper(0.02f));
         }
         //assign follow object when game starts
         private void InitialCameraSetUp()
         {
             Virtualcameras = FindObjectsOfType<CinemachineVirtualCamera>();
 
-            if (CamFollow == null)
+            if (camFollow == null)
             {
-                CamFollow = GameObject.FindGameObjectWithTag("CamFollow").transform;
+                camFollow = GameObject.FindGameObjectWithTag("CamFollow").transform;
             }
 
             foreach (var virtualCamera in Virtualcameras)
             {
-                virtualCamera.LookAt = CamFollow;
-                virtualCamera.Follow = CamFollow;
+                virtualCamera.LookAt = camFollow;
+                virtualCamera.Follow = camFollow;
             }
         }
         //check if player is dead, if it is unassign follow object/ stop following
@@ -55,7 +55,7 @@ namespace EndlessRunning
             }
             else
             {
-                StartCoroutine(CameraStopper(0.03f));
+                StartCoroutine(CameraStopper(0.02f));
             }
         }
         public void TriggerCamera(CameraTriggers trigger)

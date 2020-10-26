@@ -13,11 +13,6 @@ namespace EndlessRunning
             CameraManger.Instance.ShakeCamera(0.3f);
             playerStateBase.characterControl.Death = false;
             animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], false);
-
-            if (!playerStateBase.characterControl.RIGIDBODY.useGravity ||
-                !(stateInfo.normalizedTime >= animationProgress)) return;
-            playerStateBase.characterControl.Death = false;
-            playerStateBase.characterControl.RIGIDBODY.useGravity = false;
         }
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {

@@ -4,13 +4,13 @@ namespace EndlessRunning
 {
     public enum CharacterGender
     {
-        MALE,
-        FEMALE
+        Male,
+        Female
     }
 
     public enum PlayableCharacterTypes
     {
-        NONE,
+        None,
         Mike,
         James,
         Liam,
