@@ -4,34 +4,29 @@ namespace EndlessRunning
 {
     public class MouseControl : MonoBehaviour
     {
+        Ray ray;
+        RaycastHit hit;
+
         public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect SelectedCharacterData;
         [SerializeField] protected Animator characterselect_camController;
 
         private void Update()
-        {
-            Ray _ray;
-            RaycastHit hit;
+        {          
+            ray = CameraManger.Instance.mainCamera.ScreenPointToRay(Input.mousePosition);
 
-            _ray = CameraManger.Instance.mainCamera.ScreenPointToRay
-                (Input.mousePosition);
-
-            if (Physics.Raycast(_ray, out hit))
+            if (Physics.Raycast(ray, out hit))
             {
                 CharacterControl control = hit.collider.GetComponent<CharacterControl>();
 
                 if (control != null)
                 {
-                    selectedCharacter = control.type;
+                    selectedCharacter = control.TYPE;
                 }
                 else
                 {
                     selectedCharacter = PlayableCharacterTypes.NONE;
                 }
-            }
-            else
-            {
-                return;
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -47,19 +42,15 @@ namespace EndlessRunning
 
                 foreach (CharacterControl c in CharacterManger.Instance.characters)
                 {
-                    if (c.type == selectedCharacter)
+                    if (c.TYPE == selectedCharacter)
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], true);
-                        //DontDestroyOnLoad(c.gameObject);
                     }
                     else
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], false);
-
-                        //   SceneManager.MoveGameObjectToScene(c.gameObject,
-                        //  SceneManager.GetActiveScene());
                     }
                     if (selectedCharacter == PlayableCharacterTypes.NONE)
                     {

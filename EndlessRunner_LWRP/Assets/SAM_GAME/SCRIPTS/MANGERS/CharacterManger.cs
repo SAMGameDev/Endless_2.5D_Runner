@@ -6,11 +6,11 @@ namespace EndlessRunning
     {
         public List<CharacterControl> characters = new List<CharacterControl>();
 
-        public CharacterControl GetCharacterControl(PlayableCharacterTypes characterTypes)
+        public CharacterControl GetCharacterControl(PlayableCharacterTypes characterType)
         {
             foreach (CharacterControl control in characters)
             {
-                if (control.type == characterTypes)
+                if (control.TYPE == characterType)
                 {
                     return control;
                 }

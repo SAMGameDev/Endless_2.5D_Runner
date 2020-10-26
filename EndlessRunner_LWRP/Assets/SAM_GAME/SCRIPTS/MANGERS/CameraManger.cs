@@ -5,19 +5,19 @@ namespace EndlessRunning
 {
     public class CameraManger : Singleton<CameraManger>
     {
-        private Coroutine routine;
         public Camera mainCamera;
-        public CameraController camController;
+        private Coroutine routine;
+        public CameraController Game_CamController;
 
         public CameraController CAMERACONTROLLER
         {
             get
             {
-                if (camController == null)
+                if (Game_CamController == null)
                 {
-                    camController = FindObjectOfType<CameraController>();
+                    Game_CamController = FindObjectOfType<CameraController>();
                 }
-                return camController;
+                return Game_CamController;
             }
         }
 

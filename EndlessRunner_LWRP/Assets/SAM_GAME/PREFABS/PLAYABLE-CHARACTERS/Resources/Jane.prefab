@@ -1286,6 +1286,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1931,19 +1932,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gender: 1
-  Type: 7
+  TYPE: 7
   Jump: 0
   Dash: 0
   StartRun: 0
   Slide: 0
   isStarted: 0
   isGrounded: 1
-  isDoubleJumping: 0
   Death: 0
-  GravityMultipier: 0
+  GameOver: 0
+  gravityMultiplier: 0
   speed: 0
   targetCenter_C: {x: 0, y: 0, z: 0}
-  targetHieght: 0
+  targetHeight: 0
   CenterUpdate_Speed_C: 0
   UpdateNow: 0
   anim: {fileID: 0}

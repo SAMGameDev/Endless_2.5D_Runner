@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.Serialization;
 
 namespace EndlessRunning
 {
@@ -22,7 +20,7 @@ namespace EndlessRunning
         public CharacterGender gender;
         
         [Header("CharacterType")]
-        public PlayableCharacterTypes type;
+        public PlayableCharacterTypes TYPE;
 
         [Header("INPUTS")]
         public bool Jump;
@@ -79,6 +77,8 @@ namespace EndlessRunning
             UpdateSize();
         }
         #endregion
+
+
         #region RunForward
         public void RunForward(float speed)
         {
