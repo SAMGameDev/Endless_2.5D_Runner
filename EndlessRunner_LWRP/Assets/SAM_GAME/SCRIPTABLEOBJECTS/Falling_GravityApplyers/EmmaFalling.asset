@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c91a19de8382f848b940e66de07ac36, type: 3}
-  m_Name: Falling
+  m_Name: EmmaFalling
   m_EditorClassIdentifier: 
-  transition: 0.05
+  CamSwitch_transition: 0.05
   gravity:
     serializedVersion: 2
     m_Curve:
@@ -27,7 +27,7 @@ MonoBehaviour:
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 2
+      value: 0.7
       inSlope: 0
       outSlope: 0
       tangentMode: 0

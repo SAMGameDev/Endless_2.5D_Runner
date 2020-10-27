@@ -46,7 +46,7 @@ namespace EndlessRunning
 
                 case PlayableCharacterTypes.Emma:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_EMMA");
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_EMMA_TEST");
                     break;
 
                 case PlayableCharacterTypes.William:
@@ -71,6 +71,8 @@ namespace EndlessRunning
             }
             controlCache.GetCharacterControl.isStarted = true;
             gameObject.SetActive(false);
+
+            Time.timeScale = 0.6f;
             #endregion
         }
     }

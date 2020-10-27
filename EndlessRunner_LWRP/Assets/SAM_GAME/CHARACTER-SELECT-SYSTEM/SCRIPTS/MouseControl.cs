@@ -12,7 +12,7 @@ namespace EndlessRunning
         [SerializeField] protected Animator characterselect_camController;
 
         private void Update()
-        {          
+        {
             ray = CameraManger.Instance.mainCamera.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray, out hit))
@@ -27,6 +27,10 @@ namespace EndlessRunning
                 {
                     selectedCharacter = PlayableCharacterTypes.None;
                 }
+            }
+            else
+            {
+                return;
             }
 
             if (Input.GetMouseButtonDown(0))

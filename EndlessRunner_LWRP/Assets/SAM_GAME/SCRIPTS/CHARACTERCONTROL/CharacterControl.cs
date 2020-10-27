@@ -78,7 +78,6 @@ namespace EndlessRunning
         }
         #endregion
 
-
         #region RunForward
         public void RunForward(float speed)
         {

@@ -6,7 +6,7 @@ namespace EndlessRunning
     public class Falling : ScriptableObjectData
     {
         [Range(0.01f, 1f)]
-        [SerializeField] protected float transition;
+        [SerializeField] protected float CamSwitch_transition;
 
         [SerializeField] protected AnimationCurve gravity;
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
@@ -17,7 +17,7 @@ namespace EndlessRunning
         {
             playerStateBase.characterControl.gravityMultiplier = gravity.Evaluate(stateInfo.normalizedTime);
 
-            if (stateInfo.normalizedTime >= transition)
+            if (stateInfo.normalizedTime >= CamSwitch_transition)
             {
                 CameraManger.Instance.CAMERACONTROLLER.animator.SetTrigger
                     (CameraTriggers.Default.ToString());
