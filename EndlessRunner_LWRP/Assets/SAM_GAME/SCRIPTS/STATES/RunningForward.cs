@@ -6,6 +6,7 @@ namespace EndlessRunning
     public class RunningForward : ScriptableObjectData
     {
         [SerializeField] protected float speed;
+
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }

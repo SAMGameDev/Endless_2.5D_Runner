@@ -8,6 +8,7 @@ namespace EndlessRunning
         [SerializeField]
         [Range(0.1f, 1f)]
         protected float Transitions;
+
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             CameraManger.Instance.Game_CamController.animator.SetTrigger(CameraTriggers.Slide.ToString());

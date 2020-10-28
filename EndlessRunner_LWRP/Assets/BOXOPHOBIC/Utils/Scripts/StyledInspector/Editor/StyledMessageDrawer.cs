@@ -8,10 +8,10 @@ namespace Boxophobic.StyledGUI
     [CustomPropertyDrawer(typeof(StyledMessage))]
     public class StyledMessageAttributeDrawer : PropertyDrawer
     {
-        StyledMessage a;
+        private StyledMessage a;
 
-        bool show;
-        MessageType messageType;
+        private bool show;
+        private MessageType messageType;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {

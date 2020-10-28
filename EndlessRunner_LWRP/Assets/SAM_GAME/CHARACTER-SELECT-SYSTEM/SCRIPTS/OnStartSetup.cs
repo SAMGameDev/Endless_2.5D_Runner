@@ -7,9 +7,11 @@ namespace EndlessRunning
         [SerializeField] protected CharacterSelect characterSelect;
 
         public CacheCharacterControl controlCache;
+
         private void Start()
         {
             #region Reset Model
+
             //reset postion of 3d model to colliders gameobject postion , USE ONLY IF PLAYER COMES
             // FROM DontDestroyOnLoad METHOD
 
@@ -19,9 +21,11 @@ namespace EndlessRunning
             // {
             //    CharacterModel_Transform.position = characterControl.transform.position;
             //}
-            #endregion
+
+            #endregion Reset Model
 
             #region Change Animator
+
             switch (characterSelect.SelectedCharacter)
             {
                 case PlayableCharacterTypes.Charlotte:
@@ -41,12 +45,12 @@ namespace EndlessRunning
 
                 case PlayableCharacterTypes.Jessica:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JESSICA");
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JESSICA_TEST");
                     break;
 
                 case PlayableCharacterTypes.Emma:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_EMMA_TEST");
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_EMMA");
                     break;
 
                 case PlayableCharacterTypes.William:
@@ -70,10 +74,10 @@ namespace EndlessRunning
                     break;
             }
             controlCache.GetCharacterControl.isStarted = true;
+
             gameObject.SetActive(false);
 
-            Time.timeScale = 0.6f;
-            #endregion
+            #endregion Change Animator
         }
     }
 }

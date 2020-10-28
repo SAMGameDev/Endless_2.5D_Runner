@@ -8,7 +8,7 @@ namespace Boxophobic.StyledGUI
     [CustomPropertyDrawer(typeof(StyledInteractive))]
     public class StyledInteractiveAttributeDrawer : PropertyDrawer
     {
-        StyledInteractive a;
+        private StyledInteractive a;
 
         private int Value;
         private string Keywork;
@@ -44,7 +44,6 @@ namespace Boxophobic.StyledGUI
                     GUI.enabled = false;
                 }
             }
-
         }
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)

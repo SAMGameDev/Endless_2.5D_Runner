@@ -11,19 +11,21 @@ namespace EndlessRunning
         Slide,
         Jump,
     }
+
     public class CameraController : MonoBehaviour
-    { 
+    {
         [SerializeField] protected CinemachineVirtualCamera[] Virtualcameras;
         [SerializeField] protected CacheCharacterControl cachedControl;
 
         private Transform camFollow;
         public Animator animator;
+
         private void Start()
         {
             InitialCameraSetUp();
-            animator = GetComponent<Animator>();
             StartCoroutine(CameraStopper(0.02f));
         }
+
         //assign follow object when game starts
         private void InitialCameraSetUp()
         {
@@ -40,17 +42,18 @@ namespace EndlessRunning
                 virtualCamera.Follow = camFollow;
             }
         }
+
         //check if player is dead, if it is unassign follow object/ stop following
         private IEnumerator CameraStopper(float time)
         {
             yield return new WaitForSeconds(time);
-            
+
             if (cachedControl.GetCharacterControl.GameOver)
             {
                 foreach (var cams in Virtualcameras)
                 {
-                        cams.LookAt = null;
-                        cams.Follow = null;
+                    cams.LookAt = null;
+                    cams.Follow = null;
                 }
             }
             else
@@ -58,6 +61,7 @@ namespace EndlessRunning
                 StartCoroutine(CameraStopper(0.02f));
             }
         }
+
         public void TriggerCamera(CameraTriggers trigger)
         {
             animator.SetTrigger(trigger.ToString());

@@ -6,14 +6,17 @@ namespace EndlessRunning
     {
         [SerializeField]
         protected Vector3 parallaxEffectMultiplier;
+
         public Transform camTransfor;
         private Vector3 lastCamPostion;
-        void Start()
+
+        private void Start()
         {
             camTransfor = Camera.main.transform;
             lastCamPostion = camTransfor.position;
         }
-        void LateUpdate()
+
+        private void LateUpdate()
         {
             Vector3 deltaPostion = camTransfor.position - lastCamPostion;
             transform.position += new Vector3(deltaPostion.x, deltaPostion.y * parallaxEffectMultiplier.y,
@@ -22,4 +25,3 @@ namespace EndlessRunning
         }
     }
 }
-

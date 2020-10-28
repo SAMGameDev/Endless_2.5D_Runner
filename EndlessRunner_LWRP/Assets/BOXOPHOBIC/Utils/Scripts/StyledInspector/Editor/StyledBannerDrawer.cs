@@ -9,7 +9,7 @@ namespace Boxophobic.StyledGUI
     [CustomPropertyDrawer(typeof(StyledBanner))]
     public class StyledBannerAttributeDrawer : PropertyDrawer
     {
-        StyledBanner a;
+        private StyledBanner a;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
@@ -23,7 +23,7 @@ namespace Boxophobic.StyledGUI
             return -2;
         }
 
-        void DrawBanner()
+        private void DrawBanner()
         {
             GUILayout.Space(a.spaceTop);
 
@@ -42,7 +42,6 @@ namespace Boxophobic.StyledGUI
                 {
                     bannerColor = CONSTANT.ColorDarkGray;
                     guiColor = CONSTANT.ColorLightGray;
-
                 }
                 else
                 {
@@ -79,5 +78,4 @@ namespace Boxophobic.StyledGUI
             GUILayout.Space(a.spaceBottom);
         }
     }
-
 }

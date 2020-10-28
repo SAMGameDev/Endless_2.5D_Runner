@@ -8,7 +8,7 @@ namespace Boxophobic.StyledGUI
     [CustomPropertyDrawer(typeof(StyledCategory))]
     public class StyledCategoryAttributeDrawer : PropertyDrawer
     {
-        StyledCategory a;
+        private StyledCategory a;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {

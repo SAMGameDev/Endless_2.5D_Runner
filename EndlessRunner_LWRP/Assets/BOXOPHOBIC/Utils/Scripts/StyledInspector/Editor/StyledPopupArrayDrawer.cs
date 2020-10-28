@@ -8,7 +8,7 @@ namespace Boxophobic.StyledGUI
     [CustomPropertyDrawer(typeof(StyledPopupArray))]
     public class StyledPopupArrayAttributeDrawer : PropertyDrawer
     {
-        StyledPopupArray a;
+        private StyledPopupArray a;
         private int index = 0;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

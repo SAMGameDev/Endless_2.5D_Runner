@@ -6,4 +6,3 @@ namespace Boxophobic.StyledGUI
     {
     }
 }
-

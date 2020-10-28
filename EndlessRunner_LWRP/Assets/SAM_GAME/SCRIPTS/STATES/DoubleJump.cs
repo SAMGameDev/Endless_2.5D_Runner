@@ -6,6 +6,7 @@ namespace EndlessRunning
     public class DoubleJump : ScriptableObjectData
     {
         [SerializeField] private bool CanDoubleJump = true;
+
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }

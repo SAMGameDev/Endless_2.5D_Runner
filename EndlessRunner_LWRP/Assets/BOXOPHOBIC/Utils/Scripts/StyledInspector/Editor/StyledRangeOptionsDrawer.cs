@@ -8,7 +8,7 @@ namespace Boxophobic.StyledGUI
     [CustomPropertyDrawer(typeof(StyledRangeOptions))]
     public class StyledRangeOptionsAttributeDrawer : PropertyDrawer
     {
-        StyledRangeOptions a;
+        private StyledRangeOptions a;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
@@ -53,7 +53,6 @@ namespace Boxophobic.StyledGUI
 
             GUILayout.Label(a.options[a.options.Length - 1], styleMid, GUILayout.Width(maxWidth));
             GUILayout.EndHorizontal();
-
         }
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)

@@ -12,6 +12,7 @@ namespace EndlessRunning
 
         [Header("Components")]
         public AudioSource source;
+
         public CharacterControl control;
 
         private void Awake()
@@ -34,7 +35,6 @@ namespace EndlessRunning
         public void Landing()
         {
             source.PlayOneShot(Land);
-
         }
 
         public void Dashing()
@@ -51,6 +51,7 @@ namespace EndlessRunning
                         source.PlayOneShot(grunts[0]);
                     }
                     break;
+
                 case CharacterGender.Female:
                     {
                         source.PlayOneShot(grunts[1]);
@@ -60,4 +61,3 @@ namespace EndlessRunning
         }
     }
 }
-

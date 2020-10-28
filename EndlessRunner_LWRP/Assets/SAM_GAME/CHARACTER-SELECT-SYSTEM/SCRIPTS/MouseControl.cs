@@ -4,8 +4,8 @@ namespace EndlessRunning
 {
     public class MouseControl : MonoBehaviour
     {
-        Ray ray;
-        RaycastHit hit;
+        private Ray ray;
+        private RaycastHit hit;
 
         public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect SelectedCharacterData;

@@ -37,7 +37,7 @@ namespace Boxophobic.StyledGUI
             return -2;
         }
 
-        void DrawBanner(Shader shader)
+        private void DrawBanner(Shader shader)
         {
             GUILayout.Space(10);
 
@@ -86,7 +86,6 @@ namespace Boxophobic.StyledGUI
                 AssetDatabase.OpenAsset(Shader.Find(shader.name), 1);
             }
 #endif
-
 
             GUI.color = Color.white;
 

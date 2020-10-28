@@ -8,11 +8,12 @@ namespace EndlessRunning
         protected CharacterSelect SelectedCharacter;
 
         private string objName;
+
         private void Awake()
         {
             //instansiting character in MainMenu (ALSO IN GAME SCENE)
             //according to saved data in SO,
-            //LOADING DEPENDS ON INSTANSITING 
+            //LOADING DEPENDS ON INSTANSITING
 
             if (SelectedCharacter.SelectedCharacter != PlayableCharacterTypes.None)
             {
@@ -21,27 +22,35 @@ namespace EndlessRunning
                     case PlayableCharacterTypes.Charlotte:
                         objName = "Charlotte";
                         break;
+
                     case PlayableCharacterTypes.Emma:
                         objName = "Emma";
                         break;
+
                     case PlayableCharacterTypes.James:
                         objName = "James";
                         break;
+
                     case PlayableCharacterTypes.Jane:
                         objName = "Jane";
                         break;
+
                     case PlayableCharacterTypes.Jessica:
                         objName = "Jessica";
                         break;
+
                     case PlayableCharacterTypes.Liam:
                         objName = "Liam";
                         break;
+
                     case PlayableCharacterTypes.Mike:
                         objName = "Mike";
                         break;
+
                     case PlayableCharacterTypes.Noah:
                         objName = "Noah";
                         break;
+
                     case PlayableCharacterTypes.William:
                         objName = "William";
                         break;
@@ -56,4 +65,3 @@ namespace EndlessRunning
         }
     }
 }
-

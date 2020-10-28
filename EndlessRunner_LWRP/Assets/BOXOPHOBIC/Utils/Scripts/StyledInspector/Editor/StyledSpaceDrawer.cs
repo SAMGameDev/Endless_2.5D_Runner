@@ -8,7 +8,7 @@ namespace Boxophobic.StyledGUI
     [CustomPropertyDrawer(typeof(StyledSpace))]
     public class StyledSpaceAttributeDrawer : PropertyDrawer
     {
-        StyledSpace a;
+        private StyledSpace a;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {

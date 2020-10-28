@@ -22,6 +22,4 @@ namespace Boxophobic.StyledGUI
             keyword = k;
         }
     }
-
 }
-

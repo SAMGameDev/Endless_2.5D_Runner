@@ -17,4 +17,5 @@ namespace Boxophobic.StyledGUI
         }
     }
 }
+
 //#endif

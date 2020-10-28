@@ -9,10 +9,12 @@ namespace EndlessRunning
         [SerializeField] protected float CamSwitch_transition;
 
         [SerializeField] protected AnimationCurve gravity;
+
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
         }
+
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.gravityMultiplier = gravity.Evaluate(stateInfo.normalizedTime);
@@ -23,6 +25,7 @@ namespace EndlessRunning
                     (CameraTriggers.Default.ToString());
             }
         }
+
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.gravityMultiplier = 0f;

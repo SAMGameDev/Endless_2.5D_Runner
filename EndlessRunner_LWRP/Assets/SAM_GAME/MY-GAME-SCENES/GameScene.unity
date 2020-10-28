@@ -688,11 +688,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2932862448422839035, guid: 3d94a46984f24c84bb17f94c2c29f386,
-        type: 3}
-      propertyPath: levelPrefabs.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d94a46984f24c84bb17f94c2c29f386, type: 3}
 --- !u!1001 &719591084
@@ -2006,16 +2001,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 6951685512506285635, guid: f67a727aa475cc14fa9e1e370780364d,
-        type: 3}
-      propertyPath: far clip plane
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6951685512506285635, guid: f67a727aa475cc14fa9e1e370780364d,
-        type: 3}
-      propertyPath: near clip plane
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2034,22 +2019,22 @@ PrefabInstance:
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000011034021
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70710677
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000011034019
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071069
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6951685512506285636, guid: f67a727aa475cc14fa9e1e370780364d,
         type: 3}
@@ -2285,26 +2270,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1409174904456826905, guid: 028d24acb3ae73e49a236b7a0a522b9c,
-        type: 3}
-      propertyPath: m_Priority
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5663900297025937940, guid: 028d24acb3ae73e49a236b7a0a522b9c,
-        type: 3}
-      propertyPath: m_ChildCameras.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5663900297025937940, guid: 028d24acb3ae73e49a236b7a0a522b9c,
         type: 3}
       propertyPath: m_AnimatedTarget
       value: 
       objectReference: {fileID: 2042338676}
-    - target: {fileID: 5663900297025937940, guid: 028d24acb3ae73e49a236b7a0a522b9c,
-        type: 3}
-      propertyPath: m_DefaultBlend.m_Style
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 5663900297025937941, guid: 028d24acb3ae73e49a236b7a0a522b9c,
         type: 3}
       propertyPath: m_Name

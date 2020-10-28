@@ -61,4 +61,3 @@ namespace Boxophobic.StyledGUI
         }
     }
 }
-

@@ -9,7 +9,7 @@ namespace Boxophobic.StyledGUI
     public class StyledDiffusionMaterialDrawer : MaterialPropertyDrawer
     {
         public string propName;
-        GUIStyle styleCenteredHelpBox;
+        private GUIStyle styleCenteredHelpBox;
 
         public StyledDiffusionMaterialDrawer(string propName)
         {
@@ -85,13 +85,12 @@ namespace Boxophobic.StyledGUI
             return -2;
         }
 
-        void SetGUIStyles()
+        private void SetGUIStyles()
         {
             styleCenteredHelpBox = new GUIStyle(GUI.skin.GetStyle("HelpBox"))
             {
                 alignment = TextAnchor.MiddleCenter,
             };
-
         }
     }
 }

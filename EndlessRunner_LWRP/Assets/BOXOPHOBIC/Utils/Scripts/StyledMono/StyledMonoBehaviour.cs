@@ -4,5 +4,4 @@ using UnityEngine;
 [StyledMonoHideScriptField]
 public class StyledMonoBehaviour : MonoBehaviour
 {
-
 }

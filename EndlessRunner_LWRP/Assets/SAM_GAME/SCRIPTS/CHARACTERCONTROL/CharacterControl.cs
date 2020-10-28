@@ -14,16 +14,18 @@ namespace EndlessRunning
         Die,
         OnClick,
     }
+
     public class CharacterControl : MonoBehaviour
     {
         [Header("CHARACTER-GENDER")]
         public CharacterGender gender;
-        
+
         [Header("CharacterType")]
         public PlayableCharacterTypes TYPE;
 
         [Header("INPUTS")]
         public bool Jump;
+
         public bool Dash;
         public bool StartRun;
         public bool Slide;
@@ -33,23 +35,28 @@ namespace EndlessRunning
 
         [Header("DETECTORS")]
         public bool isGrounded = true;
+
         public bool Death;
         public bool GameOver = false;
 
         [Header("FLOATS")]
         public float gravityMultiplier;
+
         public float speed;
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
+
         public float targetHeight;
         public float CenterUpdate_Speed_C;
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
         public Animator anim;
+
         public CapsuleCollider cCollider;
         private Rigidbody rb;
+
         public Rigidbody RIGIDBODY
         {
             get
@@ -61,7 +68,9 @@ namespace EndlessRunning
                 return rb;
             }
         }
+
         #region Unity Default Methods
+
         private void Awake()
         {
             Death = false;
@@ -70,22 +79,27 @@ namespace EndlessRunning
             cCollider = GetComponent<CapsuleCollider>();
             RegisterCharacter();
         }
+
         private void FixedUpdate()
         {
             ApplyGravity();
             UpdateCenter();
             UpdateSize();
         }
-        #endregion
+
+        #endregion Unity Default Methods
 
         #region RunForward
+
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }
-        #endregion
+
+        #endregion RunForward
 
         #region Gravity Apply
+
         private void ApplyGravity()
         {
             if (RIGIDBODY.velocity.y < 0)
@@ -93,9 +107,11 @@ namespace EndlessRunning
                 RIGIDBODY.velocity += (Vector3.down * gravityMultiplier);
             }
         }
-        #endregion
+
+        #endregion Gravity Apply
 
         #region OnTrigger
+
         // Death With On Trigger when there's no surface Under Player
         private void OnTriggerEnter(Collider other)
         {
@@ -104,9 +120,11 @@ namespace EndlessRunning
                 Death = true;
             }
         }
-        #endregion
+
+        #endregion OnTrigger
 
         #region OnCollision
+
         // DEATH WHEN PLAYER COLLIDE WITH ANY OBSTECLE
         private void OnCollisionEnter(Collision other)
         {
@@ -115,6 +133,7 @@ namespace EndlessRunning
                 Death = true;
             }
         }
+
         private void OnCollisionStay(Collision other)
         {
             if (other.gameObject.CompareTag("Ground")
@@ -123,12 +142,14 @@ namespace EndlessRunning
                 isGrounded = true;
             }
         }
+
         private void OnCollisionExit()
         {
             isGrounded = false;
             Death = false;
         }
-        #endregion
+
+        #endregion OnCollision
 
         #region Update Collider on Runtime
 
@@ -145,6 +166,7 @@ namespace EndlessRunning
                     Time.deltaTime * CenterUpdate_Speed_C);
             }
         }
+
         private void UpdateSize()
         {
             if (!UpdateNow)
@@ -156,7 +178,8 @@ namespace EndlessRunning
                 cCollider.height = targetHeight;
             }
         }
-        #endregion
+
+        #endregion Update Collider on Runtime
 
         #region Caching CharacterControl in playerStateBase
 
@@ -171,9 +194,11 @@ namespace EndlessRunning
                 p.characterControl = this;
             }
         }
-        #endregion
+
+        #endregion Caching CharacterControl in playerStateBase
 
         #region Register CharacterControl In Manger
+
         private void RegisterCharacter()
         {
             if (!CharacterManger.Instance.characters.Contains(this))
@@ -181,6 +206,7 @@ namespace EndlessRunning
                 CharacterManger.Instance.characters.Add(this);
             }
         }
-        #endregion
+
+        #endregion Register CharacterControl In Manger
     }
 }

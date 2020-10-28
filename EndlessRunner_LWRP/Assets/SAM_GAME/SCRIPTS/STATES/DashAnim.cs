@@ -6,10 +6,11 @@ namespace EndlessRunning
     public class DashAnim : ScriptableObjectData
     {
         public bool CanDash;
+
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-
         }
+
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             if (playerStateBase.characterControl.isGrounded)
@@ -30,6 +31,7 @@ namespace EndlessRunning
                 }
             }
         }
+
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Dash], false);

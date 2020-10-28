@@ -5,6 +5,7 @@ namespace EndlessRunning
     public class CacheCharacterControl : MonoBehaviour
     {
         private CharacterControl characterControl;
+
         public CharacterControl GetCharacterControl
         {
             get
@@ -19,4 +20,3 @@ namespace EndlessRunning
         }
     }
 }
-
