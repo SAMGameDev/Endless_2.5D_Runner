@@ -11,7 +11,6 @@ namespace EndlessRunning
         Slide,
         Jump,
     }
-
     public class CameraController : MonoBehaviour
     {
         [SerializeField] protected CinemachineVirtualCamera[] Virtualcameras;
@@ -23,7 +22,7 @@ namespace EndlessRunning
         private void Start()
         {
             InitialCameraSetUp();
-            StartCoroutine(CameraStopper(0.02f));
+            StartCoroutine(CameraStopper(0.03f));
         }
 
         //assign follow object when game starts
@@ -58,7 +57,7 @@ namespace EndlessRunning
             }
             else
             {
-                StartCoroutine(CameraStopper(0.02f));
+                StartCoroutine(CameraStopper(0.03f));
             }
         }
 

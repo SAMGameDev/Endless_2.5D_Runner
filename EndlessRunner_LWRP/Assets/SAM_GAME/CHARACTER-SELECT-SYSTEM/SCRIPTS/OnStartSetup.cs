@@ -10,20 +10,6 @@ namespace EndlessRunning
 
         private void Start()
         {
-            #region Reset Model
-
-            //reset postion of 3d model to colliders gameobject postion , USE ONLY IF PLAYER COMES
-            // FROM DontDestroyOnLoad METHOD
-
-            // CharacterModel_Transform = GetCharacterControl.anim.GetComponent<Transform>();
-
-            // if (CharacterModel_Transform.position != characterControl.transform.position)
-            // {
-            //    CharacterModel_Transform.position = characterControl.transform.position;
-            //}
-
-            #endregion Reset Model
-
             #region Change Animator
 
             switch (characterSelect.SelectedCharacter)
@@ -74,9 +60,7 @@ namespace EndlessRunning
                     break;
             }
             controlCache.GetCharacterControl.isStarted = true;
-
             gameObject.SetActive(false);
-
             #endregion Change Animator
         }
     }

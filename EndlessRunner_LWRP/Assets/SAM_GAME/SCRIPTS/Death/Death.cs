@@ -19,7 +19,6 @@ namespace EndlessRunning
             {
                 case true:
                     Control.anim.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], true);
-                    Control.GameOver = true;
                     break;
 
                 case false:
