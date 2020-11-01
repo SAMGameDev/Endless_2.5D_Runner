@@ -41,7 +41,7 @@ namespace EndlessRunning
 
                 case PlayableCharacterTypes.William:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_WILLIAM");
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_WILLIAM_TEST");
                     break;
 
                 case PlayableCharacterTypes.Liam:
@@ -59,6 +59,7 @@ namespace EndlessRunning
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_MIKE");
                     break;
             }
+            Time.timeScale = 0.25f;
             controlCache.GetCharacterControl.isStarted = true;
             gameObject.SetActive(false);
             #endregion Change Animator
