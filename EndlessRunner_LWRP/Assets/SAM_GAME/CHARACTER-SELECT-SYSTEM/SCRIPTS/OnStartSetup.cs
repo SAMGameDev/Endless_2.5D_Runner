@@ -59,7 +59,7 @@ namespace EndlessRunning
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_MIKE");
                     break;
             }
-            Time.timeScale = 0.25f;
+            Time.timeScale = 0.15f;
             controlCache.GetCharacterControl.isStarted = true;
             gameObject.SetActive(false);
             #endregion Change Animator

@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: c21c4bcf55d8539489151fa84e5f3c49
+guid: 78a4ecb2a34140d42ae0751e1072e2a5
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Landing
+    second: Jump_William
   externalObjects: {}
   materials:
     materialImportMode: 0
@@ -35,10 +35,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Landing
+      name: Jump_William
       takeName: mixamo.com
       internalID: 0
-      firstFrame: 56
+      firstFrame: 0
       lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
@@ -51,7 +51,7 @@ ModelImporter:
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -526,23 +526,23 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: ybot@Jump(Clone)
+    - name: Jump_William(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Alpha_Joints
-      parentName: ybot@Jump(Clone)
+      parentName: Jump_William(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Alpha_Surface
-      parentName: ybot@Jump(Clone)
+      parentName: Jump_William(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Hips
-      parentName: ybot@Jump(Clone)
+      parentName: Jump_William(Clone)
       position: {x: 0.0025331788, y: 1.0258601, z: 0.008178166}
       rotation: {x: -6.7762636e-17, y: -0.000000011641532, z: -0.000000005820766,
         w: 1}

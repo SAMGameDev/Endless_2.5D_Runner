@@ -14,6 +14,9 @@ namespace EndlessRunning
         [SerializeField]
         protected float CenterUpdate_Speed;
 
+        [SerializeField]
+        public float sizeUpdate_Speed;
+
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             playerStateBase.characterControl.UpdateNow = true;
@@ -21,6 +24,7 @@ namespace EndlessRunning
             playerStateBase.characterControl.targetCenter_C = targetCenter;
             playerStateBase.characterControl.targetHeight = targetHieght;
             playerStateBase.characterControl.CenterUpdate_Speed_C = CenterUpdate_Speed;
+            playerStateBase.characterControl.SizeUpdate_Speed_C = sizeUpdate_Speed;
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

@@ -46,7 +46,7 @@ namespace EndlessRunning
 
         [Header("UpdateBoxCollider")]
         public Vector3 targetCenter_C;
-
+        public float SizeUpdate_Speed_C;
         public float targetHeight;
         public float CenterUpdate_Speed_C;
         public bool UpdateNow;
@@ -90,7 +90,6 @@ namespace EndlessRunning
         #endregion Unity Default Methods
 
         #region RunForward
-
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
@@ -115,7 +114,7 @@ namespace EndlessRunning
         // Death With On Trigger when there's no surface Under Player
         private void OnTriggerEnter(Collider other)
         {
-            if (other.isTrigger && other.gameObject.CompareTag("Obstacle"))
+            if (other.gameObject.CompareTag("InstantKillObstacle"))
             {
                 Death = true;
             }
@@ -136,8 +135,7 @@ namespace EndlessRunning
 
         private void OnCollisionStay(Collision other)
         {
-            if (other.gameObject.CompareTag("Ground")
-                || other.gameObject.CompareTag("Slope"))
+            if (other.gameObject.CompareTag("Ground"))
             {
                 isGrounded = true;
             }
