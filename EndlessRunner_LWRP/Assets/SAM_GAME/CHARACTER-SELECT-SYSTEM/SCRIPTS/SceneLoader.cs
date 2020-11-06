@@ -15,16 +15,15 @@ namespace EndlessRunning
     {
         public void LoadMenu()
         {
+            if (Time.timeScale != 1f)
+            {
+                Time.timeScale = 1f;
+            }
             SceneManager.LoadSceneAsync(Scenes.MainMenu.ToString());
         }
 
         public void LoadCharacterSelectScene()
         {
-            if (Time.timeScale != 1f)
-            {
-                Time.timeScale = 1f;
-            }
-
             SceneManager.LoadSceneAsync(Scenes.CharacterSelect.ToString());
         }
 
@@ -35,6 +34,7 @@ namespace EndlessRunning
 
         public void LoadGameScene()
         {
+           
             SceneManager.LoadSceneAsync(Scenes.GameScene.ToString());
         }
     }
