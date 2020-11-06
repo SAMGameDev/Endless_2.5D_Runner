@@ -20,6 +20,11 @@ namespace EndlessRunning
 
         public void LoadCharacterSelectScene()
         {
+            if (Time.timeScale != 1f)
+            {
+                Time.timeScale = 1f;
+            }
+
             SceneManager.LoadSceneAsync(Scenes.CharacterSelect.ToString());
         }
 

@@ -44,11 +44,16 @@ namespace EndlessRunning
 
         public float speed;
 
-        [Header("UpdateBoxCollider")]
+        [HideInInspector]
         public Vector3 targetCenter_C;
+        [HideInInspector]
         public float SizeUpdate_Speed_C;
+        [HideInInspector]
         public float targetHeight;
+        [HideInInspector]
         public float CenterUpdate_Speed_C;
+
+        [Header("UpdateBoxCollider")]
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
@@ -110,7 +115,6 @@ namespace EndlessRunning
         #endregion Gravity Apply
 
         #region OnTrigger
-
         // Death With On Trigger when there's no surface Under Player
         private void OnTriggerEnter(Collider other)
         {
@@ -173,7 +177,7 @@ namespace EndlessRunning
             }
             else
             {
-                cCollider.height = targetHeight;
+                cCollider.height = Mathf.MoveTowards(cCollider.height, targetHeight, Time.deltaTime * SizeUpdate_Speed_C);
             }
         }
 
