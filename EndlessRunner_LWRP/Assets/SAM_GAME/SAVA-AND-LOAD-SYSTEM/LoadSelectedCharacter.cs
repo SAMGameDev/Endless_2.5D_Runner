@@ -8,7 +8,6 @@ namespace EndlessRunning
 
         private void Awake()
         {
-            //Loads Selected character in mainMenu Scene
             saveData.LoadSelectedCharacter();
         }
     }
