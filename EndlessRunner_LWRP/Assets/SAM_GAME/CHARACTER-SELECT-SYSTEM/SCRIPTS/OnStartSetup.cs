@@ -61,6 +61,7 @@ namespace EndlessRunning
             }
             controlCache.GetCharacterControl.isStarted = true;
             gameObject.SetActive(false);
+
             #endregion Change Animator
         }
     }

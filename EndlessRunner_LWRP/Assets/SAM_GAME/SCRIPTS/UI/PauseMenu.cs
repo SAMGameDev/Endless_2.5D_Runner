@@ -23,6 +23,7 @@ namespace EndlessRunning
                 }
             }
         }
+
         public void Pause()
         {
             PauseMenu_gameobject.SetActive(true);
@@ -30,6 +31,7 @@ namespace EndlessRunning
             GameIsPaused = true;
             ControlCache.GetCharacterControl.isStarted = false;
         }
+
         public void Resume()
         {
             PauseMenu_gameobject.SetActive(false);
@@ -37,12 +39,14 @@ namespace EndlessRunning
             GameIsPaused = false;
             ControlCache.GetCharacterControl.isStarted = true;
         }
+
         public void Restart()
         {
             SceneManager.LoadSceneAsync(Scenes.GameScene.ToString());
             Time.timeScale = 1f;
             GameIsPaused = false;
         }
+
         public void QuitGame()
         {
             Application.Quit();

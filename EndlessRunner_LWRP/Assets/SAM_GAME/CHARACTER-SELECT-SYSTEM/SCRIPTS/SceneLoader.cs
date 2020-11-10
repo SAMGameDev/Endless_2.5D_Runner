@@ -34,7 +34,6 @@ namespace EndlessRunning
 
         public void LoadGameScene()
         {
-           
             SceneManager.LoadSceneAsync(Scenes.GameScene.ToString());
         }
     }

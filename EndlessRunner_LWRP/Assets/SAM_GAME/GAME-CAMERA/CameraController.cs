@@ -11,6 +11,7 @@ namespace EndlessRunning
         Slide,
         Jump,
     }
+
     public class CameraController : MonoBehaviour
     {
         [SerializeField] protected CinemachineVirtualCamera[] Virtualcameras;

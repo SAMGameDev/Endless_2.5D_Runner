@@ -46,10 +46,13 @@ namespace EndlessRunning
 
         [HideInInspector]
         public Vector3 targetCenter_C;
+
         [HideInInspector]
         public float SizeUpdate_Speed_C;
+
         [HideInInspector]
         public float targetHeight;
+
         [HideInInspector]
         public float CenterUpdate_Speed_C;
 
@@ -95,6 +98,7 @@ namespace EndlessRunning
         #endregion Unity Default Methods
 
         #region RunForward
+
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
@@ -115,6 +119,7 @@ namespace EndlessRunning
         #endregion Gravity Apply
 
         #region OnTrigger
+
         // Death With On Trigger when there's no surface Under Player
         private void OnTriggerEnter(Collider other)
         {

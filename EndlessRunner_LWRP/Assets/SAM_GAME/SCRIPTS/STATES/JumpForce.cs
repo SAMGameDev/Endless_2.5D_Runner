@@ -11,7 +11,7 @@ namespace EndlessRunning
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             CameraManger.Instance.CAMERACONTROLLER.animator.SetTrigger(CameraTriggers.Jump.ToString());
-          //  playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
+            //  playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
 
             playerStateBase.characterControl.RIGIDBODY.AddForce
               (playerStateBase.characterControl.transform.up * jumpForce, ForceMode.Impulse);
