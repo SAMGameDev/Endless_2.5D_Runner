@@ -41,7 +41,7 @@ namespace EndlessRunning
 
                 case PlayableCharacterTypes.William:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_WILLIAM_TEST");
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_WILLIAM");
                     break;
 
                 case PlayableCharacterTypes.Liam:

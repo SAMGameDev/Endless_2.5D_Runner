@@ -13,9 +13,17 @@ namespace EndlessRunning
 
         private void Update()
         {
+            MouseHoverSelect();
+            MouseClickSelect();
+        }
+
+        private void MouseHoverSelect()
+        {
+            LayerMask mask = LayerMask.GetMask("Player");
+
             ray = CameraManger.Instance.mainCamera.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, mask))
             {
                 CharacterControl control = hit.collider.GetComponent<CharacterControl>();
 
@@ -32,7 +40,10 @@ namespace EndlessRunning
             {
                 return;
             }
+        }
 
+        private void MouseClickSelect()
+        {
             if (Input.GetMouseButtonDown(0))
             {
                 if (selectedCharacter != PlayableCharacterTypes.None)
