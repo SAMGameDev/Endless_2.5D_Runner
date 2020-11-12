@@ -4,21 +4,14 @@ namespace EndlessRunning
 {
     public class MouseControl : MonoBehaviour
     {
-        private Ray ray;
-        private RaycastHit hit;
-
         public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect SelectedCharacterData;
         [SerializeField] protected Animator characterselect_camController;
 
         private void Update()
         {
-            MouseHoverSelect();
-            MouseClickSelect();
-        }
-
-        private void MouseHoverSelect()
-        {
+            Ray ray;
+            RaycastHit hit;
             LayerMask mask = LayerMask.GetMask("Player");
 
             ray = CameraManger.Instance.mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -40,10 +33,6 @@ namespace EndlessRunning
             {
                 return;
             }
-        }
-
-        private void MouseClickSelect()
-        {
             if (Input.GetMouseButtonDown(0))
             {
                 if (selectedCharacter != PlayableCharacterTypes.None)
@@ -66,10 +55,6 @@ namespace EndlessRunning
                     {
                         c.anim.SetBool(HashManger.Instance.DicMainParameters
                                           [TranistionParemeters.OnClick], false);
-                    }
-                    if (selectedCharacter == PlayableCharacterTypes.None)
-                    {
-                        return;
                     }
                 }
                 characterselect_camController.SetBool(selectedCharacter.ToString(), true);
