@@ -8,7 +8,6 @@ namespace EndlessRunning
         protected CharacterSelect SelectedCharacter;
 
         private string objName;
-
         private void Awake()
         {
             //instansiting character in MainMenu (ALSO IN GAME SCENE)
@@ -54,9 +53,11 @@ namespace EndlessRunning
                     case PlayableCharacterTypes.William:
                         objName = "William";
                         break;
+
                 }
+
                 GameObject player = Instantiate(Resources.Load(objName,
-                 typeof(GameObject))) as GameObject;
+             typeof(GameObject))) as GameObject;
 
                 player.transform.position = transform.position;
 
