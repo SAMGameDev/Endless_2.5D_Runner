@@ -12,7 +12,6 @@ namespace EndlessRunning
         [SerializeField]
         [Range(0.01f, 1f)]
         private float startTime;
-
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {      
             /*
