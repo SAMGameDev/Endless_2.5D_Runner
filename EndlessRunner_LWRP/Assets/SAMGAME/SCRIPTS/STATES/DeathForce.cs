@@ -7,7 +7,6 @@ namespace EndlessRunning
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
             CameraManger.Instance.ShakeCamera(0.3f);
             playerStateBase.characterControl.GameOver = true;
             playerStateBase.characterControl.Death = false;

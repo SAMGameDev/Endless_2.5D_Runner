@@ -16,32 +16,32 @@ namespace EndlessRunning
             {
                 case PlayableCharacterTypes.Charlotte:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_CHARLOTTE");
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_CHARLOTTE"); // Animation done
                     break;
 
                 case PlayableCharacterTypes.Jane:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                    Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JANE");
+                    Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JANE_TEST");
                     break;
 
                 case PlayableCharacterTypes.Noah:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_NOAH");
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_NOAH"); // Animation done
                     break;
 
                 case PlayableCharacterTypes.Jessica:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JESSICA");
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JESSICA"); // Animation done
                     break;
 
                 case PlayableCharacterTypes.Emma:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_EMMA");
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_EMMA"); // Animation done
                     break;
 
                 case PlayableCharacterTypes.William:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_WILLIAM");
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_WILLIAM"); // Animation done
                     break;
 
                 case PlayableCharacterTypes.Liam:
