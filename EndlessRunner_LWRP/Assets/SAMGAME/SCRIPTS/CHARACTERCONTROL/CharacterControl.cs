@@ -118,18 +118,18 @@ namespace EndlessRunning
 
         #endregion Gravity Apply
 
-        #region OnTrigger
+        //#region OnTrigger
 
-        // Death With On Trigger when there's no surface Under Player
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.gameObject.CompareTag("InstantKillObstacle"))
-            {
-                Death = true;
-            }
-        }
+        //// Death With On Trigger when there's no surface Under Player
+        //private void OnTriggerEnter(Collider other)
+        //{
+        //    if (other.gameObject.CompareTag("InstantKillObstacle"))
+        //    {
+        //        Death = true;
+        //    }
+        //}
 
-        #endregion OnTrigger
+        //#endregion OnTrigger
 
         #region OnCollision
 
@@ -167,7 +167,7 @@ namespace EndlessRunning
             {
                 return;
             }
-            if (Vector3.SqrMagnitude(cCollider.center - targetCenter_C) > 0.01f)
+            else if (Vector3.SqrMagnitude(cCollider.center - targetCenter_C) > 0.01f)
             {
                 cCollider.center = Vector3.Lerp(cCollider.center, targetCenter_C,
                     Time.deltaTime * CenterUpdate_Speed_C);
@@ -182,7 +182,7 @@ namespace EndlessRunning
             }
             else
             {
-                cCollider.height = Mathf.MoveTowards(cCollider.height, targetHeight, Time.deltaTime * SizeUpdate_Speed_C);
+                cCollider.height = Mathf.Lerp(cCollider.height, targetHeight, Time.deltaTime * SizeUpdate_Speed_C);
             }
         }
 
