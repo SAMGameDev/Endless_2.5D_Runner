@@ -55,7 +55,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jumping_Landing
+  m_Name: Landing
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -72,7 +72,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 0b59afab6e1c09a4b9ec20da8ffa41be,
+  m_Motion: {fileID: -203655887218126122, guid: 26e13538ff97e3148940e4f99c96a116,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -350,9 +350,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.032979727
+  m_TransitionDuration: 0.11771202
   m_TransitionOffset: 0
-  m_ExitTime: 0.97621983
+  m_ExitTime: 0.87876004
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -414,7 +414,7 @@ AnimatorStateMachine:
     m_Position: {x: -620, y: 370, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2617954818389049529}
-    m_Position: {x: -10, y: 80, z: 0}
+    m_Position: {x: 50, y: 70, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 483858298883316914}
@@ -460,7 +460,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 0d3962f7754ff46429d580ce67949e0f,
+  m_Motion: {fileID: -203655887218126122, guid: 44b71bf1b2c83444abd33fae7fa0acf1,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -1394,7 +1394,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: 2300df8b518427147b3c32f14b811ad3, type: 2}
   - {fileID: 11400000, guid: 288588811d17a7041bfcf1e3eec5c5c0, type: 2}
-  - {fileID: 11400000, guid: 06d75c0583e507f4783f8817761006cb, type: 2}
   - {fileID: 11400000, guid: 70454dc7aaf4e574bb640b16a134fbdb, type: 2}
   - {fileID: 11400000, guid: 992975f3274d9e24099676d6e5f13c3a, type: 2}
   characterControl: {fileID: 0}
@@ -1629,9 +1628,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.0036010146
+  m_TransitionDuration: 0.1230579
   m_TransitionOffset: 0
-  m_ExitTime: 0.9946681
+  m_ExitTime: 0.7774738
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1670,8 +1669,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: 288588811d17a7041bfcf1e3eec5c5c0, type: 2}
   - {fileID: 11400000, guid: 70454dc7aaf4e574bb640b16a134fbdb, type: 2}
-  - {fileID: 11400000, guid: 992975f3274d9e24099676d6e5f13c3a, type: 2}
-  - {fileID: 11400000, guid: 005f0f2c24b609841b9848a13c508261, type: 2}
+  - {fileID: 11400000, guid: ceb449b10d2ce81409d040e3734f2a86, type: 2}
   characterControl: {fileID: 0}
 --- !u!1102 &8035600168223188893
 AnimatorState:

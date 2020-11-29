@@ -557,17 +557,17 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: ForceTransition
+  - m_ConditionMode: 2
+    m_ConditionEvent: Grounded
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Dash
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: Grounded
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
     m_ConditionEvent: Slide
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: ForceTransition
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5984723750503210836}
@@ -1185,9 +1185,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.16847262
+  m_TransitionDuration: 0.03609848
   m_TransitionOffset: 0
-  m_ExitTime: 0.82782304
+  m_ExitTime: 0.980407
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1313,7 +1313,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: 2300df8b518427147b3c32f14b811ad3, type: 2}
   - {fileID: 11400000, guid: 288588811d17a7041bfcf1e3eec5c5c0, type: 2}
-  - {fileID: 11400000, guid: 06d75c0583e507f4783f8817761006cb, type: 2}
   - {fileID: 11400000, guid: 70454dc7aaf4e574bb640b16a134fbdb, type: 2}
   - {fileID: 11400000, guid: 5e48c543a4f249f46a0ce750f5f2e3fa, type: 2}
   characterControl: {fileID: 0}
@@ -1729,9 +1728,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.017864108
+  m_TransitionDuration: 0.011346638
   m_TransitionOffset: 0
-  m_ExitTime: 0.9754139
+  m_ExitTime: 0.98431826
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

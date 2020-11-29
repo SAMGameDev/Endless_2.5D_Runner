@@ -61,7 +61,6 @@ namespace EndlessRunning
 
         [Header("SUB-COMPONENTS")]
         public Animator anim;
-
         public CapsuleCollider cCollider;
         private Rigidbody rb;
 

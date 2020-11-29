@@ -5,7 +5,7 @@ namespace EndlessRunning
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/DoubleJump")]
     public class DoubleJump : ScriptableObjectData
     {
-        [SerializeField] private bool CanDoubleJump = true;
+        [SerializeField] private bool CanDoubleJump;
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
