@@ -21,12 +21,12 @@ namespace EndlessRunning
 
                 case PlayableCharacterTypes.Jane:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                    Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JANE_TEST");
+                    Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_JANE");
                     break;
 
                 case PlayableCharacterTypes.Noah:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_NOAH"); // Animation done
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_NOAH_TEST"); // Animation done
                     break;
 
                 case PlayableCharacterTypes.Jessica:

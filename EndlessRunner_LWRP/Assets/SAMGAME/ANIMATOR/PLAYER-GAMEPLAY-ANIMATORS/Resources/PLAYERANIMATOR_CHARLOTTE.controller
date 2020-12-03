@@ -360,22 +360,22 @@ AnimatorStateMachine:
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 5004502809453923652}
-    m_Position: {x: -310, y: 460, z: 0}
+    m_Position: {x: -120, y: 470, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: -8849790823568524052}
-    m_Position: {x: 600, y: 450, z: 0}
+    m_Position: {x: 370, y: 470, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 322122364469334475}
-    m_Position: {x: 140, y: 120, z: 0}
+    m_Position: {x: 120, y: 120, z: 0}
   m_AnyStateTransitions:
   - {fileID: 6933751621604271841}
   m_EntryTransitions: []
   m_StateMachineTransitions:
   - first: {fileID: 322122364469334475}
     second: []
-  - first: {fileID: 5004502809453923652}
-    second: []
   - first: {fileID: -8849790823568524052}
+    second: []
+  - first: {fileID: 5004502809453923652}
     second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -450, y: -80, z: 0}

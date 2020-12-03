@@ -117,19 +117,6 @@ namespace EndlessRunning
 
         #endregion Gravity Apply
 
-        //#region OnTrigger
-
-        //// Death With On Trigger when there's no surface Under Player
-        //private void OnTriggerEnter(Collider other)
-        //{
-        //    if (other.gameObject.CompareTag("InstantKillObstacle"))
-        //    {
-        //        Death = true;
-        //    }
-        //}
-
-        //#endregion OnTrigger
-
         #region OnCollision
 
         // DEATH WHEN PLAYER COLLIDE WITH ANY OBSTECLE
