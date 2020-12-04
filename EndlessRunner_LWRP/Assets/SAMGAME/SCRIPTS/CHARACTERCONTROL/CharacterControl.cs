@@ -122,7 +122,7 @@ namespace EndlessRunning
         // DEATH WHEN PLAYER COLLIDE WITH ANY OBSTECLE
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("InstantKillObstacle"))
+            if (other.gameObject.CompareTag("Obstacle"))
             {
                 Death = true;
             }
