@@ -273,7 +273,6 @@ MonoBehaviour:
   scriptableObjectDatas:
   - {fileID: 11400000, guid: 9a239936bab0ed4488739a8ce9cc5867, type: 2}
   - {fileID: 11400000, guid: b3840abe570313543b9f99e352337417, type: 2}
-  - {fileID: 11400000, guid: b62062ee2afdbd241a1992b8512fdae6, type: 2}
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: 2300df8b518427147b3c32f14b811ad3, type: 2}
   - {fileID: 11400000, guid: 288588811d17a7041bfcf1e3eec5c5c0, type: 2}
@@ -543,9 +542,6 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: ForceTransition
-    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Dash
     m_EventTreshold: 0
@@ -564,7 +560,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.14113587
   m_TransitionOffset: 0
   m_ExitTime: 0.9491653
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -896,7 +892,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Zombie Death
-  m_Speed: 1.15
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours:
@@ -1060,9 +1056,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: Grounded
     m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: ForceTransition
-    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: DoubleJump
     m_EventTreshold: 0
@@ -1072,10 +1065,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.048534065
+  m_TransitionDuration: 0.17188203
   m_TransitionOffset: 0
-  m_ExitTime: 0.9905232
-  m_HasExitTime: 0
+  m_ExitTime: 0.7828455
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1324,7 +1317,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IDLE
-  m_Speed: 1.1
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4282071706458111211}
@@ -1398,7 +1391,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sliding
-  m_Speed: 1.15
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1638045696874038690}
@@ -1515,7 +1508,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 3a370e77256c40c41b89440c42a5d1d8,
+  m_Motion: {fileID: -5777239895801550181, guid: 9c6fc9e1d8681cd468f3271111679488,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -1551,7 +1544,6 @@ MonoBehaviour:
   scriptableObjectDatas:
   - {fileID: 11400000, guid: 0b53f75c209b89b408c45ed71a23e92e, type: 2}
   - {fileID: 11400000, guid: 449aa4b858d76dc4885066561223cb55, type: 2}
-  - {fileID: 11400000, guid: 23b09c48e4ea9644281fb0e93b754923, type: 2}
   - {fileID: 11400000, guid: 8a01f2f3cd8cce94992900cb4e0fb7d3, type: 2}
   - {fileID: 11400000, guid: 2300df8b518427147b3c32f14b811ad3, type: 2}
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}

@@ -640,7 +640,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Zombie Death
-  m_Speed: 1
+  m_Speed: 1.1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours:
@@ -716,7 +716,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Dash
-  m_Speed: 1.2
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3325907480287069441}
@@ -1010,8 +1010,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f90b39e9a4f3ff42813375074711c0f, type: 2}
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: 8a01f2f3cd8cce94992900cb4e0fb7d3, type: 2}
-  - {fileID: 11400000, guid: 1be3f741b3f92ce428d602c62f269c6e, type: 2}
   - {fileID: 11400000, guid: 175c07efe26f2f2499eb65be17ba7d0f, type: 2}
+  - {fileID: 11400000, guid: 1be3f741b3f92ce428d602c62f269c6e, type: 2}
   characterControl: {fileID: 0}
 --- !u!1102 &3917400183248669363
 AnimatorState:
@@ -1279,7 +1279,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: 2300df8b518427147b3c32f14b811ad3, type: 2}
   - {fileID: 11400000, guid: 288588811d17a7041bfcf1e3eec5c5c0, type: 2}
-  - {fileID: 11400000, guid: 06d75c0583e507f4783f8817761006cb, type: 2}
   - {fileID: 11400000, guid: 70454dc7aaf4e574bb640b16a134fbdb, type: 2}
   - {fileID: 11400000, guid: 992975f3274d9e24099676d6e5f13c3a, type: 2}
   characterControl: {fileID: 0}
@@ -1365,7 +1364,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sliding
-  m_Speed: 1.1
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1638045696874038690}
@@ -1440,7 +1439,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Running
-  m_Speed: 1.05
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8929500999484007425}

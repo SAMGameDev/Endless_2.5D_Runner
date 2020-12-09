@@ -26,7 +26,7 @@ namespace EndlessRunning
 
                 case PlayableCharacterTypes.Noah:
                     controlCache.GetCharacterControl.anim.runtimeAnimatorController =
-                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_NOAH_TEST"); // Animation done
+                        Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_NOAH"); // Animation done
                     break;
 
                 case PlayableCharacterTypes.Jessica:

@@ -4,11 +4,12 @@ namespace EndlessRunning
 {
     public class FPSDisplay : MonoBehaviour
     {
-        // private float deltaTime = 0.0f;
+        // private float deltaTime = 0.0f
         private void Start()
         {
             Time.timeScale = 1f;
         }
+        #region FPS Display
         //private void Update()
         //{
         //    deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
@@ -29,5 +30,6 @@ namespace EndlessRunning
         //    string text = string.Format("{0:0.0} ms ({1:0.} fps)", msec, fps);
         //    GUI.Label(rect, text, style);
         //}
+        #endregion
     }
 }
