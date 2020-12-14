@@ -25,7 +25,6 @@ namespace EndlessRunning
 
         [Header("INPUTS")]
         public bool Jump;
-
         public bool Dash;
         public bool StartRun;
         public bool Slide;
@@ -35,13 +34,11 @@ namespace EndlessRunning
 
         [Header("DETECTORS")]
         public bool isGrounded = true;
-
         public bool Death;
         public bool GameOver = false;
 
         [Header("FLOATS")]
         public float gravityMultiplier;
-
         public float speed;
 
         [HideInInspector]
@@ -168,7 +165,8 @@ namespace EndlessRunning
             }
             else
             {
-                cCollider.height = Mathf.Lerp(cCollider.height, targetHeight, Time.deltaTime * SizeUpdate_Speed_C);
+                cCollider.height = Mathf.Lerp(cCollider.height, targetHeight,
+                    Time.deltaTime * SizeUpdate_Speed_C);
             }
         }
 

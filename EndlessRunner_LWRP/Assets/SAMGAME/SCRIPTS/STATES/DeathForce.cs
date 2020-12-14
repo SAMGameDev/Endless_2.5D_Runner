@@ -7,12 +7,12 @@ namespace EndlessRunning
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.characterControl.GameOver = true;
             CameraManger.Instance.ShakeCamera(0.3f);
+            playerStateBase.characterControl.StartRun = false;
+            playerStateBase.characterControl.GameOver = true;          
             playerStateBase.characterControl.Death = false;
             animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], false);
         }
-
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }

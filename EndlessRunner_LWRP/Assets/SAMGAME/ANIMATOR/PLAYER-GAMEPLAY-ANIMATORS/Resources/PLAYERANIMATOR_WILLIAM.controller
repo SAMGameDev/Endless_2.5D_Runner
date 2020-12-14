@@ -288,31 +288,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1101 &-5680132395507441128
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Grounded
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -8299052900897027996}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.14044273
-  m_TransitionOffset: 0
-  m_ExitTime: 0.95968026
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
 --- !u!114 &-5500613863771163570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -449,7 +424,6 @@ AnimatorState:
   - {fileID: 9179965197916645537}
   - {fileID: 4496687286510638793}
   - {fileID: -3281749190661027597}
-  - {fileID: -5680132395507441128}
   m_StateMachineBehaviours:
   - {fileID: 7718348514727323319}
   m_Position: {x: 50, y: 50, z: 0}
@@ -487,9 +461,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.105715275
+  m_TransitionDuration: 0.1350838
   m_TransitionOffset: 0
-  m_ExitTime: 0.96516114
+  m_ExitTime: 0.91176367
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1628,9 +1602,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.1230579
+  m_TransitionDuration: 0.013928413
   m_TransitionOffset: 0
-  m_ExitTime: 0.7774738
+  m_ExitTime: 0.9966629
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1669,6 +1643,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: 288588811d17a7041bfcf1e3eec5c5c0, type: 2}
   - {fileID: 11400000, guid: 70454dc7aaf4e574bb640b16a134fbdb, type: 2}
+  - {fileID: 11400000, guid: 449aa4b858d76dc4885066561223cb55, type: 2}
   characterControl: {fileID: 0}
 --- !u!1102 &8035600168223188893
 AnimatorState:
