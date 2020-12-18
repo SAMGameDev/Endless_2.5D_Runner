@@ -5,9 +5,10 @@ namespace EndlessRunning
     public class FPSDisplay : MonoBehaviour
     {
         // private float deltaTime = 0.0f
+        //-0.365
         private void Start()
         {
-            Time.timeScale = 0.65f;
+            Time.timeScale = 0.5f;
         }
         #region FPS Display
         //private void Update()

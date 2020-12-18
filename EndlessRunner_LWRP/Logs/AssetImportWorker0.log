@@ -15,11 +15,11 @@ C:/Users/samim/Unity Projects/Endless_2.5D_Runner/EndlessRunner_LWRP
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49839
+51000
 Successfully changed project path to: C:/Users/samim/Unity Projects/Endless_2.5D_Runner/EndlessRunner_LWRP
 C:/Users/samim/Unity Projects/Endless_2.5D_Runner/EndlessRunner_LWRP
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 137.98 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 115.75 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.0f1 (3721df5a8b28)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Resources/UnitySubsystems
@@ -36,395 +36,315 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56664
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003448 seconds.
+Registered in 0.003399 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 128.00 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 120.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.383 seconds
+- Completed reload, in  3.742 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002882 seconds.
+Registered in 0.002952 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 130.05 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 125.02 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.326 seconds
+- Completed reload, in  2.056 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.18 seconds
-Refreshing native plugins compatible for Editor in 1.36 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2651 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 121.7 MB.
-System memory in use after: 121.9 MB.
+System memory in use before: 121.8 MB.
+System memory in use after: 122.0 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3094.
-Total: 9.840000 ms (FindLiveObjects: 2.801600 ms CreateObjectMapping: 0.369600 ms MarkObjects: 6.509800 ms  DeleteObjects: 0.156000 ms)
+Total: 4.199700 ms (FindLiveObjects: 0.376300 ms CreateObjectMapping: 0.285900 ms MarkObjects: 3.440800 ms  DeleteObjects: 0.094500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/SAMGAME/CHARACTER-SELECT-SYSTEM
-  artifactKey: Guid(5856d8dc53c922a4e8f1893baba96abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/CHARACTER-SELECT-SYSTEM using Guid(5856d8dc53c922a4e8f1893baba96abb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35e2b59125c56c50146df40957848134') in 0.114461 seconds
-  Import took 0.125839 seconds .
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward.asset
+  artifactKey: Guid(b0e9e2f7f3db80149832c4bbcf95bbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward.asset using Guid(b0e9e2f7f3db80149832c4bbcf95bbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77d61c01416e6db64efe120981228248') in 0.065968 seconds
+  Import took 0.084637 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.031610 seconds.
-  path: Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/characterSelect.asset
-  artifactKey: Guid(e24765b944e40084c8fe6579a68b3d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/characterSelect.asset using Guid(e24765b944e40084c8fe6579a68b3d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3aa3247aef60809e6e0b47ac3292d8c') in 0.183387 seconds
-  Import took 0.194652 seconds .
+  Time since last request: 0.000450 seconds.
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Landing.asset
+  artifactKey: Guid(c8bfb39bb9a4dc446a6325e155267c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Landing.asset using Guid(c8bfb39bb9a4dc446a6325e155267c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c2c22428b7521463fce591512ced31b') in 0.012145 seconds
+  Import took 0.026053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.182157 seconds.
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Jump_Falling.asset
+  artifactKey: Guid(288588811d17a7041bfcf1e3eec5c5c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Jump_Falling.asset using Guid(288588811d17a7041bfcf1e3eec5c5c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d6eeafcbf9f5119f5b459f5a4134a83') in 0.008554 seconds
+  Import took 0.107719 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.604624 seconds.
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Landing_Jane.asset
+  artifactKey: Guid(8ac5a733e3d1874458b1edc18b5b0a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Landing_Jane.asset using Guid(8ac5a733e3d1874458b1edc18b5b0a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9b4f25d8a9b0324b4276531ec9e57a5') in 0.012205 seconds
+  Import took 0.017041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.679100 seconds.
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Sliding.asset
+  artifactKey: Guid(2450e5d169b24c7468f9a58a27965a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Sliding.asset using Guid(2450e5d169b24c7468f9a58a27965a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ec03b175b6935c88ffd98a7bbaf4560') in 0.009856 seconds
+  Import took 0.045152 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002713 seconds.
+Registered in 0.001400 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.860 seconds
+- Completed reload, in  0.844 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2529 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 113.0 MB.
-System memory in use after: 113.2 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3096.
-Total: 4.071100 ms (FindLiveObjects: 0.425500 ms CreateObjectMapping: 0.270900 ms MarkObjects: 3.341000 ms  DeleteObjects: 0.031200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.837222 seconds.
-  path: Assets/SAMGAME/MY-GAME-SCENES
-  artifactKey: Guid(0f6a8cbfc28d69f4398b79423a257148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/MY-GAME-SCENES using Guid(0f6a8cbfc28d69f4398b79423a257148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1d08522e6d4dcbfd70a592af8015a23') in 0.016539 seconds
-  Import took 0.024488 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.867190 seconds.
-  path: Assets/SAMGAME/MY-GAME-SCENES/CharacterSelect.unity
-  artifactKey: Guid(07591b14c08d7424babbda5271c217b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/MY-GAME-SCENES/CharacterSelect.unity using Guid(07591b14c08d7424babbda5271c217b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08a1e90b7130c5ed251529ded356b695') in 0.030616 seconds
-  Import took 0.038229 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 37.577486 seconds.
-  path: Assets/SAMGAME/MY-GAME-SCENES/GameScene.unity
-  artifactKey: Guid(2e30cd657770faf4cad570614b9d945e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/MY-GAME-SCENES/GameScene.unity using Guid(2e30cd657770faf4cad570614b9d945e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d36f13b02af55cebcde5df419d47cec') in 0.010305 seconds
-  Import took 0.017534 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001341 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.947 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 113.1 MB.
 System memory in use after: 113.3 MB.
 
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3096.
+Total: 2.393900 ms (FindLiveObjects: 0.420900 ms CreateObjectMapping: 0.187300 ms MarkObjects: 1.727000 ms  DeleteObjects: 0.056800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 219.482002 seconds.
+  path: Assets/SAMGAME/SCRIPTS/CHARACTERCONTROL/FPSDisplay.cs
+  artifactKey: Guid(3e00eb95c6ce9d84fb2b7b871d282097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTS/CHARACTERCONTROL/FPSDisplay.cs using Guid(3e00eb95c6ce9d84fb2b7b871d282097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e53a425576f878ca1e5986fafc2cd19') in 0.033951 seconds
+  Import took 0.037962 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001251 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.811 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 113.4 MB.
+System memory in use after: 113.6 MB.
+
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3098.
-Total: 3.221500 ms (FindLiveObjects: 0.404300 ms CreateObjectMapping: 0.145400 ms MarkObjects: 2.644000 ms  DeleteObjects: 0.025600 ms)
+Total: 2.609600 ms (FindLiveObjects: 0.270200 ms CreateObjectMapping: 0.154300 ms MarkObjects: 2.165800 ms  DeleteObjects: 0.017600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 104.864240 seconds.
+  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
+  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f1b586a38dfb5a2cc32663817a3c04e') in 0.466986 seconds
+  Import took 0.491623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.870711 seconds.
+  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
+  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f1b586a38dfb5a2cc32663817a3c04e') in 0.053476 seconds
+  Import took 0.058363 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002797 seconds.
+Registered in 0.001273 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.878 seconds
+- Completed reload, in  0.857 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 113.2 MB.
-System memory in use after: 113.4 MB.
+System memory in use before: 129.9 MB.
+System memory in use after: 130.1 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3100.
-Total: 4.104900 ms (FindLiveObjects: 0.458200 ms CreateObjectMapping: 0.306500 ms MarkObjects: 3.303300 ms  DeleteObjects: 0.034500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 111.137124 seconds.
-  path: Assets/SAMGAME/ANIMATOR
-  artifactKey: Guid(078a294d210add7419b99de05c3d00e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR using Guid(078a294d210add7419b99de05c3d00e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cdb2519185b8cf3b3bc04b6bbff2470') in 0.020175 seconds
-  Import took 0.030523 seconds .
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3149.
+Total: 2.231500 ms (FindLiveObjects: 0.279900 ms CreateObjectMapping: 0.120000 ms MarkObjects: 1.815600 ms  DeleteObjects: 0.014800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.565793 seconds.
-  path: Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS
-  artifactKey: Guid(1aa159f1701ffb84292a8084a8868ba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS using Guid(1aa159f1701ffb84292a8084a8868ba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7200ef326ecaf0bf5b77197aed40a594') in 0.015357 seconds
-  Import took 0.160223 seconds .
+  Time since last request: 27.141903 seconds.
+  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
+  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01ca5f32f85b1c63b3573ea104af223d') in 0.188706 seconds
+  Import took 0.196433 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.823427 seconds.
-  path: Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources
-  artifactKey: Guid(d3dadca03c1e37a48ae97d22f2267759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources using Guid(d3dadca03c1e37a48ae97d22f2267759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d450b4a7211f251d0e24d15f8bb653a') in 0.022483 seconds
-  Import took 0.030590 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.843886 seconds.
-  path: Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_JESSICA.controller
-  artifactKey: Guid(8caac03f4386ae548806493b95ff21d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_JESSICA.controller using Guid(8caac03f4386ae548806493b95ff21d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a843e09738ab7631d354a88e80925de') in 0.064156 seconds
-  Import took 0.073375 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 89.332284 seconds.
-  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Falling_GravityApplyers/Jessica_Falling.asset
-  artifactKey: Guid(996a314215550c8439fa7fcdc3e1bd52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Falling_GravityApplyers/Jessica_Falling.asset using Guid(996a314215550c8439fa7fcdc3e1bd52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1877abecf1a6bf49c6c6035b58ec182c') in 0.023700 seconds
-  Import took 0.032446 seconds .
+  Time since last request: 2.020743 seconds.
+  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
+  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01ca5f32f85b1c63b3573ea104af223d') in 0.034948 seconds
+  Import took 0.039887 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001404 seconds.
+Registered in 0.001499 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.001 seconds
+- Completed reload, in  0.841 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.51 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 113.2 MB.
-System memory in use after: 113.5 MB.
+System memory in use before: 130.2 MB.
+System memory in use after: 130.4 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3102.
-Total: 4.575100 ms (FindLiveObjects: 0.688400 ms CreateObjectMapping: 0.389500 ms MarkObjects: 3.458900 ms  DeleteObjects: 0.035600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1414.800146 seconds.
-  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Jump/JumpForce.asset
-  artifactKey: Guid(0b53f75c209b89b408c45ed71a23e92e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Jump/JumpForce.asset using Guid(0b53f75c209b89b408c45ed71a23e92e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f002c80a0e5757e9ec47a66c1d2e7100') in 0.047862 seconds
-  Import took 0.067837 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002747 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.893 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 113.3 MB.
-System memory in use after: 113.5 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3104.
-Total: 4.271000 ms (FindLiveObjects: 0.578800 ms CreateObjectMapping: 0.283000 ms MarkObjects: 3.374400 ms  DeleteObjects: 0.032600 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3187.
+Total: 2.578500 ms (FindLiveObjects: 0.362100 ms CreateObjectMapping: 0.175900 ms MarkObjects: 2.023200 ms  DeleteObjects: 0.016000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 248.758538 seconds.
-  path: Assets/SAMGAME/ANIMATIONS
-  artifactKey: Guid(47ed63ec7b0dae64aa9e545c44baf846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATIONS using Guid(47ed63ec7b0dae64aa9e545c44baf846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce9310cca7b8105198819f91f2657b53') in 0.022255 seconds
-  Import took 0.030475 seconds .
+  Time since last request: 139.335232 seconds.
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Landing.asset
+  artifactKey: Guid(c8bfb39bb9a4dc446a6325e155267c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Landing.asset using Guid(c8bfb39bb9a4dc446a6325e155267c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '598544f477d912be8679de0baca813fd') in 0.031039 seconds
+  Import took 0.132587 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.361591 seconds.
+  Time since last request: 21.386645 seconds.
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Landing_Jane.asset
+  artifactKey: Guid(8ac5a733e3d1874458b1edc18b5b0a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Landing_Jane.asset using Guid(8ac5a733e3d1874458b1edc18b5b0a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3e2f65733d9fe94c1fb6ccc82ca86e8') in 0.003780 seconds
+  Import took 0.009393 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.553110 seconds.
   path: Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM.controller
   artifactKey: Guid(dde1bc7dbb7603f4b872b8ddf40f6d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM.controller using Guid(dde1bc7dbb7603f4b872b8ddf40f6d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bae38827200a714fb8cdd26eb3538bf') in 0.692284 seconds
-  Import took 0.702313 seconds .
+Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM.controller using Guid(dde1bc7dbb7603f4b872b8ddf40f6d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed2e52f198ad37c8c58e60f8f755a2e') in 0.062627 seconds
+  Import took 0.167673 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.615332 seconds.
-  path: Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM 1.controller
-  artifactKey: Guid(e22ce2cc7ba35fc47a163286808be6a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM 1.controller using Guid(e22ce2cc7ba35fc47a163286808be6a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b0ee9e58cbb8cafc72d30872693a08a') in 0.046800 seconds
-  Import took 0.056967 seconds .
+  Time since last request: 15.120944 seconds.
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/ForceTransitions/ForceTransition_Liam.asset
+  artifactKey: Guid(107045e254a04d440a9832729d1bacd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/ForceTransitions/ForceTransition_Liam.asset using Guid(107045e254a04d440a9832729d1bacd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a7a4afbc8eaf59295503ac4ff394c44') in 0.007674 seconds
+  Import took 0.023226 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.003516 seconds.
-  path: Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM 1.controller
-  artifactKey: Guid(e22ce2cc7ba35fc47a163286808be6a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM 1.controller using Guid(e22ce2cc7ba35fc47a163286808be6a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b0ee9e58cbb8cafc72d30872693a08a') in 0.041325 seconds
-  Import took 0.050611 seconds .
+  Time since last request: 0.000814 seconds.
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/ForceTransitions/ForceTransition_Liam.asset
+  artifactKey: Guid(107045e254a04d440a9832729d1bacd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/ForceTransitions/ForceTransition_Liam.asset using Guid(107045e254a04d440a9832729d1bacd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a7a4afbc8eaf59295503ac4ff394c44') in 0.003287 seconds
+  Import took 0.007144 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001281 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.846 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.4 MB.
+System memory in use after: 130.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3189.
+Total: 3.094800 ms (FindLiveObjects: 0.485400 ms CreateObjectMapping: 0.250400 ms MarkObjects: 2.337400 ms  DeleteObjects: 0.019100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.717574 seconds.
-  path: Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM_Backup.controller
-  artifactKey: Guid(e22ce2cc7ba35fc47a163286808be6a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM_Backup.controller using Guid(e22ce2cc7ba35fc47a163286808be6a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b38119ba5483d6d83a036514ca38849') in 0.035460 seconds
-  Import took 0.041040 seconds .
+  Time since last request: 114.970074 seconds.
+  path: Assets/SAMGAME/ANIMATIONS/FALLING/Falling Idle.fbx
+  artifactKey: Guid(6374f5a20bf7b1a4ab5f14239a095633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/ANIMATIONS/FALLING/Falling Idle.fbx using Guid(6374f5a20bf7b1a4ab5f14239a095633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9937f6b659452b58f61c49784ae0515a') in 0.213534 seconds
+  Import took 0.233267 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 11.103392 seconds.
-  path: Assets/SAMGAME/TESTS
-  artifactKey: Guid(d371e4adc855a814bbe58d8ef6183649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS using Guid(d371e4adc855a814bbe58d8ef6183649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b23f4dd6cc516f361135f895dcca56bf') in 0.014747 seconds
-  Import took 0.114293 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001285 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.838 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.6 MB.
+System memory in use after: 130.8 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 1.301599 seconds.
-  path: Assets/SAMGAME/TESTS/Animations
-  artifactKey: Guid(f78c45cd024a1f14987da2c78481cc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations using Guid(f78c45cd024a1f14987da2c78481cc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa6e3459342078d38623adabd4246234') in 0.013695 seconds
-  Import took 0.022010 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.734479 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/_bot@Jump.fbx
-  artifactKey: Guid(79ca3cb9caab3e94db71d7109a78c7e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/_bot@Jump.fbx using Guid(79ca3cb9caab3e94db71d7109a78c7e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17198dc7fbbbae8ffb4d1505b8f309b0') in 3.071137 seconds
-  Import took 3.101158 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.194996 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/xbot@Falling To Landing.fbx
-  artifactKey: Guid(d215b3cf0df7d2546b0de9528fcb8532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/xbot@Falling To Landing.fbx using Guid(d215b3cf0df7d2546b0de9528fcb8532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdbcb16745509b4d814548b4e4693928') in 0.136152 seconds
-  Import took 0.145017 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.270297 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Backflip.fbx
-  artifactKey: Guid(f5fc7be9444e4d64f927603354bce3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Backflip.fbx using Guid(f5fc7be9444e4d64f927603354bce3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a0ee443dc612c6b189a8a8b913ab469') in 0.142326 seconds
-  Import took 0.151198 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.436602 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a50a2cdd5807e32f221e0d6758951ed') in 0.139085 seconds
-  Import took 0.148532 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.768314 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Front Flip.fbx
-  artifactKey: Guid(a290f0541abe40d45b2bac4e9292a713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Front Flip.fbx using Guid(a290f0541abe40d45b2bac4e9292a713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdb8012f5c49e4d1e18dec2a50032892') in 0.136921 seconds
-  Import took 0.146019 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.656049 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Front Twist Flip.fbx
-  artifactKey: Guid(5da3af10371b5e6428d8a8520f340285) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Front Twist Flip.fbx using Guid(5da3af10371b5e6428d8a8520f340285) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab53223e17951e67151783880b3839f0') in 0.133454 seconds
-  Import took 0.158819 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.883833 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Jump Over.fbx
-  artifactKey: Guid(6f09f02b445f04446a0501235ea25708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Jump Over.fbx using Guid(6f09f02b445f04446a0501235ea25708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '449c0bd54e1bbfcb068fb8ca5f4fc75a') in 0.146146 seconds
-  Import took 0.170587 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.315773 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42ae1d959b87916364121b86015a7d38') in 0.094101 seconds
-  Import took 0.102682 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.221184 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baff6318d1d3ae588c38647951fdb0f4') in 0.113765 seconds
-  Import took 0.145090 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 113.500730 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ead6febd643dc335b6bb9b2cf9a74d7') in 0.123945 seconds
-  Import took 0.134074 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.447118 seconds.
-  path: Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/characterSelect.asset
-  artifactKey: Guid(e24765b944e40084c8fe6579a68b3d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/characterSelect.asset using Guid(e24765b944e40084c8fe6579a68b3d98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '403bf34c94be985a736e9c575eff9bec') in 0.015236 seconds
-  Import took 0.023235 seconds .
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3227.
+Total: 2.216900 ms (FindLiveObjects: 0.281500 ms CreateObjectMapping: 0.156300 ms MarkObjects: 1.761700 ms  DeleteObjects: 0.016000 ms)
 
 ========================================================================
 Received Prepare
@@ -432,87 +352,127 @@ Registering precompiled user dll's ...
 Registered in 0.002726 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.982 seconds
+- Completed reload, in  0.856 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 130.0 MB.
-System memory in use after: 130.2 MB.
+System memory in use before: 130.7 MB.
+System memory in use after: 131.0 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3155.
-Total: 4.083100 ms (FindLiveObjects: 0.499200 ms CreateObjectMapping: 0.309100 ms MarkObjects: 3.237800 ms  DeleteObjects: 0.035000 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3229.
+Total: 2.344100 ms (FindLiveObjects: 0.363300 ms CreateObjectMapping: 0.176500 ms MarkObjects: 1.762700 ms  DeleteObjects: 0.040300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 321.475382 seconds.
+  path: Assets/SAMGAME/ANIMATIONS/FALLING/Falling Idle.fbx
+  artifactKey: Guid(6374f5a20bf7b1a4ab5f14239a095633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/ANIMATIONS/FALLING/Falling Idle.fbx using Guid(6374f5a20bf7b1a4ab5f14239a095633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f2ecf0068c8d015a01219ab3369c6c0') in 0.201446 seconds
+  Import took 0.220542 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.609749 seconds.
+  path: Assets/SAMGAME/ANIMATIONS/FALLING/Falling Idle.fbx
+  artifactKey: Guid(6374f5a20bf7b1a4ab5f14239a095633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/ANIMATIONS/FALLING/Falling Idle.fbx using Guid(6374f5a20bf7b1a4ab5f14239a095633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc551e5ef327e2eeaf2a946b604f0289') in 0.105353 seconds
+  Import took 0.128832 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002679 seconds.
+Registered in 0.001420 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.005 seconds
+- Completed reload, in  0.832 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 130.2 MB.
-System memory in use after: 130.4 MB.
+System memory in use before: 131.0 MB.
+System memory in use after: 131.2 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3157.
-Total: 4.289200 ms (FindLiveObjects: 0.477200 ms CreateObjectMapping: 0.295900 ms MarkObjects: 3.479000 ms  DeleteObjects: 0.034900 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3267.
+Total: 2.581000 ms (FindLiveObjects: 0.338000 ms CreateObjectMapping: 0.138600 ms MarkObjects: 2.086100 ms  DeleteObjects: 0.016700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 606.786222 seconds.
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Falling_GravityApplyers/Default_Falling.asset
+  artifactKey: Guid(992975f3274d9e24099676d6e5f13c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Falling_GravityApplyers/Default_Falling.asset using Guid(992975f3274d9e24099676d6e5f13c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77819feabd0b5413b794467f3bfe879c') in 0.046101 seconds
+  Import took 0.051585 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003053 seconds.
+Registered in 0.001240 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.997 seconds
+- Completed reload, in  0.846 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 130.3 MB.
-System memory in use after: 130.5 MB.
+System memory in use before: 131.1 MB.
+System memory in use after: 131.4 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3159.
-Total: 4.284800 ms (FindLiveObjects: 0.461400 ms CreateObjectMapping: 0.272100 ms MarkObjects: 3.512600 ms  DeleteObjects: 0.036500 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3269.
+Total: 2.557600 ms (FindLiveObjects: 0.303000 ms CreateObjectMapping: 0.118000 ms MarkObjects: 2.118900 ms  DeleteObjects: 0.016700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001204 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.853 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.3 MB.
+System memory in use after: 131.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3271.
+Total: 2.444000 ms (FindLiveObjects: 0.273500 ms CreateObjectMapping: 0.132400 ms MarkObjects: 1.992900 ms  DeleteObjects: 0.044100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 341.874879 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3964782d122ce04cb8cfac2a44227c3c') in 0.524475 seconds
-  Import took 0.533510 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.767294 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3964782d122ce04cb8cfac2a44227c3c') in 0.088174 seconds
-  Import took 0.098079 seconds .
+  Time since last request: 163.423734 seconds.
+  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Jump_Falling 1.asset
+  artifactKey: Guid(57f8a4d54d86f4c4897777ad0f3fc34d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Running/RunForward_Jump_Falling 1.asset using Guid(57f8a4d54d86f4c4897777ad0f3fc34d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9f5a0ffe93dec7e7bdd80687ef07050') in 0.149874 seconds
+  Import took 0.154818 seconds .
 
 ========================================================================
 Received Prepare
@@ -520,28 +480,100 @@ Registering precompiled user dll's ...
 Registered in 0.002714 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.048 seconds
+- Completed reload, in  2.139 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.4 MB.
+System memory in use after: 130.6 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3273.
+Total: 4.459100 ms (FindLiveObjects: 0.711500 ms CreateObjectMapping: 0.353600 ms MarkObjects: 3.356700 ms  DeleteObjects: 0.034500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001225 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.838 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 130.5 MB.
 System memory in use after: 130.7 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3197.
-Total: 4.228200 ms (FindLiveObjects: 0.481900 ms CreateObjectMapping: 0.310000 ms MarkObjects: 3.402400 ms  DeleteObjects: 0.031700 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3275.
+Total: 2.612100 ms (FindLiveObjects: 0.354900 ms CreateObjectMapping: 0.297900 ms MarkObjects: 1.941000 ms  DeleteObjects: 0.017200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 752.042367 seconds.
+  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
+  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50d69b9df8fb969b76ae391ae6432a8d') in 0.528911 seconds
+  Import took 0.555262 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002762 seconds.
+Registered in 0.004456 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.135 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.8 MB.
+System memory in use after: 131.0 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3313.
+Total: 4.544600 ms (FindLiveObjects: 0.508800 ms CreateObjectMapping: 0.264000 ms MarkObjects: 3.735200 ms  DeleteObjects: 0.034400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.305054 seconds.
+  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
+  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e58fe1ef870ac9908754b5188cb5e2f2') in 0.453980 seconds
+  Import took 0.493317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.508286 seconds.
+  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
+  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e58fe1ef870ac9908754b5188cb5e2f2') in 0.085899 seconds
+  Import took 0.094643 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002751 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
@@ -550,1176 +582,96 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.995 seconds
+- Completed reload, in  2.182 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.86 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 130.6 MB.
-System memory in use after: 130.9 MB.
+System memory in use before: 131.1 MB.
+System memory in use after: 131.3 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3199.
-Total: 4.268800 ms (FindLiveObjects: 0.501900 ms CreateObjectMapping: 0.325600 ms MarkObjects: 3.405500 ms  DeleteObjects: 0.033600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 87.200627 seconds.
-  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Jump/JumpForce 1.asset
-  artifactKey: Guid(cab7332a89cc1484a929ae75ac71be2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Jump/JumpForce 1.asset using Guid(cab7332a89cc1484a929ae75ac71be2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2240b0f06a42a20ac42402cf0ae5841d') in 0.032093 seconds
-  Import took 0.041206 seconds .
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3351.
+Total: 5.148600 ms (FindLiveObjects: 0.720500 ms CreateObjectMapping: 0.293700 ms MarkObjects: 4.096400 ms  DeleteObjects: 0.036000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 37.099491 seconds.
-  path: Assets/SAMGAME/SCRIPTS
-  artifactKey: Guid(02a3527b6b33a924e8ec66aa805ea717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/SCRIPTS using Guid(02a3527b6b33a924e8ec66aa805ea717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b40ef0575e121a6914e985f73de789') in 0.017632 seconds
-  Import took 0.025720 seconds .
+  Time since last request: 344.843933 seconds.
+  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
+  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe760f379a4dbee4766689636023b4dd') in 0.417444 seconds
+  Import took 0.514265 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002775 seconds.
+Registered in 0.002040 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.97 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.078 seconds
+- Completed reload, in  0.963 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2620 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 134.1 MB.
+System memory in use after: 134.3 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3476.
+Total: 2.838900 ms (FindLiveObjects: 0.386400 ms CreateObjectMapping: 0.153100 ms MarkObjects: 2.276700 ms  DeleteObjects: 0.021100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003549 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.808 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.96 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 130.7 MB.
-System memory in use after: 131.0 MB.
+Unloading 2633 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 136.2 MB.
+System memory in use after: 136.5 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3201.
-Total: 4.886600 ms (FindLiveObjects: 0.712800 ms CreateObjectMapping: 0.304200 ms MarkObjects: 3.828700 ms  DeleteObjects: 0.036200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 149.971540 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/_bot@Jump.fbx
-  artifactKey: Guid(79ca3cb9caab3e94db71d7109a78c7e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/_bot@Jump.fbx using Guid(79ca3cb9caab3e94db71d7109a78c7e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '774b1d7b3a503a4087ac14a19afaae28') in 0.439501 seconds
-  Import took 0.461354 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.570021 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed4b2cfc484e08f1c405cfeab9162b3') in 0.108513 seconds
-  Import took 0.117221 seconds .
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3490.
+Total: 5.172300 ms (FindLiveObjects: 0.780300 ms CreateObjectMapping: 0.445300 ms MarkObjects: 3.904000 ms  DeleteObjects: 0.040100 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002692 seconds.
+Registered in 0.002978 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.111 seconds
+- Completed reload, in  3.195 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 131.0 MB.
-System memory in use after: 131.2 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3239.
-Total: 4.359600 ms (FindLiveObjects: 0.654500 ms CreateObjectMapping: 0.312400 ms MarkObjects: 3.355600 ms  DeleteObjects: 0.034900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 26.965727 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b2de5e12b2c59ab65038555fc163596') in 0.439635 seconds
-  Import took 0.449141 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002835 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.200 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 131.2 MB.
-System memory in use after: 131.4 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3277.
-Total: 4.586200 ms (FindLiveObjects: 0.500400 ms CreateObjectMapping: 0.296100 ms MarkObjects: 3.753900 ms  DeleteObjects: 0.034200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.960960 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3707df51062b25a7df90ba70ca2c09fe') in 0.411266 seconds
-  Import took 0.420270 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.466742 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3707df51062b25a7df90ba70ca2c09fe') in 0.087712 seconds
-  Import took 0.096563 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002725 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.208 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 131.4 MB.
-System memory in use after: 131.7 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3315.
-Total: 4.655900 ms (FindLiveObjects: 0.701000 ms CreateObjectMapping: 0.307800 ms MarkObjects: 3.607400 ms  DeleteObjects: 0.037200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.372229 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx
-  artifactKey: Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Big Jump.fbx using Guid(77cfcb4a48aff9342b52d00548ef9026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdf6b0af1e2c28461f2b4f84de85a41f') in 0.436982 seconds
-  Import took 0.446107 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.010790 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/ybot@Front Flip.fbx
-  artifactKey: Guid(a290f0541abe40d45b2bac4e9292a713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/ybot@Front Flip.fbx using Guid(a290f0541abe40d45b2bac4e9292a713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6902ef6a1bbb827f417a489398ce02e8') in 0.125787 seconds
-  Import took 0.134444 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 44.137202 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing
-  artifactKey: Guid(da2f974b206a6134bb4dadc7a33c4f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing using Guid(da2f974b206a6134bb4dadc7a33c4f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55baa8eafd858ec440e8d62ac9f35884') in 0.008792 seconds
-  Import took 0.029100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.322166 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/ybot@Big Jump 1.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/ybot@Big Jump 1.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '143944b0baf9776db1b8a954a336cb80') in 0.044201 seconds
-  Import took 0.048613 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.910747 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/ybot@Big Jump 2.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/ybot@Big Jump 2.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c5e91f5d0b2b478047a8b957290214d') in 0.136296 seconds
-  Import took 0.163238 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.724269 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d4fcdabe89b49bde79e25cf73674603') in 0.067416 seconds
-  Import took 0.072363 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.260500 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50ec38006025b9bfcb208d2c6ce798ef') in 0.053667 seconds
-  Import took 0.057981 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 71.136288 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8deac7d34a0f1026fd07bd426f75a05a') in 0.128339 seconds
-  Import took 0.154215 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 40.562868 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65f3b7231a7fcd5de7f8399709e08355') in 0.088509 seconds
-  Import took 0.097650 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.035252 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65f3b7231a7fcd5de7f8399709e08355') in 0.113027 seconds
-  Import took 0.121995 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002716 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.113 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 131.8 MB.
-System memory in use after: 132.0 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3353.
-Total: 4.408200 ms (FindLiveObjects: 0.491000 ms CreateObjectMapping: 0.288400 ms MarkObjects: 3.592500 ms  DeleteObjects: 0.033500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.964403 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26625fa3500d245cfa88e5e54d7acfbd') in 0.417074 seconds
-  Import took 0.426072 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.367120 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26625fa3500d245cfa88e5e54d7acfbd') in 0.084743 seconds
-  Import took 0.093561 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002736 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.147 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 131.0 MB.
-System memory in use after: 131.3 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3391.
-Total: 4.468900 ms (FindLiveObjects: 0.496400 ms CreateObjectMapping: 0.277400 ms MarkObjects: 3.659600 ms  DeleteObjects: 0.033400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.137110 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7010342b5735595357a36820c820fff5') in 0.426682 seconds
-  Import took 0.444457 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.293511 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7010342b5735595357a36820c820fff5') in 0.087269 seconds
-  Import took 0.095807 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002724 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.116 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 131.3 MB.
-System memory in use after: 131.5 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3429.
-Total: 4.789900 ms (FindLiveObjects: 0.707900 ms CreateObjectMapping: 0.286800 ms MarkObjects: 3.759200 ms  DeleteObjects: 0.033800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.320635 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08687733570fd1323543729d311e10d2') in 0.421321 seconds
-  Import took 0.430576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.403998 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08687733570fd1323543729d311e10d2') in 0.084148 seconds
-  Import took 0.095114 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002721 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.93 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.160 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 131.6 MB.
-System memory in use after: 131.8 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3467.
-Total: 5.091200 ms (FindLiveObjects: 0.761500 ms CreateObjectMapping: 0.318300 ms MarkObjects: 3.973900 ms  DeleteObjects: 0.035400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.043457 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '089820cf13536b839513d662077671d8') in 0.415894 seconds
-  Import took 0.424993 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.492693 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '089820cf13536b839513d662077671d8') in 0.087333 seconds
-  Import took 0.095967 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002701 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.02 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.165 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 131.8 MB.
-System memory in use after: 132.1 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3505.
-Total: 5.156100 ms (FindLiveObjects: 0.567400 ms CreateObjectMapping: 0.436400 ms MarkObjects: 4.111700 ms  DeleteObjects: 0.038200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.493468 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dadc47a320d05d714539df78b8289453') in 0.426298 seconds
-  Import took 0.533192 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.990962 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dadc47a320d05d714539df78b8289453') in 0.082272 seconds
-  Import took 0.091030 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002683 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.222 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.1 MB.
-System memory in use after: 132.3 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3543.
-Total: 4.946200 ms (FindLiveObjects: 0.528700 ms CreateObjectMapping: 0.370200 ms MarkObjects: 4.009600 ms  DeleteObjects: 0.035900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 52.410418 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c90c873f6fcdd29f0b678fa54287f69d') in 0.444353 seconds
-  Import took 0.551620 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 93.040442 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93770c09732f61766d9bedd49b783523') in 0.119504 seconds
-  Import took 0.129808 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.157736 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '493a1f336db2c9c71aa0fe25ca947edf') in 0.118166 seconds
-  Import took 0.234994 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.752055 seconds.
-  path: Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM.controller
-  artifactKey: Guid(dde1bc7dbb7603f4b872b8ddf40f6d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM.controller using Guid(dde1bc7dbb7603f4b872b8ddf40f6d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e7cac63cbd4ed90f959f47f771072f0') in 0.049872 seconds
-  Import took 0.069765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 63.232038 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '122cd1de062d2f92fd695631be50cec1') in 0.108717 seconds
-  Import took 0.117247 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002730 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.260 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.5 MB.
-System memory in use after: 132.7 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3581.
-Total: 4.928800 ms (FindLiveObjects: 0.534100 ms CreateObjectMapping: 0.275400 ms MarkObjects: 4.081200 ms  DeleteObjects: 0.036100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 83.621710 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb0a874589060e8c912d6611c06a8821') in 0.450285 seconds
-  Import took 0.459664 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.989901 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7542ddc83c1484b223a5f643c39fa0d8') in 0.114467 seconds
-  Import took 0.123312 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.994353 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '855095a7dbbfce8c2587dc9f9099ee3e') in 0.096673 seconds
-  Import took 0.948737 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002774 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.208 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.7 MB.
-System memory in use after: 133.0 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3619.
-Total: 5.112900 ms (FindLiveObjects: 0.539900 ms CreateObjectMapping: 0.269900 ms MarkObjects: 4.264700 ms  DeleteObjects: 0.036300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 118.727883 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33130cd5bd412eede87e6ee4faa5f9aa') in 0.416216 seconds
-  Import took 0.425327 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.279384 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33130cd5bd412eede87e6ee4faa5f9aa') in 0.088191 seconds
-  Import took 0.096779 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002708 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.195 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.0 MB.
-System memory in use after: 133.2 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3657.
-Total: 5.360500 ms (FindLiveObjects: 0.601300 ms CreateObjectMapping: 0.306900 ms MarkObjects: 4.410300 ms  DeleteObjects: 0.039200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002719 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.213 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.1 MB.
-System memory in use after: 133.3 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3659.
-Total: 5.323000 ms (FindLiveObjects: 0.774000 ms CreateObjectMapping: 0.283500 ms MarkObjects: 4.228000 ms  DeleteObjects: 0.035300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 159.684816 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab59ad09ec692bea792e244f68191340') in 0.419191 seconds
-  Import took 0.428593 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.355031 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab59ad09ec692bea792e244f68191340') in 0.087894 seconds
-  Import took 0.096465 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002708 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.93 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.238 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.3 MB.
-System memory in use after: 132.6 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3697.
-Total: 5.571300 ms (FindLiveObjects: 0.864700 ms CreateObjectMapping: 0.321100 ms MarkObjects: 4.347900 ms  DeleteObjects: 0.034400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001427 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.920 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.4 MB.
-System memory in use after: 132.7 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3699.
-Total: 2.841600 ms (FindLiveObjects: 0.399600 ms CreateObjectMapping: 0.146200 ms MarkObjects: 2.257800 ms  DeleteObjects: 0.036900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 109.196960 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx
-  artifactKey: Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump.fbx using Guid(4e71154a9f5df1e4b9760b8a1e8e527c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0330af3df980a10db9317225488d8f47') in 0.190558 seconds
-  Import took 0.195008 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.836582 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32450237ca1459c5822169abdb9c3eae') in 0.071820 seconds
-  Import took 0.080557 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 114.797196 seconds.
-  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Jump/JumpForce 1.asset
-  artifactKey: Guid(cab7332a89cc1484a929ae75ac71be2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Jump/JumpForce 1.asset using Guid(cab7332a89cc1484a929ae75ac71be2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '005313b8fe3a7760d81dccf0c952a17e') in 0.009399 seconds
-  Import took 0.019276 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002786 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.243 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.7 MB.
-System memory in use after: 132.9 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3737.
-Total: 5.621400 ms (FindLiveObjects: 0.826700 ms CreateObjectMapping: 0.299400 ms MarkObjects: 4.454500 ms  DeleteObjects: 0.038100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002706 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.284 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.8 MB.
-System memory in use after: 133.0 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3739.
-Total: 5.397700 ms (FindLiveObjects: 0.598900 ms CreateObjectMapping: 0.316400 ms MarkObjects: 4.444800 ms  DeleteObjects: 0.035200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 87.804802 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00f2472717126a77ea153d5324bb1b7c') in 0.443935 seconds
-  Import took 0.453176 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 69.398565 seconds.
-  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/Jump/Jump.asset
-  artifactKey: Guid(8a01f2f3cd8cce94992900cb4e0fb7d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/Jump/Jump.asset using Guid(8a01f2f3cd8cce94992900cb4e0fb7d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf71f611f6324db4ddf9576999b2c75f') in 0.017097 seconds
-  Import took 0.026249 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002742 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.476 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.35 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.0 MB.
-System memory in use after: 133.3 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3777.
-Total: 5.773500 ms (FindLiveObjects: 0.638100 ms CreateObjectMapping: 0.310500 ms MarkObjects: 4.785900 ms  DeleteObjects: 0.036100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 265.350284 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c247863f2fe0ccbdcfb92d73b60cfd64') in 0.468620 seconds
-  Import took 0.479050 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001602 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.967 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.3 MB.
-System memory in use after: 133.5 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3815.
-Total: 2.820900 ms (FindLiveObjects: 0.341700 ms CreateObjectMapping: 0.121000 ms MarkObjects: 2.340100 ms  DeleteObjects: 0.016900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004078 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.301 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.39 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.4 MB.
-System memory in use after: 133.6 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3817.
-Total: 5.771100 ms (FindLiveObjects: 1.000200 ms CreateObjectMapping: 0.324500 ms MarkObjects: 4.406800 ms  DeleteObjects: 0.036800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002737 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.368 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.5 MB.
-System memory in use after: 133.8 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3819.
-Total: 5.883800 ms (FindLiveObjects: 0.963200 ms CreateObjectMapping: 0.332700 ms MarkObjects: 4.549600 ms  DeleteObjects: 0.035700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 362.500064 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump 1.fbx
-  artifactKey: Guid(198020aa8e40b4949b446f13ab8beb1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump 1.fbx using Guid(198020aa8e40b4949b446f13ab8beb1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c50a5367f2c5127e71d0b6f44f1277c') in 0.451433 seconds
-  Import took 0.463134 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.194480 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump 1.fbx
-  artifactKey: Guid(198020aa8e40b4949b446f13ab8beb1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Jump 1.fbx using Guid(198020aa8e40b4949b446f13ab8beb1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0ef4a32341d37a50058e2907fc9591b') in 0.119741 seconds
-  Import took 0.142491 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002717 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.334 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.8 MB.
-System memory in use after: 134.0 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3857.
-Total: 5.816800 ms (FindLiveObjects: 0.916700 ms CreateObjectMapping: 0.351000 ms MarkObjects: 4.510800 ms  DeleteObjects: 0.035700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 122.885055 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec0b3651e0dd04edf5f5964fb6f5d69') in 0.428398 seconds
-  Import took 0.437665 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.441949 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f035f86532b1dd074b78a650850a36') in 0.115164 seconds
-  Import took 0.124530 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002682 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.369 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.9 MB.
-System memory in use after: 134.1 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3895.
-Total: 6.837100 ms (FindLiveObjects: 0.580700 ms CreateObjectMapping: 0.260100 ms MarkObjects: 5.939200 ms  DeleteObjects: 0.054900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003098 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.372 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.1 MB.
-System memory in use after: 133.3 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3897.
-Total: 5.549200 ms (FindLiveObjects: 0.612200 ms CreateObjectMapping: 0.287600 ms MarkObjects: 4.610200 ms  DeleteObjects: 0.036600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 118.277983 seconds.
-  path: Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM.controller
-  artifactKey: Guid(dde1bc7dbb7603f4b872b8ddf40f6d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM.controller using Guid(dde1bc7dbb7603f4b872b8ddf40f6d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4077678a020b01917c66da54547a429a') in 0.073508 seconds
-  Import took 0.087374 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.009635 seconds.
-  path: Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM.controller
-  artifactKey: Guid(dde1bc7dbb7603f4b872b8ddf40f6d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/ANIMATOR/PLAYER-GAMEPLAY-ANIMATORS/Resources/PLAYERANIMATOR_LIAM.controller using Guid(dde1bc7dbb7603f4b872b8ddf40f6d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4077678a020b01917c66da54547a429a') in 0.046120 seconds
-  Import took 0.056289 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 251.141325 seconds.
-  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/ForceTransitions/ForceTransition_JumpTOFall.asset
-  artifactKey: Guid(23b09c48e4ea9644281fb0e93b754923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/ForceTransitions/ForceTransition_JumpTOFall.asset using Guid(23b09c48e4ea9644281fb0e93b754923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6b3655428732c7c8be1815e1068c53a') in 0.017610 seconds
-  Import took 0.027423 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002731 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.93 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.353 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.3 MB.
-System memory in use after: 133.5 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3899.
-Total: 5.954300 ms (FindLiveObjects: 0.887000 ms CreateObjectMapping: 0.272100 ms MarkObjects: 4.752300 ms  DeleteObjects: 0.040200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.813573 seconds.
-  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/ForceTransitions/ForceTransition_JumpTOFall 2.asset
-  artifactKey: Guid(107045e254a04d440a9832729d1bacd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/ForceTransitions/ForceTransition_JumpTOFall 2.asset using Guid(107045e254a04d440a9832729d1bacd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9af6c3a786a4f0f6efc4fb428883793d') in 0.030570 seconds
-  Import took 0.038694 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.514709 seconds.
-  path: Assets/SAMGAME/SCRIPTABLEOBJECTS/ForceTransitions/ForceTransition_Liam.asset
-  artifactKey: Guid(107045e254a04d440a9832729d1bacd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/SCRIPTABLEOBJECTS/ForceTransitions/ForceTransition_Liam.asset using Guid(107045e254a04d440a9832729d1bacd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '587dee9dbc5724a4b53514eadcc8f0cb') in 0.016375 seconds
-  Import took 0.048942 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002750 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.39 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.419 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.4 MB.
-System memory in use after: 133.6 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3901.
-Total: 5.650800 ms (FindLiveObjects: 0.581000 ms CreateObjectMapping: 0.278500 ms MarkObjects: 4.754200 ms  DeleteObjects: 0.035400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 71.550809 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65c6e3d1fee7121c553fba8e6752858d') in 0.434952 seconds
-  Import took 0.444201 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.038539 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65c6e3d1fee7121c553fba8e6752858d') in 0.091018 seconds
-  Import took 0.099725 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003318 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.461 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 133.6 MB.
-System memory in use after: 133.8 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3939.
-Total: 5.780800 ms (FindLiveObjects: 0.608700 ms CreateObjectMapping: 0.278900 ms MarkObjects: 4.852900 ms  DeleteObjects: 0.038100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 141.928599 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91cfebb6b7c4a551a8daaa180eefed66') in 0.436530 seconds
-  Import took 0.446507 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.011602 seconds.
-  path: Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx
-  artifactKey: Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/Animations/In Testing/Big Jump_Landing.fbx using Guid(0e89d597dc4d93541be2c53bc6bdab5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91cfebb6b7c4a551a8daaa180eefed66') in 0.068161 seconds
-  Import took 0.076894 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003689 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.867 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2530 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 134.4 MB.
-System memory in use after: 134.6 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3977.
-Total: 6.055500 ms (FindLiveObjects: 1.028600 ms CreateObjectMapping: 0.298900 ms MarkObjects: 4.688800 ms  DeleteObjects: 0.036800 ms)
+Unloading 2633 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 136.4 MB.
+System memory in use after: 136.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3492.
+Total: 4.842800 ms (FindLiveObjects: 0.622600 ms CreateObjectMapping: 0.286300 ms MarkObjects: 3.895000 ms  DeleteObjects: 0.036200 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
