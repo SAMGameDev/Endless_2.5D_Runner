@@ -7,7 +7,6 @@ namespace EndlessRunning
     public class GameSaveData : MonoBehaviour
     {
         public CharacterSelect SelectedCharacterData;
-
         public void SaveSelectedCharacter()
         {
             if (!Directory.Exists(Application.persistentDataPath + "/SavedData"))
