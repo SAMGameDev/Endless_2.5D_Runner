@@ -3,7 +3,7 @@
 namespace EndlessRunning
 {
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/EnableANDDisable")]
-    public class Enable_AND_Disable : ScriptableObjectData
+    public class EnableGravity : ScriptableObjectData
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
