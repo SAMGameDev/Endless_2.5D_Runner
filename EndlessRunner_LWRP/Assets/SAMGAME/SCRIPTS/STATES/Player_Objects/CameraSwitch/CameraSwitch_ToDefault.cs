@@ -1,13 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace EndlessRunning
 {
-    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/Slide")]
-    public class Slide : ScriptableObjectData
+    [CreateAssetMenu(fileName = "new CameraSwitch_ToDefault", menuName = "ScriptableObject/CameraSystem/CameraSwitch_ToDefault")]
+    public class CameraSwitch_ToDefault : ScriptableObjectData
     {
-        [SerializeField]
-        [Range(0.1f, 1f)]
-        protected float Transitions;
+        [Range(0.01f, 1f)]
+        [SerializeField] protected float CamSwitch_transition;
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -16,9 +15,10 @@ namespace EndlessRunning
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (stateInfo.normalizedTime >= Transitions)
+            if (stateInfo.normalizedTime >= CamSwitch_transition)
             {
-                CameraManger.Instance.Game_CamController.animator.SetTrigger(CameraTriggers.Default.ToString());
+                CameraManger.Instance.CAMERACONTROLLER.animator.SetTrigger
+                    (CameraTriggers.Default.ToString());
             }
         }
 

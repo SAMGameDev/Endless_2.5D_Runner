@@ -80,7 +80,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jumping_Landing
+  m_Name: LANDING
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -372,9 +372,9 @@ AnimatorStateMachine:
   m_StateMachineTransitions:
   - first: {fileID: 5004502809453923652}
     second: []
-  - first: {fileID: -8849790823568524052}
-    second: []
   - first: {fileID: 322122364469334475}
+    second: []
+  - first: {fileID: -8849790823568524052}
     second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -450, y: -80, z: 0}
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f870780239339446acdcb0518c33f14, type: 2}
   - {fileID: 11400000, guid: 8a01f2f3cd8cce94992900cb4e0fb7d3, type: 2}
   - {fileID: 11400000, guid: 1be3f741b3f92ce428d602c62f269c6e, type: 2}
-  - {fileID: 11400000, guid: 175c07efe26f2f2499eb65be17ba7d0f, type: 2}
+  - {fileID: 11400000, guid: 9a32047015a0b38428743bb341871d57, type: 2}
   characterControl: {fileID: 0}
 --- !u!1102 &3917400183248669363
 AnimatorState:
@@ -1357,7 +1357,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Falling Idle
+  m_Name: FALLING
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

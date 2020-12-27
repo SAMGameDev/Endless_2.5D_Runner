@@ -8,9 +8,7 @@ namespace EndlessRunning
         [SerializeField] protected float DoubleJumpForce_Val;
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
-        {
-            CameraManger.Instance.CAMERACONTROLLER.animator.SetTrigger(CameraTriggers.Default.ToString());
-
+        {         
             playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
 
             playerStateBase.characterControl.RIGIDBODY.AddForce
