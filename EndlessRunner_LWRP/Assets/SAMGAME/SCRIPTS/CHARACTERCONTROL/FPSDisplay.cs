@@ -7,7 +7,7 @@ namespace EndlessRunning
         // private float deltaTime = 0.0f
         private void Start()
         {
-            Time.timeScale = 0.85f;
+            Time.timeScale = 0.35f;
         }
         #region FPS Display
         //private void Update()

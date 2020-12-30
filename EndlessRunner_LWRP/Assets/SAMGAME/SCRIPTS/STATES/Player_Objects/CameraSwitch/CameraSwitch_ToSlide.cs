@@ -24,6 +24,7 @@ namespace EndlessRunning
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+            CameraManger.Instance.Game_CamController.animator.SetTrigger(CameraTriggers.Default.ToString());
         }
     }
 }

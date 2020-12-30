@@ -10,10 +10,11 @@ namespace EndlessRunning
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CameraManger.Instance.CAMERACONTROLLER.animator.SetTrigger(CameraTriggers.Jump.ToString());
+           // CameraManger.Instance.CAMERACONTROLLER.animator.SetTrigger(CameraTriggers.Jump.ToString());
            
             playerStateBase.characterControl.RIGIDBODY.AddForce
               (playerStateBase.characterControl.transform.up * jumpForce, ForceMode.Impulse);
+
             #region slope jump
 
             //float Slope_JumpForce = 1000;
@@ -36,7 +37,7 @@ namespace EndlessRunning
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CameraManger.Instance.CAMERACONTROLLER.animator.SetTrigger(CameraTriggers.Default.ToString());
+            //CameraManger.Instance.CAMERACONTROLLER.animator.SetTrigger(CameraTriggers.Default.ToString());
         }
     }
 }
