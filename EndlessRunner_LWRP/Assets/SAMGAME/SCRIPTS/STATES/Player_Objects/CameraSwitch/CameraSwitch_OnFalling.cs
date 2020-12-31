@@ -18,12 +18,7 @@ namespace EndlessRunning
                 if (stateInfo.normalizedTime >= camSwitch)
                 {
                     CameraManger.Instance.CAMERACONTROLLER.animator.SetTrigger(CameraTriggers.Default.ToString());
-                    Debug.LogWarning("Called camswitch");
                 }
-            }
-            else
-            {
-                return;
             }
         }
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
