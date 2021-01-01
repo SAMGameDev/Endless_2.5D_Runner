@@ -17,7 +17,6 @@ namespace EndlessRunning
 
         private void Update()
         {
-            #region Mobile Input
             if (characterControl.isStarted)
             {
                 if (Input.GetMouseButtonUp(0))
@@ -41,7 +40,6 @@ namespace EndlessRunning
                         characterControl.Dash = true;
                     }
                 }
-                #endregion
                 else
                 {
                     characterControl.Jump = false;
