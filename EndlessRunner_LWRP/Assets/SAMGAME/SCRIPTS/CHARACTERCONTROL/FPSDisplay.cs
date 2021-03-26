@@ -4,7 +4,6 @@ namespace EndlessRunning
 {
     public class FPSDisplay : MonoBehaviour
     {
-        // private float deltaTime = 0.0f
         private void Start()
         {
             Time.timeScale = 1f;
