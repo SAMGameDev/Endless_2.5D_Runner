@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+#if UNITY_ANDROID
 namespace EndlessRunning
 {
+
     public class TakeInputs : MonoBehaviour
     {
         private CharacterControl characterControl;
@@ -59,3 +61,4 @@ namespace EndlessRunning
         }
     }
 }
+#endif

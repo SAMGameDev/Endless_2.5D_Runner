@@ -6,7 +6,6 @@ namespace EndlessRunning
     {
         private void Start()
         {
-            Time.timeScale = 1f;
         }
         #region FPS Display
         //private void Update()
