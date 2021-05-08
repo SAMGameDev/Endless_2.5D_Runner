@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+// Used in CharacterSelect for moving character forward
 namespace EndlessRunning
 {
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/TurnOnRootMotion")]

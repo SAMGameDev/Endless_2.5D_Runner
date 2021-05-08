@@ -56,8 +56,7 @@ namespace EndlessRunning
 
                 }
 
-                GameObject player = Instantiate(Resources.Load(objName,
-             typeof(GameObject))) as GameObject;
+                GameObject player = Instantiate(Resources.Load(objName, typeof(GameObject))) as GameObject;
 
                 player.transform.position = transform.position;
 

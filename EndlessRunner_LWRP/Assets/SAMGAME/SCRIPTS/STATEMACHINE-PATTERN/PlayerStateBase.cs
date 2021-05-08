@@ -10,8 +10,6 @@ namespace EndlessRunning
 
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            // CHECKING IF characterControl IS NULL THEN GETTING CharacterControl FROM ANIMATOR
-            //ROOT (TOP GAMEOBJECT) AND CALLING CacheCharacterControl METHON WHICH FILLS characterControl
             if (characterControl == null)
             {
                 CharacterControl control = animator.transform.root.GetComponent<CharacterControl>();
