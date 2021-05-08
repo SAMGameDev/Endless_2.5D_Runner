@@ -15,7 +15,6 @@ namespace EndlessRunning
                     return control;
                 }
             }
-
             return null;
         }
     }
