@@ -7,6 +7,7 @@ namespace EndlessRunning
     {
         public List<ScriptableObjectData> scriptableObjectDatas = new List<ScriptableObjectData>();
         public CharacterControl characterControl;
+        public FightingSystem fightingSystem;
 
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
@@ -14,6 +15,10 @@ namespace EndlessRunning
             {
                 CharacterControl control = animator.transform.root.GetComponent<CharacterControl>();
                 control.CacheCharacterControl(animator);
+            }
+            if (fightingSystem == null)
+            {
+                fightingSystem = animator.transform.root.GetComponent<FightingSystem>();
             }
 
             foreach (ScriptableObjectData d in scriptableObjectDatas)

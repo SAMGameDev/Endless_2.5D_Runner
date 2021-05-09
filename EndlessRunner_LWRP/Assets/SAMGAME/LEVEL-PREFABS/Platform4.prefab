@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 755239872}
   m_Layer: 11
   m_Name: FightTrigger
-  m_TagString: Obstacle
+  m_TagString: FightTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &755239871
 Transform:
@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755239870}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6064,7 +6064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6608753432607604915
 Transform:
   m_ObjectHideFlags: 0

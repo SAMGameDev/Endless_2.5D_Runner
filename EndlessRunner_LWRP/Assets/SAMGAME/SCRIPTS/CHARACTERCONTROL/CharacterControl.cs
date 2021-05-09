@@ -12,6 +12,7 @@ namespace EndlessRunning
         Slide,
         DoubleJump,
         Die,
+        Fight,
         OnClick,
     }
 
@@ -43,13 +44,10 @@ namespace EndlessRunning
 
         [HideInInspector]
         public Vector3 targetCenter_C;
-
         [HideInInspector]
         public float SizeUpdate_Speed_C;
-
         [HideInInspector]
         public float targetHeight;
-
         [HideInInspector]
         public float CenterUpdate_Speed_C;
 
@@ -57,6 +55,7 @@ namespace EndlessRunning
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
+        public TakeInputs input;
         public Animator anim;
         public CapsuleCollider cCollider;
         private Rigidbody rb;
@@ -81,8 +80,37 @@ namespace EndlessRunning
             StartRun = false;
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
+            input = GetComponent<TakeInputs>();
             RegisterCharacter();
         }
+
+        private void Update()
+        {
+            //input.OnMousePressed_StartRun += Input_OnMousePressed_StartRun;
+            // input.OnMousePressed_Jump += Input_OnMousePressed_Jump;
+            // input.OnMousePressed_Dash += Input_OnMousePressed_Dash;
+            // input.OnMousePressed_Slide += Input_OnMousePressed_Slide;
+        }
+
+        //private void Input_OnMousePressed_Dash(object sender, System.EventArgs e)
+        //{
+        //    Dash = true;
+        //}
+
+        //private void Input_OnMousePressed_Jump(object sender, System.EventArgs e)
+        //{
+        //    Jump = true;
+        //}
+
+        //private void Input_OnMousePressed_Slide(object sender, System.EventArgs e)
+        //{
+        //    Slide = true;
+        //}
+
+        //private void Input_OnMousePressed_StartRun(object sender, System.EventArgs e)
+        //{
+        //    StartRun = true;
+        //}
 
         private void FixedUpdate()
         {
