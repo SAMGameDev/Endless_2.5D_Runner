@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 namespace EndlessRunning
 {
@@ -86,31 +87,14 @@ namespace EndlessRunning
 
         private void Update()
         {
-            //input.OnMousePressed_StartRun += Input_OnMousePressed_StartRun;
-            // input.OnMousePressed_Jump += Input_OnMousePressed_Jump;
-            // input.OnMousePressed_Dash += Input_OnMousePressed_Dash;
-            // input.OnMousePressed_Slide += Input_OnMousePressed_Slide;
+            input.OnMousePressed_StartRun += Input_OnMousePressed_StartRun;
+            input.OnMousePressed_Jump += Input_OnMousePressed_Jump;
+            Jump = false;
+            input.OnMousePressed_Dash += Input_OnMousePressed_Dash;
+            Dash = false;
+            input.OnMousePressed_Slide += Input_OnMousePressed_Slide;
+            
         }
-
-        //private void Input_OnMousePressed_Dash(object sender, System.EventArgs e)
-        //{
-        //    Dash = true;
-        //}
-
-        //private void Input_OnMousePressed_Jump(object sender, System.EventArgs e)
-        //{
-        //    Jump = true;
-        //}
-
-        //private void Input_OnMousePressed_Slide(object sender, System.EventArgs e)
-        //{
-        //    Slide = true;
-        //}
-
-        //private void Input_OnMousePressed_StartRun(object sender, System.EventArgs e)
-        //{
-        //    StartRun = true;
-        //}
 
         private void FixedUpdate()
         {
@@ -227,5 +211,37 @@ namespace EndlessRunning
         }
 
         #endregion Register CharacterControl In Manger
+
+        private void Input_OnMousePressed_StartRun(object sender, System.EventArgs e)
+        {
+            StartRun = true;
+        }
+
+        private void Input_OnMousePressed_Dash(object sender, System.EventArgs e)
+        {
+            Dash = true;
+        }
+
+        private void Input_OnMousePressed_Jump(object sender, System.EventArgs e)
+        {
+            Jump = true;
+        }
+
+        private void Input_OnMousePressed_Slide(object sender, System.EventArgs e)
+        {
+            Slide = true;
+
+            StartCoroutine(TurnOff(0.25f));
+        }
+
+        private IEnumerator TurnOff(float time)
+        {
+            yield return new WaitForSeconds(time);
+
+            if (Slide)
+            {
+                Slide = false;
+            }
+        }
     }
 }
