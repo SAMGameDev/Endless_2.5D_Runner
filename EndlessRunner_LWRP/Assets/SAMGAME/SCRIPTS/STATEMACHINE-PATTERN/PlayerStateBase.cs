@@ -11,16 +11,13 @@ namespace EndlessRunning
 
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            if (characterControl == null)
+            if (characterControl == null && fightingSystem == null)
             {
                 CharacterControl control = animator.transform.root.GetComponent<CharacterControl>();
+                FightingSystem Fsystem = animator.transform.root.GetComponent<FightingSystem>();
                 control.CacheCharacterControl(animator);
+                Fsystem.CacheFightingSystem(animator);
             }
-            if (fightingSystem == null)
-            {
-                fightingSystem = animator.transform.root.GetComponent<FightingSystem>();
-            }
-
             foreach (ScriptableObjectData d in scriptableObjectDatas)
             {
                 d.OnEnter(this, animator, stateInfo);

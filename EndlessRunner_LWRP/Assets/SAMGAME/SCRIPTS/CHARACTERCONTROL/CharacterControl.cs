@@ -87,13 +87,25 @@ namespace EndlessRunning
 
         private void Update()
         {
-            input.OnMousePressed_StartRun += Input_OnMousePressed_StartRun;
-            input.OnMousePressed_Jump += Input_OnMousePressed_Jump;
-            Jump = false;
-            input.OnMousePressed_Dash += Input_OnMousePressed_Dash;
-            Dash = false;
-            input.OnMousePressed_Slide += Input_OnMousePressed_Slide;
-            
+            if (isStarted)
+            {
+                if (!StartRun)
+                {
+                    input.OnMousePressed_StartRun += Input_OnMousePressed_StartRun;
+                }
+                else
+                {
+                    input.OnMousePressed_Jump += Input_OnMousePressed_Jump;
+                    Jump = false;
+                    input.OnMousePressed_Dash += Input_OnMousePressed_Dash;
+                    Dash = false;
+                    input.OnMousePressed_Slide += Input_OnMousePressed_Slide;
+                }
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void FixedUpdate()
@@ -230,7 +242,6 @@ namespace EndlessRunning
         private void Input_OnMousePressed_Slide(object sender, System.EventArgs e)
         {
             Slide = true;
-
             StartCoroutine(TurnOff(0.25f));
         }
 

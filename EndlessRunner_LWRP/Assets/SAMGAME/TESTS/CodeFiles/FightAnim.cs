@@ -7,13 +7,12 @@ namespace EndlessRunning
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.fightingSystem.OnFightHit += FightingSystem_OnFightHit; ;
+            playerStateBase.fightingSystem.OnFightHit += FightingSystem_OnFightHit;
         }
 
-        private void FightingSystem_OnFightHit(object sender, MyEventaArgs e)
+        private void FightingSystem_OnFightHit()
         {
-            //e.anim.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Fight], true);
-            Debug.Log("Fighting Area Detect switch to fight IDLE");
+            Debug.Log("Fight Trigger Detected");
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
