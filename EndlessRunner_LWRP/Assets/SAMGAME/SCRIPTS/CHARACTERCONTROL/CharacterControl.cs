@@ -73,18 +73,15 @@ namespace EndlessRunning
             }
         }
 
-        #region Unity Default Methods
-
         private void Awake()
         {
-            Death = false;
-            StartRun = false;
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
             input = GetComponent<TakeInputs>();
+            Death = false;
+            StartRun = false;
             RegisterCharacter();
         }
-
         private void Update()
         {
             if (isStarted)
@@ -115,18 +112,11 @@ namespace EndlessRunning
             UpdateSize();
         }
 
-        #endregion Unity Default Methods
-
-        #region RunForward
-
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }
 
-        #endregion RunForward
-
-        #region Gravity Apply
 
         private void ApplyGravity()
         {
@@ -136,11 +126,6 @@ namespace EndlessRunning
             }
         }
 
-        #endregion Gravity Apply
-
-        #region OnCollision
-
-        // DEATH WHEN PLAYER COLLIDE WITH ANY OBSTECLE
         private void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.CompareTag("Obstacle"))
@@ -163,11 +148,6 @@ namespace EndlessRunning
             Death = false;
         }
 
-        #endregion OnCollision
-
-        #region Update Collider on Runtime
-
-        //UPDATE COLLIDERS (SIZE AND CENTER) WHEN PLAYER JUMPS, FALLS, SLIDE ETC
         private void UpdateCenter()
         {
             if (!UpdateNow)
@@ -194,12 +174,6 @@ namespace EndlessRunning
             }
         }
 
-        #endregion Update Collider on Runtime
-
-        #region Caching CharacterControl in playerStateBase
-
-        // THIS FUNCTION GETTING ALL PLAYERSTATEBASE AND FILLING CHARACTERCONTROL VARIABLE
-        // IN ALL PLAYERSTATEBASE WITH THIS SCRIPT (CHARACTERcONTROL)
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
@@ -210,10 +184,6 @@ namespace EndlessRunning
             }
         }
 
-        #endregion Caching CharacterControl in playerStateBase
-
-        #region Register CharacterControl In Manger
-
         private void RegisterCharacter()
         {
             if (!CharacterManger.Instance.characters.Contains(this))
@@ -221,8 +191,6 @@ namespace EndlessRunning
                 CharacterManger.Instance.characters.Add(this);
             }
         }
-
-        #endregion Register CharacterControl In Manger
 
         private void Input_OnMousePressed_StartRun(object sender, System.EventArgs e)
         {
