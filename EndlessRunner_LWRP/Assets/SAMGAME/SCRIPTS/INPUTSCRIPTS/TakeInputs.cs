@@ -1,60 +1,36 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using System;
 
 namespace EndlessRunning
 {
     public class TakeInputs : MonoBehaviour
     {
-        private CharacterControl characterControl;
+        public event EventHandler OnMousePressed_StartRun;
+        public event EventHandler OnMousePressed_Jump;
+        public event EventHandler OnMousePressed_Dash;
+        public EventHandler OnMousePressed_Slide;
 
         private readonly int splitScreenY = Screen.height / 2;
         private readonly int splitScreenX = Screen.width / 2;
 
-        private void Awake()
-        {
-            characterControl = GetComponent<CharacterControl>();
-        }
-
         private void Update()
         {
-            if (characterControl.isStarted)
+            if (Input.GetMouseButtonUp(0))
             {
-                if (Input.GetMouseButtonUp(0))
+                OnMousePressed_StartRun?.Invoke(this, EventArgs.Empty);
+
+                if (Input.mousePosition.y >= splitScreenY && Input.mousePosition.x <= splitScreenX)
                 {
-                    if (!characterControl.StartRun)
-                    {
-                        characterControl.StartRun = true;
-                    }
-
-                    if (Input.mousePosition.y >= splitScreenY && Input.mousePosition.x <= splitScreenX)
-                    {
-                        characterControl.Jump = true;
-                    }
-                    else if (Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
-                    {
-                        characterControl.Slide = true;
-                        StartCoroutine(TurnOff(0.25f));
-                    }
-                    else if (Input.mousePosition.x > splitScreenX)
-                    {
-                        characterControl.Dash = true;
-                    }
+                    OnMousePressed_Jump?.Invoke(this, EventArgs.Empty);
                 }
-                else
+                else if (Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
                 {
-                    characterControl.Jump = false;
-                    characterControl.Dash = false;
+                    OnMousePressed_Slide?.Invoke(this, EventArgs.Empty);
                 }
-            }
-        }
-
-        private IEnumerator TurnOff(float time)
-        {
-            yield return new WaitForSeconds(time);
-
-            if (characterControl.Slide)
-            {
-                characterControl.Slide = false;
+                else if (Input.mousePosition.x > splitScreenX)
+                {
+                    OnMousePressed_Dash?.Invoke(this, EventArgs.Empty);
+                }
             }
         }
     }

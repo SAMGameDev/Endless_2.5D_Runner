@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/release' branch; Version is '2020.3.7f1 (dd97f2c94397) revision 14522354'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.964; Version 2009; 64bit' Language: 'en' Physical Memory: 8027 MB
+OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 8027 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ C:/Users/samim/Unity Project/Endless_2.5D_Runner/EndlessRunner_LWRP
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63053
+59161
 Successfully changed project path to: C:/Users/samim/Unity Project/Endless_2.5D_Runner/EndlessRunner_LWRP
 C:/Users/samim/Unity Project/Endless_2.5D_Runner/EndlessRunner_LWRP
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 128.64 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 234.62 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
@@ -36,214 +36,86 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56772
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56940
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003789 seconds.
+Registered in 0.004077 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 129.72 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 155.40 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.848 seconds
+- Completed reload, in  4.549 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002994 seconds.
+Registered in 0.003119 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 138.39 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 160.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.615 seconds
+- Completed reload, in  3.503 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.15 seconds
-Refreshing native plugins compatible for Editor in 1.01 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.95 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 140.4 MB.
-System memory in use after: 140.5 MB.
+Unloading 3046 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 140.6 MB.
+System memory in use after: 140.8 MB.
 
-Unloading 125 unused Assets to reduce memory usage. Loaded Objects now: 3479.
-Total: 5.645600 ms (FindLiveObjects: 0.484700 ms CreateObjectMapping: 0.263500 ms MarkObjects: 4.564400 ms  DeleteObjects: 0.330800 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/SAMGAME/PREFABS/OnStartSetup.prefab
-  artifactKey: Guid(5b3fb2ff06279024186ba29c2e523dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/PREFABS/OnStartSetup.prefab using Guid(5b3fb2ff06279024186ba29c2e523dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbafe53976b784a41b8e0896334d62e0') in 0.130221 seconds
-  Import took 0.158893 seconds .
+Unloading 125 unused Assets to reduce memory usage. Loaded Objects now: 3481.
+Total: 5.893900 ms (FindLiveObjects: 0.685800 ms CreateObjectMapping: 0.384900 ms MarkObjects: 4.461200 ms  DeleteObjects: 0.359100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000465 seconds.
-  path: Assets/SAMGAME/PREFABS/PLAYABLE-CHARACTERS
-  artifactKey: Guid(8874510095a22574caed68e45e74dca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/PREFABS/PLAYABLE-CHARACTERS using Guid(8874510095a22574caed68e45e74dca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eee07e5e2f1d34839f0529abaea8c6d') in 0.012512 seconds
-  Import took 0.027836 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000419 seconds.
-  path: Assets/SAMGAME/PREFABS/FPSShower.prefab
-  artifactKey: Guid(ae92faaed90359b4eadcea1edbcd8905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/PREFABS/FPSShower.prefab using Guid(ae92faaed90359b4eadcea1edbcd8905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf70359e688e230f931da697d7be3689') in 0.028792 seconds
-  Import took 0.064936 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000379 seconds.
-  path: Assets/SAMGAME/PREFABS/CharacterControlHolder.prefab
-  artifactKey: Guid(18131f4d36f8c334abbc31b7a4181a83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/PREFABS/CharacterControlHolder.prefab using Guid(18131f4d36f8c334abbc31b7a4181a83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d520221e40ea14bad74e19254105aaa') in 0.016799 seconds
-  Import took 0.029252 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.942874 seconds.
-  path: Assets/SAMGAME/PREFABS/SceneLoader.prefab
-  artifactKey: Guid(247feddcfafd9e64ab153f91ad3980fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/PREFABS/SceneLoader.prefab using Guid(247feddcfafd9e64ab153f91ad3980fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6241df983d52aca3f2657b12eb5b7fb') in 0.015331 seconds
-  Import took 0.038192 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005117 seconds.
-  path: Assets/SAMGAME/PREFABS/SceneLoader.prefab
-  artifactKey: Guid(247feddcfafd9e64ab153f91ad3980fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/PREFABS/SceneLoader.prefab using Guid(247feddcfafd9e64ab153f91ad3980fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6241df983d52aca3f2657b12eb5b7fb') in 0.007213 seconds
-  Import took 0.017405 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.426884 seconds.
-  path: Assets/SAMGAME/PREFABS/BACKGROUNDS
-  artifactKey: Guid(0f1527ba3dfdaa04496a46847e6af600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/PREFABS/BACKGROUNDS using Guid(0f1527ba3dfdaa04496a46847e6af600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79e304f923cf48fff1654d6ca3d46adf') in 0.019961 seconds
-  Import took 0.042993 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.456198 seconds.
-  path: Assets/SAMGAME/PREFABS/CHARACTER-SELECT-SYSTEM-CAMERA
-  artifactKey: Guid(5296a01791421784583c443bdaad71d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/PREFABS/CHARACTER-SELECT-SYSTEM-CAMERA using Guid(5296a01791421784583c443bdaad71d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e407429e8edb2d456b6a04d81fb3e56') in 0.015496 seconds
-  Import took 0.047417 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 38.461906 seconds.
-  path: Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/CAMERA-SYSTEM
-  artifactKey: Guid(9762c2fb7e3f50349ab9add09075a73b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/CAMERA-SYSTEM using Guid(9762c2fb7e3f50349ab9add09075a73b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '797f8c129c9ae88d572f870a4f5d356f') in 0.013629 seconds
-  Import took 0.025776 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.736478 seconds.
-  path: Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/CHARACTER-SELECT-SYSTEM-CAMERA-PREFABS
-  artifactKey: Guid(5296a01791421784583c443bdaad71d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/CHARACTER-SELECT-SYSTEM-CAMERA-PREFABS using Guid(5296a01791421784583c443bdaad71d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cadee2dbae94a392137ead98110bb97b') in 0.014803 seconds
-  Import took 0.027237 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.145718 seconds.
-  path: Assets/SAMGAME/MY-GAME-SCENES/LevelDesign(TEMP)
-  artifactKey: Guid(209ee39a78bffe5478bdcf846ee63a89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/MY-GAME-SCENES/LevelDesign(TEMP) using Guid(209ee39a78bffe5478bdcf846ee63a89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35597a6cf208b00b1fb5fd1271f68ae3') in 0.014657 seconds
-  Import took 0.087255 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.003515 seconds.
-  path: Assets/SAMGAME/MAIN-MENU/CharacterSpawnPostion.prefab
-  artifactKey: Guid(8e27882caffa5fb4a8cc7120855cf068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/MAIN-MENU/CharacterSpawnPostion.prefab using Guid(8e27882caffa5fb4a8cc7120855cf068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91e45ac27da84e5f4c86b5f0751e75e9') in 0.016993 seconds
-  Import took 0.028994 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002055 seconds.
-  path: Assets/SAMGAME/MAIN-MENU/CharacterSpawnPostion.prefab
-  artifactKey: Guid(8e27882caffa5fb4a8cc7120855cf068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/MAIN-MENU/CharacterSpawnPostion.prefab using Guid(8e27882caffa5fb4a8cc7120855cf068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91e45ac27da84e5f4c86b5f0751e75e9') in 0.015343 seconds
-  Import took 0.026230 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.657821 seconds.
-  path: Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/SCRIPTS/OnStartSetup.cs
-  artifactKey: Guid(2b1ddf40015ff1a4aa35feacc7ef56bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/SCRIPTS/OnStartSetup.cs using Guid(2b1ddf40015ff1a4aa35feacc7ef56bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d27ed921caed4f9489fbee8a29a1fa') in 0.086861 seconds
-  Import took 0.120927 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003058 seconds.
-  path: Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/SCRIPTS/OnStartSetup.cs
-  artifactKey: Guid(2b1ddf40015ff1a4aa35feacc7ef56bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/CHARACTER-SELECT-SYSTEM/SCRIPTS/OnStartSetup.cs using Guid(2b1ddf40015ff1a4aa35feacc7ef56bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d27ed921caed4f9489fbee8a29a1fa') in 0.005673 seconds
-  Import took 0.016545 seconds .
+  path: Assets/SAMGAME/SCRIPTS/STATEMACHINE-PATTERN/BaseScripts/PlayerStateBase.cs
+  artifactKey: Guid(101ebb669a5f5a946b0f2836c9b378a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SAMGAME/SCRIPTS/STATEMACHINE-PATTERN/BaseScripts/PlayerStateBase.cs using Guid(101ebb669a5f5a946b0f2836c9b378a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35313da79cc2d00e084e8a12c15bc8ad') in 0.128317 seconds
+  Import took 0.208449 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002871 seconds.
+Registered in 0.002948 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.97 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.117 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.99 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2892 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 129.4 MB.
-System memory in use after: 129.6 MB.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3482.
-Total: 5.781900 ms (FindLiveObjects: 0.514600 ms CreateObjectMapping: 0.366100 ms MarkObjects: 4.776600 ms  DeleteObjects: 0.120900 ms)
+[Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.287 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2894 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 129.5 MB.
+System memory in use after: 129.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3484.
+Total: 5.282700 ms (FindLiveObjects: 0.470200 ms CreateObjectMapping: 0.315700 ms MarkObjects: 4.397300 ms  DeleteObjects: 0.097400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Import Request.
-  Time since last request: 544.173121 seconds.
-  path: ProjectSettings/TagManager.asset
-  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '343147996a75723bd6ae0574b31f2e64') in 0.026881 seconds
-  Import took 0.117381 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 329.083976 seconds.
-  path: Assets/SAMGAME/TESTS/ANIMATIONS/ybot@Fighting Idle.fbx
-  artifactKey: Guid(db78cde231209a943a8b96cb9e115201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/ANIMATIONS/ybot@Fighting Idle.fbx using Guid(db78cde231209a943a8b96cb9e115201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5634ae373d90f605b0b5058e0e4ce15a') in 1.471974 seconds
-  Import took 1.520458 seconds .
-
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001318 seconds.
+Registered in 0.001327 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.10 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -255,26 +127,19 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs line 593]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.489 seconds
+- Completed reload, in  2.414 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.98 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2892 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 148.0 MB.
-System memory in use after: 148.1 MB.
+Unloading 2894 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 129.6 MB.
+System memory in use after: 129.8 MB.
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3567.
-Total: 5.469100 ms (FindLiveObjects: 0.556300 ms CreateObjectMapping: 0.345400 ms MarkObjects: 4.436100 ms  DeleteObjects: 0.128700 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3487.
+Total: 5.681900 ms (FindLiveObjects: 0.714000 ms CreateObjectMapping: 0.413300 ms MarkObjects: 4.433700 ms  DeleteObjects: 0.118000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Import Request.
-  Time since last request: 137.312730 seconds.
-  path: Assets/SAMGAME/TESTS/CodeFiles
-  artifactKey: Guid(d1dc1323470e9a645a45edb7b5e6d061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SAMGAME/TESTS/CodeFiles using Guid(d1dc1323470e9a645a45edb7b5e6d061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5971261d55ae394e3559d155699605d') in 0.076232 seconds
-  Import took 0.102959 seconds .
-
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
