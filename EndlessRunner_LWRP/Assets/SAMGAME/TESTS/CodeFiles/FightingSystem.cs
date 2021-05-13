@@ -14,16 +14,6 @@ namespace EndlessRunning
                 OnFightHit?.Invoke();
             }
         }
-
-        public void CacheFightingSystem(Animator anim)
-        {
-            PlayerStateBase[] arr = anim.GetBehaviours<PlayerStateBase>();
-
-            foreach (PlayerStateBase p in arr)
-            {
-                p.fightingSystem = this;
-            }
-        }
     }
 }
 

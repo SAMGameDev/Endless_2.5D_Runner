@@ -7,14 +7,7 @@ namespace EndlessRunning
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            playerStateBase.fightingSystem.OnFightHit += FightingSystem_OnFightHit;
         }
-
-        private void FightingSystem_OnFightHit()
-        {
-            Debug.Log("Fight Trigger Detected");
-        }
-
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
 

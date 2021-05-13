@@ -1836,7 +1836,6 @@ GameObject:
   - component: {fileID: 4276405785058717175}
   - component: {fileID: 2003642213689986407}
   - component: {fileID: 1323477078720587641}
-  - component: {fileID: 7823517792672062016}
   m_Layer: 9
   m_Name: Liam
   m_TagString: Player
@@ -1919,6 +1918,7 @@ MonoBehaviour:
   targetHeight: 0
   CenterUpdate_Speed_C: 0
   UpdateNow: 0
+  input: {fileID: 0}
   anim: {fileID: 0}
   cCollider: {fileID: 0}
 --- !u!114 &2003642213689986407
@@ -1943,18 +1943,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f08773bc2d187b546a7882a72c2e8695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7823517792672062016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3428086828106034955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0fa46641538f884f9fd8f840b507dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5119564152890474142
