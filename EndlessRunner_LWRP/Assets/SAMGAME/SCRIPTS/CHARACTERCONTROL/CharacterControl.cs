@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 namespace EndlessRunning
 {
@@ -12,6 +13,7 @@ namespace EndlessRunning
         Slide,
         DoubleJump,
         Die,
+        Fight,
         OnClick,
     }
 
@@ -43,13 +45,10 @@ namespace EndlessRunning
 
         [HideInInspector]
         public Vector3 targetCenter_C;
-
         [HideInInspector]
         public float SizeUpdate_Speed_C;
-
         [HideInInspector]
         public float targetHeight;
-
         [HideInInspector]
         public float CenterUpdate_Speed_C;
 
@@ -57,6 +56,7 @@ namespace EndlessRunning
         public bool UpdateNow;
 
         [Header("SUB-COMPONENTS")]
+        public TakeInputs input;
         public Animator anim;
         public CapsuleCollider cCollider;
         private Rigidbody rb;
@@ -73,15 +73,36 @@ namespace EndlessRunning
             }
         }
 
-        #region Unity Default Methods
-
         private void Awake()
         {
-            Death = false;
-            StartRun = false;
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
+            input = GetComponent<TakeInputs>();
+            Death = false;
+            StartRun = false;
             RegisterCharacter();
+        }
+        private void Update()
+        {
+            if (isStarted)
+            {
+                if (!StartRun)
+                {
+                    input.OnMousePressed_StartRun += Input_OnMousePressed_StartRun;
+                }
+                else
+                {
+                    input.OnMousePressed_Jump += Input_OnMousePressed_Jump;
+                    Jump = false;
+                    input.OnMousePressed_Dash += Input_OnMousePressed_Dash;
+                    Dash = false;
+                    input.OnMousePressed_Slide += Input_OnMousePressed_Slide;
+                }
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void FixedUpdate()
@@ -91,18 +112,11 @@ namespace EndlessRunning
             UpdateSize();
         }
 
-        #endregion Unity Default Methods
-
-        #region RunForward
-
         public void RunForward(float speed)
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }
 
-        #endregion RunForward
-
-        #region Gravity Apply
 
         private void ApplyGravity()
         {
@@ -112,11 +126,6 @@ namespace EndlessRunning
             }
         }
 
-        #endregion Gravity Apply
-
-        #region OnCollision
-
-        // DEATH WHEN PLAYER COLLIDE WITH ANY OBSTECLE
         private void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.CompareTag("Obstacle"))
@@ -139,11 +148,6 @@ namespace EndlessRunning
             Death = false;
         }
 
-        #endregion OnCollision
-
-        #region Update Collider on Runtime
-
-        //UPDATE COLLIDERS (SIZE AND CENTER) WHEN PLAYER JUMPS, FALLS, SLIDE ETC
         private void UpdateCenter()
         {
             if (!UpdateNow)
@@ -170,12 +174,6 @@ namespace EndlessRunning
             }
         }
 
-        #endregion Update Collider on Runtime
-
-        #region Caching CharacterControl in playerStateBase
-
-        // THIS FUNCTION GETTING ALL PLAYERSTATEBASE AND FILLING CHARACTERCONTROL VARIABLE
-        // IN ALL PLAYERSTATEBASE WITH THIS SCRIPT (CHARACTERcONTROL)
         public void CacheCharacterControl(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
@@ -186,10 +184,6 @@ namespace EndlessRunning
             }
         }
 
-        #endregion Caching CharacterControl in playerStateBase
-
-        #region Register CharacterControl In Manger
-
         private void RegisterCharacter()
         {
             if (!CharacterManger.Instance.characters.Contains(this))
@@ -198,6 +192,35 @@ namespace EndlessRunning
             }
         }
 
-        #endregion Register CharacterControl In Manger
+        private void Input_OnMousePressed_StartRun(object sender, System.EventArgs e)
+        {
+            StartRun = true;
+        }
+
+        private void Input_OnMousePressed_Dash(object sender, System.EventArgs e)
+        {
+            Dash = true;
+        }
+
+        private void Input_OnMousePressed_Jump(object sender, System.EventArgs e)
+        {
+            Jump = true;
+        }
+
+        private void Input_OnMousePressed_Slide(object sender, System.EventArgs e)
+        {
+            Slide = true;
+            StartCoroutine(TurnOff(0.25f));
+        }
+
+        private IEnumerator TurnOff(float time)
+        {
+            yield return new WaitForSeconds(time);
+
+            if (Slide)
+            {
+                Slide = false;
+            }
+        }
     }
 }
