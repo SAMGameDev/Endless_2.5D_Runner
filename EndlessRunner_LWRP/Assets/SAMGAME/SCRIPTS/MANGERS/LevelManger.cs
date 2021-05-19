@@ -5,26 +5,21 @@ namespace EndlessRunning
 {
     public class LevelManger : MonoBehaviour
     {
-        public GameObject[] levelPrefabs;
+        [SerializeField] [Space(10)] private List<GameObject> levelPrefabs = new List<GameObject>();
 
-        [SerializeField]
-        private List<GameObject> activeTiles = new List<GameObject>();
+        [SerializeField] [Space(10)] private List<GameObject> activeTiles = new List<GameObject>();
 
-        [SerializeField]
-        private Transform playertransform;
+        [SerializeField] [Space(10)] private Transform playertransform;
 
-        private float spawnZ = 0;
+        [SerializeField] [Space(10)] private float spawnZ;
 
-        [SerializeField]
-        protected float tileLength;
+        [SerializeField] [Space(10)] protected float tileLength;
 
-        [SerializeField]
-        protected float AmountOfPlatforms;
+        [SerializeField] [Space(10)] protected int AmountOfPlatforms;
 
-        [SerializeField]
-        protected float safeZone;
+        [SerializeField] [Space(10)] protected float safeZone;
 
-        protected int lastIndexprefab = 0;
+        [SerializeField] [Space(10)] private int lastIndexprefab = 0;
 
         private void Start()
         {
@@ -56,13 +51,19 @@ namespace EndlessRunning
         {
             GameObject go;
             if (prefabIndex == -1)
+            {
                 go = Instantiate(levelPrefabs[RandomPrefabIndex()]) as GameObject;
+
+            }
             else
+            {
                 go = Instantiate(levelPrefabs[prefabIndex]) as GameObject;
+            }
             go.transform.SetParent(transform);
             go.transform.position = Vector3.forward * spawnZ;
             spawnZ += tileLength;
             activeTiles.Add(go);
+
         }
 
         private void DestroyPlatform()
@@ -73,7 +74,7 @@ namespace EndlessRunning
 
         private int RandomPrefabIndex()
         {
-            if (levelPrefabs.Length <= 1)
+            if (levelPrefabs.Count <= 1)
             {
                 return 0;
             }
@@ -81,10 +82,11 @@ namespace EndlessRunning
 
             while (randomIndex == lastIndexprefab)
             {
-                randomIndex = Random.Range(0, levelPrefabs.Length);
+                randomIndex = Random.Range(0, levelPrefabs.Count);
             }
             lastIndexprefab = randomIndex;
             return randomIndex;
         }
+
     }
 }
