@@ -1866,6 +1866,7 @@ GameObject:
   - component: {fileID: 9049800522730724250}
   - component: {fileID: 1527178450793671519}
   - component: {fileID: 6094054895530856724}
+  - component: {fileID: 680202473542383518}
   m_Layer: 9
   m_Name: Noah
   m_TagString: Player
@@ -1948,6 +1949,8 @@ MonoBehaviour:
   targetHeight: 0
   CenterUpdate_Speed_C: 0
   UpdateNow: 0
+  fightingSystem: {fileID: 680202473542383518}
+  input: {fileID: 0}
   anim: {fileID: 0}
   cCollider: {fileID: 0}
 --- !u!114 &1527178450793671519
@@ -1972,5 +1975,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f08773bc2d187b546a7882a72c2e8695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &680202473542383518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592087148131473766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fa46641538f884f9fd8f840b507dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

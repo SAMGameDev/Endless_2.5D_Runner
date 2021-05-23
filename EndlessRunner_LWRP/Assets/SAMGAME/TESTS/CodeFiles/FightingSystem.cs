@@ -1,17 +1,20 @@
-using System;
 using UnityEngine;
 
 namespace EndlessRunning
 {
     public class FightingSystem : MonoBehaviour
     {
-        public event Action OnFightHit;
+        public bool FightMod;
 
+        private void Awake()
+        {
+            FightMod = false;
+        }
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "FightTrigger")
             {
-                OnFightHit?.Invoke();
+                FightMod = true;
             }
         }
     }

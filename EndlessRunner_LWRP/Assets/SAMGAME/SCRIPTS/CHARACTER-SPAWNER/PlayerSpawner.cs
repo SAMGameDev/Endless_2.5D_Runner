@@ -10,10 +10,6 @@ namespace EndlessRunning
         private string objName;
         private void Awake()
         {
-            //instansiting character in MainMenu (ALSO IN GAME SCENE)
-            //according to saved data in SO,
-            //LOADING DEPENDS ON INSTANSITING
-
             if (SelectedCharacter.SelectedCharacter != PlayableCharacterTypes.None)
             {
                 switch (SelectedCharacter.SelectedCharacter)

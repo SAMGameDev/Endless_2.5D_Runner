@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2932862448422839034}
-  - component: {fileID: 2932862448422839035}
+  - component: {fileID: 425628300}
   m_Layer: 0
   m_Name: LevelManger
   m_TagString: Ground
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2932862448422839035
+--- !u!114 &425628300
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,16 +40,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2932862448422839013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 492bd02728a2e694fb4ae757181a0819, type: 3}
+  m_Script: {fileID: 11500000, guid: 6311026628ee3d34e9931581f407609a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelPrefabs:
+  platformsPrefab:
   - {fileID: 3132121109922270881, guid: 73bf7b0130244fa45b8a09118d3edd9f, type: 3}
-  - {fileID: 4001595582476129708, guid: 828f75000c99e9d49881414db9a412d6, type: 3}
-  activeTiles: []
-  playertransform: {fileID: 0}
+  - {fileID: 1148809602030847764, guid: 637e84ee8609fb1438daf57b6f7791c0, type: 3}
+  playerTransform: {fileID: 0}
+  platformLength: 65
   spawnZ: 0
-  tileLength: 65
-  AmountOfPlatforms: 2
-  safeZone: 95
-  lastIndexprefab: 0

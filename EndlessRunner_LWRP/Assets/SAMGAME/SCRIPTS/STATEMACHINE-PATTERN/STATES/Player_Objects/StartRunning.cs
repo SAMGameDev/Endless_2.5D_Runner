@@ -13,9 +13,11 @@ namespace EndlessRunning
         {
             if (playerStateBase.characterControl.StartRun)
             {
-                animator.SetBool
-                    (HashManger.Instance.DicMainParameters[TranistionParemeters.StartRun],
-                    true);
+                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.StartRun],true);
+            }
+            else
+            {
+                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.StartRun],false);
             }
         }
 

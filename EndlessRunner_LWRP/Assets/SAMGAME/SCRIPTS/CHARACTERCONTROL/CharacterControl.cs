@@ -55,6 +55,9 @@ namespace EndlessRunning
         [Header("UpdateBoxCollider")]
         public bool UpdateNow;
 
+        [Header("Scripts")]
+        public FightingSystem fightingSystem;
+
         [Header("SUB-COMPONENTS")]
         public TakeInputs input;
         public Animator anim;
@@ -78,8 +81,6 @@ namespace EndlessRunning
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
             input = GetComponent<TakeInputs>();
-            Death = false;
-            StartRun = false;
             RegisterCharacter();
         }
         private void Update()
@@ -174,13 +175,14 @@ namespace EndlessRunning
             }
         }
 
-        public void CacheCharacterControl(Animator animator)
+        public void CacheScripts(Animator animator)
         {
             PlayerStateBase[] arr = animator.GetBehaviours<PlayerStateBase>();
 
             foreach (PlayerStateBase p in arr)
             {
                 p.characterControl = this;
+                p.fightingSystem = fightingSystem;
             }
         }
 
