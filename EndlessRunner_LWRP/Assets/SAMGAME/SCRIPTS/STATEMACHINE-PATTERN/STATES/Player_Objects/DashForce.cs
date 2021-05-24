@@ -15,7 +15,6 @@ namespace EndlessRunning
         {
             CameraManger.Instance.ShakeCamera(0.2f);
             playerStateBase.characterControl.RIGIDBODY.useGravity = false;
-            playerStateBase.characterControl.RIGIDBODY.velocity = Vector3.zero;
 
             playerStateBase.characterControl.RIGIDBODY.AddForce
                 (playerStateBase.characterControl.transform.forward * dashForce, ForceMode.Impulse);
