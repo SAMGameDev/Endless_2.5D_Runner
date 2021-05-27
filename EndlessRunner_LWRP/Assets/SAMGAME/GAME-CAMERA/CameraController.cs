@@ -10,6 +10,7 @@ namespace EndlessRunning
         Shake,
         Slide,
         Jump,
+        Fight
     }
 
     public class CameraController : MonoBehaviour
