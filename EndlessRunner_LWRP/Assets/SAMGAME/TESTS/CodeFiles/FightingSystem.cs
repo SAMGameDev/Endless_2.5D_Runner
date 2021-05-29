@@ -16,6 +16,7 @@ namespace EndlessRunning
             {
                 FightMod = true;
             }
+            //must flase the FightMod Bool in order to switch back to run mode
         }
     }
 }

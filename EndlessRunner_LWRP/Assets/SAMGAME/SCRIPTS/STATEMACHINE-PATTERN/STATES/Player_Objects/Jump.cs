@@ -7,6 +7,7 @@ namespace EndlessRunning
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
+
         }
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
@@ -15,7 +16,7 @@ namespace EndlessRunning
                 playerStateBase.characterControl.isGrounded == true)
             {
                 animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Jump], true);
-            }
+            }         
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

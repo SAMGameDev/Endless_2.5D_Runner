@@ -15,10 +15,7 @@ namespace EndlessRunning
             {
                 animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.StartRun],true);
             }
-            else
-            {
-                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.StartRun],false);
-            }
+            //Must Flase the animation bool
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)

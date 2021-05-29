@@ -15,6 +15,10 @@ namespace EndlessRunning
             {
                 animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Fight], true);
             }
+            else
+            {
+                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Fight], false);
+            }
         }
 
         public override void OnExit(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
