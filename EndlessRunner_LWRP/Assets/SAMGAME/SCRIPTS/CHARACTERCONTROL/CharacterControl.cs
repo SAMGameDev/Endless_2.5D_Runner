@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace EndlessRunning
 {
@@ -63,6 +64,7 @@ namespace EndlessRunning
         public Animator anim;
         public CapsuleCollider cCollider;
         private Rigidbody rb;
+        [Space(15)] public List<Collider> ragdollColliders = new List<Collider>();
 
         public Rigidbody RIGIDBODY
         {
@@ -81,8 +83,10 @@ namespace EndlessRunning
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
             input = GetComponent<TakeInputs>();
+            SetRagdollParts();
             RegisterCharacter();
         }
+       
         private void Update()
         {
             if (isStarted)
@@ -100,10 +104,6 @@ namespace EndlessRunning
                     input.OnMousePressed_Slide += Input_OnMousePressed_Slide;
                 }
             }
-            else
-            {
-                return;
-            }
         }
 
         private void FixedUpdate()
@@ -111,6 +111,20 @@ namespace EndlessRunning
             ApplyGravity();
             UpdateCenter();
             UpdateSize();
+        }
+
+        private void SetRagdollParts()
+        {
+            Collider[] colliders = gameObject.GetComponentsInChildren<Collider>();
+
+            foreach (var item in colliders)
+            {
+                if (item.gameObject != gameObject)
+                {
+                    item.isTrigger = true;
+                    ragdollColliders.Add(item);
+                }
+            }
         }
 
         public void RunForward(float speed)
@@ -193,7 +207,7 @@ namespace EndlessRunning
                 CharacterManger.Instance.characters.Add(this);
             }
         }
-
+        #region Input Methods
         private void Input_OnMousePressed_StartRun(object sender, System.EventArgs e)
         {
             StartRun = true;
@@ -224,5 +238,20 @@ namespace EndlessRunning
                 Slide = false;
             }
         }
+        #endregion
+        public void TurnOnRagdoll()
+        {
+            RIGIDBODY.useGravity = false;
+            RIGIDBODY.velocity = Vector3.zero;
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            anim.enabled = false;
+            anim.avatar = null;
+
+            foreach (var item in ragdollColliders)
+            {
+                item.isTrigger = false;
+                item.attachedRigidbody.velocity = Vector3.zero;
+            }
+        }     
     }
 }
