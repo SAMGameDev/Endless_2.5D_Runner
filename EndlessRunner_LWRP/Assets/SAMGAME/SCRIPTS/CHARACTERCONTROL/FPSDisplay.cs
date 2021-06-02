@@ -8,7 +8,6 @@ namespace EndlessRunning
 
         private void Start()
         {
-            Time.timeScale = 1f;
         }
         //private void Update()
         //{

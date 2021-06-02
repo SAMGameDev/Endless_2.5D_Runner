@@ -6,7 +6,7 @@ namespace EndlessRunning
     {
         private CharacterControl Control;
 
-        private void Start()
+        private void Awake()
         {
             Control = GetComponent<CharacterControl>();
         }
