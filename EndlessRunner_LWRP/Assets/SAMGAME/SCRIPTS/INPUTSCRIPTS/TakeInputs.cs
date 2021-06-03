@@ -18,11 +18,17 @@ namespace EndlessRunning
 
         private void Update()
         {
+            RunMode_Input();
+            FightMode_Input();
+        }
+
+        private void RunMode_Input()
+        {
             if (Input.GetMouseButtonUp(0))
             {
-                if(control.isStarted)
+                if (control.isStarted)
                 {
-                    if(!control.StartRun)
+                    if (!control.StartRun)
                     {
                         control.StartRun = true;
                     }
@@ -39,12 +45,23 @@ namespace EndlessRunning
                     {
                         control.Dash = true;
                     }
-                }     
+                }
             }
             else
             {
                 control.Jump = false;
                 control.Dash = false;
+            }
+        }
+        private void FightMode_Input()
+        {
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                control.Walk = true;
+            }
+            else
+            {
+                control.Walk = false;
             }
         }
 

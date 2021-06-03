@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-using System.Collections;
 
 namespace EndlessRunning
 {
@@ -31,6 +29,7 @@ namespace EndlessRunning
         public bool Dash;
         public bool StartRun;
         public bool Slide;
+        public bool Walk;
 
         [Header("ExtraBool")]
         public bool isStarted = false;
@@ -63,7 +62,7 @@ namespace EndlessRunning
         public Animator anim;
         public CapsuleCollider cCollider;
         private Rigidbody rb;
-        
+
 
         public Rigidbody RIGIDBODY
         {
@@ -82,14 +81,6 @@ namespace EndlessRunning
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
             RegisterCharacter();
-        }
-
-        IEnumerator Start()
-        {
-            yield return new WaitForSeconds(2f);
-            RIGIDBODY.AddForce(400f * Vector3.up);
-            yield return new WaitForSeconds(0.5f);
-            TurnOnRagdoll();
         }
 
         private void FixedUpdate()
