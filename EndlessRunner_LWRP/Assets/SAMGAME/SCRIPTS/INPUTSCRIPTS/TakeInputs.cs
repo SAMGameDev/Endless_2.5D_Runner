@@ -21,7 +21,7 @@ namespace EndlessRunning
             RunMode_Input();
             FightMode_Input();
         }
-
+        #region RunMode_Input
         private void RunMode_Input()
         {
             if (Input.GetMouseButtonUp(0))
@@ -53,15 +53,25 @@ namespace EndlessRunning
                 control.Dash = false;
             }
         }
+        #endregion
+
         private void FightMode_Input()
         {
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (control.fightingSystem.FightMod)
             {
-                control.Walk = true;
-            }
-            else
-            {
-                control.Walk = false;
+                if (Input.GetKey(KeyCode.RightArrow))
+                {
+                    control.Walk = true;
+                }
+                else if (Input.GetKey(KeyCode.LeftArrow))
+                {
+                    control.Walk = true;
+                }
+                else
+                {
+                    control.Walk = false;
+
+                }
             }
         }
 

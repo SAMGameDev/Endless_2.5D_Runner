@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace EndlessRunning
 {
-    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/FightingSystem/FightMod")]
-    public class FightMode : ScriptableObjectData
+    [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/FightingSystem/Walk")]
+    public class Walk : ScriptableObjectData
     {
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -11,13 +11,13 @@ namespace EndlessRunning
 
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if (playerStateBase.fightingSystem.FightMod)
+            if (playerStateBase.characterControl.Walk)
             {
-                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Fight], true);
+                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Walk], true);
             }
             else
             {
-                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Fight], false);
+                animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Walk], false);
             }
         }
 

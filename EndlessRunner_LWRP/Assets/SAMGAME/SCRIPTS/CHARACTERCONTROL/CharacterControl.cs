@@ -11,6 +11,7 @@ namespace EndlessRunning
         Dash,
         Slide,
         DoubleJump,
+        Walk,
         Die,
         Fight,
         OnClick,
