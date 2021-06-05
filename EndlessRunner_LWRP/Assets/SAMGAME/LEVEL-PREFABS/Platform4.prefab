@@ -9,15 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 755239871}
-  - component: {fileID: 755239874}
-  - component: {fileID: 755239873}
   - component: {fileID: 755239872}
+  - component: {fileID: 1205517403}
+  - component: {fileID: 1205517402}
   m_Layer: 11
   m_Name: FightTrigger
   m_TagString: FightTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967294
   m_IsActive: 1
 --- !u!4 &755239871
 Transform:
@@ -27,13 +27,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755239870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.88, y: -0.13, z: 30}
-  m_LocalScale: {x: 10, y: 7, z: 0}
+  m_LocalPosition: {x: -4.88, y: -1.53, z: 41.6}
+  m_LocalScale: {x: 10, y: 2.9523156, z: 0}
   m_Children: []
   m_Father: {fileID: 7274879204425987331}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &755239874
+--- !u!65 &755239872
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755239870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1205517403
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +54,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755239870}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &755239873
+--- !u!23 &1205517402
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,19 +95,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &755239872
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755239870}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1148809601943491544
 GameObject:
   m_ObjectHideFlags: 0
@@ -6059,7 +6059,7 @@ GameObject:
   - component: {fileID: 6608753432607604913}
   - component: {fileID: 6608753432607604912}
   m_Layer: 11
-  m_Name: Cube (1)
+  m_Name: DeathCube
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6073,8 +6073,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6608753432607604914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.88, y: -0.13, z: 64.52}
-  m_LocalScale: {x: 10, y: 7, z: 1.5}
+  m_LocalPosition: {x: -4.88, y: -1.99, z: -0.44}
+  m_LocalScale: {x: 10, y: 2, z: 1.5}
   m_Children: []
   m_Father: {fileID: 7274879204425987331}
   m_RootOrder: 0

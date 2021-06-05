@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace EndlessRunning
 {
@@ -12,6 +11,7 @@ namespace EndlessRunning
         Dash,
         Slide,
         DoubleJump,
+        Walk,
         Die,
         Fight,
         OnClick,
@@ -30,6 +30,7 @@ namespace EndlessRunning
         public bool Dash;
         public bool StartRun;
         public bool Slide;
+        public bool Walk;
 
         [Header("ExtraBool")]
         public bool isStarted = false;
@@ -59,10 +60,10 @@ namespace EndlessRunning
         public FightingSystem fightingSystem;
 
         [Header("SUB-COMPONENTS")]
-        public TakeInputs input;
         public Animator anim;
         public CapsuleCollider cCollider;
         private Rigidbody rb;
+
 
         public Rigidbody RIGIDBODY
         {
@@ -80,30 +81,7 @@ namespace EndlessRunning
         {
             anim = GetComponentInChildren<Animator>();
             cCollider = GetComponent<CapsuleCollider>();
-            input = GetComponent<TakeInputs>();
             RegisterCharacter();
-        }
-        private void Update()
-        {
-            if (isStarted)
-            {
-                if (!StartRun)
-                {
-                    input.OnMousePressed_StartRun += Input_OnMousePressed_StartRun;
-                }
-                else
-                {
-                    input.OnMousePressed_Jump += Input_OnMousePressed_Jump;
-                    Jump = false;
-                    input.OnMousePressed_Dash += Input_OnMousePressed_Dash;
-                    Dash = false;
-                    input.OnMousePressed_Slide += Input_OnMousePressed_Slide;
-                }
-            }
-            else
-            {
-                return;
-            }
         }
 
         private void FixedUpdate()
@@ -117,7 +95,6 @@ namespace EndlessRunning
         {
             RIGIDBODY.velocity = new Vector3(0f, RIGIDBODY.velocity.y, speed);
         }
-
 
         private void ApplyGravity()
         {
@@ -194,34 +171,18 @@ namespace EndlessRunning
             }
         }
 
-        private void Input_OnMousePressed_StartRun(object sender, System.EventArgs e)
+        public void TurnOnRagdoll()
         {
-            StartRun = true;
-        }
+            RIGIDBODY.useGravity = false;
+            RIGIDBODY.velocity = Vector3.zero;
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            anim.enabled = false;
+            anim.avatar = null;
 
-        private void Input_OnMousePressed_Dash(object sender, System.EventArgs e)
-        {
-            Dash = true;
-        }
-
-        private void Input_OnMousePressed_Jump(object sender, System.EventArgs e)
-        {
-            Jump = true;
-        }
-
-        private void Input_OnMousePressed_Slide(object sender, System.EventArgs e)
-        {
-            Slide = true;
-            StartCoroutine(TurnOff(0.25f));
-        }
-
-        private IEnumerator TurnOff(float time)
-        {
-            yield return new WaitForSeconds(time);
-
-            if (Slide)
+            foreach (var item in fightingSystem.ragdollColliders)
             {
-                Slide = false;
+                item.isTrigger = false;
+                item.attachedRigidbody.velocity = Vector3.zero;
             }
         }
     }

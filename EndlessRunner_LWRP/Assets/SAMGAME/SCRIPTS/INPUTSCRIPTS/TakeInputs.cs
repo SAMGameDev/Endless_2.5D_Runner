@@ -1,36 +1,87 @@
 ﻿using UnityEngine;
-using System;
+using System.Collections;
 
 namespace EndlessRunning
 {
     public class TakeInputs : MonoBehaviour
     {
-        public event EventHandler OnMousePressed_StartRun;
-        public event EventHandler OnMousePressed_Jump;
-        public event EventHandler OnMousePressed_Dash;
-        public EventHandler OnMousePressed_Slide;
+        [SerializeField]
+        private CharacterControl control;
 
         private readonly int splitScreenY = Screen.height / 2;
         private readonly int splitScreenX = Screen.width / 2;
 
+        private void Awake()
+        {
+            control = GetComponent<CharacterControl>();
+        }
+
         private void Update()
+        {
+            RunMode_Input();
+            FightMode_Input();
+        }
+        #region RunMode_Input
+        private void RunMode_Input()
         {
             if (Input.GetMouseButtonUp(0))
             {
-                OnMousePressed_StartRun?.Invoke(this, EventArgs.Empty);
+                if (control.isStarted)
+                {
+                    if (!control.StartRun)
+                    {
+                        control.StartRun = true;
+                    }
+                    if (Input.mousePosition.y >= splitScreenY && Input.mousePosition.x <= splitScreenX)
+                    {
+                        control.Jump = true;
+                    }
+                    else if (Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
+                    {
+                        control.Slide = true;
+                        StartCoroutine(TurnOff(0.3f));
+                    }
+                    else if (Input.mousePosition.x > splitScreenX)
+                    {
+                        control.Dash = true;
+                    }
+                }
+            }
+            else
+            {
+                control.Jump = false;
+                control.Dash = false;
+            }
+        }
+        #endregion
 
-                if (Input.mousePosition.y >= splitScreenY && Input.mousePosition.x <= splitScreenX)
+        private void FightMode_Input()
+        {
+            if (control.fightingSystem.FightMod)
+            {
+                if (Input.GetKey(KeyCode.RightArrow))
                 {
-                    OnMousePressed_Jump?.Invoke(this, EventArgs.Empty);
+                    control.Walk = true;
                 }
-                else if (Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
+                else if (Input.GetKey(KeyCode.LeftArrow))
                 {
-                    OnMousePressed_Slide?.Invoke(this, EventArgs.Empty);
+                    control.Walk = true;
                 }
-                else if (Input.mousePosition.x > splitScreenX)
+                else
                 {
-                    OnMousePressed_Dash?.Invoke(this, EventArgs.Empty);
+                    control.Walk = false;
+
                 }
+            }
+        }
+
+        private IEnumerator TurnOff(float time)
+        {
+            yield return new WaitForSeconds(time);
+
+            if (control.Slide)
+            {
+                control.Slide = false;
             }
         }
     }

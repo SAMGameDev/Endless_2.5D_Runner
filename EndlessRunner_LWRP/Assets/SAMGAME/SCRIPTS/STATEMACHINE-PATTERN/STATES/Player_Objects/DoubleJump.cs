@@ -5,12 +5,12 @@ namespace EndlessRunning
     [CreateAssetMenu(fileName = "New Object", menuName = "ScriptableObject/Ability/DoubleJump")]
     public class DoubleJump : ScriptableObjectData
     {
-        [SerializeField] private bool CanDoubleJump;
+        [SerializeField]
+        private bool CanDoubleJump = true;
 
         public override void OnEnter(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
         }
-
         public override void OnUpdate(PlayerStateBase playerStateBase, Animator animator, AnimatorStateInfo stateInfo)
         {
             if (playerStateBase.characterControl.isGrounded)
@@ -23,10 +23,6 @@ namespace EndlessRunning
                 {
                     animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], true);
                     CanDoubleJump = false;
-                }
-                else
-                {
-                    animator.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.DoubleJump], false);
                 }
             }
         }
