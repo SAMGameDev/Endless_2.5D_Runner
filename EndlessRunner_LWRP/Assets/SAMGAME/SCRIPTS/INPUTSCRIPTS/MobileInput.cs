@@ -8,6 +8,13 @@ namespace EndlessRunning
         private int splitScreenY = Screen.height / 2;
         private int splitScreenX = Screen.width / 2;
 
+        public CharacterControl Control;
+
+        private void Awake()
+        {
+            Control = FindObjectOfType<CharacterControl>();
+        }
+
         void Update()
         {
             if (Input.GetMouseButtonUp(0))

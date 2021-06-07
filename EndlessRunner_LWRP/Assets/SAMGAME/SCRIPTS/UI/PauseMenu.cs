@@ -7,7 +7,7 @@ namespace EndlessRunning
     {
         private static bool GameIsPaused = false;
         [SerializeField] protected GameObject PauseMenu_gameobject;
-        [SerializeField] protected CacheCharacterControl ControlCache;
+       // [SerializeField] protected CacheCharacterControl ControlCache;
 
         private void Update()
         {
@@ -27,16 +27,16 @@ namespace EndlessRunning
         public void Pause()
         {
             PauseMenu_gameobject.SetActive(true);
-            Time.timeScale = 0.5f;
+            Time.timeScale = 0f;
             GameIsPaused = true;
             InputManger.Instance.isStarted = false;
-            //ControlCache.GetCharacterControl.isStarted = false;
+           // ControlCache.GetCharacterControl.isStarted = false;
         }
 
         public void Resume()
         {
             PauseMenu_gameobject.SetActive(false);
-            Time.timeScale = Time.timeScale;
+            Time.timeScale = 1f;
             GameIsPaused = false;
             InputManger.Instance.isStarted = true;
             //ControlCache.GetCharacterControl.isStarted = true;
