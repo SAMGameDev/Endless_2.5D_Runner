@@ -13,8 +13,6 @@ namespace EndlessRunning
 
         private void Update()
         {
-            if (!Control.isStarted) return;
-
             switch (Control.Death)
             {
                 case true:

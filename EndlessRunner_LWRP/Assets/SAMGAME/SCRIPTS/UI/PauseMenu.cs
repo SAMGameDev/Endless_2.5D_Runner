@@ -27,17 +27,19 @@ namespace EndlessRunning
         public void Pause()
         {
             PauseMenu_gameobject.SetActive(true);
-            Time.timeScale = 0f;
+            Time.timeScale = 0.5f;
             GameIsPaused = true;
-            ControlCache.GetCharacterControl.isStarted = false;
+            InputManger.Instance.isStarted = false;
+            //ControlCache.GetCharacterControl.isStarted = false;
         }
 
         public void Resume()
         {
             PauseMenu_gameobject.SetActive(false);
-            Time.timeScale = 1f;
+            Time.timeScale = Time.timeScale;
             GameIsPaused = false;
-            ControlCache.GetCharacterControl.isStarted = true;
+            InputManger.Instance.isStarted = true;
+            //ControlCache.GetCharacterControl.isStarted = true;
         }
 
         public void Restart()
