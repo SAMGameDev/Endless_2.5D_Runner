@@ -17,26 +17,33 @@ namespace EndlessRunning
 
         void Update()
         {
+            RunMode_Input();
+        }
+
+        void RunMode_Input()
+        {
             if (Input.GetMouseButtonUp(0))
             {
-                if (!InputManger.Instance.StartRun)
+                if (InputManger.Instance.isStarted)
                 {
-                    InputManger.Instance.StartRun = true;
+                    if (!InputManger.Instance.StartRun)
+                    {
+                        InputManger.Instance.StartRun = true;
+                    }
+                    if (Input.mousePosition.y >= splitScreenY && Input.mousePosition.x <= splitScreenX)
+                    {
+                        InputManger.Instance.Jump = true;
+                    }
+                    else if (Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
+                    {
+                        InputManger.Instance.Slide = true;
+                        StartCoroutine(TurnOff(0.2f));
+                    }
+                    else if (Input.mousePosition.x > splitScreenX)
+                    {
+                        InputManger.Instance.Dash = true;
+                    }
                 }
-                if (Input.mousePosition.y >= splitScreenY && Input.mousePosition.x <= splitScreenX)
-                {
-                    InputManger.Instance.Jump = true;
-                }
-                else if (Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
-                {
-                    InputManger.Instance.Slide = true;
-                    StartCoroutine(TurnOff(0.2f));
-                }
-                else if (Input.mousePosition.x > splitScreenX)
-                {
-                    InputManger.Instance.Dash = true;
-                }
-
             }
             else
             {

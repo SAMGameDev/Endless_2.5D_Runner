@@ -14,11 +14,10 @@ namespace EndlessRunning
 
         private void Update()
         {
-            RunMode_Input();
-            //FightMode_Input();
+            AnimationControl();
         }
 
-        private void RunMode_Input()
+        private void AnimationControl()
         {
             if (InputManger.Instance.StartRun)
             {
@@ -53,24 +52,5 @@ namespace EndlessRunning
                 control.Dash = false;
             }
         }
-        //private void FightMode_Input()
-        //{
-        //    if (control.fightingSystem.FightMod)
-        //    {
-        //        if (Input.GetKey(KeyCode.RightArrow))
-        //        {
-        //            control.Walk = true;
-        //        }
-        //        else if (Input.GetKey(KeyCode.LeftArrow))
-        //        {
-        //            control.Walk = true;
-        //        }
-        //        else
-        //        {
-        //            control.Walk = false;
-
-        //        }
-        //    }
-        //}
     }
 }
