@@ -13,18 +13,20 @@ namespace EndlessRunning
 
         private void Update()
         {
-            if (!Control.isStarted) return;
-
-            switch (Control.Death)
+            if (InputManger.Instance.isStarted)
             {
-                case true:
-                    Control.anim.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], true);
-                    break;
+                switch (Control.Death)
+                {
+                    case true:
+                        Control.anim.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], true);
+                        break;
 
-                case false:
-                    Control.anim.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], false);
-                    break;
+                    case false:
+                        Control.anim.SetBool(HashManger.Instance.DicMainParameters[TranistionParemeters.Die], false);
+                        break;
+                }
             }
+
         }
     }
 }

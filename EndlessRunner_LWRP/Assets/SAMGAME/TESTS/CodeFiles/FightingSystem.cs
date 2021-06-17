@@ -14,7 +14,6 @@ namespace EndlessRunning
             SetRagdollParts();
         }
 
-
         private void SetRagdollParts()
         {
             Collider[] colliders = gameObject.GetComponentsInChildren<Collider>();
@@ -28,7 +27,6 @@ namespace EndlessRunning
                 }
             }
         }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "FightTrigger")

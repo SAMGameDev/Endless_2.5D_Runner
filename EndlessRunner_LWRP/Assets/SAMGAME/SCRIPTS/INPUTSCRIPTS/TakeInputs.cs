@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace EndlessRunning
 {
@@ -8,9 +7,6 @@ namespace EndlessRunning
         [SerializeField]
         private CharacterControl control;
 
-        private readonly int splitScreenY = Screen.height / 2;
-        private readonly int splitScreenX = Screen.width / 2;
-
         private void Awake()
         {
             control = GetComponent<CharacterControl>();
@@ -18,70 +14,42 @@ namespace EndlessRunning
 
         private void Update()
         {
-            RunMode_Input();
-            FightMode_Input();
+            AnimationControl();
         }
-        #region RunMode_Input
-        private void RunMode_Input()
+
+        private void AnimationControl()
         {
-            if (Input.GetMouseButtonUp(0))
+            if (InputManger.Instance.StartRun)
             {
-                if (control.isStarted)
-                {
-                    if (!control.StartRun)
-                    {
-                        control.StartRun = true;
-                    }
-                    if (Input.mousePosition.y >= splitScreenY && Input.mousePosition.x <= splitScreenX)
-                    {
-                        control.Jump = true;
-                    }
-                    else if (Input.mousePosition.y < splitScreenY && Input.mousePosition.x <= splitScreenX)
-                    {
-                        control.Slide = true;
-                        StartCoroutine(TurnOff(0.3f));
-                    }
-                    else if (Input.mousePosition.x > splitScreenX)
-                    {
-                        control.Dash = true;
-                    }
-                }
+                control.StartRun = true;
+            }
+            else
+            {
+                control.StartRun = false;
+            }
+            if (InputManger.Instance.Jump)
+            {
+                control.Jump = true;
             }
             else
             {
                 control.Jump = false;
-                control.Dash = false;
             }
-        }
-        #endregion
-
-        private void FightMode_Input()
-        {
-            if (control.fightingSystem.FightMod)
+            if (InputManger.Instance.Slide)
             {
-                if (Input.GetKey(KeyCode.RightArrow))
-                {
-                    control.Walk = true;
-                }
-                else if (Input.GetKey(KeyCode.LeftArrow))
-                {
-                    control.Walk = true;
-                }
-                else
-                {
-                    control.Walk = false;
-
-                }
+                control.Slide = true;
             }
-        }
-
-        private IEnumerator TurnOff(float time)
-        {
-            yield return new WaitForSeconds(time);
-
-            if (control.Slide)
+            else
             {
                 control.Slide = false;
+            }
+            if (InputManger.Instance.Dash)
+            {
+                control.Dash = true;
+            }
+            else
+            {
+                control.Dash = false;
             }
         }
     }

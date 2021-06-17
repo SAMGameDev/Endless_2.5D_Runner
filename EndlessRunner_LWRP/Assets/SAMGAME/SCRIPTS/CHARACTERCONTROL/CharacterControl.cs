@@ -32,9 +32,6 @@ namespace EndlessRunning
         public bool Slide;
         public bool Walk;
 
-        [Header("ExtraBool")]
-        public bool isStarted = false;
-
         [Header("DETECTORS")]
         public bool isGrounded = true;
         public bool Death;

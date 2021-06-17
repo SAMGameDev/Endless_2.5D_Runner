@@ -59,7 +59,9 @@ namespace EndlessRunning
                         Resources.Load<RuntimeAnimatorController>("PLAYERANIMATOR_MIKE");
                     break;
             }
-            controlCache.GetCharacterControl.isStarted = true;
+
+            InputManger.Instance.isStarted = true;
+            //controlCache.GetCharacterControl.isStarted = true;
             gameObject.SetActive(false);
 
             #endregion Change Animator

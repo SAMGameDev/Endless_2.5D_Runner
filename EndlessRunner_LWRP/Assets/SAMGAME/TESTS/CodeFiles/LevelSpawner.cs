@@ -14,7 +14,7 @@ namespace EndlessRunning
         private float platformLength;
         [SerializeField]
         private float spawnZ;
-
+        
         void Start()
         {
             playerTransform = GameObject.FindGameObjectWithTag("Player").transform;

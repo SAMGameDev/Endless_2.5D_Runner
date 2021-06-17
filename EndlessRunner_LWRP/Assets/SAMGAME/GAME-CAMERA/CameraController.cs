@@ -17,18 +17,15 @@ namespace EndlessRunning
     {
         [SerializeField] protected CinemachineVirtualCamera[] Virtualcameras;
         [SerializeField] protected CacheCharacterControl cachedControl;
-
         private Transform camFollow;
         public Animator animator;
 
         private void Start()
         {
-            InitialCameraSetUp();
+            Initial_Camera_SetUp();
             StartCoroutine(CameraStopper(0.03f));
         }
-
-        //assign follow object when game starts
-        private void InitialCameraSetUp()
+        private void Initial_Camera_SetUp()
         {
             Virtualcameras = FindObjectsOfType<CinemachineVirtualCamera>();
 

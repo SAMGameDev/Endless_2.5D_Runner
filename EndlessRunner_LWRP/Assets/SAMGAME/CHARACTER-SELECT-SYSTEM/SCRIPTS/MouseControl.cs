@@ -6,7 +6,7 @@ namespace EndlessRunning
     {
         public PlayableCharacterTypes selectedCharacter;
         public CharacterSelect SelectedCharacterData;
-        [SerializeField] protected Animator characterselect_camController;
+        [SerializeField] private Animator characterselect_camController;
 
         private void Update()
         {
